@@ -3,6 +3,7 @@ from optparse import OptionParser
 import sys
 import time
 import statistics as stat
+import os
 
 parser = OptionParser()
 #Required args
@@ -32,15 +33,15 @@ ped_rels = {"PO":["PO"],
 
 def ilash2germline(match_file):
     for i in range(1,23):
-    ilash = open(match_file  % str(i)).readlines()
-    germline = open("GERMLINE" + match_file % str(i),"w")
-    for lines in germline:
-        lines = lines.split()
-        lines[1] = lines[1].split("_")[0] + "." + lines[1].split("_")[1]
-        lines[3] = lines[3].split("_")[0] + "." + lines[3].split("_")[1]
-        lines[7] = "\n"
-        cols = [0,1,2,3,4,5,6,7]
-        germline.write(" ".join([lines[i] for i in cols]))
+        ilash = open(match_file  % str(i)).readlines()
+        germline = open("GERMLINE" + match_file % str(i),"w")
+        for lines in ilash:
+            lines = lines.split()
+            lines[1] = lines[1].split("_")[0] + "." + lines[1].split("_")[1]
+            lines[3] = lines[3].split("_")[0] + "." + lines[3].split("_")[1]
+            lines[7] = "\n"
+            cols = [0,1,2,3,4,5,6,7]
+            germline.write(" ".join([lines[i] for i in cols]))
     return "GERMLINE" + match_file
 
 def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
@@ -141,7 +142,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
             for pairs in rel_list:
                 iid1,iid2 = pairs[0],pairs[1]
                 scores = self.get_scores(iid1,iid2)
-                self.out.write(" ".join([scores[0],str(scores[1]),scores[2],str(scores[3]),str(scores[4]),str(scores[6]),"\n"]))
+                self.out.write(" ".join([scores[0],str(round(scores[1],3)),scores[2],str(round(scores[3],3)),str(round(scores[4],3)),str(scores[6]),"\n"]))
                 out_list.append(scores)
             return out_list
 
@@ -168,7 +169,8 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
             ticker += 1
             sys.stdout.write("\rCalculating hap score...chr %s %s" % (chrm,ticker_char[ticker % 4]))
             sys.stdout.flush()
-        os.remove(match_file % str(chrm))
+        if ilash:
+            os.remove(match_file % str(chrm))
         match.sort()
 
         while match != []:
@@ -249,6 +251,11 @@ class Data:
             for rels in ped_rels[degs]:
                 self.relationships[rels] = []
         self.dummy_id = 0
+
+        #Gap thresholds
+        self.po_gap = option.po_gap
+        self.gp_gap = option.gp_gap
+        self.mhs_gap = option.mhs_gap
 
     #To make sure that the pair is in the right order for dict lookup
     def order_pair(self,iid1,iid2):
@@ -554,9 +561,9 @@ class Data:
         rels = {0:"PHS",1:"MHS",2:"GP",3:"AV"}
         h1,h2 = self.get_hap_score(iid1,iid2),self.get_hap_score(iid2,iid1)
         def have_parent(iid,sex):
-            if sex == 0:
+            if sex == 1:
                 parent = self.get_dad(iid)
-            elif sex == 1:
+            elif sex == 2:
                 parent = self.get_mom(iid)
             return parent != "0" and "Missing" not in parent
         if have_parent(iid1,1) or have_parent(iid2,1):
@@ -572,7 +579,7 @@ class Data:
         tot = sum(ped_prob)
         ped_prob = [ped_prob[i]/tot for i in range(4)]
         ped_rel = ped_prob.index(max(ped_prob))
-        prob = prob_2nd * ped_prob[inf_rel]
+        prob = prob_2nd * ped_prob[ped_rel]
         ped_rel = rels[ped_rel]
         age1,age2 = self.get_age(iid1),self.get_age(iid2)
         if age1 != "NA" and age2 != "NA":
@@ -587,7 +594,7 @@ class Data:
             self.add_siblings(iid1,iid2,prob,ped_rel)
 
     def write_score(self,iid1,iid2,h1,h2,hap_data,probs):
-        out = [iid1,str(h1),iid2,str(h2),str(hap_data[0]),str(hap_data[1])]
+        out = [iid1,str(round(h1,3)),iid2,str(round(h2,3)),str(round(hap_data[0],3)),str(hap_data[1])]
         for i in probs:
             out.append(str(round(i,3)))
         out.append("\n")
@@ -604,7 +611,7 @@ class Data:
         self.fam.close()
 
 def main(fam_file,match_file,king_file,map_file,
-        ped_file,age_file,out,mhs_gap,gp_gap,po_gap,haps):
+        ped_file,age_file,out,mhs_gap,gp_gap,po_gap,haps,ilash):
     start_time = time.time()
     data = Data(out)
 
@@ -701,7 +708,7 @@ def main(fam_file,match_file,king_file,map_file,
                 if rels == "GP" and abs(young_age-old_age) < gp_gap:
                     problem_pairs.append([rels,younger,str(young_age),older,str(old_age),"\n"])
             else:
-                h1,h2 = self.get_hap_score(younger),self.get_hap_score(older)
+                h1,h2 = data.get_hap_score(younger,older),data.get_hap_score(older,younger)
                 if h1 != "NA" and h2 != "NA" and h2 > h1 and h2 > 0.80:
                     problem_pairs.append([rels,younger,str(h1),older,str(h2),"\n"])
     if problem_pairs != []:
@@ -728,7 +735,7 @@ def main(fam_file,match_file,king_file,map_file,
             h1,h2 = data.get_hap_score(iid1,iid2),data.get_hap_score(iid2,iid1)
             ped_prob = list(second_lda.predict_proba([hap_data])[0])
             data.write_score(iid1,iid2,h1,h2,hap_data,ped_prob)
-            data.infer_relationship(iid1,iid2,ped_rel,ped_prob,prob_2nd)
+            data.infer_relationship(iid1,iid2,ped_prob,prob_2nd)
     sys.stdout.write("\rClassifying putative second degree relatives...done\n")
 
     data.write_log("\nRuntime: %s seconds\n" % round(time.time() - start_time,0))
