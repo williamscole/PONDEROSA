@@ -21,13 +21,13 @@ Please note that PONDEROSA is designed to assist pedigree construction and furth
 ##### _Optional arguments_  
 | Flag | Description |
 | ---- | ----------- |
-|**\-\-out** | Output file prefix. _Default: “PONDEROSA”_ |
-|**\-\-ilash** | For use if .match file is in iLASH format. |
-|**\-\-haps** | If PONDEROSA has already been run, supplying the haplotype score file here will skip the haplotype score calculation step. |
-|**\-\-age** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
-|**\-\-gp_age** | Minimum age-gap for a grandparent-grandchild pair. _Default: 30_ |
-|**\-\-mhs_age** | Maximum age-gap for maternal half-siblings. _Default: 30_ |
-|**\-\-ped** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM of each other _and_ have, at most, one discordant homozygote.|  
+|**out** | Output file prefix. _Default: “PONDEROSA”_ |
+|**ilash** | For use if .match file is in iLASH format. |
+|**haps** | If PONDEROSA has already been run, supplying the haplotype score file here will skip the haplotype score calculation step. |
+|**age** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
+|**gp_age** | Minimum age-gap for a grandparent-grandchild pair. _Default: 30_ |
+|**mhs_age** | Maximum age-gap for maternal half-siblings. _Default: 30_ |
+|**ped** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM of each other _and_ have, at most, one discordant homozygote.|  
 
 ##### _Example_
 `python3.6 PONDEROSA.py --map Himba_chr%s.map --ped Himba_chr%s.ped --king king.seg –fam Himba.fam --match Himba_chr%s.match --out Himba`
