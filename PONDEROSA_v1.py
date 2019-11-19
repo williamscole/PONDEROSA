@@ -574,7 +574,7 @@ class Data:
         if age1 != "NA" and age2 != "NA":
             if abs(age1-age2) < self.gp_gap:
                 ped_prob[2] = 0
-            if abs(age1-age2) < self.mhs_gap:
+            if abs(age1-age2) > self.mhs_gap:
                 ped_prob[1] = 0
         tot = sum(ped_prob)
         ped_prob = [ped_prob[i]/tot for i in range(4)]
@@ -712,10 +712,12 @@ def main(fam_file,match_file,king_file,map_file,
                 if h1 != "NA" and h2 != "NA" and h2 > h1 and h2 > 0.80:
                     problem_pairs.append([rels,younger,str(h1),older,str(h2),"\n"])
     if problem_pairs != []:
-        data.write_log("The following pairs are PO or GP pairs in which the reported age is not consistent with the relationship.\n")
+        data.write_log("\nThe following pairs are PO or GP pairs in which the reported age is not consistent with the relationship.\n")
         data.write_log("Either the child/granchild is older than the parent/grandparent or the age gap is too small.\n")
         data.write_log("If age data is unavailable, hap scores are used. If a parent/grandparent has a hap score greater than the child/grandchild ")
-        data.write_log("and the hap score is >0.80, then a warning will be printed.")
+        data.write_log("and the hap score is >0.80, then a warning will be printed.\n")
+        for pairs in problem_pairs:
+            data.write_log(" ".join(pairs))
 
     #Create the classifier for 2nd degree relatives
     training_data = data.generate_training_data("2nd")
