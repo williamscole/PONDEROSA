@@ -13,10 +13,10 @@ Please note that PONDEROSA is designed to assist pedigree construction and furth
 ##### _Required arguments_  
 | Flag | Description |
 | ---- | ----------- |
-|**\-\-king** | KING .seg file (or any .seg-formatted IBD file). |
-|**\-\-map** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. This .map file must be the same .map file used to generate IBD segments. |
-|**\-\-fam** | PLINK-formatted .fam file. |
-|**\-\-match** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.|
+|**king** | KING .seg file (or any .seg-formatted IBD file). |
+|**map** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. This .map file must be the same .map file used to generate IBD segments. |
+|**fam** | PLINK-formatted .fam file. |
+|**match** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.|
 
 ##### _Optional arguments_  
 | Flag | Description |
