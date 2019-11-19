@@ -565,7 +565,7 @@ class Data:
                 parent = self.get_dad(iid)
             elif sex == 2:
                 parent = self.get_mom(iid)
-            return parent != "0" and "Missing" not in parent
+            return parent != "0" and "Missing" not in parent and self.gt_status(parent)
         if have_parent(iid1,1) or have_parent(iid2,1):
             ped_prob[0] = 0
         if have_parent(iid1,2) or have_parent(iid2,2):
