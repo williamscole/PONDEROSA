@@ -35,7 +35,7 @@ ped_rels = {"PO":["PO"],
             "4th":["GGGP","HC"]}
 
 tree = ["       P  O  N  D  E  R  O  S  A",
-"                v.1.1          "
+"                v.1.1          ",
 "                  &",                   
 "                 ##&",                   
 "                #####",                  
