@@ -1,7 +1,7 @@
 # PONDEROSA
 
 ### **Introduction**  
-PONDEROSA (_**P**arent **O**ffspri**N**g pe**D**igree Inf**E**rence **RO**bu**S**t to Endog**A**my_) is an algorithm designed to assist in pedigree construction. PONDEROSA is highly sensitive to phase quality and will see reduced performance in datasets with any of the following: admixture, sparse pedigrees (especially sparse parent-offspring data), samples from different populations, etc. While we have found PONDEROSA to work best in endogamous populations, PONDEROSA can work well in any population as long as high phase quality can be achieved. However, running PONDEROSA with a dataset with suboptimal phase quality should only affect avuncular/grandparent-grandchild vs. half-sibling distinction and may still be useful for datasets with few half-siblings or datasets with a narrow age range (which may be unlikely to have avuncular or grandparent-grandchildren pairs).  
+PONDEROSA (_**P**arent **O**ffspri**N**g pe**D**igree Inf**E**rence **RO**bu**S**t to Endog**A**my_) is an algorithm designed to assist in pedigree construction. PONDEROSA works well in datasets with high-quality long-range phasing. We have found that this can be better achieved in endogamous populations. Even in datasets with poor phasing, PONDEROSA can still distinguish avuncular from grandparent-grandchildren and maternal half-siblings from paternal half-siblings and will work well in datasets with few half-siblings or datasets with a narrow age range (which may be unlikely to have avuncular or grandparent-grandchildren pairs). PONDEROSA works best in datasets with existing pedigree structure, which is necessary for training the machine-learning classifiers. PONDEROSA will work out this existing pedigree structure from tracing parent-offspring lineages; therefore, every parent-offspring pair as inferred by KING must be present in the .fam file.  
 
 Please note that PONDEROSA is designed to _assist_ pedigree construction and further steps by the user are required to construct the pedigree. We hope to change this in future versions of PONDEROSA. For now, PONDEROSA largely infers relationships in a vacuum (i.e. without considering the context of the pedigree). Relationship inference should be double-checked against the existing pedigree structure.  
 
@@ -25,9 +25,13 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 |**ilash** | For use if .match file is in iLASH format. |
 |**haps** | If PONDEROSA has already been run, supplying the haplotype score file here will skip the haplotype score calculation step. |
 |**age** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
-|**gp_age** | Minimum age-gap for a grandparent-grandchild pair. _Default: 30_ |
-|**mhs_age** | Maximum age-gap for maternal half-siblings. _Default: 30_ |
-|**ped** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM of each other _and_ have, at most, one discordant homozygote.|  
+|**gp_gap** | Minimum age-gap for a grandparent-grandchild pair. _Default: 30_ |
+|**mhs_gap** | Maximum age-gap for maternal half-siblings. _Default: 30_ |
+|**po_gap** | Minimum age-gap for parent-offspring. If you do not want PONDEROSA to consider age here, use 0 for this flag. _Default: 15_ |
+|**ped** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM of each other _and_ have, at most, one discordant homozygote.|
+|**cm_gap** | Maximum gap in cM between IBD segments for them to be considered a single segment (see **--ped** flag for more detail). _Default: 1_ |
+|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **--ped** flag for more detail). Only use if **--ped file** is used. _Default: 1_ |  
+|**likelihood** | Minimum likelihood (0.5 - 1) required for a pair to be inferred as a 2nd degree pair. We recommend being more conservative here. _Default: 0.80_ |  
 
 ##### _Example_
 `python3.6 PONDEROSA.py --map Himba_chr%s.map --ped Himba_chr%s.ped --king king.seg –fam Himba.fam --match Himba_chr%s.match --out Himba`

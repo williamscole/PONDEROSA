@@ -20,6 +20,9 @@ parser.add_option("--gp_gap",dest="gp_gap",default=30)
 parser.add_option("--po_gap",dest="po_gap",default=15)
 parser.add_option("--haps",dest="haps",default="")
 parser.add_option("--ilash",action="store_true",dest="ilash")
+parser.add_option("--cm_gap",dest="cm_gap",default=1)
+parser.add_option("--disc_homoz",dest="disc_homoz",default=1)
+parser.add_option("--likelihood",dest="likelihood",default=0.80)
 
 (option,args) = parser.parse_args()
 
@@ -40,8 +43,7 @@ def ilash2germline(match_file):
             lines[1] = lines[1].split("_")[0] + "." + lines[1].split("_")[1]
             lines[3] = lines[3].split("_")[0] + "." + lines[3].split("_")[1]
             lines[7] = "\n"
-            cols = [0,1,2,3,4,5,6,7]
-            germline.write(" ".join([lines[i] for i in cols]))
+            germline.write(" ".join([lines[i] for i in [0,1,2,3,4,5,6,7]]))
     return "GERMLINE" + match_file
 
 def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
@@ -69,7 +71,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
         def mb_to_cm(self,mb):
             return self.mb_cm[mb]
 
-        def gap_discordance(self,iid1,iid2,gap_start,gap_end,threshold=1):
+        def gap_discordance(self,iid1,iid2,gap_start,gap_end,threshold):
             status = False
             if self.gts != {}:
                 start=self.snp_pos.index(gap_start)+1
@@ -191,7 +193,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
                     del index_list[-1]
                 elif end2 <= end1:
                     continue
-                elif (start2 > end1 + 1) or (0 < start2 - end1 <= 1 and genotype_data.gap_discordance(iid1,iid2,end1,start2)):
+                elif (start2 > end1 + option.cm_gap) or (0 < start2 - end1 <= option.cm_gap and genotype_data.gap_discordance(iid1,iid2,end1,start2,option.disc_homoz)):
                     num_segs += 1
                 end1 = end2
                 index_list.append(i)
@@ -740,7 +742,7 @@ def main(fam_file,match_file,king_file,map_file,
         iid1,iid2 = pairs[0],pairs[1]
         ibd1,ibd2 = data.get_ibd(iid1,iid2,1),data.get_ibd(iid1,iid2,2)
         prob_2nd = ibd_lda.predict_proba([[ibd1,ibd2]])[0][2]
-        if prob_2nd > 0.80:
+        if prob_2nd > option.likelihood:
             hap_data = data.get_hap_data(iid1,iid2)
             h1,h2 = data.get_hap_score(iid1,iid2),data.get_hap_score(iid2,iid1)
             ped_prob = list(second_lda.predict_proba([hap_data])[0])
