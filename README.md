@@ -14,9 +14,9 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 | Flag | Description |
 | ---- | ----------- |
 |**king** | KING .seg file (or any .seg-formatted IBD file). |
-|**map** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. This .map file must be the same .map file used to generate IBD segments. |
+|**map** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. Note that PONDEROSA expects a .map file for each chromosome but only one **--map** flag (see example script). This .map file must be the same .map file used to generate IBD segments. |
 |**fam** | PLINK-formatted .fam file. All PO present in the KING file must be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA can be run and the haplotype scores of the individuals can be used to make the distinction. |
-|**match** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.|
+|**match** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. Again, PONDEROSA expects a .match file for each chromosome but only one **--match** flag (see example script). If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.|
 
 ##### _Optional arguments_  
 | Flag | Description |
