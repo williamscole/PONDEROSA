@@ -34,7 +34,7 @@ ped_rels = {"PO":["PO"],
             "3rd":["GGP","HV","CO"],
             "4th":["GGGP","HC"]}
 
-tree = ["       P  O  N  D  E  R  O  S  A",
+tree = ["\n       P  O  N  D  E  R  O  S  A",
 "                v.1.1          ",
 "                  &",                   
 "                 ##&",                   
@@ -52,20 +52,37 @@ tree = ["       P  O  N  D  E  R  O  S  A",
 "     #  &%%%%##/(###########&/",         
 "      %%%%%%##%((%%############%&",      
 "   &%%%%&&  &%%%&&&%#######&&&&&&&&&",   
-"&&.&%     &%%&   &((&&  ###&&",        
-"                 %((&         &&&",      
+"&&.&%     &%%&   &((&&  ###&&&&&",        
+"                 %((&       ",      
 "                 %*(&",                  
 "                 #((&",                 
 "                .(((%",                  
 "                &%(((%",                 
-"              %%%#(#((((",               
-"            &&   &(  &(&",
+"               %%#(#((((",               
+"              &&&&(  &(&)",
 "                          ",
 "               (c) 2019",
-"C.M. Williams, C.R. Gignoux, B.M. Henn"]
+"C.M. Williams, C.R. Gignoux, B.M. Henn\n"]
 
-for i in tree:
-	print(i)
+def print_color(color,text):
+    if color == "bold":
+        color = "\033[1m"
+    if color == "brown":
+        color = "\033[0;33m"
+    elif color == "green":
+        color = "\033[0;32m"
+    colored_text = f"\033[{color}{text}\033[00m"
+    return colored_text
+
+for index,i in enumerate(tree):
+        if index in [k for k in range(19,26)]:
+            print(print_color("brown",i))
+        elif index in [k for k in range(2,19)]:
+            print(print_color("green",i))
+        elif index == 0:
+            print(print_color("bold",i))
+        elif index in [1,27,28]:
+            print(i)
 
 def ilash2germline(match_file):
     for i in range(1,23):
