@@ -1,0 +1,33 @@
+map ./Sample/Map_Files/Sample_shapeit.chr1.map
+
+ped ./Sample/Phased_Data/Sample_shapeit.chr1.ped
+
+output Sample_ilash_chr1.match
+
+slice_size 350
+
+step_size 350
+
+perm_count 20
+
+shingle_size 15
+
+shingle_overlap 0
+
+bucket_count 5
+
+max_thread 20
+
+match_threshold 0.99
+
+interest_threshold 0.70
+
+max_error 0
+
+min_length 2.9
+
+auto_slice 1
+
+cm_overlap 1
+
+minhash_threshold 55
