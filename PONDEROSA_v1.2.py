@@ -171,7 +171,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
 
     pairs = PairData(rel_list,out)
 
-    for chrm in range(1,2):
+    for chrm in range(1,23):
         ticker_char = {0: "|", 1: "/", 2: "-", 3: "\\"}
         ticker = 1
         sys.stdout.write("\rCalculating hap score...chr %s %s" % (chrm,ticker_char[ticker % 4]))
