@@ -136,7 +136,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
                     if num_disc_homoz > threshold:
                         status=True
                         break
-            return not status
+            return status
 
 
     class PairData:
@@ -186,8 +186,11 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
             pair = self.order_pair(iid1,iid2)
             info = self.pair_data[pair]
             h1,h2,total,num = info[0][iid1],info[0][iid2],info[1],info[2]
-            h1,h2 = h1/total,h2/total
-            ratio = min(h1/h2,h2/h1)
+            if total != 0:
+                h1,h2 = h1/total,h2/total
+                ratio = min(h1/h2,h2/h1)
+            else:
+                h1,h2,ratio = 0,0,0
             return [iid1,h1,iid2,h2,ratio,total,num]
 
         def write_out(self,rel_list):
@@ -241,16 +244,19 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
             start1,end1,index_list,num_segs = pair_segs[0][2],pair_segs[0][3],[0],0
             for i in range(1,len(pair_segs)):
                 start2,end2 = pair_segs[i][2],pair_segs[i][3]
-                if start1 == start2:
-                    del index_list[-1]
-                elif end2 <= end1:
+                if start1 < start2 < end1 and start1 < end2 < end1: #Completely overlap
                     continue
-                elif (start2 > end1 + option.cm_gap) or (0 < start2 - end1 <= option.cm_gap and genotype_data.gap_discordance(iid1,iid2,end1,start2,option.disc_homoz)):
-                    num_segs += 1
-                end1 = end2
                 index_list.append(i)
+                if start1 == start2: #Segs have same start but seg2 is as long or longer
+                    del index_list[-2]
+                    continue
+                if start2 > end1 + option.cm_gap or (start2 <= end1 + option.cm_gap and genotype_data.gap_discordance(iid1,iid2,end1,start2,option.disc_homoz)): #New seg
+                    num_segs += 1
+                    start1,end1 = start2,end2
+                    continue
+                end1 = end2
             num_segs += 1
-            pairs.finish_chrm(iid1,iid2,[pair_segs[i] for i in index_list],num_segs)
+            pairs.finish_chrm(iid1,iid2,[pair_segs[i] for i in index_list],num_segs)            
 
     sys.stdout.write("\rCalculating hap score...done   ")
     return pairs.write_out(rel_list)
