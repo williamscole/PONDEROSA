@@ -3,7 +3,7 @@ import sys
 
 def start_up(parameter_dict):
 
-    tree = ["\n       P  O  N  D  E  R  O  S  A",
+    tree = ["\n           P O N D E R O S A",
     "                v.1.1          ",
     "                  &",                   
     "                 ##&",                   
