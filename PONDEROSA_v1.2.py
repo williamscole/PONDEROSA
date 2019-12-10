@@ -50,20 +50,6 @@ ped_rels = {"PO":["PO"],
             "3rd":["GGP","HV","CO"],
             "4th":["GGGP","HC"]}
 
-'''def ilash2germline(match_file):
-    if "/" in match_file:
-        match_file_stripped = match_file.split("/")[-1]
-    for i in range(1,23):
-        ilash = open(match_file  % str(i)).readlines()
-        germline = open("GERMLINE" + match_file_stripped % str(i),"w")
-        for lines in ilash:
-            lines = lines.split()
-            lines[1] = lines[1].split("_")[0] + "." + lines[1].split("_")[1]
-            lines[3] = lines[3].split("_")[0] + "." + lines[3].split("_")[1]
-            lines[7] = "\n"
-            germline.write(" ".join([lines[i] for i in [0,1,2,3,4,5,6,7]]))
-    return "GERMLINE" + match_file_stripped'''
-
 def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
     class GenotypeData:
         def __init__(self,map_file,ped_file,chrm):
