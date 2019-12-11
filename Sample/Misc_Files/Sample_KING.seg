@@ -1,22 +1,15 @@
 FID1	ID1	FID2	ID2	MaxIBD1	MaxIBD2	IBD1Seg	IBD2Seg	PropIBD	InfType
 Sample1	SampleAA0	Sample1	SampleAA1	20.0	6.0	0.0764	0.0023	0.0405	UN
-Sample1	SampleAA0	Sample1	SampleAA2	15.2	0.0	0.0909	0.0000	0.0455	4th
 Sample1	SampleAA0	Sample1	SampleAA3	51.4	0.0	0.2417	0.0000	0.1208	3rd
 Sample1	SampleAA0	Sample1	SampleAA4	138.2	11.3	0.9711	0.0279	0.5135	PO
 Sample1	SampleAA0	Sample1	SampleAA5	138.2	6.6	0.9865	0.0128	0.5060	PO
 Sample1	SampleAA0	Sample1	SampleAA6	21.2	0.0	0.1172	0.0000	0.0586	4th
 Sample1	SampleAA0	Sample1	SampleAA7	19.9	3.7	0.0757	0.0026	0.0404	UN
-Sample1	SampleAA1	Sample1	SampleAA2	13.3	0.0	0.0722	0.0000	0.0361	UN
 Sample1	SampleAA1	Sample1	SampleAA3	37.1	11.1	0.1308	0.0042	0.0696	4th
 Sample1	SampleAA1	Sample1	SampleAA4	13.3	0.0	0.0932	0.0000	0.0466	4th
 Sample1	SampleAA1	Sample1	SampleAA5	10.8	0.0	0.0755	0.0000	0.0377	UN
 Sample1	SampleAA1	Sample1	SampleAA6	17.0	4.3	0.0926	0.0016	0.0479	4th
 Sample1	SampleAA1	Sample1	SampleAA7	147.6	11.0	0.9735	0.0257	0.5125	PO
-Sample1	SampleAA2	Sample1	SampleAA3	16.6	0.0	0.0917	0.0000	0.0459	4th
-Sample1	SampleAA2	Sample1	SampleAA4	147.6	7.7	0.9848	0.0152	0.5076	PO
-Sample1	SampleAA2	Sample1	SampleAA5	138.2	6.4	0.9822	0.0163	0.5074	PO
-Sample1	SampleAA2	Sample1	SampleAA6	34.3	0.0	0.1029	0.0000	0.0515	4th
-Sample1	SampleAA2	Sample1	SampleAA7	147.6	5.1	0.9957	0.0043	0.5021	PO
 Sample1	SampleAA3	Sample1	SampleAA4	42.4	4.3	0.1700	0.0016	0.0866	4th
 Sample1	SampleAA3	Sample1	SampleAA5	36.0	0.0	0.1677	0.0000	0.0839	4th
 Sample1	SampleAA3	Sample1	SampleAA6	31.7	10.0	0.1233	0.0058	0.0675	4th
@@ -42,12 +35,6 @@ Sample1	SampleAA1	Sample2	SampleAB1	15.3	0.0	0.0894	0.0000	0.0447	4th
 Sample1	SampleAA1	Sample2	SampleAB2	27.5	0.0	0.1052	0.0000	0.0526	4th
 Sample1	SampleAA1	Sample2	SampleAB3	13.4	0.0	0.0515	0.0000	0.0258	UN
 Sample1	SampleAA1	Sample2	SampleAB4	32.7	3.3	0.0805	0.0022	0.0425	UN
-Sample1	SampleAA2	Sample1	SampleAA8	138.2	11.0	0.9810	0.0182	0.5087	PO
-Sample1	SampleAA2	Sample1	SampleAA9	98.0	13.8	0.5414	0.0125	0.2832	2nd
-Sample1	SampleAA2	Sample1	SampleAA10	95.9	7.5	0.5313	0.0076	0.2732	2nd
-Sample1	SampleAA2	Sample2	SampleAB1	13.6	6.4	0.0577	0.0024	0.0312	UN
-Sample1	SampleAA2	Sample2	SampleAB2	16.8	0.0	0.0762	0.0000	0.0381	UN
-Sample1	SampleAA2	Sample2	SampleAB4	12.8	0.0	0.0565	0.0000	0.0283	UN
 Sample1	SampleAA3	Sample1	SampleAA8	37.3	0.0	0.1381	0.0000	0.0691	4th
 Sample1	SampleAA3	Sample1	SampleAA9	117.8	18.5	0.9523	0.0457	0.5219	PO
 Sample1	SampleAA3	Sample1	SampleAA10	31.8	0.0	0.1405	0.0000	0.0703	4th
@@ -101,13 +88,6 @@ Sample1	SampleAA1	Sample2	SampleAB9	16.0	0.0	0.0634	0.0000	0.0317	UN
 Sample1	SampleAA1	Sample2	SampleAB10	17.4	0.0	0.0976	0.0000	0.0488	4th
 Sample1	SampleAA1	Sample3	SampleAC0	23.1	3.7	0.0970	0.0014	0.0499	4th
 Sample1	SampleAA1	Sample3	SampleAC1	10.0	0.0	0.0531	0.0000	0.0266	UN
-Sample1	SampleAA2	Sample2	SampleAB5	11.2	0.0	0.0551	0.0000	0.0276	UN
-Sample1	SampleAA2	Sample2	SampleAB6	30.2	0.0	0.0939	0.0000	0.0470	4th
-Sample1	SampleAA2	Sample2	SampleAB8	15.8	5.0	0.0644	0.0019	0.0341	UN
-Sample1	SampleAA2	Sample2	SampleAB9	10.2	2.8	0.0483	0.0010	0.0252	UN
-Sample1	SampleAA2	Sample2	SampleAB10	19.2	0.0	0.0804	0.0000	0.0402	UN
-Sample1	SampleAA2	Sample3	SampleAC0	11.4	2.7	0.0629	0.0010	0.0324	UN
-Sample1	SampleAA2	Sample3	SampleAC1	10.8	0.0	0.0511	0.0000	0.0255	UN
 Sample1	SampleAA3	Sample2	SampleAB5	35.1	0.0	0.0970	0.0000	0.0485	4th
 Sample1	SampleAA3	Sample2	SampleAB6	22.5	0.0	0.0627	0.0000	0.0314	UN
 Sample1	SampleAA3	Sample2	SampleAB7	29.7	0.0	0.1129	0.0000	0.0565	4th
@@ -158,14 +138,6 @@ Sample1	SampleAA1	Sample3	SampleAC2	11.0	4.4	0.0495	0.0030	0.0278	UN
 Sample1	SampleAA1	Sample3	SampleAC3	18.9	4.4	0.0867	0.0017	0.0450	4th
 Sample1	SampleAA1	Sample3	SampleAC4	12.8	0.0	0.0679	0.0000	0.0340	UN
 Sample1	SampleAA1	Sample3	SampleAC6	33.8	0.0	0.1208	0.0000	0.0604	4th
-Sample1	SampleAA2	Sample3	SampleAC2	19.1	3.3	0.0712	0.0024	0.0380	UN
-Sample1	SampleAA2	Sample3	SampleAC3	12.2	3.6	0.0666	0.0026	0.0359	UN
-Sample1	SampleAA2	Sample3	SampleAC4	11.2	2.6	0.0483	0.0010	0.0252	UN
-Sample1	SampleAA2	Sample3	SampleAC5	11.5	0.0	0.0610	0.0000	0.0305	UN
-Sample1	SampleAA2	Sample3	SampleAC6	24.9	5.2	0.0856	0.0051	0.0479	4th
-Sample1	SampleAA2	Sample3	SampleAC7	19.2	0.0	0.0672	0.0000	0.0336	UN
-Sample1	SampleAA2	Sample3	SampleAC8	19.1	0.0	0.0666	0.0000	0.0333	UN
-Sample1	SampleAA2	Sample3	SampleAC9	11.4	0.0	0.0563	0.0000	0.0282	UN
 Sample1	SampleAA3	Sample3	SampleAC2	29.3	0.0	0.0836	0.0000	0.0418	UN
 Sample1	SampleAA3	Sample3	SampleAC3	18.5	0.0	0.0766	0.0000	0.0383	UN
 Sample1	SampleAA3	Sample3	SampleAC4	25.9	0.0	0.0754	0.0000	0.0377	UN
@@ -221,14 +193,6 @@ Sample1	SampleAA1	Sample4	SampleAD3	18.0	0.0	0.0979	0.0000	0.0490	4th
 Sample1	SampleAA1	Sample4	SampleAD4	16.8	0.0	0.0843	0.0000	0.0421	UN
 Sample1	SampleAA1	Sample4	SampleAD5	16.8	0.0	0.0810	0.0000	0.0405	UN
 Sample1	SampleAA1	Sample4	SampleAD6	18.1	0.0	0.0925	0.0000	0.0462	4th
-Sample1	SampleAA2	Sample3	SampleAC10	10.1	0.0	0.0520	0.0000	0.0260	UN
-Sample1	SampleAA2	Sample4	SampleAD0	30.6	0.0	0.0918	0.0000	0.0459	4th
-Sample1	SampleAA2	Sample4	SampleAD1	15.9	9.0	0.0778	0.0051	0.0440	UN
-Sample1	SampleAA2	Sample4	SampleAD2	26.6	0.0	0.0836	0.0000	0.0418	UN
-Sample1	SampleAA2	Sample4	SampleAD3	17.1	0.0	0.0807	0.0000	0.0404	UN
-Sample1	SampleAA2	Sample4	SampleAD4	11.6	0.0	0.0624	0.0000	0.0312	UN
-Sample1	SampleAA2	Sample4	SampleAD5	25.9	11.2	0.1008	0.0042	0.0546	4th
-Sample1	SampleAA2	Sample4	SampleAD6	34.2	0.0	0.1052	0.0000	0.0526	4th
 Sample1	SampleAA3	Sample3	SampleAC10	21.0	0.0	0.0859	0.0000	0.0430	UN
 Sample1	SampleAA3	Sample4	SampleAD0	15.3	4.5	0.0831	0.0030	0.0446	4th
 Sample1	SampleAA3	Sample4	SampleAD1	18.2	0.0	0.0935	0.0000	0.0467	4th
@@ -285,14 +249,6 @@ Sample1	SampleAA1	Sample5	SampleAE0	19.4	0.0	0.0792	0.0000	0.0396	UN
 Sample1	SampleAA1	Sample5	SampleAE1	38.6	0.0	0.0864	0.0000	0.0432	UN
 Sample1	SampleAA1	Sample5	SampleAE2	53.0	0.0	0.1137	0.0000	0.0569	4th
 Sample1	SampleAA1	Sample5	SampleAE3	18.9	8.0	0.0882	0.0055	0.0496	4th
-Sample1	SampleAA2	Sample4	SampleAD7	22.3	0.0	0.0617	0.0000	0.0309	UN
-Sample1	SampleAA2	Sample4	SampleAD8	22.3	9.3	0.0901	0.0035	0.0486	4th
-Sample1	SampleAA2	Sample4	SampleAD9	17.8	0.0	0.0749	0.0000	0.0375	UN
-Sample1	SampleAA2	Sample4	SampleAD10	22.3	0.0	0.0548	0.0000	0.0274	UN
-Sample1	SampleAA2	Sample5	SampleAE0	19.0	0.0	0.0988	0.0000	0.0494	4th
-Sample1	SampleAA2	Sample5	SampleAE1	19.6	3.3	0.0760	0.0013	0.0393	UN
-Sample1	SampleAA2	Sample5	SampleAE2	16.5	4.9	0.0797	0.0018	0.0417	UN
-Sample1	SampleAA2	Sample5	SampleAE3	25.9	0.0	0.0888	0.0000	0.0444	4th
 Sample1	SampleAA3	Sample4	SampleAD7	32.6	3.4	0.1014	0.0013	0.0520	4th
 Sample1	SampleAA3	Sample4	SampleAD8	20.7	3.4	0.1114	0.0013	0.0570	4th
 Sample1	SampleAA3	Sample4	SampleAD9	31.6	6.8	0.1164	0.0025	0.0607	4th
@@ -349,14 +305,6 @@ Sample1	SampleAA1	Sample5	SampleAE8	54.7	3.2	0.0887	0.0012	0.0456	4th
 Sample1	SampleAA1	Sample5	SampleAE9	20.3	8.0	0.1009	0.0030	0.0535	4th
 Sample1	SampleAA1	Sample5	SampleAE10	16.2	0.0	0.0613	0.0000	0.0307	UN
 Sample1	SampleAA1	Sample6	SampleAF0	18.1	2.8	0.0916	0.0010	0.0468	4th
-Sample1	SampleAA2	Sample5	SampleAE4	20.5	4.7	0.0859	0.0045	0.0475	4th
-Sample1	SampleAA2	Sample5	SampleAE5	18.9	0.0	0.0865	0.0000	0.0433	UN
-Sample1	SampleAA2	Sample5	SampleAE6	12.9	0.0	0.0755	0.0000	0.0377	UN
-Sample1	SampleAA2	Sample5	SampleAE7	17.4	3.4	0.0877	0.0013	0.0452	4th
-Sample1	SampleAA2	Sample5	SampleAE8	15.3	0.0	0.0836	0.0000	0.0418	UN
-Sample1	SampleAA2	Sample5	SampleAE9	25.1	0.0	0.0928	0.0000	0.0464	4th
-Sample1	SampleAA2	Sample5	SampleAE10	15.1	0.0	0.0911	0.0000	0.0456	4th
-Sample1	SampleAA2	Sample6	SampleAF0	17.9	0.0	0.0991	0.0000	0.0496	4th
 Sample1	SampleAA3	Sample5	SampleAE4	10.8	0.0	0.0634	0.0000	0.0317	UN
 Sample1	SampleAA3	Sample5	SampleAE5	10.8	0.0	0.0684	0.0000	0.0342	UN
 Sample1	SampleAA3	Sample5	SampleAE6	15.4	0.0	0.0846	0.0000	0.0423	UN
@@ -410,14 +358,6 @@ Sample1	SampleAA1	Sample6	SampleAF5	18.2	0.0	0.0812	0.0000	0.0406	UN
 Sample1	SampleAA1	Sample6	SampleAF6	12.3	0.0	0.0890	0.0000	0.0445	4th
 Sample1	SampleAA1	Sample6	SampleAF7	16.9	0.0	0.0760	0.0000	0.0380	UN
 Sample1	SampleAA1	Sample6	SampleAF8	13.8	0.0	0.0650	0.0000	0.0325	UN
-Sample1	SampleAA2	Sample6	SampleAF1	25.5	0.0	0.0964	0.0000	0.0482	4th
-Sample1	SampleAA2	Sample6	SampleAF2	23.8	0.0	0.0998	0.0000	0.0499	4th
-Sample1	SampleAA2	Sample6	SampleAF3	23.5	0.0	0.1043	0.0000	0.0522	4th
-Sample1	SampleAA2	Sample6	SampleAF4	17.0	3.4	0.1016	0.0013	0.0521	4th
-Sample1	SampleAA2	Sample6	SampleAF5	17.9	0.0	0.0964	0.0000	0.0482	4th
-Sample1	SampleAA2	Sample6	SampleAF6	27.3	3.4	0.0833	0.0013	0.0430	UN
-Sample1	SampleAA2	Sample6	SampleAF7	14.7	0.0	0.0800	0.0000	0.0400	UN
-Sample1	SampleAA2	Sample6	SampleAF8	25.9	0.0	0.0994	0.0000	0.0497	4th
 Sample1	SampleAA3	Sample6	SampleAF1	21.2	0.0	0.0719	0.0000	0.0360	UN
 Sample1	SampleAA3	Sample6	SampleAF2	26.0	0.0	0.0842	0.0000	0.0421	UN
 Sample1	SampleAA3	Sample6	SampleAF3	37.1	2.9	0.0986	0.0011	0.0504	4th
@@ -473,14 +413,6 @@ Sample1	SampleAA1	Sample7	SampleAG2	22.5	0.0	0.1220	0.0000	0.0610	4th
 Sample1	SampleAA1	Sample7	SampleAG3	16.1	0.0	0.0878	0.0000	0.0439	UN
 Sample1	SampleAA1	Sample7	SampleAG4	22.8	3.9	0.0814	0.0014	0.0421	UN
 Sample1	SampleAA1	Sample7	SampleAG5	22.4	0.0	0.1096	0.0000	0.0548	4th
-Sample1	SampleAA2	Sample6	SampleAF9	12.7	5.9	0.1073	0.0037	0.0574	4th
-Sample1	SampleAA2	Sample6	SampleAF10	27.4	0.0	0.0853	0.0000	0.0427	UN
-Sample1	SampleAA2	Sample7	SampleAG0	16.8	0.0	0.0500	0.0000	0.0250	UN
-Sample1	SampleAA2	Sample7	SampleAG1	20.7	10.1	0.0890	0.0038	0.0483	4th
-Sample1	SampleAA2	Sample7	SampleAG2	14.0	0.0	0.0689	0.0000	0.0345	UN
-Sample1	SampleAA2	Sample7	SampleAG3	10.9	0.0	0.0551	0.0000	0.0276	UN
-Sample1	SampleAA2	Sample7	SampleAG4	10.5	0.0	0.0560	0.0000	0.0280	UN
-Sample1	SampleAA2	Sample7	SampleAG5	10.4	0.0	0.0663	0.0000	0.0331	UN
 Sample1	SampleAA3	Sample6	SampleAF9	39.5	6.6	0.1148	0.0025	0.0599	4th
 Sample1	SampleAA3	Sample6	SampleAF10	20.2	0.0	0.0920	0.0000	0.0460	4th
 Sample1	SampleAA3	Sample7	SampleAG0	23.0	3.3	0.0759	0.0012	0.0392	UN
@@ -536,14 +468,6 @@ Sample1	SampleAA1	Sample7	SampleAG10	25.4	0.0	0.1253	0.0000	0.0626	4th
 Sample1	SampleAA1	Sample8	SampleAH0	30.9	0.0	0.1024	0.0000	0.0512	4th
 Sample1	SampleAA1	Sample8	SampleAH1	18.9	0.0	0.0779	0.0000	0.0389	UN
 Sample1	SampleAA1	Sample8	SampleAH2	13.3	0.0	0.0786	0.0000	0.0393	UN
-Sample1	SampleAA2	Sample7	SampleAG6	13.9	0.0	0.0746	0.0000	0.0373	UN
-Sample1	SampleAA2	Sample7	SampleAG7	15.0	3.3	0.0706	0.0013	0.0366	UN
-Sample1	SampleAA2	Sample7	SampleAG8	20.7	10.1	0.0818	0.0038	0.0447	4th
-Sample1	SampleAA2	Sample7	SampleAG9	10.9	0.0	0.0543	0.0000	0.0272	UN
-Sample1	SampleAA2	Sample7	SampleAG10	20.9	0.0	0.0584	0.0000	0.0292	UN
-Sample1	SampleAA2	Sample8	SampleAH0	27.8	0.0	0.0812	0.0000	0.0406	UN
-Sample1	SampleAA2	Sample8	SampleAH1	22.6	0.0	0.1021	0.0000	0.0511	4th
-Sample1	SampleAA2	Sample8	SampleAH2	84.5	11.0	0.5699	0.0158	0.3008	2nd
 Sample1	SampleAA3	Sample7	SampleAG6	18.2	0.0	0.0894	0.0000	0.0447	4th
 Sample1	SampleAA3	Sample7	SampleAG7	13.5	3.2	0.0846	0.0022	0.0445	4th
 Sample1	SampleAA3	Sample7	SampleAG8	13.7	0.0	0.0801	0.0000	0.0401	UN
@@ -600,14 +524,6 @@ Sample1	SampleAA1	Sample8	SampleAH7	13.5	0.0	0.0959	0.0000	0.0479	4th
 Sample1	SampleAA1	Sample8	SampleAH8	13.2	0.0	0.0905	0.0000	0.0453	4th
 Sample1	SampleAA1	Sample8	SampleAH9	30.9	0.0	0.0809	0.0000	0.0404	UN
 Sample1	SampleAA1	Sample8	SampleAH10	20.8	0.0	0.0848	0.0000	0.0424	UN
-Sample1	SampleAA2	Sample8	SampleAH3	17.2	0.0	0.1053	0.0000	0.0527	4th
-Sample1	SampleAA2	Sample8	SampleAH4	59.9	8.2	0.3113	0.0073	0.1630	3rd
-Sample1	SampleAA2	Sample8	SampleAH5	76.2	8.2	0.2885	0.0066	0.1509	3rd
-Sample1	SampleAA2	Sample8	SampleAH6	19.6	0.0	0.0926	0.0000	0.0463	4th
-Sample1	SampleAA2	Sample8	SampleAH7	63.5	3.2	0.3148	0.0012	0.1586	3rd
-Sample1	SampleAA2	Sample8	SampleAH8	63.5	13.4	0.3245	0.0154	0.1777	2nd
-Sample1	SampleAA2	Sample8	SampleAH9	38.9	3.9	0.2037	0.0015	0.1034	3rd
-Sample1	SampleAA2	Sample8	SampleAH10	63.5	5.3	0.1928	0.0035	0.0999	3rd
 Sample1	SampleAA3	Sample8	SampleAH3	21.6	2.6	0.0785	0.0010	0.0403	UN
 Sample1	SampleAA3	Sample8	SampleAH4	24.2	0.0	0.1054	0.0000	0.0527	4th
 Sample1	SampleAA3	Sample8	SampleAH5	24.2	0.0	0.1248	0.0000	0.0624	4th
@@ -663,14 +579,6 @@ Sample1	SampleAA1	Sample9	SampleAI4	14.0	0.0	0.0701	0.0000	0.0351	UN
 Sample1	SampleAA1	Sample9	SampleAI5	17.2	0.0	0.0762	0.0000	0.0381	UN
 Sample1	SampleAA1	Sample9	SampleAI6	20.7	0.0	0.0613	0.0000	0.0307	UN
 Sample1	SampleAA1	Sample9	SampleAI7	10.9	0.0	0.0547	0.0000	0.0274	UN
-Sample1	SampleAA2	Sample9	SampleAI0	23.4	0.0	0.1163	0.0000	0.0582	4th
-Sample1	SampleAA2	Sample9	SampleAI1	49.5	7.1	0.3075	0.0026	0.1563	3rd
-Sample1	SampleAA2	Sample9	SampleAI2	26.9	0.0	0.0726	0.0000	0.0363	UN
-Sample1	SampleAA2	Sample9	SampleAI3	43.5	0.0	0.0766	0.0000	0.0383	UN
-Sample1	SampleAA2	Sample9	SampleAI4	12.2	0.0	0.0872	0.0000	0.0436	UN
-Sample1	SampleAA2	Sample9	SampleAI5	23.4	0.0	0.1136	0.0000	0.0568	4th
-Sample1	SampleAA2	Sample9	SampleAI6	23.4	0.0	0.0757	0.0000	0.0379	UN
-Sample1	SampleAA2	Sample9	SampleAI7	40.0	5.5	0.2119	0.0038	0.1098	3rd
 Sample1	SampleAA3	Sample9	SampleAI0	13.2	0.0	0.0992	0.0000	0.0496	4th
 Sample1	SampleAA3	Sample9	SampleAI1	21.2	3.1	0.0899	0.0011	0.0461	4th
 Sample1	SampleAA3	Sample9	SampleAI2	19.8	0.0	0.0753	0.0000	0.0377	UN
@@ -727,14 +635,6 @@ Sample1	SampleAA1	Sample10	SampleAJ1	45.4	6.1	0.2036	0.0034	0.1052	3rd
 Sample1	SampleAA1	Sample10	SampleAJ2	15.9	0.0	0.0675	0.0000	0.0338	UN
 Sample1	SampleAA1	Sample10	SampleAJ3	19.6	0.0	0.0762	0.0000	0.0381	UN
 Sample1	SampleAA1	Sample10	SampleAJ4	73.7	12.5	0.1462	0.0047	0.0778	4th
-Sample1	SampleAA2	Sample9	SampleAI8	30.5	5.5	0.1742	0.0021	0.0892	3rd
-Sample1	SampleAA2	Sample9	SampleAI9	43.7	0.0	0.0942	0.0000	0.0471	4th
-Sample1	SampleAA2	Sample9	SampleAI10	25.0	15.0	0.1123	0.0056	0.0618	4th
-Sample1	SampleAA2	Sample10	SampleAJ0	13.6	3.7	0.0564	0.0014	0.0296	UN
-Sample1	SampleAA2	Sample10	SampleAJ1	23.1	4.0	0.1037	0.0043	0.0561	4th
-Sample1	SampleAA2	Sample10	SampleAJ2	19.8	3.3	0.1172	0.0012	0.0598	4th
-Sample1	SampleAA2	Sample10	SampleAJ3	20.5	0.0	0.0730	0.0000	0.0365	UN
-Sample1	SampleAA2	Sample10	SampleAJ4	15.6	0.0	0.0911	0.0000	0.0456	4th
 Sample1	SampleAA3	Sample9	SampleAI8	22.1	0.0	0.0971	0.0000	0.0486	4th
 Sample1	SampleAA3	Sample9	SampleAI9	15.3	0.0	0.0760	0.0000	0.0380	UN
 Sample1	SampleAA3	Sample9	SampleAI10	16.5	0.0	0.0799	0.0000	0.0399	UN
@@ -791,14 +691,6 @@ Sample1	SampleAA1	Sample10	SampleAJ9	54.9	0.0	0.1178	0.0000	0.0589	4th
 Sample1	SampleAA1	Sample10	SampleAJ10	19.1	0.0	0.1164	0.0000	0.0582	4th
 Sample1	SampleAA1	Sample11	SampleAK0	65.4	6.4	0.3232	0.0035	0.1651	3rd
 Sample1	SampleAA1	Sample11	SampleAK1	14.8	0.0	0.0748	0.0000	0.0374	UN
-Sample1	SampleAA2	Sample10	SampleAJ5	15.8	0.0	0.0833	0.0000	0.0416	UN
-Sample1	SampleAA2	Sample10	SampleAJ6	18.6	5.9	0.0887	0.0040	0.0484	4th
-Sample1	SampleAA2	Sample10	SampleAJ7	15.9	9.4	0.1305	0.0071	0.0723	4th
-Sample1	SampleAA2	Sample10	SampleAJ8	22.5	0.0	0.1089	0.0000	0.0545	4th
-Sample1	SampleAA2	Sample10	SampleAJ9	20.4	8.0	0.0932	0.0030	0.0496	4th
-Sample1	SampleAA2	Sample10	SampleAJ10	19.9	0.0	0.1262	0.0000	0.0631	4th
-Sample1	SampleAA2	Sample11	SampleAK0	17.9	7.6	0.0753	0.0028	0.0404	UN
-Sample1	SampleAA2	Sample11	SampleAK1	16.5	3.2	0.0887	0.0012	0.0456	4th
 Sample1	SampleAA3	Sample10	SampleAJ5	15.6	0.0	0.0776	0.0000	0.0388	UN
 Sample1	SampleAA3	Sample10	SampleAJ6	39.6	4.5	0.1120	0.0017	0.0577	4th
 Sample1	SampleAA3	Sample10	SampleAJ7	17.0	9.2	0.0967	0.0070	0.0554	4th
@@ -855,14 +747,6 @@ Sample1	SampleAA1	Sample11	SampleAK6	18.1	0.0	0.0922	0.0000	0.0461	4th
 Sample1	SampleAA1	Sample11	SampleAK7	46.2	4.6	0.2872	0.0065	0.1501	3rd
 Sample1	SampleAA1	Sample11	SampleAK8	60.3	4.6	0.2901	0.0054	0.1505	3rd
 Sample1	SampleAA1	Sample11	SampleAK9	65.4	0.0	0.2667	0.0000	0.1333	3rd
-Sample1	SampleAA2	Sample11	SampleAK2	16.2	0.0	0.0854	0.0000	0.0427	UN
-Sample1	SampleAA2	Sample11	SampleAK3	13.7	0.0	0.0879	0.0000	0.0440	UN
-Sample1	SampleAA2	Sample11	SampleAK4	14.5	9.3	0.0753	0.0035	0.0412	UN
-Sample1	SampleAA2	Sample11	SampleAK5	11.2	9.3	0.0680	0.0035	0.0375	UN
-Sample1	SampleAA2	Sample11	SampleAK6	24.2	0.0	0.0820	0.0000	0.0410	UN
-Sample1	SampleAA2	Sample11	SampleAK7	15.8	0.0	0.0969	0.0000	0.0485	4th
-Sample1	SampleAA2	Sample11	SampleAK8	12.0	5.8	0.0744	0.0022	0.0394	UN
-Sample1	SampleAA2	Sample11	SampleAK9	16.1	0.0	0.0847	0.0000	0.0423	UN
 Sample1	SampleAA3	Sample11	SampleAK2	47.3	4.7	0.1215	0.0033	0.0641	4th
 Sample1	SampleAA3	Sample11	SampleAK3	15.0	8.7	0.0798	0.0047	0.0446	4th
 Sample1	SampleAA3	Sample11	SampleAK4	54.9	3.3	0.1164	0.0035	0.0617	4th
@@ -919,14 +803,6 @@ Sample1	SampleAA1	Sample12	SampleAL3	14.6	0.0	0.0933	0.0000	0.0467	4th
 Sample1	SampleAA1	Sample12	SampleAL4	29.5	0.0	0.1156	0.0000	0.0578	4th
 Sample1	SampleAA1	Sample12	SampleAL5	16.9	0.0	0.0978	0.0000	0.0489	4th
 Sample1	SampleAA1	Sample12	SampleAL6	17.6	0.0	0.0977	0.0000	0.0489	4th
-Sample1	SampleAA2	Sample11	SampleAK10	23.8	4.0	0.0886	0.0015	0.0458	4th
-Sample1	SampleAA2	Sample12	SampleAL0	14.1	0.0	0.0665	0.0000	0.0333	UN
-Sample1	SampleAA2	Sample12	SampleAL1	45.4	0.0	0.1910	0.0000	0.0955	3rd
-Sample1	SampleAA2	Sample12	SampleAL2	14.0	0.0	0.0905	0.0000	0.0453	4th
-Sample1	SampleAA2	Sample12	SampleAL3	23.2	0.0	0.0894	0.0000	0.0447	4th
-Sample1	SampleAA2	Sample12	SampleAL4	14.1	0.0	0.0786	0.0000	0.0393	UN
-Sample1	SampleAA2	Sample12	SampleAL5	10.3	0.0	0.0596	0.0000	0.0298	UN
-Sample1	SampleAA2	Sample12	SampleAL6	17.5	0.0	0.0928	0.0000	0.0464	4th
 Sample1	SampleAA3	Sample11	SampleAK10	21.1	0.0	0.0878	0.0000	0.0439	UN
 Sample1	SampleAA3	Sample12	SampleAL0	22.2	0.0	0.1194	0.0000	0.0597	4th
 Sample1	SampleAA3	Sample12	SampleAL1	13.3	4.4	0.0892	0.0017	0.0463	4th
@@ -983,13 +859,6 @@ Sample1	SampleAA1	Sample13	SampleAM0	12.1	0.0	0.0853	0.0000	0.0427	UN
 Sample1	SampleAA1	Sample13	SampleAM1	25.0	4.9	0.0936	0.0018	0.0486	4th
 Sample1	SampleAA1	Sample13	SampleAM2	63.5	4.0	0.2477	0.0015	0.1253	3rd
 Sample1	SampleAA1	Sample13	SampleAM3	13.9	0.0	0.0659	0.0000	0.0330	UN
-Sample1	SampleAA2	Sample12	SampleAL7	45.6	0.0	0.1403	0.0000	0.0702	4th
-Sample1	SampleAA2	Sample12	SampleAL8	22.9	9.5	0.1119	0.0062	0.0621	4th
-Sample1	SampleAA2	Sample12	SampleAL9	15.0	0.0	0.0761	0.0000	0.0381	UN
-Sample1	SampleAA2	Sample12	SampleAL10	17.5	0.0	0.1333	0.0000	0.0667	4th
-Sample1	SampleAA2	Sample13	SampleAM1	19.2	0.0	0.0846	0.0000	0.0423	UN
-Sample1	SampleAA2	Sample13	SampleAM2	23.7	0.0	0.1117	0.0000	0.0559	4th
-Sample1	SampleAA2	Sample13	SampleAM3	31.0	6.0	0.1222	0.0022	0.0633	4th
 Sample1	SampleAA3	Sample12	SampleAL7	20.7	4.4	0.0823	0.0017	0.0428	UN
 Sample1	SampleAA3	Sample12	SampleAL8	16.7	4.4	0.0901	0.0017	0.0467	4th
 Sample1	SampleAA3	Sample12	SampleAL9	14.6	0.0	0.0912	0.0000	0.0456	4th
@@ -1045,14 +914,6 @@ Sample1	SampleAA1	Sample13	SampleAM8	34.0	7.2	0.1783	0.0027	0.0919	3rd
 Sample1	SampleAA1	Sample13	SampleAM9	63.5	3.4	0.1358	0.0013	0.0692	4th
 Sample1	SampleAA1	Sample13	SampleAM10	25.8	5.0	0.1621	0.0019	0.0829	4th
 Sample1	SampleAA1	Sample14	SampleAN0	17.4	0.0	0.0727	0.0000	0.0364	UN
-Sample1	SampleAA2	Sample13	SampleAM4	16.3	0.0	0.0864	0.0000	0.0432	UN
-Sample1	SampleAA2	Sample13	SampleAM5	24.5	3.3	0.0934	0.0012	0.0479	4th
-Sample1	SampleAA2	Sample13	SampleAM6	15.5	3.7	0.0895	0.0025	0.0473	4th
-Sample1	SampleAA2	Sample13	SampleAM7	20.9	3.0	0.0915	0.0011	0.0468	4th
-Sample1	SampleAA2	Sample13	SampleAM8	14.0	0.0	0.0931	0.0000	0.0466	4th
-Sample1	SampleAA2	Sample13	SampleAM9	16.4	15.2	0.0959	0.0069	0.0549	4th
-Sample1	SampleAA2	Sample13	SampleAM10	20.9	12.6	0.0943	0.0047	0.0519	4th
-Sample1	SampleAA2	Sample14	SampleAN0	13.1	0.0	0.0570	0.0000	0.0285	UN
 Sample1	SampleAA3	Sample13	SampleAM4	22.7	0.0	0.0663	0.0000	0.0331	UN
 Sample1	SampleAA3	Sample13	SampleAM5	26.1	0.0	0.0782	0.0000	0.0391	UN
 Sample1	SampleAA3	Sample13	SampleAM6	24.5	2.9	0.1314	0.0011	0.0668	4th
@@ -1109,14 +970,6 @@ Sample1	SampleAA1	Sample14	SampleAN5	15.6	2.9	0.0795	0.0011	0.0408	UN
 Sample1	SampleAA1	Sample14	SampleAN6	14.9	0.0	0.0486	0.0000	0.0243	UN
 Sample1	SampleAA1	Sample14	SampleAN7	12.3	0.0	0.0735	0.0000	0.0368	UN
 Sample1	SampleAA1	Sample14	SampleAN8	21.6	0.0	0.0809	0.0000	0.0404	UN
-Sample1	SampleAA2	Sample14	SampleAN1	32.3	4.0	0.0847	0.0015	0.0439	UN
-Sample1	SampleAA2	Sample14	SampleAN2	23.8	0.0	0.0670	0.0000	0.0335	UN
-Sample1	SampleAA2	Sample14	SampleAN3	19.5	3.5	0.0795	0.0013	0.0411	UN
-Sample1	SampleAA2	Sample14	SampleAN4	11.8	6.8	0.0585	0.0025	0.0318	UN
-Sample1	SampleAA2	Sample14	SampleAN5	17.2	0.0	0.0523	0.0000	0.0261	UN
-Sample1	SampleAA2	Sample14	SampleAN6	13.7	0.0	0.0763	0.0000	0.0382	UN
-Sample1	SampleAA2	Sample14	SampleAN7	20.0	0.0	0.0832	0.0000	0.0416	UN
-Sample1	SampleAA2	Sample14	SampleAN8	17.2	0.0	0.0856	0.0000	0.0428	UN
 Sample1	SampleAA3	Sample14	SampleAN1	14.5	0.0	0.0620	0.0000	0.0310	UN
 Sample1	SampleAA3	Sample14	SampleAN2	19.4	0.0	0.0788	0.0000	0.0394	UN
 Sample1	SampleAA3	Sample14	SampleAN3	38.4	0.0	0.1473	0.0000	0.0737	4th
@@ -1171,14 +1024,6 @@ Sample1	SampleAA1	Sample15	SampleAO2	12.9	0.0	0.0628	0.0000	0.0314	UN
 Sample1	SampleAA1	Sample15	SampleAO3	46.6	4.4	0.2362	0.0028	0.1209	3rd
 Sample1	SampleAA1	Sample15	SampleAO4	17.1	2.7	0.0696	0.0010	0.0358	UN
 Sample1	SampleAA1	Sample15	SampleAO5	12.9	0.0	0.0731	0.0000	0.0365	UN
-Sample1	SampleAA2	Sample14	SampleAN9	19.2	0.0	0.0573	0.0000	0.0287	UN
-Sample1	SampleAA2	Sample14	SampleAN10	17.7	4.8	0.0733	0.0018	0.0385	UN
-Sample1	SampleAA2	Sample15	SampleAO0	34.0	0.0	0.1953	0.0000	0.0977	3rd
-Sample1	SampleAA2	Sample15	SampleAO1	21.2	0.0	0.0844	0.0000	0.0422	UN
-Sample1	SampleAA2	Sample15	SampleAO2	19.8	3.3	0.1113	0.0012	0.0569	4th
-Sample1	SampleAA2	Sample15	SampleAO3	12.5	0.0	0.0759	0.0000	0.0380	UN
-Sample1	SampleAA2	Sample15	SampleAO4	34.1	13.2	0.1503	0.0049	0.0801	4th
-Sample1	SampleAA2	Sample15	SampleAO5	27.4	13.2	0.1092	0.0049	0.0595	4th
 Sample1	SampleAA3	Sample14	SampleAN9	32.2	5.5	0.1041	0.0038	0.0558	4th
 Sample1	SampleAA3	Sample14	SampleAN10	27.0	0.0	0.0806	0.0000	0.0403	UN
 Sample1	SampleAA3	Sample15	SampleAO0	21.5	0.0	0.1011	0.0000	0.0506	4th
@@ -1233,14 +1078,6 @@ Sample1	SampleAA1	Sample15	SampleAO10	11.1	0.0	0.0612	0.0000	0.0306	UN
 Sample1	SampleAA1	Sample16	SampleAP0	12.4	0.0	0.0701	0.0000	0.0351	UN
 Sample1	SampleAA1	Sample16	SampleAP1	22.8	5.9	0.1150	0.0057	0.0632	4th
 Sample1	SampleAA1	Sample16	SampleAP2	17.1	0.0	0.0911	0.0000	0.0456	4th
-Sample1	SampleAA2	Sample15	SampleAO6	14.3	0.0	0.0650	0.0000	0.0325	UN
-Sample1	SampleAA2	Sample15	SampleAO7	19.5	0.0	0.1094	0.0000	0.0547	4th
-Sample1	SampleAA2	Sample15	SampleAO8	19.5	0.0	0.0936	0.0000	0.0468	4th
-Sample1	SampleAA2	Sample15	SampleAO9	22.0	4.1	0.1189	0.0028	0.0622	4th
-Sample1	SampleAA2	Sample15	SampleAO10	14.1	0.0	0.0942	0.0000	0.0471	4th
-Sample1	SampleAA2	Sample16	SampleAP0	19.1	4.1	0.0868	0.0016	0.0450	4th
-Sample1	SampleAA2	Sample16	SampleAP1	15.5	8.1	0.0774	0.0030	0.0417	UN
-Sample1	SampleAA2	Sample16	SampleAP2	22.8	0.0	0.0841	0.0000	0.0421	UN
 Sample1	SampleAA3	Sample15	SampleAO6	17.2	0.0	0.0588	0.0000	0.0294	UN
 Sample1	SampleAA3	Sample15	SampleAO7	14.0	4.5	0.0844	0.0017	0.0439	UN
 Sample1	SampleAA3	Sample15	SampleAO8	15.3	0.0	0.0841	0.0000	0.0421	UN
@@ -1297,14 +1134,6 @@ Sample1	SampleAA1	Sample16	SampleAP7	21.3	0.0	0.1120	0.0000	0.0560	4th
 Sample1	SampleAA1	Sample16	SampleAP8	21.3	0.0	0.0868	0.0000	0.0434	UN
 Sample1	SampleAA1	Sample16	SampleAP9	88.8	6.8	0.4572	0.0073	0.2359	2nd
 Sample1	SampleAA1	Sample16	SampleAP10	16.9	0.0	0.0943	0.0000	0.0472	4th
-Sample1	SampleAA2	Sample16	SampleAP3	34.3	0.0	0.1059	0.0000	0.0530	4th
-Sample1	SampleAA2	Sample16	SampleAP4	15.2	0.0	0.0879	0.0000	0.0440	UN
-Sample1	SampleAA2	Sample16	SampleAP5	15.1	0.0	0.0639	0.0000	0.0319	UN
-Sample1	SampleAA2	Sample16	SampleAP6	14.0	0.0	0.0788	0.0000	0.0394	UN
-Sample1	SampleAA2	Sample16	SampleAP7	22.8	0.0	0.0780	0.0000	0.0390	UN
-Sample1	SampleAA2	Sample16	SampleAP8	15.6	6.3	0.0732	0.0024	0.0390	UN
-Sample1	SampleAA2	Sample16	SampleAP9	13.6	0.0	0.0897	0.0000	0.0449	4th
-Sample1	SampleAA2	Sample16	SampleAP10	16.1	0.0	0.0783	0.0000	0.0392	UN
 Sample1	SampleAA3	Sample16	SampleAP3	52.7	3.8	0.1288	0.0027	0.0671	4th
 Sample1	SampleAA3	Sample16	SampleAP4	15.9	5.5	0.1126	0.0021	0.0584	4th
 Sample1	SampleAA3	Sample16	SampleAP5	15.9	5.9	0.0909	0.0036	0.0491	4th
@@ -1361,14 +1190,6 @@ Sample1	SampleAA1	Sample17	SampleAQ4	20.7	7.2	0.1002	0.0040	0.0541	4th
 Sample1	SampleAA1	Sample17	SampleAQ5	20.7	7.2	0.0830	0.0065	0.0480	4th
 Sample1	SampleAA1	Sample17	SampleAQ6	12.8	0.0	0.0609	0.0000	0.0305	UN
 Sample1	SampleAA1	Sample17	SampleAQ7	18.8	0.0	0.0876	0.0000	0.0438	UN
-Sample1	SampleAA2	Sample17	SampleAQ0	30.6	3.5	0.0989	0.0013	0.0508	4th
-Sample1	SampleAA2	Sample17	SampleAQ1	22.6	0.0	0.0883	0.0000	0.0442	UN
-Sample1	SampleAA2	Sample17	SampleAQ2	13.5	3.0	0.0659	0.0022	0.0352	UN
-Sample1	SampleAA2	Sample17	SampleAQ3	25.0	4.4	0.0773	0.0016	0.0403	UN
-Sample1	SampleAA2	Sample17	SampleAQ4	30.2	0.0	0.0912	0.0000	0.0456	4th
-Sample1	SampleAA2	Sample17	SampleAQ5	30.2	0.0	0.0938	0.0000	0.0469	4th
-Sample1	SampleAA2	Sample17	SampleAQ6	20.5	0.0	0.0842	0.0000	0.0421	UN
-Sample1	SampleAA2	Sample17	SampleAQ7	21.0	9.4	0.0739	0.0035	0.0405	UN
 Sample1	SampleAA3	Sample17	SampleAQ0	80.1	8.3	0.3301	0.0101	0.1752	3rd
 Sample1	SampleAA3	Sample17	SampleAQ1	17.8	0.0	0.0718	0.0000	0.0359	UN
 Sample1	SampleAA3	Sample17	SampleAQ2	18.5	0.0	0.0821	0.0000	0.0411	UN
@@ -1425,14 +1246,6 @@ Sample1	SampleAA1	Sample18	SampleAR1	12.7	3.2	0.0627	0.0012	0.0326	UN
 Sample1	SampleAA1	Sample18	SampleAR2	65.1	3.0	0.2324	0.0011	0.1173	3rd
 Sample1	SampleAA1	Sample18	SampleAR3	29.3	14.0	0.1124	0.0111	0.0673	4th
 Sample1	SampleAA1	Sample18	SampleAR4	52.5	5.3	0.1236	0.0035	0.0653	4th
-Sample1	SampleAA2	Sample17	SampleAQ8	18.7	3.5	0.0752	0.0013	0.0389	UN
-Sample1	SampleAA2	Sample17	SampleAQ9	15.1	24.8	0.0890	0.0093	0.0538	4th
-Sample1	SampleAA2	Sample17	SampleAQ10	18.6	0.0	0.0965	0.0000	0.0483	4th
-Sample1	SampleAA2	Sample18	SampleAR0	33.7	0.0	0.1376	0.0000	0.0688	4th
-Sample1	SampleAA2	Sample18	SampleAR1	14.7	0.0	0.0845	0.0000	0.0423	UN
-Sample1	SampleAA2	Sample18	SampleAR2	10.7	0.0	0.0704	0.0000	0.0352	UN
-Sample1	SampleAA2	Sample18	SampleAR3	16.3	0.0	0.0816	0.0000	0.0408	UN
-Sample1	SampleAA2	Sample18	SampleAR4	33.7	3.6	0.0945	0.0014	0.0486	4th
 Sample1	SampleAA3	Sample17	SampleAQ8	21.6	0.0	0.0718	0.0000	0.0359	UN
 Sample1	SampleAA3	Sample17	SampleAQ9	24.3	0.0	0.1101	0.0000	0.0551	4th
 Sample1	SampleAA3	Sample17	SampleAQ10	18.5	0.0	0.0799	0.0000	0.0399	UN
@@ -1489,14 +1302,6 @@ Sample1	SampleAA1	Sample18	SampleAR9	31.8	3.4	0.1197	0.0013	0.0612	4th
 Sample1	SampleAA1	Sample18	SampleAR10	22.4	0.0	0.1091	0.0000	0.0546	4th
 Sample1	SampleAA1	Sample19	SampleAS0	16.0	0.0	0.0795	0.0000	0.0398	UN
 Sample1	SampleAA1	Sample19	SampleAS1	18.3	0.0	0.1174	0.0000	0.0587	4th
-Sample1	SampleAA2	Sample18	SampleAR5	20.4	4.3	0.0909	0.0016	0.0471	4th
-Sample1	SampleAA2	Sample18	SampleAR6	17.0	0.0	0.0939	0.0000	0.0470	4th
-Sample1	SampleAA2	Sample18	SampleAR7	13.9	0.0	0.0797	0.0000	0.0399	UN
-Sample1	SampleAA2	Sample18	SampleAR8	17.9	0.0	0.0751	0.0000	0.0376	UN
-Sample1	SampleAA2	Sample18	SampleAR9	14.0	3.5	0.0823	0.0013	0.0425	UN
-Sample1	SampleAA2	Sample18	SampleAR10	12.7	0.0	0.0836	0.0000	0.0418	UN
-Sample1	SampleAA2	Sample19	SampleAS0	74.7	5.5	0.3555	0.0039	0.1817	2nd
-Sample1	SampleAA2	Sample19	SampleAS1	29.4	0.0	0.1103	0.0000	0.0552	4th
 Sample1	SampleAA3	Sample18	SampleAR5	20.4	0.0	0.0953	0.0000	0.0477	4th
 Sample1	SampleAA3	Sample18	SampleAR6	14.6	0.0	0.0953	0.0000	0.0477	4th
 Sample1	SampleAA3	Sample18	SampleAR7	18.9	0.0	0.0882	0.0000	0.0441	UN
@@ -1553,14 +1358,6 @@ Sample1	SampleAA1	Sample19	SampleAS6	27.5	0.0	0.0961	0.0000	0.0481	4th
 Sample1	SampleAA1	Sample19	SampleAS7	17.6	0.0	0.0932	0.0000	0.0466	4th
 Sample1	SampleAA1	Sample19	SampleAS8	17.1	0.0	0.1046	0.0000	0.0523	4th
 Sample1	SampleAA1	Sample19	SampleAS9	11.9	7.2	0.0888	0.0038	0.0482	4th
-Sample1	SampleAA2	Sample19	SampleAS2	14.6	0.0	0.0913	0.0000	0.0457	4th
-Sample1	SampleAA2	Sample19	SampleAS3	12.5	4.3	0.0704	0.0016	0.0368	UN
-Sample1	SampleAA2	Sample19	SampleAS4	75.3	8.4	0.2384	0.0084	0.1276	3rd
-Sample1	SampleAA2	Sample19	SampleAS5	46.6	8.4	0.1987	0.0059	0.1053	3rd
-Sample1	SampleAA2	Sample19	SampleAS6	14.3	0.0	0.0796	0.0000	0.0398	UN
-Sample1	SampleAA2	Sample19	SampleAS7	30.2	4.9	0.0924	0.0018	0.0480	4th
-Sample1	SampleAA2	Sample19	SampleAS8	29.0	4.1	0.0853	0.0029	0.0456	4th
-Sample1	SampleAA2	Sample19	SampleAS9	62.6	11.8	0.1807	0.0097	0.1001	3rd
 Sample1	SampleAA3	Sample19	SampleAS2	29.7	9.1	0.0899	0.0034	0.0484	4th
 Sample1	SampleAA3	Sample19	SampleAS3	38.5	0.0	0.1297	0.0000	0.0649	4th
 Sample1	SampleAA3	Sample19	SampleAS4	20.2	0.0	0.1044	0.0000	0.0522	4th
@@ -1616,14 +1413,6 @@ Sample1	SampleAA1	Sample20	SampleAT3	20.0	0.0	0.0830	0.0000	0.0415	UN
 Sample1	SampleAA1	Sample20	SampleAT4	21.1	0.0	0.0880	0.0000	0.0440	UN
 Sample1	SampleAA1	Sample20	SampleAT5	41.0	4.5	0.0989	0.0032	0.0527	4th
 Sample1	SampleAA1	Sample20	SampleAT6	17.1	3.4	0.0963	0.0013	0.0495	4th
-Sample1	SampleAA2	Sample19	SampleAS10	29.3	0.0	0.0908	0.0000	0.0454	4th
-Sample1	SampleAA2	Sample20	SampleAT0	14.7	0.0	0.0539	0.0000	0.0270	UN
-Sample1	SampleAA2	Sample20	SampleAT1	14.7	0.0	0.0776	0.0000	0.0388	UN
-Sample1	SampleAA2	Sample20	SampleAT2	16.8	9.7	0.0766	0.0049	0.0432	UN
-Sample1	SampleAA2	Sample20	SampleAT3	14.7	0.0	0.0702	0.0000	0.0351	UN
-Sample1	SampleAA2	Sample20	SampleAT4	14.5	0.0	0.0652	0.0000	0.0326	UN
-Sample1	SampleAA2	Sample20	SampleAT5	16.2	0.0	0.0541	0.0000	0.0271	UN
-Sample1	SampleAA2	Sample20	SampleAT6	15.0	0.0	0.1035	0.0000	0.0518	4th
 Sample1	SampleAA3	Sample19	SampleAS10	31.6	0.0	0.1144	0.0000	0.0572	4th
 Sample1	SampleAA3	Sample20	SampleAT0	51.3	2.8	0.2747	0.0011	0.1384	3rd
 Sample1	SampleAA3	Sample20	SampleAT1	15.6	0.0	0.0800	0.0000	0.0400	UN
@@ -1678,14 +1467,6 @@ Sample1	SampleAA1	Sample21	SampleAU0	13.5	0.0	0.0758	0.0000	0.0379	UN
 Sample1	SampleAA1	Sample21	SampleAU1	23.1	0.0	0.0648	0.0000	0.0324	UN
 Sample1	SampleAA1	Sample21	SampleAU2	20.9	0.0	0.0691	0.0000	0.0346	UN
 Sample1	SampleAA1	Sample21	SampleAU3	11.2	0.0	0.0658	0.0000	0.0329	UN
-Sample1	SampleAA2	Sample20	SampleAT7	16.5	0.0	0.0920	0.0000	0.0460	4th
-Sample1	SampleAA2	Sample20	SampleAT8	10.9	0.0	0.0805	0.0000	0.0403	UN
-Sample1	SampleAA2	Sample20	SampleAT9	13.1	0.0	0.0612	0.0000	0.0306	UN
-Sample1	SampleAA2	Sample20	SampleAT10	16.1	0.0	0.0979	0.0000	0.0490	4th
-Sample1	SampleAA2	Sample21	SampleAU0	15.6	0.0	0.0976	0.0000	0.0488	4th
-Sample1	SampleAA2	Sample21	SampleAU1	19.3	0.0	0.0866	0.0000	0.0433	UN
-Sample1	SampleAA2	Sample21	SampleAU2	20.0	3.3	0.0899	0.0012	0.0462	4th
-Sample1	SampleAA2	Sample21	SampleAU3	30.0	0.0	0.1372	0.0000	0.0686	4th
 Sample1	SampleAA3	Sample20	SampleAT7	20.7	0.0	0.0942	0.0000	0.0471	4th
 Sample1	SampleAA3	Sample20	SampleAT8	20.7	3.5	0.1030	0.0013	0.0528	4th
 Sample1	SampleAA3	Sample20	SampleAT9	32.0	3.2	0.1381	0.0012	0.0703	4th
@@ -1741,14 +1522,6 @@ Sample1	SampleAA1	Sample21	SampleAU8	21.1	0.0	0.0657	0.0000	0.0329	UN
 Sample1	SampleAA1	Sample21	SampleAU9	21.3	0.0	0.0678	0.0000	0.0339	UN
 Sample1	SampleAA1	Sample21	SampleAU10	21.3	0.0	0.0681	0.0000	0.0341	UN
 Sample1	SampleAA1	Sample22	SampleAV0	16.4	6.5	0.0883	0.0024	0.0466	4th
-Sample1	SampleAA2	Sample21	SampleAU4	16.1	0.0	0.0908	0.0000	0.0454	4th
-Sample1	SampleAA2	Sample21	SampleAU5	16.1	0.0	0.1072	0.0000	0.0536	4th
-Sample1	SampleAA2	Sample21	SampleAU6	14.3	9.3	0.0855	0.0035	0.0463	4th
-Sample1	SampleAA2	Sample21	SampleAU7	11.9	0.0	0.0900	0.0000	0.0450	4th
-Sample1	SampleAA2	Sample21	SampleAU8	10.8	0.0	0.0715	0.0000	0.0358	UN
-Sample1	SampleAA2	Sample21	SampleAU9	29.8	2.7	0.1086	0.0010	0.0553	4th
-Sample1	SampleAA2	Sample21	SampleAU10	14.8	9.2	0.1102	0.0062	0.0613	4th
-Sample1	SampleAA2	Sample22	SampleAV0	13.7	6.3	0.0688	0.0024	0.0368	UN
 Sample1	SampleAA3	Sample21	SampleAU4	22.4	0.0	0.0799	0.0000	0.0399	UN
 Sample1	SampleAA3	Sample21	SampleAU5	14.7	0.0	0.0799	0.0000	0.0399	UN
 Sample1	SampleAA3	Sample21	SampleAU6	15.3	0.0	0.0752	0.0000	0.0376	UN
@@ -1803,13 +1576,6 @@ Sample1	SampleAA1	Sample22	SampleAV5	17.9	0.0	0.0966	0.0000	0.0483	4th
 Sample1	SampleAA1	Sample22	SampleAV6	20.4	3.5	0.0810	0.0013	0.0418	UN
 Sample1	SampleAA1	Sample22	SampleAV7	13.8	0.0	0.0719	0.0000	0.0360	UN
 Sample1	SampleAA1	Sample22	SampleAV8	13.8	0.0	0.0731	0.0000	0.0365	UN
-Sample1	SampleAA2	Sample22	SampleAV1	27.7	0.0	0.1072	0.0000	0.0536	4th
-Sample1	SampleAA2	Sample22	SampleAV2	15.5	0.0	0.0857	0.0000	0.0428	UN
-Sample1	SampleAA2	Sample22	SampleAV3	25.9	0.0	0.0615	0.0000	0.0308	UN
-Sample1	SampleAA2	Sample22	SampleAV4	11.4	10.1	0.0690	0.0038	0.0383	UN
-Sample1	SampleAA2	Sample22	SampleAV5	15.5	0.0	0.0712	0.0000	0.0356	UN
-Sample1	SampleAA2	Sample22	SampleAV7	19.6	4.9	0.0944	0.0018	0.0490	4th
-Sample1	SampleAA2	Sample22	SampleAV8	11.4	5.0	0.0808	0.0019	0.0423	UN
 Sample1	SampleAA3	Sample22	SampleAV1	39.3	0.0	0.1266	0.0000	0.0633	4th
 Sample1	SampleAA3	Sample22	SampleAV2	19.3	0.0	0.0911	0.0000	0.0456	4th
 Sample1	SampleAA3	Sample22	SampleAV3	11.9	0.0	0.0721	0.0000	0.0360	UN
@@ -1864,14 +1630,6 @@ Sample1	SampleAA1	Sample23	SampleAW2	25.9	0.0	0.0853	0.0000	0.0427	UN
 Sample1	SampleAA1	Sample23	SampleAW3	12.9	0.0	0.0874	0.0000	0.0437	UN
 Sample1	SampleAA1	Sample23	SampleAW4	15.2	5.0	0.0726	0.0019	0.0382	UN
 Sample1	SampleAA1	Sample23	SampleAW5	14.3	5.0	0.0642	0.0019	0.0340	UN
-Sample1	SampleAA2	Sample22	SampleAV9	14.1	0.0	0.0751	0.0000	0.0376	UN
-Sample1	SampleAA2	Sample22	SampleAV10	19.2	0.0	0.0831	0.0000	0.0416	UN
-Sample1	SampleAA2	Sample23	SampleAW0	20.4	0.0	0.0940	0.0000	0.0470	4th
-Sample1	SampleAA2	Sample23	SampleAW1	24.2	0.0	0.1091	0.0000	0.0546	4th
-Sample1	SampleAA2	Sample23	SampleAW2	12.6	0.0	0.0761	0.0000	0.0381	UN
-Sample1	SampleAA2	Sample23	SampleAW3	17.1	0.0	0.0796	0.0000	0.0398	UN
-Sample1	SampleAA2	Sample23	SampleAW4	17.8	3.1	0.0808	0.0011	0.0415	UN
-Sample1	SampleAA2	Sample23	SampleAW5	17.7	0.0	0.0641	0.0000	0.0321	UN
 Sample1	SampleAA3	Sample22	SampleAV9	12.7	0.0	0.0954	0.0000	0.0477	4th
 Sample1	SampleAA3	Sample22	SampleAV10	15.6	5.6	0.0906	0.0021	0.0474	4th
 Sample1	SampleAA3	Sample23	SampleAW0	17.6	0.0	0.0632	0.0000	0.0316	UN
@@ -1927,14 +1685,6 @@ Sample1	SampleAA1	Sample23	SampleAW10	18.2	0.0	0.1014	0.0000	0.0507	4th
 Sample1	SampleAA1	Sample24	SampleAX0	77.2	0.0	0.3234	0.0000	0.1617	3rd
 Sample1	SampleAA1	Sample24	SampleAX1	17.3	0.0	0.0837	0.0000	0.0419	UN
 Sample1	SampleAA1	Sample24	SampleAX2	19.5	0.0	0.0623	0.0000	0.0312	UN
-Sample1	SampleAA2	Sample23	SampleAW6	13.6	4.8	0.0647	0.0018	0.0342	UN
-Sample1	SampleAA2	Sample23	SampleAW7	24.4	0.0	0.1006	0.0000	0.0503	4th
-Sample1	SampleAA2	Sample23	SampleAW8	16.5	0.0	0.0858	0.0000	0.0429	UN
-Sample1	SampleAA2	Sample23	SampleAW9	17.0	6.8	0.0804	0.0025	0.0427	UN
-Sample1	SampleAA2	Sample23	SampleAW10	23.9	0.0	0.1125	0.0000	0.0563	4th
-Sample1	SampleAA2	Sample24	SampleAX0	11.7	4.4	0.0674	0.0027	0.0364	UN
-Sample1	SampleAA2	Sample24	SampleAX1	24.6	0.0	0.1261	0.0000	0.0631	4th
-Sample1	SampleAA2	Sample24	SampleAX2	25.8	0.0	0.0888	0.0000	0.0444	4th
 Sample1	SampleAA3	Sample23	SampleAW6	41.0	0.0	0.1195	0.0000	0.0598	4th
 Sample1	SampleAA3	Sample23	SampleAW7	17.2	0.0	0.0864	0.0000	0.0432	UN
 Sample1	SampleAA3	Sample23	SampleAW8	26.7	0.0	0.1035	0.0000	0.0518	4th
@@ -1990,14 +1740,6 @@ Sample1	SampleAA1	Sample24	SampleAX7	15.0	0.0	0.0656	0.0000	0.0328	UN
 Sample1	SampleAA1	Sample24	SampleAX8	17.9	5.3	0.0636	0.0020	0.0338	UN
 Sample1	SampleAA1	Sample24	SampleAX9	40.3	4.7	0.1507	0.0017	0.0771	4th
 Sample1	SampleAA1	Sample24	SampleAX10	17.2	0.0	0.0711	0.0000	0.0355	UN
-Sample1	SampleAA2	Sample24	SampleAX3	14.6	3.1	0.0703	0.0011	0.0362	UN
-Sample1	SampleAA2	Sample24	SampleAX4	25.3	0.0	0.0996	0.0000	0.0498	4th
-Sample1	SampleAA2	Sample24	SampleAX5	14.4	3.6	0.0695	0.0013	0.0361	UN
-Sample1	SampleAA2	Sample24	SampleAX6	15.2	0.0	0.0836	0.0000	0.0418	UN
-Sample1	SampleAA2	Sample24	SampleAX7	19.8	3.1	0.1281	0.0022	0.0663	4th
-Sample1	SampleAA2	Sample24	SampleAX8	25.3	5.1	0.1005	0.0031	0.0534	4th
-Sample1	SampleAA2	Sample24	SampleAX9	15.1	7.6	0.0771	0.0047	0.0433	UN
-Sample1	SampleAA2	Sample24	SampleAX10	20.0	0.0	0.1143	0.0000	0.0571	4th
 Sample1	SampleAA3	Sample24	SampleAX3	17.1	0.0	0.0905	0.0000	0.0453	4th
 Sample1	SampleAA3	Sample24	SampleAX4	18.9	5.5	0.0872	0.0021	0.0457	4th
 Sample1	SampleAA3	Sample24	SampleAX5	12.0	0.0	0.0725	0.0000	0.0363	UN
@@ -2054,13 +1796,6 @@ Sample1	SampleAA1	Sample25	SampleAY4	33.5	0.0	0.0849	0.0000	0.0425	UN
 Sample1	SampleAA1	Sample25	SampleAY5	14.2	3.9	0.1018	0.0015	0.0524	4th
 Sample1	SampleAA1	Sample25	SampleAY6	14.6	0.0	0.0752	0.0000	0.0376	UN
 Sample1	SampleAA1	Sample25	SampleAY7	21.8	0.0	0.1095	0.0000	0.0548	4th
-Sample1	SampleAA2	Sample25	SampleAY0	17.0	3.9	0.1067	0.0015	0.0549	4th
-Sample1	SampleAA2	Sample25	SampleAY1	26.0	0.0	0.0727	0.0000	0.0364	UN
-Sample1	SampleAA2	Sample25	SampleAY2	31.2	0.0	0.0844	0.0000	0.0422	UN
-Sample1	SampleAA2	Sample25	SampleAY4	31.7	0.0	0.1072	0.0000	0.0536	4th
-Sample1	SampleAA2	Sample25	SampleAY5	31.7	3.5	0.0946	0.0013	0.0486	4th
-Sample1	SampleAA2	Sample25	SampleAY6	17.4	0.0	0.0916	0.0000	0.0458	4th
-Sample1	SampleAA2	Sample25	SampleAY7	28.3	0.0	0.0723	0.0000	0.0362	UN
 Sample1	SampleAA3	Sample25	SampleAY0	22.5	0.0	0.1071	0.0000	0.0536	4th
 Sample1	SampleAA3	Sample25	SampleAY1	11.9	0.0	0.0672	0.0000	0.0336	UN
 Sample1	SampleAA3	Sample25	SampleAY2	26.7	0.0	0.1087	0.0000	0.0544	4th
@@ -2115,15 +1850,6 @@ Sample1	SampleAA1	Sample26	SampleAZ0	14.6	3.3	0.0694	0.0024	0.0371	UN
 Sample1	SampleAA1	Sample26	SampleAZ1	20.1	0.0	0.0618	0.0000	0.0309	UN
 Sample1	SampleAA1	Sample26	SampleAZ2	19.1	8.1	0.0723	0.0031	0.0393	UN
 Sample1	SampleAA1	Sample26	SampleAZ3	25.0	3.2	0.0941	0.0012	0.0483	4th
-Sample1	SampleAA1	Sample26	SampleAZ4	15.4	2.7	0.0609	0.0010	0.0314	UN
-Sample1	SampleAA2	Sample25	SampleAY8	25.9	0.0	0.0774	0.0000	0.0387	UN
-Sample1	SampleAA2	Sample25	SampleAY9	17.0	0.0	0.0814	0.0000	0.0407	UN
-Sample1	SampleAA2	Sample25	SampleAY10	27.4	0.0	0.0894	0.0000	0.0447	4th
-Sample1	SampleAA2	Sample26	SampleAZ0	14.6	0.0	0.0506	0.0000	0.0253	UN
-Sample1	SampleAA2	Sample26	SampleAZ1	14.7	0.0	0.0872	0.0000	0.0436	UN
-Sample1	SampleAA2	Sample26	SampleAZ2	22.4	0.0	0.0783	0.0000	0.0392	UN
-Sample1	SampleAA2	Sample26	SampleAZ3	20.3	0.0	0.1188	0.0000	0.0594	4th
-Sample1	SampleAA2	Sample26	SampleAZ4	15.0	0.0	0.0622	0.0000	0.0311	UN
 Sample1	SampleAA3	Sample25	SampleAY8	21.5	0.0	0.0909	0.0000	0.0455	4th
 Sample1	SampleAA3	Sample25	SampleAY9	18.2	0.0	0.0860	0.0000	0.0430	UN
 Sample1	SampleAA3	Sample25	SampleAY10	29.5	6.4	0.0869	0.0024	0.0459	4th
@@ -2131,7 +1857,6 @@ Sample1	SampleAA3	Sample26	SampleAZ0	15.4	0.0	0.0882	0.0000	0.0441	UN
 Sample1	SampleAA3	Sample26	SampleAZ1	21.3	5.3	0.0837	0.0020	0.0439	UN
 Sample1	SampleAA3	Sample26	SampleAZ2	15.2	7.2	0.0757	0.0027	0.0406	UN
 Sample1	SampleAA3	Sample26	SampleAZ3	18.9	0.0	0.0888	0.0000	0.0444	4th
-Sample1	SampleAA3	Sample26	SampleAZ4	13.7	0.0	0.0693	0.0000	0.0347	UN
 Sample1	SampleAA4	Sample25	SampleAY8	25.9	0.0	0.0810	0.0000	0.0405	UN
 Sample1	SampleAA4	Sample25	SampleAY9	19.2	0.0	0.0759	0.0000	0.0380	UN
 Sample1	SampleAA4	Sample25	SampleAY10	27.4	0.0	0.0844	0.0000	0.0422	UN
@@ -2146,7 +1871,6 @@ Sample1	SampleAA5	Sample26	SampleAZ0	11.7	5.9	0.0781	0.0022	0.0413	UN
 Sample1	SampleAA5	Sample26	SampleAZ1	64.6	0.0	0.1694	0.0000	0.0847	4th
 Sample1	SampleAA5	Sample26	SampleAZ2	13.0	0.0	0.0699	0.0000	0.0350	UN
 Sample1	SampleAA5	Sample26	SampleAZ3	20.6	4.0	0.1102	0.0015	0.0566	4th
-Sample1	SampleAA5	Sample26	SampleAZ4	10.0	0.0	0.0664	0.0000	0.0332	UN
 Sample1	SampleAA6	Sample25	SampleAY8	20.9	0.0	0.1052	0.0000	0.0526	4th
 Sample1	SampleAA6	Sample25	SampleAY9	16.2	2.7	0.0785	0.0010	0.0403	UN
 Sample1	SampleAA6	Sample25	SampleAY10	16.8	0.0	0.0750	0.0000	0.0375	UN
@@ -2154,7 +1878,6 @@ Sample1	SampleAA6	Sample26	SampleAZ0	24.4	0.0	0.0627	0.0000	0.0314	UN
 Sample1	SampleAA6	Sample26	SampleAZ1	17.9	0.0	0.0791	0.0000	0.0396	UN
 Sample1	SampleAA6	Sample26	SampleAZ2	13.4	3.0	0.0549	0.0011	0.0286	UN
 Sample1	SampleAA6	Sample26	SampleAZ3	30.5	0.0	0.0716	0.0000	0.0358	UN
-Sample1	SampleAA6	Sample26	SampleAZ4	18.8	0.0	0.0621	0.0000	0.0311	UN
 Sample1	SampleAA7	Sample25	SampleAY8	22.4	8.9	0.0783	0.0033	0.0425	UN
 Sample1	SampleAA7	Sample25	SampleAY9	19.0	0.0	0.0791	0.0000	0.0396	UN
 Sample1	SampleAA7	Sample25	SampleAY10	26.6	0.0	0.0766	0.0000	0.0383	UN
@@ -2162,7 +1885,6 @@ Sample1	SampleAA7	Sample26	SampleAZ0	13.3	0.0	0.0587	0.0000	0.0294	UN
 Sample1	SampleAA7	Sample26	SampleAZ1	15.0	4.2	0.0706	0.0026	0.0379	UN
 Sample1	SampleAA7	Sample26	SampleAZ2	15.8	0.0	0.0703	0.0000	0.0352	UN
 Sample1	SampleAA7	Sample26	SampleAZ3	12.7	0.0	0.1009	0.0000	0.0505	4th
-Sample1	SampleAA7	Sample26	SampleAZ4	15.4	0.0	0.0593	0.0000	0.0297	UN
 Sample1	SampleAA0	Sample26	SampleAZ5	12.1	3.4	0.0839	0.0013	0.0433	UN
 Sample1	SampleAA0	Sample26	SampleAZ6	28.8	3.5	0.1196	0.0013	0.0611	4th
 Sample1	SampleAA0	Sample26	SampleAZ7	48.0	0.0	0.1508	0.0000	0.0754	4th
@@ -2175,11 +1897,6 @@ Sample1	SampleAA1	Sample26	SampleAZ7	19.2	0.0	0.0882	0.0000	0.0441	UN
 Sample1	SampleAA1	Sample26	SampleAZ8	19.2	0.0	0.0959	0.0000	0.0479	4th
 Sample1	SampleAA1	Sample26	SampleAZ9	12.7	6.4	0.0759	0.0024	0.0404	UN
 Sample1	SampleAA1	Sample26	SampleAZ10	13.3	0.0	0.0726	0.0000	0.0363	UN
-Sample1	SampleAA2	Sample26	SampleAZ6	24.0	6.1	0.1175	0.0023	0.0611	4th
-Sample1	SampleAA2	Sample26	SampleAZ7	12.3	0.0	0.0814	0.0000	0.0407	UN
-Sample1	SampleAA2	Sample26	SampleAZ8	22.3	0.0	0.0841	0.0000	0.0421	UN
-Sample1	SampleAA2	Sample26	SampleAZ9	16.8	3.9	0.1059	0.0014	0.0544	4th
-Sample1	SampleAA2	Sample26	SampleAZ10	24.1	0.0	0.1029	0.0000	0.0515	4th
 Sample1	SampleAA3	Sample26	SampleAZ5	13.6	0.0	0.0751	0.0000	0.0376	UN
 Sample1	SampleAA3	Sample26	SampleAZ6	20.7	6.4	0.0963	0.0024	0.0506	4th
 Sample1	SampleAA3	Sample26	SampleAZ7	15.2	0.0	0.0771	0.0000	0.0386	UN
@@ -4224,7 +3941,6 @@ Sample1	SampleAA8	Sample26	SampleAZ0	15.3	0.0	0.0691	0.0000	0.0346	UN
 Sample1	SampleAA8	Sample26	SampleAZ1	17.5	4.2	0.0873	0.0016	0.0452	4th
 Sample1	SampleAA8	Sample26	SampleAZ2	19.3	0.0	0.0754	0.0000	0.0377	UN
 Sample1	SampleAA8	Sample26	SampleAZ3	25.0	0.0	0.1044	0.0000	0.0522	4th
-Sample1	SampleAA8	Sample26	SampleAZ4	14.6	0.0	0.0548	0.0000	0.0274	UN
 Sample1	SampleAA9	Sample25	SampleAY8	23.9	3.9	0.0654	0.0014	0.0341	UN
 Sample1	SampleAA9	Sample25	SampleAY9	16.4	4.4	0.0823	0.0017	0.0428	UN
 Sample1	SampleAA9	Sample25	SampleAY10	25.4	0.0	0.0944	0.0000	0.0472	4th
@@ -4232,7 +3948,6 @@ Sample1	SampleAA9	Sample26	SampleAZ0	17.2	0.0	0.0693	0.0000	0.0347	UN
 Sample1	SampleAA9	Sample26	SampleAZ1	26.7	0.0	0.1184	0.0000	0.0592	4th
 Sample1	SampleAA9	Sample26	SampleAZ2	15.4	0.0	0.0680	0.0000	0.0340	UN
 Sample1	SampleAA9	Sample26	SampleAZ3	19.1	0.0	0.1051	0.0000	0.0525	4th
-Sample1	SampleAA9	Sample26	SampleAZ4	15.4	0.0	0.0500	0.0000	0.0250	UN
 Sample1	SampleAA10	Sample25	SampleAY8	16.6	14.7	0.0889	0.0067	0.0512	4th
 Sample1	SampleAA10	Sample25	SampleAY9	16.1	0.0	0.0727	0.0000	0.0364	UN
 Sample1	SampleAA10	Sample25	SampleAY10	25.1	0.0	0.0974	0.0000	0.0487	4th
@@ -4240,7 +3955,6 @@ Sample1	SampleAA10	Sample26	SampleAZ0	18.2	0.0	0.0706	0.0000	0.0353	UN
 Sample1	SampleAA10	Sample26	SampleAZ1	14.7	0.0	0.0795	0.0000	0.0398	UN
 Sample1	SampleAA10	Sample26	SampleAZ2	13.5	0.0	0.0912	0.0000	0.0456	4th
 Sample1	SampleAA10	Sample26	SampleAZ3	30.6	0.0	0.0852	0.0000	0.0426	UN
-Sample1	SampleAA10	Sample26	SampleAZ4	14.7	7.9	0.0638	0.0029	0.0348	UN
 Sample2	SampleAB0	Sample25	SampleAY8	18.9	0.0	0.0560	0.0000	0.0280	UN
 Sample2	SampleAB0	Sample26	SampleAZ0	10.8	0.0	0.0580	0.0000	0.0290	UN
 Sample2	SampleAB0	Sample26	SampleAZ1	37.1	4.1	0.0918	0.0016	0.0475	4th
@@ -4256,7 +3970,6 @@ Sample2	SampleAB2	Sample25	SampleAY8	31.8	0.0	0.0970	0.0000	0.0485	4th
 Sample2	SampleAB2	Sample25	SampleAY9	17.4	3.0	0.0607	0.0011	0.0314	UN
 Sample2	SampleAB2	Sample26	SampleAZ0	32.2	0.0	0.1121	0.0000	0.0561	4th
 Sample2	SampleAB2	Sample26	SampleAZ1	17.3	0.0	0.0773	0.0000	0.0387	UN
-Sample2	SampleAB2	Sample26	SampleAZ4	31.7	2.7	0.0740	0.0010	0.0380	UN
 Sample2	SampleAB3	Sample25	SampleAY8	19.2	0.0	0.0734	0.0000	0.0367	UN
 Sample2	SampleAB3	Sample25	SampleAY9	25.7	0.0	0.0602	0.0000	0.0301	UN
 Sample2	SampleAB3	Sample25	SampleAY10	16.0	0.0	0.0479	0.0000	0.0240	UN
@@ -4268,7 +3981,6 @@ Sample2	SampleAB4	Sample25	SampleAY10	10.5	0.0	0.0590	0.0000	0.0295	UN
 Sample2	SampleAB4	Sample26	SampleAZ0	18.5	0.0	0.0749	0.0000	0.0375	UN
 Sample2	SampleAB4	Sample26	SampleAZ1	27.8	0.0	0.0702	0.0000	0.0351	UN
 Sample2	SampleAB4	Sample26	SampleAZ3	30.1	0.0	0.0726	0.0000	0.0363	UN
-Sample2	SampleAB4	Sample26	SampleAZ4	18.5	0.0	0.0551	0.0000	0.0276	UN
 Sample1	SampleAA8	Sample26	SampleAZ5	11.8	3.5	0.0588	0.0013	0.0307	UN
 Sample1	SampleAA8	Sample26	SampleAZ6	23.1	2.9	0.0798	0.0021	0.0420	UN
 Sample1	SampleAA8	Sample26	SampleAZ7	19.3	0.0	0.0907	0.0000	0.0454	4th
@@ -6238,7 +5950,6 @@ Sample2	SampleAB5	Sample25	SampleAY10	10.7	0.0	0.0587	0.0000	0.0294	UN
 Sample2	SampleAB5	Sample26	SampleAZ0	28.9	0.0	0.0946	0.0000	0.0473	4th
 Sample2	SampleAB5	Sample26	SampleAZ1	15.6	0.0	0.0680	0.0000	0.0340	UN
 Sample2	SampleAB5	Sample26	SampleAZ3	20.0	0.0	0.0677	0.0000	0.0339	UN
-Sample2	SampleAB5	Sample26	SampleAZ4	28.8	0.0	0.0651	0.0000	0.0326	UN
 Sample2	SampleAB6	Sample25	SampleAY8	15.0	0.0	0.0887	0.0000	0.0444	4th
 Sample2	SampleAB6	Sample25	SampleAY9	39.9	0.0	0.0914	0.0000	0.0457	4th
 Sample2	SampleAB6	Sample25	SampleAY10	17.2	3.3	0.0627	0.0012	0.0326	UN
@@ -6246,34 +5957,29 @@ Sample2	SampleAB6	Sample26	SampleAZ0	14.5	7.4	0.0845	0.0028	0.0450	4th
 Sample2	SampleAB6	Sample26	SampleAZ1	13.7	7.5	0.0641	0.0028	0.0348	UN
 Sample2	SampleAB6	Sample26	SampleAZ2	21.3	0.0	0.0725	0.0000	0.0363	UN
 Sample2	SampleAB6	Sample26	SampleAZ3	18.6	6.3	0.0982	0.0023	0.0514	4th
-Sample2	SampleAB6	Sample26	SampleAZ4	21.1	0.0	0.0660	0.0000	0.0330	UN
 Sample2	SampleAB7	Sample25	SampleAY8	32.0	0.0	0.0886	0.0000	0.0443	4th
 Sample2	SampleAB7	Sample25	SampleAY9	20.5	0.0	0.0698	0.0000	0.0349	UN
 Sample2	SampleAB7	Sample25	SampleAY10	13.5	0.0	0.0681	0.0000	0.0341	UN
 Sample2	SampleAB7	Sample26	SampleAZ0	18.5	3.8	0.1100	0.0014	0.0564	4th
 Sample2	SampleAB7	Sample26	SampleAZ1	11.7	0.0	0.0698	0.0000	0.0349	UN
-Sample2	SampleAB7	Sample26	SampleAZ4	18.5	3.1	0.0791	0.0012	0.0408	UN
 Sample2	SampleAB8	Sample25	SampleAY8	32.0	0.0	0.0884	0.0000	0.0442	4th
 Sample2	SampleAB8	Sample25	SampleAY9	17.9	0.0	0.0491	0.0000	0.0246	UN
 Sample2	SampleAB8	Sample25	SampleAY10	12.7	0.0	0.0714	0.0000	0.0357	UN
 Sample2	SampleAB8	Sample26	SampleAZ0	29.2	3.8	0.1145	0.0014	0.0587	4th
 Sample2	SampleAB8	Sample26	SampleAZ1	19.7	4.1	0.0802	0.0016	0.0417	UN
 Sample2	SampleAB8	Sample26	SampleAZ2	13.5	0.0	0.0760	0.0000	0.0380	UN
-Sample2	SampleAB8	Sample26	SampleAZ4	12.2	0.0	0.0624	0.0000	0.0312	UN
 Sample2	SampleAB9	Sample25	SampleAY8	16.7	0.0	0.0888	0.0000	0.0444	4th
 Sample2	SampleAB9	Sample25	SampleAY9	20.4	0.0	0.0548	0.0000	0.0274	UN
 Sample2	SampleAB9	Sample25	SampleAY10	10.5	0.0	0.0523	0.0000	0.0261	UN
 Sample2	SampleAB9	Sample26	SampleAZ0	18.2	0.0	0.0650	0.0000	0.0325	UN
 Sample2	SampleAB9	Sample26	SampleAZ1	18.4	8.8	0.0584	0.0033	0.0325	UN
 Sample2	SampleAB9	Sample26	SampleAZ3	19.2	0.0	0.0555	0.0000	0.0278	UN
-Sample2	SampleAB9	Sample26	SampleAZ4	18.2	0.0	0.0486	0.0000	0.0243	UN
 Sample2	SampleAB10	Sample25	SampleAY8	31.8	0.0	0.1039	0.0000	0.0520	4th
 Sample2	SampleAB10	Sample25	SampleAY9	26.2	3.0	0.0886	0.0011	0.0454	4th
 Sample2	SampleAB10	Sample25	SampleAY10	12.0	0.0	0.0719	0.0000	0.0360	UN
 Sample2	SampleAB10	Sample26	SampleAZ0	21.1	0.0	0.1006	0.0000	0.0503	4th
 Sample2	SampleAB10	Sample26	SampleAZ1	17.1	0.0	0.0683	0.0000	0.0341	UN
 Sample2	SampleAB10	Sample26	SampleAZ3	18.5	0.0	0.0905	0.0000	0.0453	4th
-Sample2	SampleAB10	Sample26	SampleAZ4	10.6	0.0	0.0824	0.0000	0.0412	UN
 Sample3	SampleAC0	Sample25	SampleAY8	26.3	3.0	0.0810	0.0011	0.0416	UN
 Sample3	SampleAC0	Sample25	SampleAY9	14.9	0.0	0.0767	0.0000	0.0384	UN
 Sample3	SampleAC0	Sample25	SampleAY10	32.2	0.0	0.0787	0.0000	0.0394	UN
@@ -6281,7 +5987,6 @@ Sample3	SampleAC0	Sample26	SampleAZ0	34.2	4.4	0.1000	0.0017	0.0517	4th
 Sample3	SampleAC0	Sample26	SampleAZ1	14.8	3.0	0.0706	0.0011	0.0364	UN
 Sample3	SampleAC0	Sample26	SampleAZ2	13.4	0.0	0.0653	0.0000	0.0326	UN
 Sample3	SampleAC0	Sample26	SampleAZ3	14.9	0.0	0.0915	0.0000	0.0457	4th
-Sample3	SampleAC0	Sample26	SampleAZ4	25.3	4.8	0.0810	0.0018	0.0423	UN
 Sample3	SampleAC1	Sample25	SampleAY8	25.2	0.0	0.0706	0.0000	0.0353	UN
 Sample3	SampleAC1	Sample25	SampleAY9	14.1	0.0	0.0595	0.0000	0.0298	UN
 Sample3	SampleAC1	Sample25	SampleAY10	13.6	0.0	0.0573	0.0000	0.0287	UN
@@ -6289,7 +5994,6 @@ Sample3	SampleAC1	Sample26	SampleAZ0	13.9	0.0	0.1112	0.0000	0.0556	4th
 Sample3	SampleAC1	Sample26	SampleAZ1	22.1	0.0	0.0905	0.0000	0.0453	4th
 Sample3	SampleAC1	Sample26	SampleAZ2	14.1	0.0	0.0580	0.0000	0.0290	UN
 Sample3	SampleAC1	Sample26	SampleAZ3	14.5	0.0	0.0693	0.0000	0.0347	UN
-Sample3	SampleAC1	Sample26	SampleAZ4	13.0	0.0	0.0822	0.0000	0.0411	UN
 Sample2	SampleAB5	Sample26	SampleAZ5	18.1	3.0	0.0612	0.0011	0.0317	UN
 Sample2	SampleAB5	Sample26	SampleAZ6	23.4	0.0	0.0935	0.0000	0.0467	4th
 Sample2	SampleAB5	Sample26	SampleAZ8	12.6	0.0	0.0584	0.0000	0.0292	UN
@@ -8212,7 +7916,6 @@ Sample3	SampleAC2	Sample26	SampleAZ0	34.8	6.2	0.0792	0.0023	0.0419	UN
 Sample3	SampleAC2	Sample26	SampleAZ1	21.3	0.0	0.0789	0.0000	0.0394	UN
 Sample3	SampleAC2	Sample26	SampleAZ2	19.2	0.0	0.0677	0.0000	0.0339	UN
 Sample3	SampleAC2	Sample26	SampleAZ3	15.6	0.0	0.0793	0.0000	0.0397	UN
-Sample3	SampleAC2	Sample26	SampleAZ4	24.4	4.1	0.0765	0.0027	0.0410	UN
 Sample3	SampleAC3	Sample25	SampleAY8	18.4	0.0	0.0802	0.0000	0.0401	UN
 Sample3	SampleAC3	Sample25	SampleAY9	23.2	3.5	0.0690	0.0013	0.0358	UN
 Sample3	SampleAC3	Sample25	SampleAY10	18.4	0.0	0.0715	0.0000	0.0358	UN
@@ -8220,7 +7923,6 @@ Sample3	SampleAC3	Sample26	SampleAZ0	15.2	0.0	0.1122	0.0000	0.0561	4th
 Sample3	SampleAC3	Sample26	SampleAZ1	31.7	0.0	0.0772	0.0000	0.0386	UN
 Sample3	SampleAC3	Sample26	SampleAZ2	15.2	0.0	0.0712	0.0000	0.0356	UN
 Sample3	SampleAC3	Sample26	SampleAZ3	34.8	0.0	0.1681	0.0000	0.0840	4th
-Sample3	SampleAC3	Sample26	SampleAZ4	13.1	0.0	0.0813	0.0000	0.0406	UN
 Sample3	SampleAC4	Sample25	SampleAY8	19.6	0.0	0.0748	0.0000	0.0374	UN
 Sample3	SampleAC4	Sample25	SampleAY9	23.8	0.0	0.0977	0.0000	0.0489	4th
 Sample3	SampleAC4	Sample25	SampleAY10	23.7	0.0	0.0795	0.0000	0.0398	UN
@@ -8228,7 +7930,6 @@ Sample3	SampleAC4	Sample26	SampleAZ0	34.1	6.2	0.0804	0.0023	0.0425	UN
 Sample3	SampleAC4	Sample26	SampleAZ1	21.0	0.0	0.0821	0.0000	0.0411	UN
 Sample3	SampleAC4	Sample26	SampleAZ2	18.7	0.0	0.0722	0.0000	0.0361	UN
 Sample3	SampleAC4	Sample26	SampleAZ3	15.0	4.8	0.0689	0.0029	0.0374	UN
-Sample3	SampleAC4	Sample26	SampleAZ4	22.5	0.0	0.0709	0.0000	0.0355	UN
 Sample3	SampleAC5	Sample25	SampleAY8	26.7	2.9	0.0970	0.0011	0.0496	4th
 Sample3	SampleAC5	Sample25	SampleAY9	13.7	4.0	0.0733	0.0015	0.0382	UN
 Sample3	SampleAC5	Sample25	SampleAY10	28.4	0.0	0.0707	0.0000	0.0353	UN
@@ -8236,14 +7937,12 @@ Sample3	SampleAC5	Sample26	SampleAZ0	24.3	6.2	0.0737	0.0023	0.0392	UN
 Sample3	SampleAC5	Sample26	SampleAZ1	16.4	4.9	0.0703	0.0018	0.0370	UN
 Sample3	SampleAC5	Sample26	SampleAZ2	12.9	0.0	0.0681	0.0000	0.0341	UN
 Sample3	SampleAC5	Sample26	SampleAZ3	15.3	0.0	0.0717	0.0000	0.0358	UN
-Sample3	SampleAC5	Sample26	SampleAZ4	22.5	0.0	0.0591	0.0000	0.0295	UN
 Sample3	SampleAC6	Sample25	SampleAY8	39.2	4.2	0.1154	0.0016	0.0593	4th
 Sample3	SampleAC6	Sample25	SampleAY9	87.4	3.4	0.2236	0.0024	0.1142	3rd
 Sample3	SampleAC6	Sample25	SampleAY10	15.3	0.0	0.0780	0.0000	0.0390	UN
 Sample3	SampleAC6	Sample26	SampleAZ0	39.4	3.7	0.1100	0.0014	0.0564	4th
 Sample3	SampleAC6	Sample26	SampleAZ2	22.8	0.0	0.0978	0.0000	0.0489	4th
 Sample3	SampleAC6	Sample26	SampleAZ3	22.7	0.0	0.1114	0.0000	0.0557	4th
-Sample3	SampleAC6	Sample26	SampleAZ4	39.4	0.0	0.1077	0.0000	0.0539	4th
 Sample3	SampleAC7	Sample25	SampleAY8	25.3	0.0	0.0940	0.0000	0.0470	4th
 Sample3	SampleAC7	Sample25	SampleAY9	35.5	0.0	0.0850	0.0000	0.0425	UN
 Sample3	SampleAC7	Sample25	SampleAY10	11.2	0.0	0.0532	0.0000	0.0266	UN
@@ -8251,7 +7950,6 @@ Sample3	SampleAC7	Sample26	SampleAZ0	26.7	0.0	0.0891	0.0000	0.0445	4th
 Sample3	SampleAC7	Sample26	SampleAZ1	22.0	0.0	0.0987	0.0000	0.0494	4th
 Sample3	SampleAC7	Sample26	SampleAZ2	13.2	0.0	0.0605	0.0000	0.0303	UN
 Sample3	SampleAC7	Sample26	SampleAZ3	16.7	0.0	0.0712	0.0000	0.0356	UN
-Sample3	SampleAC7	Sample26	SampleAZ4	24.4	0.0	0.0650	0.0000	0.0325	UN
 Sample3	SampleAC8	Sample25	SampleAY8	25.2	4.4	0.0893	0.0017	0.0464	4th
 Sample3	SampleAC8	Sample25	SampleAY9	35.6	0.0	0.0859	0.0000	0.0430	UN
 Sample3	SampleAC8	Sample25	SampleAY10	21.8	0.0	0.0773	0.0000	0.0387	UN
@@ -8259,7 +7957,6 @@ Sample3	SampleAC8	Sample26	SampleAZ0	34.8	10.0	0.0887	0.0037	0.0481	4th
 Sample3	SampleAC8	Sample26	SampleAZ1	22.1	0.0	0.0740	0.0000	0.0370	UN
 Sample3	SampleAC8	Sample26	SampleAZ2	17.8	0.0	0.0766	0.0000	0.0383	UN
 Sample3	SampleAC8	Sample26	SampleAZ3	16.5	0.0	0.0706	0.0000	0.0353	UN
-Sample3	SampleAC8	Sample26	SampleAZ4	19.2	10.0	0.0798	0.0037	0.0436	UN
 Sample3	SampleAC9	Sample25	SampleAY8	10.9	0.0	0.0891	0.0000	0.0445	4th
 Sample3	SampleAC9	Sample25	SampleAY9	27.9	0.0	0.0957	0.0000	0.0479	4th
 Sample3	SampleAC9	Sample25	SampleAY10	19.0	0.0	0.0784	0.0000	0.0392	UN
@@ -8267,7 +7964,6 @@ Sample3	SampleAC9	Sample26	SampleAZ0	47.6	0.0	0.1026	0.0000	0.0513	4th
 Sample3	SampleAC9	Sample26	SampleAZ1	19.7	0.0	0.0660	0.0000	0.0330	UN
 Sample3	SampleAC9	Sample26	SampleAZ2	11.2	0.0	0.0451	0.0000	0.0226	UN
 Sample3	SampleAC9	Sample26	SampleAZ3	23.0	5.1	0.1264	0.0019	0.0651	4th
-Sample3	SampleAC9	Sample26	SampleAZ4	21.2	0.0	0.0676	0.0000	0.0338	UN
 Sample3	SampleAC2	Sample26	SampleAZ5	34.8	10.0	0.0785	0.0053	0.0445	4th
 Sample3	SampleAC2	Sample26	SampleAZ6	24.8	0.0	0.0715	0.0000	0.0358	UN
 Sample3	SampleAC2	Sample26	SampleAZ7	21.3	0.0	0.0684	0.0000	0.0342	UN
@@ -10167,7 +9863,6 @@ Sample3	SampleAC10	Sample25	SampleAY10	13.9	0.0	0.0604	0.0000	0.0302	UN
 Sample3	SampleAC10	Sample26	SampleAZ1	22.9	0.0	0.0804	0.0000	0.0402	UN
 Sample3	SampleAC10	Sample26	SampleAZ2	12.9	0.0	0.0791	0.0000	0.0396	UN
 Sample3	SampleAC10	Sample26	SampleAZ3	21.2	0.0	0.0918	0.0000	0.0459	4th
-Sample3	SampleAC10	Sample26	SampleAZ4	10.1	5.9	0.0570	0.0022	0.0307	UN
 Sample4	SampleAD0	Sample25	SampleAY8	25.5	10.5	0.1159	0.0077	0.0657	4th
 Sample4	SampleAD0	Sample25	SampleAY9	52.1	0.0	0.1217	0.0000	0.0609	4th
 Sample4	SampleAD0	Sample25	SampleAY10	41.8	0.0	0.1030	0.0000	0.0515	4th
@@ -10175,7 +9870,6 @@ Sample4	SampleAD0	Sample26	SampleAZ0	47.2	0.0	0.1323	0.0000	0.0662	4th
 Sample4	SampleAD0	Sample26	SampleAZ1	15.7	0.0	0.0796	0.0000	0.0398	UN
 Sample4	SampleAD0	Sample26	SampleAZ2	31.9	0.0	0.1145	0.0000	0.0573	4th
 Sample4	SampleAD0	Sample26	SampleAZ3	14.8	3.3	0.0865	0.0012	0.0445	4th
-Sample4	SampleAD0	Sample26	SampleAZ4	39.4	0.0	0.1195	0.0000	0.0598	4th
 Sample4	SampleAD1	Sample25	SampleAY8	16.1	0.0	0.0992	0.0000	0.0496	4th
 Sample4	SampleAD1	Sample25	SampleAY9	12.6	4.3	0.0723	0.0016	0.0377	UN
 Sample4	SampleAD1	Sample25	SampleAY10	29.6	0.0	0.0890	0.0000	0.0445	4th
@@ -10183,7 +9877,6 @@ Sample4	SampleAD1	Sample26	SampleAZ0	43.3	3.4	0.1178	0.0013	0.0602	4th
 Sample4	SampleAD1	Sample26	SampleAZ1	30.9	5.7	0.1795	0.0021	0.0919	3rd
 Sample4	SampleAD1	Sample26	SampleAZ2	34.5	0.0	0.0822	0.0000	0.0411	UN
 Sample4	SampleAD1	Sample26	SampleAZ3	20.6	0.0	0.0813	0.0000	0.0406	UN
-Sample4	SampleAD1	Sample26	SampleAZ4	33.9	0.0	0.1047	0.0000	0.0524	4th
 Sample4	SampleAD2	Sample25	SampleAY8	42.5	4.3	0.1167	0.0043	0.0627	4th
 Sample4	SampleAD2	Sample25	SampleAY9	10.4	0.0	0.0563	0.0000	0.0282	UN
 Sample4	SampleAD2	Sample25	SampleAY10	19.4	4.3	0.0723	0.0031	0.0393	UN
@@ -10191,7 +9884,6 @@ Sample4	SampleAD2	Sample26	SampleAZ0	17.9	0.0	0.0700	0.0000	0.0350	UN
 Sample4	SampleAD2	Sample26	SampleAZ1	11.9	0.0	0.0823	0.0000	0.0411	UN
 Sample4	SampleAD2	Sample26	SampleAZ2	11.5	0.0	0.0684	0.0000	0.0342	UN
 Sample4	SampleAD2	Sample26	SampleAZ3	15.5	2.9	0.0785	0.0011	0.0403	UN
-Sample4	SampleAD2	Sample26	SampleAZ4	15.5	3.4	0.0701	0.0013	0.0364	UN
 Sample4	SampleAD3	Sample25	SampleAY8	19.4	0.0	0.0979	0.0000	0.0490	4th
 Sample4	SampleAD3	Sample25	SampleAY9	16.1	0.0	0.0730	0.0000	0.0365	UN
 Sample4	SampleAD3	Sample25	SampleAY10	10.3	3.2	0.0528	0.0012	0.0276	UN
@@ -10206,7 +9898,6 @@ Sample4	SampleAD4	Sample26	SampleAZ0	47.4	0.0	0.1013	0.0000	0.0507	4th
 Sample4	SampleAD4	Sample26	SampleAZ1	12.6	0.0	0.0698	0.0000	0.0349	UN
 Sample4	SampleAD4	Sample26	SampleAZ2	22.8	0.0	0.0773	0.0000	0.0387	UN
 Sample4	SampleAD4	Sample26	SampleAZ3	15.4	5.5	0.0723	0.0020	0.0382	UN
-Sample4	SampleAD4	Sample26	SampleAZ4	17.1	0.0	0.0798	0.0000	0.0399	UN
 Sample4	SampleAD5	Sample25	SampleAY8	41.9	0.0	0.1466	0.0000	0.0733	4th
 Sample4	SampleAD5	Sample25	SampleAY9	24.5	4.6	0.0973	0.0017	0.0504	4th
 Sample4	SampleAD5	Sample25	SampleAY10	31.5	2.9	0.0650	0.0011	0.0336	UN
@@ -10214,7 +9905,6 @@ Sample4	SampleAD5	Sample26	SampleAZ0	23.0	6.0	0.1021	0.0023	0.0534	4th
 Sample4	SampleAD5	Sample26	SampleAZ1	11.0	0.0	0.0648	0.0000	0.0324	UN
 Sample4	SampleAD5	Sample26	SampleAZ2	20.9	0.0	0.0810	0.0000	0.0405	UN
 Sample4	SampleAD5	Sample26	SampleAZ3	14.8	0.0	0.0727	0.0000	0.0364	UN
-Sample4	SampleAD5	Sample26	SampleAZ4	13.1	0.0	0.0757	0.0000	0.0379	UN
 Sample4	SampleAD6	Sample25	SampleAY8	42.8	5.7	0.3279	0.0044	0.1683	3rd
 Sample4	SampleAD6	Sample25	SampleAY9	42.9	2.9	0.2111	0.0011	0.1067	3rd
 Sample4	SampleAD6	Sample25	SampleAY10	53.4	3.2	0.2311	0.0012	0.1168	3rd
@@ -10222,7 +9912,6 @@ Sample4	SampleAD6	Sample26	SampleAZ0	27.3	6.2	0.1080	0.0023	0.0563	4th
 Sample4	SampleAD6	Sample26	SampleAZ1	17.5	0.0	0.0826	0.0000	0.0413	UN
 Sample4	SampleAD6	Sample26	SampleAZ2	15.3	0.0	0.0889	0.0000	0.0445	4th
 Sample4	SampleAD6	Sample26	SampleAZ3	22.2	0.0	0.0903	0.0000	0.0452	4th
-Sample4	SampleAD6	Sample26	SampleAZ4	21.4	0.0	0.0885	0.0000	0.0443	4th
 Sample3	SampleAC10	Sample26	SampleAZ5	11.5	0.0	0.0580	0.0000	0.0290	UN
 Sample3	SampleAC10	Sample26	SampleAZ6	25.9	0.0	0.0795	0.0000	0.0398	UN
 Sample3	SampleAC10	Sample26	SampleAZ7	12.5	0.0	0.0679	0.0000	0.0340	UN
@@ -12050,7 +11739,6 @@ Sample4	SampleAD7	Sample26	SampleAZ0	13.0	3.5	0.0806	0.0013	0.0416	UN
 Sample4	SampleAD7	Sample26	SampleAZ1	26.0	0.0	0.1131	0.0000	0.0566	4th
 Sample4	SampleAD7	Sample26	SampleAZ2	13.5	0.0	0.0730	0.0000	0.0365	UN
 Sample4	SampleAD7	Sample26	SampleAZ3	15.7	0.0	0.0750	0.0000	0.0375	UN
-Sample4	SampleAD7	Sample26	SampleAZ4	13.5	0.0	0.0790	0.0000	0.0395	UN
 Sample4	SampleAD8	Sample25	SampleAY8	42.1	4.1	0.1246	0.0015	0.0638	4th
 Sample4	SampleAD8	Sample25	SampleAY9	13.1	0.0	0.0686	0.0000	0.0343	UN
 Sample4	SampleAD8	Sample25	SampleAY10	28.8	0.0	0.0951	0.0000	0.0476	4th
@@ -12058,14 +11746,12 @@ Sample4	SampleAD8	Sample26	SampleAZ0	16.8	3.5	0.1054	0.0025	0.0552	4th
 Sample4	SampleAD8	Sample26	SampleAZ1	31.4	9.2	0.1422	0.0058	0.0769	4th
 Sample4	SampleAD8	Sample26	SampleAZ2	12.4	0.0	0.0754	0.0000	0.0377	UN
 Sample4	SampleAD8	Sample26	SampleAZ3	17.7	0.0	0.0926	0.0000	0.0463	4th
-Sample4	SampleAD8	Sample26	SampleAZ4	17.1	0.0	0.0888	0.0000	0.0444	4th
 Sample4	SampleAD9	Sample25	SampleAY8	19.4	5.1	0.0913	0.0046	0.0503	4th
 Sample4	SampleAD9	Sample25	SampleAY9	16.1	0.0	0.0812	0.0000	0.0406	UN
 Sample4	SampleAD9	Sample25	SampleAY10	29.0	0.0	0.0675	0.0000	0.0338	UN
 Sample4	SampleAD9	Sample26	SampleAZ0	17.4	0.0	0.0598	0.0000	0.0299	UN
 Sample4	SampleAD9	Sample26	SampleAZ1	22.3	0.0	0.0972	0.0000	0.0486	4th
 Sample4	SampleAD9	Sample26	SampleAZ3	14.8	4.9	0.0687	0.0018	0.0362	UN
-Sample4	SampleAD9	Sample26	SampleAZ4	12.9	0.0	0.0448	0.0000	0.0224	UN
 Sample4	SampleAD10	Sample25	SampleAY8	29.2	6.0	0.1967	0.0037	0.1021	3rd
 Sample4	SampleAD10	Sample25	SampleAY9	23.5	0.0	0.1275	0.0000	0.0638	4th
 Sample4	SampleAD10	Sample25	SampleAY10	31.0	0.0	0.1303	0.0000	0.0651	4th
@@ -12073,7 +11759,6 @@ Sample4	SampleAD10	Sample26	SampleAZ0	15.7	3.4	0.1054	0.0013	0.0540	4th
 Sample4	SampleAD10	Sample26	SampleAZ1	14.0	0.0	0.0965	0.0000	0.0483	4th
 Sample4	SampleAD10	Sample26	SampleAZ2	15.5	0.0	0.0806	0.0000	0.0403	UN
 Sample4	SampleAD10	Sample26	SampleAZ3	21.7	0.0	0.0754	0.0000	0.0377	UN
-Sample4	SampleAD10	Sample26	SampleAZ4	17.4	3.5	0.0842	0.0013	0.0434	UN
 Sample5	SampleAE0	Sample25	SampleAY8	18.3	0.0	0.0937	0.0000	0.0469	4th
 Sample5	SampleAE0	Sample25	SampleAY9	12.8	0.0	0.0484	0.0000	0.0242	UN
 Sample5	SampleAE0	Sample25	SampleAY10	14.7	0.0	0.0752	0.0000	0.0376	UN
@@ -12081,7 +11766,6 @@ Sample5	SampleAE0	Sample26	SampleAZ0	30.1	0.0	0.0957	0.0000	0.0479	4th
 Sample5	SampleAE0	Sample26	SampleAZ1	18.1	7.7	0.0960	0.0029	0.0509	4th
 Sample5	SampleAE0	Sample26	SampleAZ2	16.4	3.0	0.0827	0.0011	0.0425	UN
 Sample5	SampleAE0	Sample26	SampleAZ3	18.2	0.0	0.1002	0.0000	0.0501	4th
-Sample5	SampleAE0	Sample26	SampleAZ4	19.8	0.0	0.0799	0.0000	0.0399	UN
 Sample5	SampleAE1	Sample25	SampleAY8	32.0	3.4	0.0759	0.0013	0.0393	UN
 Sample5	SampleAE1	Sample25	SampleAY9	12.0	0.0	0.0472	0.0000	0.0236	UN
 Sample5	SampleAE1	Sample25	SampleAY10	21.3	0.0	0.0552	0.0000	0.0276	UN
@@ -12089,7 +11773,6 @@ Sample5	SampleAE1	Sample26	SampleAZ0	18.6	0.0	0.0640	0.0000	0.0320	UN
 Sample5	SampleAE1	Sample26	SampleAZ1	103.6	8.5	0.2653	0.0046	0.1373	3rd
 Sample5	SampleAE1	Sample26	SampleAZ2	21.3	0.0	0.0715	0.0000	0.0358	UN
 Sample5	SampleAE1	Sample26	SampleAZ3	22.0	3.4	0.0949	0.0013	0.0488	4th
-Sample5	SampleAE1	Sample26	SampleAZ4	18.6	0.0	0.0619	0.0000	0.0310	UN
 Sample5	SampleAE2	Sample25	SampleAY8	12.9	0.0	0.0472	0.0000	0.0236	UN
 Sample5	SampleAE2	Sample25	SampleAY9	12.9	0.0	0.0499	0.0000	0.0249	UN
 Sample5	SampleAE2	Sample25	SampleAY10	29.8	0.0	0.0877	0.0000	0.0439	UN
@@ -12097,7 +11780,6 @@ Sample5	SampleAE2	Sample26	SampleAZ0	16.7	0.0	0.0447	0.0000	0.0224	UN
 Sample5	SampleAE2	Sample26	SampleAZ1	23.6	3.3	0.0582	0.0012	0.0303	UN
 Sample5	SampleAE2	Sample26	SampleAZ2	47.6	0.0	0.0700	0.0000	0.0350	UN
 Sample5	SampleAE2	Sample26	SampleAZ3	12.3	0.0	0.0389	0.0000	0.0195	UN
-Sample5	SampleAE2	Sample26	SampleAZ4	38.1	5.1	0.0643	0.0019	0.0341	UN
 Sample5	SampleAE3	Sample25	SampleAY8	15.0	0.0	0.0762	0.0000	0.0381	UN
 Sample5	SampleAE3	Sample25	SampleAY9	28.3	0.0	0.1093	0.0000	0.0547	4th
 Sample5	SampleAE3	Sample25	SampleAY10	20.4	6.6	0.0877	0.0025	0.0464	4th
@@ -12105,7 +11787,6 @@ Sample5	SampleAE3	Sample26	SampleAZ0	15.7	0.0	0.0748	0.0000	0.0374	UN
 Sample5	SampleAE3	Sample26	SampleAZ1	20.8	0.0	0.0720	0.0000	0.0360	UN
 Sample5	SampleAE3	Sample26	SampleAZ2	16.9	0.0	0.0662	0.0000	0.0331	UN
 Sample5	SampleAE3	Sample26	SampleAZ3	18.8	0.0	0.0837	0.0000	0.0419	UN
-Sample5	SampleAE3	Sample26	SampleAZ4	18.9	0.0	0.0716	0.0000	0.0358	UN
 Sample4	SampleAD7	Sample26	SampleAZ5	13.0	0.0	0.0777	0.0000	0.0389	UN
 Sample4	SampleAD7	Sample26	SampleAZ6	21.9	3.5	0.0821	0.0013	0.0424	UN
 Sample4	SampleAD7	Sample26	SampleAZ7	18.8	0.0	0.1047	0.0000	0.0524	4th
@@ -13840,14 +13521,12 @@ Sample5	SampleAE4	Sample26	SampleAZ0	16.3	0.0	0.0873	0.0000	0.0437	UN
 Sample5	SampleAE4	Sample26	SampleAZ1	18.5	0.0	0.0768	0.0000	0.0384	UN
 Sample5	SampleAE4	Sample26	SampleAZ2	47.6	0.0	0.0785	0.0000	0.0393	UN
 Sample5	SampleAE4	Sample26	SampleAZ3	19.0	0.0	0.0575	0.0000	0.0288	UN
-Sample5	SampleAE4	Sample26	SampleAZ4	47.6	0.0	0.0902	0.0000	0.0451	4th
 Sample5	SampleAE5	Sample25	SampleAY8	15.1	0.0	0.0904	0.0000	0.0452	4th
 Sample5	SampleAE5	Sample25	SampleAY9	12.6	2.8	0.0512	0.0011	0.0267	UN
 Sample5	SampleAE5	Sample25	SampleAY10	18.7	3.2	0.0728	0.0012	0.0376	UN
 Sample5	SampleAE5	Sample26	SampleAZ1	25.0	0.0	0.0914	0.0000	0.0457	4th
 Sample5	SampleAE5	Sample26	SampleAZ2	47.6	0.0	0.1014	0.0000	0.0507	4th
 Sample5	SampleAE5	Sample26	SampleAZ3	18.2	0.0	0.0756	0.0000	0.0378	UN
-Sample5	SampleAE5	Sample26	SampleAZ4	47.5	0.0	0.1051	0.0000	0.0525	4th
 Sample5	SampleAE6	Sample25	SampleAY8	18.8	3.5	0.0883	0.0013	0.0455	4th
 Sample5	SampleAE6	Sample25	SampleAY9	29.5	3.2	0.0798	0.0012	0.0411	UN
 Sample5	SampleAE6	Sample25	SampleAY10	16.9	0.0	0.0742	0.0000	0.0371	UN
@@ -13855,7 +13534,6 @@ Sample5	SampleAE6	Sample26	SampleAZ0	20.5	0.0	0.0783	0.0000	0.0392	UN
 Sample5	SampleAE6	Sample26	SampleAZ1	24.6	0.0	0.0567	0.0000	0.0284	UN
 Sample5	SampleAE6	Sample26	SampleAZ2	14.8	0.0	0.0635	0.0000	0.0318	UN
 Sample5	SampleAE6	Sample26	SampleAZ3	17.6	0.0	0.0814	0.0000	0.0407	UN
-Sample5	SampleAE6	Sample26	SampleAZ4	14.8	0.0	0.0611	0.0000	0.0306	UN
 Sample5	SampleAE7	Sample25	SampleAY8	18.7	0.0	0.0562	0.0000	0.0281	UN
 Sample5	SampleAE7	Sample25	SampleAY9	10.6	0.0	0.0498	0.0000	0.0249	UN
 Sample5	SampleAE7	Sample25	SampleAY10	30.3	0.0	0.0881	0.0000	0.0440	UN
@@ -13863,7 +13541,6 @@ Sample5	SampleAE7	Sample26	SampleAZ0	16.3	0.0	0.0640	0.0000	0.0320	UN
 Sample5	SampleAE7	Sample26	SampleAZ1	39.5	0.0	0.1593	0.0000	0.0796	4th
 Sample5	SampleAE7	Sample26	SampleAZ2	23.1	5.7	0.0864	0.0021	0.0453	4th
 Sample5	SampleAE7	Sample26	SampleAZ3	20.6	0.0	0.0651	0.0000	0.0326	UN
-Sample5	SampleAE7	Sample26	SampleAZ4	39.7	3.4	0.0836	0.0013	0.0431	UN
 Sample5	SampleAE8	Sample25	SampleAY8	15.7	0.0	0.0481	0.0000	0.0241	UN
 Sample5	SampleAE8	Sample25	SampleAY9	12.0	0.0	0.0520	0.0000	0.0260	UN
 Sample5	SampleAE8	Sample25	SampleAY10	22.8	0.0	0.0543	0.0000	0.0272	UN
@@ -13871,7 +13548,6 @@ Sample5	SampleAE8	Sample26	SampleAZ0	18.8	0.0	0.0518	0.0000	0.0259	UN
 Sample5	SampleAE8	Sample26	SampleAZ1	39.5	4.4	0.1561	0.0017	0.0798	4th
 Sample5	SampleAE8	Sample26	SampleAZ2	47.6	0.0	0.0762	0.0000	0.0381	UN
 Sample5	SampleAE8	Sample26	SampleAZ3	22.2	0.0	0.0846	0.0000	0.0423	UN
-Sample5	SampleAE8	Sample26	SampleAZ4	21.3	18.6	0.0598	0.0070	0.0369	UN
 Sample5	SampleAE9	Sample25	SampleAY8	16.5	0.0	0.1028	0.0000	0.0514	4th
 Sample5	SampleAE9	Sample25	SampleAY9	19.0	0.0	0.0875	0.0000	0.0438	UN
 Sample5	SampleAE9	Sample25	SampleAY10	27.4	0.0	0.0840	0.0000	0.0420	UN
@@ -13879,14 +13555,12 @@ Sample5	SampleAE9	Sample26	SampleAZ0	22.3	0.0	0.0789	0.0000	0.0394	UN
 Sample5	SampleAE9	Sample26	SampleAZ1	20.2	0.0	0.0772	0.0000	0.0386	UN
 Sample5	SampleAE9	Sample26	SampleAZ2	47.6	0.0	0.0837	0.0000	0.0419	UN
 Sample5	SampleAE9	Sample26	SampleAZ3	18.3	0.0	0.0963	0.0000	0.0482	4th
-Sample5	SampleAE9	Sample26	SampleAZ4	47.6	0.0	0.0855	0.0000	0.0428	UN
 Sample5	SampleAE10	Sample25	SampleAY8	15.8	0.0	0.0712	0.0000	0.0356	UN
 Sample5	SampleAE10	Sample25	SampleAY9	29.6	0.0	0.0721	0.0000	0.0360	UN
 Sample5	SampleAE10	Sample25	SampleAY10	17.5	0.0	0.0775	0.0000	0.0387	UN
 Sample5	SampleAE10	Sample26	SampleAZ0	15.6	4.4	0.0672	0.0016	0.0352	UN
 Sample5	SampleAE10	Sample26	SampleAZ1	39.4	0.0	0.1245	0.0000	0.0622	4th
 Sample5	SampleAE10	Sample26	SampleAZ3	21.5	0.0	0.0734	0.0000	0.0367	UN
-Sample5	SampleAE10	Sample26	SampleAZ4	11.6	0.0	0.0434	0.0000	0.0217	UN
 Sample6	SampleAF0	Sample25	SampleAY8	24.3	0.0	0.0547	0.0000	0.0274	UN
 Sample6	SampleAF0	Sample25	SampleAY9	23.0	0.0	0.0907	0.0000	0.0454	4th
 Sample6	SampleAF0	Sample25	SampleAY10	29.9	0.0	0.0852	0.0000	0.0426	UN
@@ -13894,7 +13568,6 @@ Sample6	SampleAF0	Sample26	SampleAZ0	23.7	3.5	0.0751	0.0013	0.0389	UN
 Sample6	SampleAF0	Sample26	SampleAZ1	31.1	3.8	0.0888	0.0014	0.0458	4th
 Sample6	SampleAF0	Sample26	SampleAZ2	31.2	4.8	0.0673	0.0018	0.0355	UN
 Sample6	SampleAF0	Sample26	SampleAZ3	97.2	0.0	0.2378	0.0000	0.1189	3rd
-Sample6	SampleAF0	Sample26	SampleAZ4	25.5	4.2	0.0729	0.0016	0.0381	UN
 Sample5	SampleAE4	Sample26	SampleAZ5	47.6	0.0	0.0901	0.0000	0.0450	4th
 Sample5	SampleAE4	Sample26	SampleAZ6	17.0	0.0	0.0770	0.0000	0.0385	UN
 Sample5	SampleAE4	Sample26	SampleAZ7	21.3	0.0	0.0684	0.0000	0.0342	UN
@@ -15617,14 +15290,12 @@ Sample6	SampleAF1	Sample26	SampleAZ0	14.4	4.9	0.0496	0.0018	0.0266	UN
 Sample6	SampleAF1	Sample26	SampleAZ1	22.4	3.9	0.0661	0.0015	0.0346	UN
 Sample6	SampleAF1	Sample26	SampleAZ2	10.1	0.0	0.0512	0.0000	0.0256	UN
 Sample6	SampleAF1	Sample26	SampleAZ3	17.5	0.0	0.0761	0.0000	0.0381	UN
-Sample6	SampleAF1	Sample26	SampleAZ4	11.6	0.0	0.0446	0.0000	0.0223	UN
 Sample6	SampleAF2	Sample25	SampleAY8	14.2	6.2	0.0688	0.0023	0.0367	UN
 Sample6	SampleAF2	Sample25	SampleAY9	14.5	0.0	0.0557	0.0000	0.0278	UN
 Sample6	SampleAF2	Sample25	SampleAY10	13.3	7.5	0.0815	0.0028	0.0435	UN
 Sample6	SampleAF2	Sample26	SampleAZ0	13.5	0.0	0.0822	0.0000	0.0411	UN
 Sample6	SampleAF2	Sample26	SampleAZ2	62.8	10.8	0.2884	0.0051	0.1493	3rd
 Sample6	SampleAF2	Sample26	SampleAZ3	76.8	0.0	0.2337	0.0000	0.1169	3rd
-Sample6	SampleAF2	Sample26	SampleAZ4	36.0	13.2	0.1925	0.0049	0.1012	3rd
 Sample6	SampleAF3	Sample25	SampleAY8	11.9	0.0	0.0633	0.0000	0.0317	UN
 Sample6	SampleAF3	Sample25	SampleAY9	37.6	0.0	0.0930	0.0000	0.0465	4th
 Sample6	SampleAF3	Sample25	SampleAY10	24.2	0.0	0.0584	0.0000	0.0292	UN
@@ -15632,7 +15303,6 @@ Sample6	SampleAF3	Sample26	SampleAZ0	21.0	5.1	0.0963	0.0035	0.0517	4th
 Sample6	SampleAF3	Sample26	SampleAZ1	17.2	4.2	0.0684	0.0016	0.0358	UN
 Sample6	SampleAF3	Sample26	SampleAZ2	19.8	3.9	0.0856	0.0015	0.0443	4th
 Sample6	SampleAF3	Sample26	SampleAZ3	18.5	0.0	0.0839	0.0000	0.0420	UN
-Sample6	SampleAF3	Sample26	SampleAZ4	21.0	0.0	0.1016	0.0000	0.0508	4th
 Sample6	SampleAF4	Sample25	SampleAY8	22.8	0.0	0.0640	0.0000	0.0320	UN
 Sample6	SampleAF4	Sample25	SampleAY9	23.0	2.6	0.0810	0.0010	0.0415	UN
 Sample6	SampleAF4	Sample25	SampleAY10	10.9	0.0	0.0710	0.0000	0.0355	UN
@@ -15640,14 +15310,12 @@ Sample6	SampleAF4	Sample26	SampleAZ0	24.6	0.0	0.0860	0.0000	0.0430	UN
 Sample6	SampleAF4	Sample26	SampleAZ1	16.2	0.0	0.0753	0.0000	0.0377	UN
 Sample6	SampleAF4	Sample26	SampleAZ2	40.9	0.0	0.1381	0.0000	0.0691	4th
 Sample6	SampleAF4	Sample26	SampleAZ3	74.6	24.3	0.2319	0.0141	0.1300	3rd
-Sample6	SampleAF4	Sample26	SampleAZ4	20.7	0.0	0.1051	0.0000	0.0525	4th
 Sample6	SampleAF5	Sample25	SampleAY8	24.0	2.7	0.0733	0.0010	0.0377	UN
 Sample6	SampleAF5	Sample25	SampleAY9	23.0	0.0	0.0760	0.0000	0.0380	UN
 Sample6	SampleAF5	Sample25	SampleAY10	10.9	0.0	0.0755	0.0000	0.0377	UN
 Sample6	SampleAF5	Sample26	SampleAZ0	24.6	0.0	0.0918	0.0000	0.0459	4th
 Sample6	SampleAF5	Sample26	SampleAZ2	45.0	8.2	0.1887	0.0046	0.0990	3rd
 Sample6	SampleAF5	Sample26	SampleAZ3	48.4	23.3	0.2407	0.0122	0.1326	3rd
-Sample6	SampleAF5	Sample26	SampleAZ4	29.2	3.6	0.1326	0.0014	0.0677	4th
 Sample6	SampleAF6	Sample25	SampleAY8	30.8	6.1	0.1119	0.0023	0.0582	4th
 Sample6	SampleAF6	Sample25	SampleAY9	21.7	0.0	0.1029	0.0000	0.0515	4th
 Sample6	SampleAF6	Sample25	SampleAY10	27.6	0.0	0.0751	0.0000	0.0376	UN
@@ -15655,14 +15323,12 @@ Sample6	SampleAF6	Sample26	SampleAZ0	43.3	5.3	0.1125	0.0020	0.0583	4th
 Sample6	SampleAF6	Sample26	SampleAZ1	29.4	0.0	0.1326	0.0000	0.0663	4th
 Sample6	SampleAF6	Sample26	SampleAZ2	23.0	0.0	0.0870	0.0000	0.0435	UN
 Sample6	SampleAF6	Sample26	SampleAZ3	21.4	4.3	0.0789	0.0016	0.0410	UN
-Sample6	SampleAF6	Sample26	SampleAZ4	28.1	0.0	0.0903	0.0000	0.0452	4th
 Sample6	SampleAF7	Sample25	SampleAY8	21.6	0.0	0.0683	0.0000	0.0341	UN
 Sample6	SampleAF7	Sample25	SampleAY9	10.3	0.0	0.0638	0.0000	0.0319	UN
 Sample6	SampleAF7	Sample26	SampleAZ0	13.5	0.0	0.0659	0.0000	0.0330	UN
 Sample6	SampleAF7	Sample26	SampleAZ1	22.8	0.0	0.0635	0.0000	0.0318	UN
 Sample6	SampleAF7	Sample26	SampleAZ2	39.9	0.0	0.1332	0.0000	0.0666	4th
 Sample6	SampleAF7	Sample26	SampleAZ3	75.4	0.0	0.1742	0.0000	0.0871	4th
-Sample6	SampleAF7	Sample26	SampleAZ4	29.3	0.0	0.1166	0.0000	0.0583	4th
 Sample6	SampleAF8	Sample25	SampleAY8	18.6	0.0	0.0892	0.0000	0.0446	4th
 Sample6	SampleAF8	Sample25	SampleAY9	25.8	0.0	0.0828	0.0000	0.0414	UN
 Sample6	SampleAF8	Sample25	SampleAY10	22.3	0.0	0.0772	0.0000	0.0386	UN
@@ -15670,7 +15336,6 @@ Sample6	SampleAF8	Sample26	SampleAZ0	17.2	0.0	0.0690	0.0000	0.0345	UN
 Sample6	SampleAF8	Sample26	SampleAZ1	22.8	0.0	0.0574	0.0000	0.0287	UN
 Sample6	SampleAF8	Sample26	SampleAZ2	45.9	6.8	0.1701	0.0048	0.0898	3rd
 Sample6	SampleAF8	Sample26	SampleAZ3	52.1	0.0	0.1732	0.0000	0.0866	4th
-Sample6	SampleAF8	Sample26	SampleAZ4	39.3	6.6	0.1345	0.0025	0.0698	4th
 Sample6	SampleAF1	Sample26	SampleAZ6	15.4	7.2	0.1193	0.0027	0.0624	4th
 Sample6	SampleAF1	Sample26	SampleAZ7	10.2	0.0	0.0518	0.0000	0.0259	UN
 Sample6	SampleAF1	Sample26	SampleAZ8	23.1	0.0	0.0587	0.0000	0.0294	UN
@@ -17298,7 +16963,6 @@ Sample6	SampleAF9	Sample26	SampleAZ0	26.9	6.4	0.1166	0.0024	0.0607	4th
 Sample6	SampleAF9	Sample26	SampleAZ1	15.4	0.0	0.0621	0.0000	0.0311	UN
 Sample6	SampleAF9	Sample26	SampleAZ2	41.7	0.0	0.1319	0.0000	0.0660	4th
 Sample6	SampleAF9	Sample26	SampleAZ3	40.7	6.2	0.1472	0.0023	0.0759	4th
-Sample6	SampleAF9	Sample26	SampleAZ4	19.5	0.0	0.1113	0.0000	0.0557	4th
 Sample6	SampleAF10	Sample25	SampleAY8	30.7	0.0	0.0960	0.0000	0.0480	4th
 Sample6	SampleAF10	Sample25	SampleAY9	15.0	0.0	0.0754	0.0000	0.0377	UN
 Sample6	SampleAF10	Sample25	SampleAY10	18.6	0.0	0.0586	0.0000	0.0293	UN
@@ -17306,7 +16970,6 @@ Sample6	SampleAF10	Sample26	SampleAZ0	24.8	5.2	0.0814	0.0030	0.0437	UN
 Sample6	SampleAF10	Sample26	SampleAZ1	29.4	0.0	0.0954	0.0000	0.0477	4th
 Sample6	SampleAF10	Sample26	SampleAZ2	35.9	0.0	0.1119	0.0000	0.0559	4th
 Sample6	SampleAF10	Sample26	SampleAZ3	52.4	0.0	0.1229	0.0000	0.0615	4th
-Sample6	SampleAF10	Sample26	SampleAZ4	30.4	0.0	0.1006	0.0000	0.0503	4th
 Sample7	SampleAG0	Sample25	SampleAY8	25.4	3.9	0.0576	0.0015	0.0303	UN
 Sample7	SampleAG0	Sample25	SampleAY9	11.5	0.0	0.0313	0.0000	0.0157	UN
 Sample7	SampleAG0	Sample25	SampleAY10	28.4	0.0	0.0749	0.0000	0.0375	UN
@@ -17314,7 +16977,6 @@ Sample7	SampleAG0	Sample26	SampleAZ0	24.5	0.0	0.0711	0.0000	0.0355	UN
 Sample7	SampleAG0	Sample26	SampleAZ1	20.9	0.0	0.0737	0.0000	0.0369	UN
 Sample7	SampleAG0	Sample26	SampleAZ2	14.5	0.0	0.0469	0.0000	0.0235	UN
 Sample7	SampleAG0	Sample26	SampleAZ3	26.4	0.0	0.0913	0.0000	0.0457	4th
-Sample7	SampleAG0	Sample26	SampleAZ4	17.1	0.0	0.0609	0.0000	0.0305	UN
 Sample7	SampleAG1	Sample25	SampleAY8	11.9	3.5	0.0777	0.0013	0.0402	UN
 Sample7	SampleAG1	Sample25	SampleAY9	26.8	0.0	0.0837	0.0000	0.0419	UN
 Sample7	SampleAG1	Sample25	SampleAY10	37.5	0.0	0.0923	0.0000	0.0462	4th
@@ -17322,7 +16984,6 @@ Sample7	SampleAG1	Sample26	SampleAZ0	23.4	0.0	0.0960	0.0000	0.0480	4th
 Sample7	SampleAG1	Sample26	SampleAZ1	31.0	2.7	0.0872	0.0010	0.0446	4th
 Sample7	SampleAG1	Sample26	SampleAZ2	13.9	3.8	0.0517	0.0014	0.0272	UN
 Sample7	SampleAG1	Sample26	SampleAZ3	147.6	12.9	0.9710	0.0279	0.5134	PO
-Sample7	SampleAG1	Sample26	SampleAZ4	23.6	0.0	0.0713	0.0000	0.0357	UN
 Sample7	SampleAG2	Sample25	SampleAY8	19.7	0.0	0.0724	0.0000	0.0362	UN
 Sample7	SampleAG2	Sample25	SampleAY9	15.5	0.0	0.0856	0.0000	0.0428	UN
 Sample7	SampleAG2	Sample25	SampleAY10	33.1	3.0	0.1000	0.0022	0.0522	4th
@@ -17330,14 +16991,12 @@ Sample7	SampleAG2	Sample26	SampleAZ0	108.9	33.5	0.5180	0.0183	0.2773	2nd
 Sample7	SampleAG2	Sample26	SampleAZ1	20.1	0.0	0.0665	0.0000	0.0333	UN
 Sample7	SampleAG2	Sample26	SampleAZ2	54.8	2.8	0.1702	0.0010	0.0861	4th
 Sample7	SampleAG2	Sample26	SampleAZ3	17.4	0.0	0.1076	0.0000	0.0538	4th
-Sample7	SampleAG2	Sample26	SampleAZ4	49.8	3.3	0.2600	0.0023	0.1323	3rd
 Sample7	SampleAG3	Sample25	SampleAY8	62.2	0.0	0.3633	0.0000	0.1817	2nd
 Sample7	SampleAG3	Sample25	SampleAY10	28.3	0.0	0.2059	0.0000	0.1029	3rd
 Sample7	SampleAG3	Sample26	SampleAZ0	27.4	0.0	0.0746	0.0000	0.0373	UN
 Sample7	SampleAG3	Sample26	SampleAZ1	33.5	0.0	0.1041	0.0000	0.0520	4th
 Sample7	SampleAG3	Sample26	SampleAZ2	20.2	0.0	0.1029	0.0000	0.0515	4th
 Sample7	SampleAG3	Sample26	SampleAZ3	26.2	5.8	0.0947	0.0040	0.0514	4th
-Sample7	SampleAG3	Sample26	SampleAZ4	17.7	3.7	0.0815	0.0014	0.0421	UN
 Sample7	SampleAG4	Sample25	SampleAY8	28.1	0.0	0.0645	0.0000	0.0323	UN
 Sample7	SampleAG4	Sample25	SampleAY9	14.3	0.0	0.0662	0.0000	0.0331	UN
 Sample7	SampleAG4	Sample25	SampleAY10	28.2	0.0	0.0820	0.0000	0.0410	UN
@@ -17345,7 +17004,6 @@ Sample7	SampleAG4	Sample26	SampleAZ0	78.2	3.6	0.2696	0.0014	0.1362	3rd
 Sample7	SampleAG4	Sample26	SampleAZ1	14.9	0.0	0.0658	0.0000	0.0329	UN
 Sample7	SampleAG4	Sample26	SampleAZ2	35.4	0.0	0.0853	0.0000	0.0427	UN
 Sample7	SampleAG4	Sample26	SampleAZ3	17.4	0.0	0.0866	0.0000	0.0433	UN
-Sample7	SampleAG4	Sample26	SampleAZ4	40.8	3.2	0.1485	0.0012	0.0755	4th
 Sample7	SampleAG5	Sample25	SampleAY8	28.1	0.0	0.0570	0.0000	0.0285	UN
 Sample7	SampleAG5	Sample25	SampleAY9	12.8	0.0	0.0586	0.0000	0.0293	UN
 Sample7	SampleAG5	Sample25	SampleAY10	33.1	4.3	0.0990	0.0016	0.0511	4th
@@ -17353,7 +17011,6 @@ Sample7	SampleAG5	Sample26	SampleAZ0	55.9	10.1	0.2657	0.0048	0.1376	3rd
 Sample7	SampleAG5	Sample26	SampleAZ1	21.7	0.0	0.0815	0.0000	0.0408	UN
 Sample7	SampleAG5	Sample26	SampleAZ2	25.3	3.5	0.0922	0.0013	0.0474	4th
 Sample7	SampleAG5	Sample26	SampleAZ3	15.4	4.3	0.1134	0.0016	0.0583	4th
-Sample7	SampleAG5	Sample26	SampleAZ4	31.5	0.0	0.1417	0.0000	0.0709	4th
 Sample6	SampleAF9	Sample26	SampleAZ5	26.8	0.0	0.1019	0.0000	0.0510	4th
 Sample6	SampleAF9	Sample26	SampleAZ6	19.7	0.0	0.1026	0.0000	0.0513	4th
 Sample6	SampleAF9	Sample26	SampleAZ7	41.7	3.3	0.0978	0.0012	0.0501	4th
@@ -18939,7 +18596,6 @@ Sample7	SampleAG6	Sample26	SampleAZ0	15.4	0.0	0.0784	0.0000	0.0392	UN
 Sample7	SampleAG6	Sample26	SampleAZ1	21.0	0.0	0.0894	0.0000	0.0447	4th
 Sample7	SampleAG6	Sample26	SampleAZ2	33.4	0.0	0.1474	0.0000	0.0737	4th
 Sample7	SampleAG6	Sample26	SampleAZ3	21.7	0.0	0.0996	0.0000	0.0498	4th
-Sample7	SampleAG6	Sample26	SampleAZ4	33.1	0.0	0.1317	0.0000	0.0659	4th
 Sample7	SampleAG7	Sample25	SampleAY8	16.6	3.2	0.0716	0.0012	0.0370	UN
 Sample7	SampleAG7	Sample25	SampleAY9	26.8	5.4	0.1012	0.0020	0.0526	4th
 Sample7	SampleAG7	Sample25	SampleAY10	18.4	0.0	0.0923	0.0000	0.0462	4th
@@ -18947,7 +18603,6 @@ Sample7	SampleAG7	Sample26	SampleAZ0	44.5	3.1	0.2848	0.0012	0.1436	3rd
 Sample7	SampleAG7	Sample26	SampleAZ1	30.0	0.0	0.0552	0.0000	0.0276	UN
 Sample7	SampleAG7	Sample26	SampleAZ2	35.3	0.0	0.1040	0.0000	0.0520	4th
 Sample7	SampleAG7	Sample26	SampleAZ3	134.7	10.9	0.7325	0.0151	0.3814	2nd
-Sample7	SampleAG7	Sample26	SampleAZ4	38.4	2.9	0.1605	0.0011	0.0814	4th
 Sample7	SampleAG8	Sample25	SampleAY8	25.0	3.2	0.0860	0.0012	0.0442	4th
 Sample7	SampleAG8	Sample25	SampleAY9	26.8	0.0	0.0980	0.0000	0.0490	4th
 Sample7	SampleAG8	Sample25	SampleAY10	38.2	0.0	0.0868	0.0000	0.0434	UN
@@ -18955,7 +18610,6 @@ Sample7	SampleAG8	Sample26	SampleAZ0	80.9	5.9	0.3469	0.0065	0.1800	2nd
 Sample7	SampleAG8	Sample26	SampleAZ1	30.6	0.0	0.0841	0.0000	0.0421	UN
 Sample7	SampleAG8	Sample26	SampleAZ2	27.2	0.0	0.1064	0.0000	0.0532	4th
 Sample7	SampleAG8	Sample26	SampleAZ3	138.2	10.9	0.6532	0.0120	0.3386	2nd
-Sample7	SampleAG8	Sample26	SampleAZ4	34.0	0.0	0.1775	0.0000	0.0888	3rd
 Sample7	SampleAG9	Sample25	SampleAY8	50.0	14.0	0.1919	0.0065	0.1025	3rd
 Sample7	SampleAG9	Sample25	SampleAY9	11.0	0.0	0.0557	0.0000	0.0278	UN
 Sample7	SampleAG9	Sample25	SampleAY10	29.8	4.7	0.1266	0.0017	0.0650	4th
@@ -18963,7 +18617,6 @@ Sample7	SampleAG9	Sample26	SampleAZ0	54.6	3.1	0.1844	0.0012	0.0934	3rd
 Sample7	SampleAG9	Sample26	SampleAZ1	17.5	6.4	0.0728	0.0024	0.0388	UN
 Sample7	SampleAG9	Sample26	SampleAZ2	34.5	0.0	0.1017	0.0000	0.0508	4th
 Sample7	SampleAG9	Sample26	SampleAZ3	17.5	6.5	0.0885	0.0024	0.0467	4th
-Sample7	SampleAG9	Sample26	SampleAZ4	41.0	2.8	0.1401	0.0011	0.0712	4th
 Sample7	SampleAG10	Sample25	SampleAY8	32.5	4.3	0.1119	0.0029	0.0588	4th
 Sample7	SampleAG10	Sample25	SampleAY9	18.2	4.6	0.0695	0.0028	0.0376	UN
 Sample7	SampleAG10	Sample25	SampleAY10	20.6	3.9	0.0954	0.0014	0.0491	4th
@@ -18971,7 +18624,6 @@ Sample7	SampleAG10	Sample26	SampleAZ0	39.5	4.4	0.1887	0.0016	0.0960	3rd
 Sample7	SampleAG10	Sample26	SampleAZ1	30.0	0.0	0.0764	0.0000	0.0382	UN
 Sample7	SampleAG10	Sample26	SampleAZ2	33.1	0.0	0.1407	0.0000	0.0704	4th
 Sample7	SampleAG10	Sample26	SampleAZ3	134.7	10.8	0.4497	0.0079	0.2328	2nd
-Sample7	SampleAG10	Sample26	SampleAZ4	37.9	0.0	0.1647	0.0000	0.0824	4th
 Sample8	SampleAH0	Sample25	SampleAY8	120.2	15.4	0.3476	0.0159	0.1897	2nd
 Sample8	SampleAH0	Sample25	SampleAY9	71.6	0.0	0.1979	0.0000	0.0990	3rd
 Sample8	SampleAH0	Sample25	SampleAY10	133.0	0.0	0.2051	0.0000	0.1026	3rd
@@ -18979,7 +18631,6 @@ Sample8	SampleAH0	Sample26	SampleAZ0	28.0	3.7	0.0913	0.0014	0.0471	4th
 Sample8	SampleAH0	Sample26	SampleAZ1	19.2	0.0	0.0690	0.0000	0.0345	UN
 Sample8	SampleAH0	Sample26	SampleAZ2	18.4	0.0	0.0769	0.0000	0.0385	UN
 Sample8	SampleAH0	Sample26	SampleAZ3	21.8	0.0	0.0943	0.0000	0.0472	4th
-Sample8	SampleAH0	Sample26	SampleAZ4	22.2	6.5	0.0659	0.0069	0.0399	UN
 Sample8	SampleAH1	Sample25	SampleAY8	20.3	4.1	0.0723	0.0027	0.0389	UN
 Sample8	SampleAH1	Sample25	SampleAY9	18.3	0.0	0.0764	0.0000	0.0382	UN
 Sample8	SampleAH1	Sample25	SampleAY10	21.7	0.0	0.0844	0.0000	0.0422	UN
@@ -18987,7 +18638,6 @@ Sample8	SampleAH1	Sample26	SampleAZ0	12.5	0.0	0.0767	0.0000	0.0384	UN
 Sample8	SampleAH1	Sample26	SampleAZ1	22.3	6.1	0.0824	0.0038	0.0450	4th
 Sample8	SampleAH1	Sample26	SampleAZ2	23.7	0.0	0.0611	0.0000	0.0306	UN
 Sample8	SampleAH1	Sample26	SampleAZ3	31.6	3.1	0.0844	0.0012	0.0434	UN
-Sample8	SampleAH1	Sample26	SampleAZ4	23.9	4.3	0.0681	0.0016	0.0357	UN
 Sample8	SampleAH2	Sample25	SampleAY8	25.9	0.0	0.0666	0.0000	0.0333	UN
 Sample8	SampleAH2	Sample25	SampleAY9	17.0	5.4	0.0645	0.0020	0.0343	UN
 Sample8	SampleAH2	Sample25	SampleAY10	17.7	5.5	0.0849	0.0021	0.0445	4th
@@ -18995,7 +18645,6 @@ Sample8	SampleAH2	Sample26	SampleAZ0	20.9	0.0	0.0727	0.0000	0.0364	UN
 Sample8	SampleAH2	Sample26	SampleAZ1	13.0	0.0	0.0647	0.0000	0.0324	UN
 Sample8	SampleAH2	Sample26	SampleAZ2	16.6	0.0	0.0890	0.0000	0.0445	4th
 Sample8	SampleAH2	Sample26	SampleAZ3	15.2	0.0	0.0920	0.0000	0.0460	4th
-Sample8	SampleAH2	Sample26	SampleAZ4	10.5	0.0	0.0823	0.0000	0.0411	UN
 Sample7	SampleAG6	Sample26	SampleAZ5	33.1	0.0	0.1153	0.0000	0.0576	4th
 Sample7	SampleAG6	Sample26	SampleAZ6	37.1	0.0	0.1135	0.0000	0.0568	4th
 Sample7	SampleAG6	Sample26	SampleAZ7	31.2	0.0	0.1411	0.0000	0.0706	4th
@@ -20496,7 +20145,6 @@ Sample8	SampleAH3	Sample26	SampleAZ0	10.1	3.7	0.0679	0.0014	0.0353	UN
 Sample8	SampleAH3	Sample26	SampleAZ1	10.2	0.0	0.0623	0.0000	0.0312	UN
 Sample8	SampleAH3	Sample26	SampleAZ2	26.3	0.0	0.0818	0.0000	0.0409	UN
 Sample8	SampleAH3	Sample26	SampleAZ3	11.8	0.0	0.0528	0.0000	0.0264	UN
-Sample8	SampleAH3	Sample26	SampleAZ4	26.1	0.0	0.0774	0.0000	0.0387	UN
 Sample8	SampleAH4	Sample25	SampleAY8	120.2	4.2	0.2380	0.0016	0.1206	3rd
 Sample8	SampleAH4	Sample25	SampleAY9	71.6	3.3	0.1502	0.0012	0.0763	4th
 Sample8	SampleAH4	Sample25	SampleAY10	129.5	5.9	0.1983	0.0043	0.1035	3rd
@@ -20504,7 +20152,6 @@ Sample8	SampleAH4	Sample26	SampleAZ0	22.1	0.0	0.0658	0.0000	0.0329	UN
 Sample8	SampleAH4	Sample26	SampleAZ1	21.0	0.0	0.0651	0.0000	0.0326	UN
 Sample8	SampleAH4	Sample26	SampleAZ2	16.6	0.0	0.0758	0.0000	0.0379	UN
 Sample8	SampleAH4	Sample26	SampleAZ3	11.0	4.9	0.0790	0.0018	0.0413	UN
-Sample8	SampleAH4	Sample26	SampleAZ4	22.1	0.0	0.0738	0.0000	0.0369	UN
 Sample8	SampleAH5	Sample25	SampleAY8	128.7	6.7	0.2258	0.0041	0.1170	3rd
 Sample8	SampleAH5	Sample25	SampleAY9	71.6	3.3	0.1635	0.0012	0.0830	4th
 Sample8	SampleAH5	Sample25	SampleAY10	133.0	5.5	0.1847	0.0021	0.0945	3rd
@@ -20512,7 +20159,6 @@ Sample8	SampleAH5	Sample26	SampleAZ0	22.1	0.0	0.0889	0.0000	0.0445	4th
 Sample8	SampleAH5	Sample26	SampleAZ1	14.1	0.0	0.0623	0.0000	0.0312	UN
 Sample8	SampleAH5	Sample26	SampleAZ2	26.2	0.0	0.0910	0.0000	0.0455	4th
 Sample8	SampleAH5	Sample26	SampleAZ3	17.9	0.0	0.0971	0.0000	0.0486	4th
-Sample8	SampleAH5	Sample26	SampleAZ4	22.1	5.5	0.0950	0.0021	0.0496	4th
 Sample8	SampleAH6	Sample25	SampleAY8	23.9	3.2	0.0884	0.0012	0.0454	4th
 Sample8	SampleAH6	Sample25	SampleAY9	24.5	0.0	0.0707	0.0000	0.0353	UN
 Sample8	SampleAH6	Sample25	SampleAY10	12.8	3.5	0.0920	0.0013	0.0473	4th
@@ -20520,7 +20166,6 @@ Sample8	SampleAH6	Sample26	SampleAZ0	17.3	8.1	0.0889	0.0030	0.0475	4th
 Sample8	SampleAH6	Sample26	SampleAZ1	21.4	0.0	0.0533	0.0000	0.0267	UN
 Sample8	SampleAH6	Sample26	SampleAZ2	53.4	0.0	0.1932	0.0000	0.0966	3rd
 Sample8	SampleAH6	Sample26	SampleAZ3	16.6	4.3	0.0882	0.0016	0.0457	4th
-Sample8	SampleAH6	Sample26	SampleAZ4	37.8	9.0	0.1442	0.0034	0.0755	4th
 Sample8	SampleAH7	Sample25	SampleAY8	16.7	0.0	0.0697	0.0000	0.0348	UN
 Sample8	SampleAH7	Sample25	SampleAY9	17.0	0.0	0.0697	0.0000	0.0348	UN
 Sample8	SampleAH7	Sample25	SampleAY10	22.4	0.0	0.0706	0.0000	0.0353	UN
@@ -20528,7 +20173,6 @@ Sample8	SampleAH7	Sample26	SampleAZ0	21.0	4.5	0.0949	0.0017	0.0491	4th
 Sample8	SampleAH7	Sample26	SampleAZ1	17.1	0.0	0.0734	0.0000	0.0367	UN
 Sample8	SampleAH7	Sample26	SampleAZ2	17.1	0.0	0.0819	0.0000	0.0410	UN
 Sample8	SampleAH7	Sample26	SampleAZ3	27.7	0.0	0.0871	0.0000	0.0436	UN
-Sample8	SampleAH7	Sample26	SampleAZ4	11.0	0.0	0.0784	0.0000	0.0392	UN
 Sample8	SampleAH8	Sample25	SampleAY8	20.3	0.0	0.0783	0.0000	0.0392	UN
 Sample8	SampleAH8	Sample25	SampleAY9	18.3	0.0	0.0607	0.0000	0.0304	UN
 Sample8	SampleAH8	Sample25	SampleAY10	24.6	0.0	0.0965	0.0000	0.0483	4th
@@ -20536,7 +20180,6 @@ Sample8	SampleAH8	Sample26	SampleAZ0	16.0	0.0	0.0788	0.0000	0.0394	UN
 Sample8	SampleAH8	Sample26	SampleAZ1	19.4	5.0	0.0827	0.0031	0.0445	4th
 Sample8	SampleAH8	Sample26	SampleAZ2	16.4	0.0	0.0717	0.0000	0.0358	UN
 Sample8	SampleAH8	Sample26	SampleAZ3	31.6	0.0	0.1023	0.0000	0.0512	4th
-Sample8	SampleAH8	Sample26	SampleAZ4	15.1	0.0	0.0774	0.0000	0.0387	UN
 Sample8	SampleAH9	Sample25	SampleAY8	62.4	8.7	0.1648	0.0033	0.0857	4th
 Sample8	SampleAH9	Sample25	SampleAY9	56.8	0.0	0.1005	0.0000	0.0503	4th
 Sample8	SampleAH9	Sample25	SampleAY10	72.5	0.0	0.1388	0.0000	0.0694	4th
@@ -20544,14 +20187,12 @@ Sample8	SampleAH9	Sample26	SampleAZ0	13.0	0.0	0.0749	0.0000	0.0375	UN
 Sample8	SampleAH9	Sample26	SampleAZ1	19.2	3.4	0.0547	0.0035	0.0309	UN
 Sample8	SampleAH9	Sample26	SampleAZ2	26.2	0.0	0.1029	0.0000	0.0515	4th
 Sample8	SampleAH9	Sample26	SampleAZ3	23.2	0.0	0.0694	0.0000	0.0347	UN
-Sample8	SampleAH9	Sample26	SampleAZ4	21.3	6.4	0.0869	0.0042	0.0477	4th
 Sample8	SampleAH10	Sample25	SampleAY8	15.4	5.5	0.0775	0.0035	0.0423	UN
 Sample8	SampleAH10	Sample25	SampleAY9	24.5	0.0	0.0860	0.0000	0.0430	UN
 Sample8	SampleAH10	Sample25	SampleAY10	13.5	0.0	0.0715	0.0000	0.0358	UN
 Sample8	SampleAH10	Sample26	SampleAZ0	21.0	3.4	0.0844	0.0013	0.0435	UN
 Sample8	SampleAH10	Sample26	SampleAZ1	10.4	0.0	0.0603	0.0000	0.0301	UN
 Sample8	SampleAH10	Sample26	SampleAZ2	42.0	4.9	0.1355	0.0018	0.0696	4th
-Sample8	SampleAH10	Sample26	SampleAZ4	28.4	10.5	0.1029	0.0088	0.0603	4th
 Sample8	SampleAH3	Sample26	SampleAZ5	14.9	4.9	0.0638	0.0018	0.0337	UN
 Sample8	SampleAH3	Sample26	SampleAZ6	23.7	0.0	0.0470	0.0000	0.0235	UN
 Sample8	SampleAH3	Sample26	SampleAZ7	13.4	0.0	0.0757	0.0000	0.0379	UN
@@ -21997,7 +21638,6 @@ Sample9	SampleAI0	Sample26	SampleAZ0	25.8	3.1	0.1334	0.0012	0.0679	4th
 Sample9	SampleAI0	Sample26	SampleAZ1	12.8	3.1	0.0795	0.0012	0.0410	UN
 Sample9	SampleAI0	Sample26	SampleAZ2	25.2	0.0	0.1059	0.0000	0.0530	4th
 Sample9	SampleAI0	Sample26	SampleAZ3	14.6	0.0	0.0898	0.0000	0.0449	4th
-Sample9	SampleAI0	Sample26	SampleAZ4	23.2	3.8	0.1021	0.0014	0.0525	4th
 Sample9	SampleAI1	Sample25	SampleAY8	29.3	0.0	0.0826	0.0000	0.0413	UN
 Sample9	SampleAI1	Sample25	SampleAY9	14.2	0.0	0.0801	0.0000	0.0401	UN
 Sample9	SampleAI1	Sample25	SampleAY10	11.3	0.0	0.0544	0.0000	0.0272	UN
@@ -22005,7 +21645,6 @@ Sample9	SampleAI1	Sample26	SampleAZ0	20.9	0.0	0.0843	0.0000	0.0421	UN
 Sample9	SampleAI1	Sample26	SampleAZ1	23.9	0.0	0.0870	0.0000	0.0435	UN
 Sample9	SampleAI1	Sample26	SampleAZ2	20.7	0.0	0.0487	0.0000	0.0244	UN
 Sample9	SampleAI1	Sample26	SampleAZ3	19.6	0.0	0.0790	0.0000	0.0395	UN
-Sample9	SampleAI1	Sample26	SampleAZ4	20.8	0.0	0.0834	0.0000	0.0417	UN
 Sample9	SampleAI2	Sample25	SampleAY8	12.3	0.0	0.0486	0.0000	0.0243	UN
 Sample9	SampleAI2	Sample25	SampleAY9	15.3	0.0	0.0647	0.0000	0.0324	UN
 Sample9	SampleAI2	Sample25	SampleAY10	19.4	0.0	0.0475	0.0000	0.0238	UN
@@ -22013,7 +21652,6 @@ Sample9	SampleAI2	Sample26	SampleAZ0	30.0	0.0	0.0953	0.0000	0.0477	4th
 Sample9	SampleAI2	Sample26	SampleAZ1	23.3	0.0	0.0903	0.0000	0.0452	4th
 Sample9	SampleAI2	Sample26	SampleAZ2	12.8	0.0	0.0512	0.0000	0.0256	UN
 Sample9	SampleAI2	Sample26	SampleAZ3	14.6	0.0	0.0662	0.0000	0.0331	UN
-Sample9	SampleAI2	Sample26	SampleAZ4	15.0	0.0	0.0852	0.0000	0.0426	UN
 Sample9	SampleAI3	Sample25	SampleAY8	14.7	0.0	0.0847	0.0000	0.0423	UN
 Sample9	SampleAI3	Sample25	SampleAY9	20.4	0.0	0.0615	0.0000	0.0308	UN
 Sample9	SampleAI3	Sample25	SampleAY10	16.7	0.0	0.0956	0.0000	0.0478	4th
@@ -22021,7 +21659,6 @@ Sample9	SampleAI3	Sample26	SampleAZ0	13.5	0.0	0.0816	0.0000	0.0408	UN
 Sample9	SampleAI3	Sample26	SampleAZ1	14.2	0.0	0.0752	0.0000	0.0376	UN
 Sample9	SampleAI3	Sample26	SampleAZ2	15.3	0.0	0.0817	0.0000	0.0409	UN
 Sample9	SampleAI3	Sample26	SampleAZ3	23.4	0.0	0.0965	0.0000	0.0483	4th
-Sample9	SampleAI3	Sample26	SampleAZ4	15.3	0.0	0.0866	0.0000	0.0433	UN
 Sample9	SampleAI4	Sample25	SampleAY8	14.3	0.0	0.0580	0.0000	0.0290	UN
 Sample9	SampleAI4	Sample25	SampleAY9	13.8	3.4	0.0762	0.0013	0.0394	UN
 Sample9	SampleAI4	Sample25	SampleAY10	27.7	3.2	0.0739	0.0012	0.0382	UN
@@ -22029,7 +21666,6 @@ Sample9	SampleAI4	Sample26	SampleAZ0	27.0	0.0	0.1168	0.0000	0.0584	4th
 Sample9	SampleAI4	Sample26	SampleAZ1	23.4	2.9	0.0863	0.0011	0.0442	4th
 Sample9	SampleAI4	Sample26	SampleAZ2	18.6	6.5	0.0837	0.0024	0.0443	4th
 Sample9	SampleAI4	Sample26	SampleAZ3	16.7	0.0	0.0715	0.0000	0.0358	UN
-Sample9	SampleAI4	Sample26	SampleAZ4	17.1	0.0	0.0896	0.0000	0.0448	4th
 Sample9	SampleAI5	Sample25	SampleAY8	14.6	0.0	0.0676	0.0000	0.0338	UN
 Sample9	SampleAI5	Sample25	SampleAY9	14.1	12.7	0.0841	0.0048	0.0469	4th
 Sample9	SampleAI5	Sample25	SampleAY10	27.7	0.0	0.0705	0.0000	0.0353	UN
@@ -22037,7 +21673,6 @@ Sample9	SampleAI5	Sample26	SampleAZ0	31.9	0.0	0.1094	0.0000	0.0547	4th
 Sample9	SampleAI5	Sample26	SampleAZ1	23.4	2.9	0.1016	0.0011	0.0519	4th
 Sample9	SampleAI5	Sample26	SampleAZ2	19.9	0.0	0.0617	0.0000	0.0309	UN
 Sample9	SampleAI5	Sample26	SampleAZ3	16.7	3.6	0.1056	0.0013	0.0541	4th
-Sample9	SampleAI5	Sample26	SampleAZ4	23.3	3.8	0.0755	0.0027	0.0404	UN
 Sample9	SampleAI6	Sample25	SampleAY8	25.1	0.0	0.0601	0.0000	0.0301	UN
 Sample9	SampleAI6	Sample25	SampleAY9	21.0	0.0	0.0517	0.0000	0.0259	UN
 Sample9	SampleAI6	Sample25	SampleAY10	21.3	7.4	0.0690	0.0028	0.0373	UN
@@ -22045,14 +21680,12 @@ Sample9	SampleAI6	Sample26	SampleAZ0	20.5	0.0	0.0869	0.0000	0.0435	UN
 Sample9	SampleAI6	Sample26	SampleAZ1	29.1	3.6	0.0762	0.0013	0.0394	UN
 Sample9	SampleAI6	Sample26	SampleAZ2	45.0	27.8	0.2010	0.0196	0.1201	3rd
 Sample9	SampleAI6	Sample26	SampleAZ3	21.2	4.9	0.0734	0.0018	0.0385	UN
-Sample9	SampleAI6	Sample26	SampleAZ4	34.6	4.6	0.1426	0.0045	0.0758	4th
 Sample9	SampleAI7	Sample25	SampleAY9	11.5	3.0	0.0536	0.0011	0.0279	UN
 Sample9	SampleAI7	Sample25	SampleAY10	11.8	0.0	0.0512	0.0000	0.0256	UN
 Sample9	SampleAI7	Sample26	SampleAZ0	11.2	3.9	0.0738	0.0014	0.0383	UN
 Sample9	SampleAI7	Sample26	SampleAZ1	21.5	8.4	0.0663	0.0031	0.0362	UN
 Sample9	SampleAI7	Sample26	SampleAZ2	12.8	0.0	0.0418	0.0000	0.0209	UN
 Sample9	SampleAI7	Sample26	SampleAZ3	10.0	0.0	0.0585	0.0000	0.0293	UN
-Sample9	SampleAI7	Sample26	SampleAZ4	11.8	0.0	0.0707	0.0000	0.0353	UN
 Sample9	SampleAI0	Sample26	SampleAZ5	22.5	3.8	0.1077	0.0014	0.0553	4th
 Sample9	SampleAI0	Sample26	SampleAZ6	17.7	3.9	0.0956	0.0014	0.0492	4th
 Sample9	SampleAI0	Sample26	SampleAZ7	21.7	5.2	0.0865	0.0019	0.0452	4th
@@ -23452,7 +23085,6 @@ Sample9	SampleAI8	Sample26	SampleAZ0	30.0	3.9	0.1005	0.0014	0.0517	4th
 Sample9	SampleAI8	Sample26	SampleAZ1	22.1	8.0	0.0646	0.0030	0.0353	UN
 Sample9	SampleAI8	Sample26	SampleAZ2	11.8	0.0	0.0521	0.0000	0.0261	UN
 Sample9	SampleAI8	Sample26	SampleAZ3	15.8	3.4	0.0689	0.0013	0.0358	UN
-Sample9	SampleAI8	Sample26	SampleAZ4	17.0	5.1	0.0923	0.0019	0.0481	4th
 Sample9	SampleAI9	Sample25	SampleAY8	15.3	0.0	0.0751	0.0000	0.0376	UN
 Sample9	SampleAI9	Sample25	SampleAY9	20.5	0.0	0.0714	0.0000	0.0357	UN
 Sample9	SampleAI9	Sample25	SampleAY10	27.5	0.0	0.0801	0.0000	0.0401	UN
@@ -23460,7 +23092,6 @@ Sample9	SampleAI9	Sample26	SampleAZ0	21.8	0.0	0.0906	0.0000	0.0453	4th
 Sample9	SampleAI9	Sample26	SampleAZ1	14.2	3.0	0.0876	0.0011	0.0449	4th
 Sample9	SampleAI9	Sample26	SampleAZ2	16.8	0.0	0.0815	0.0000	0.0408	UN
 Sample9	SampleAI9	Sample26	SampleAZ3	23.8	0.0	0.1066	0.0000	0.0533	4th
-Sample9	SampleAI9	Sample26	SampleAZ4	12.1	0.0	0.0792	0.0000	0.0396	UN
 Sample9	SampleAI10	Sample25	SampleAY8	13.1	0.0	0.0708	0.0000	0.0354	UN
 Sample9	SampleAI10	Sample25	SampleAY9	12.8	0.0	0.0430	0.0000	0.0215	UN
 Sample9	SampleAI10	Sample25	SampleAY10	29.8	0.0	0.0737	0.0000	0.0369	UN
@@ -23468,7 +23099,6 @@ Sample9	SampleAI10	Sample26	SampleAZ0	20.3	0.0	0.0921	0.0000	0.0461	4th
 Sample9	SampleAI10	Sample26	SampleAZ1	29.1	5.2	0.0761	0.0038	0.0418	UN
 Sample9	SampleAI10	Sample26	SampleAZ2	45.3	0.0	0.1563	0.0000	0.0781	4th
 Sample9	SampleAI10	Sample26	SampleAZ3	12.7	0.0	0.0782	0.0000	0.0391	UN
-Sample9	SampleAI10	Sample26	SampleAZ4	29.2	0.0	0.1180	0.0000	0.0590	4th
 Sample10	SampleAJ0	Sample25	SampleAY8	16.1	0.0	0.0557	0.0000	0.0278	UN
 Sample10	SampleAJ0	Sample25	SampleAY9	12.1	0.0	0.0384	0.0000	0.0192	UN
 Sample10	SampleAJ0	Sample25	SampleAY10	16.7	0.0	0.0580	0.0000	0.0290	UN
@@ -23476,7 +23106,6 @@ Sample10	SampleAJ0	Sample26	SampleAZ0	15.0	0.0	0.0672	0.0000	0.0336	UN
 Sample10	SampleAJ0	Sample26	SampleAZ1	35.8	4.7	0.1493	0.0030	0.0777	4th
 Sample10	SampleAJ0	Sample26	SampleAZ2	11.5	0.0	0.0621	0.0000	0.0311	UN
 Sample10	SampleAJ0	Sample26	SampleAZ3	12.7	4.8	0.0771	0.0043	0.0428	UN
-Sample10	SampleAJ0	Sample26	SampleAZ4	13.4	0.0	0.0601	0.0000	0.0301	UN
 Sample10	SampleAJ1	Sample25	SampleAY8	18.5	0.0	0.0790	0.0000	0.0395	UN
 Sample10	SampleAJ1	Sample25	SampleAY9	15.8	0.0	0.0633	0.0000	0.0317	UN
 Sample10	SampleAJ1	Sample25	SampleAY10	20.3	0.0	0.0758	0.0000	0.0379	UN
@@ -23484,7 +23113,6 @@ Sample10	SampleAJ1	Sample26	SampleAZ0	16.0	0.0	0.0797	0.0000	0.0399	UN
 Sample10	SampleAJ1	Sample26	SampleAZ1	19.0	0.0	0.0752	0.0000	0.0376	UN
 Sample10	SampleAJ1	Sample26	SampleAZ2	14.3	0.0	0.0723	0.0000	0.0362	UN
 Sample10	SampleAJ1	Sample26	SampleAZ3	25.4	0.0	0.1297	0.0000	0.0649	4th
-Sample10	SampleAJ1	Sample26	SampleAZ4	15.1	0.0	0.0809	0.0000	0.0404	UN
 Sample10	SampleAJ2	Sample25	SampleAY8	31.5	2.7	0.0589	0.0010	0.0305	UN
 Sample10	SampleAJ2	Sample25	SampleAY9	21.6	0.0	0.0474	0.0000	0.0237	UN
 Sample10	SampleAJ2	Sample25	SampleAY10	15.0	0.0	0.0652	0.0000	0.0326	UN
@@ -23492,7 +23120,6 @@ Sample10	SampleAJ2	Sample26	SampleAZ0	16.4	3.7	0.0820	0.0014	0.0424	UN
 Sample10	SampleAJ2	Sample26	SampleAZ1	15.4	0.0	0.0559	0.0000	0.0280	UN
 Sample10	SampleAJ2	Sample26	SampleAZ2	21.4	4.1	0.0672	0.0016	0.0352	UN
 Sample10	SampleAJ2	Sample26	SampleAZ3	11.8	3.1	0.0552	0.0012	0.0288	UN
-Sample10	SampleAJ2	Sample26	SampleAZ4	16.5	0.0	0.0803	0.0000	0.0402	UN
 Sample10	SampleAJ3	Sample25	SampleAY8	23.6	0.0	0.0878	0.0000	0.0439	UN
 Sample10	SampleAJ3	Sample25	SampleAY9	20.0	0.0	0.0543	0.0000	0.0272	UN
 Sample10	SampleAJ3	Sample25	SampleAY10	41.1	0.0	0.0960	0.0000	0.0480	4th
@@ -23500,7 +23127,6 @@ Sample10	SampleAJ3	Sample26	SampleAZ0	49.5	0.0	0.1184	0.0000	0.0592	4th
 Sample10	SampleAJ3	Sample26	SampleAZ1	12.7	0.0	0.0548	0.0000	0.0274	UN
 Sample10	SampleAJ3	Sample26	SampleAZ2	21.1	0.0	0.0903	0.0000	0.0452	4th
 Sample10	SampleAJ3	Sample26	SampleAZ3	20.6	0.0	0.0993	0.0000	0.0496	4th
-Sample10	SampleAJ3	Sample26	SampleAZ4	22.5	0.0	0.0818	0.0000	0.0409	UN
 Sample10	SampleAJ4	Sample25	SampleAY8	16.2	0.0	0.0559	0.0000	0.0280	UN
 Sample10	SampleAJ4	Sample25	SampleAY9	12.7	0.0	0.0433	0.0000	0.0217	UN
 Sample10	SampleAJ4	Sample25	SampleAY10	14.1	0.0	0.0519	0.0000	0.0260	UN
@@ -23508,7 +23134,6 @@ Sample10	SampleAJ4	Sample26	SampleAZ0	15.2	0.0	0.0844	0.0000	0.0422	UN
 Sample10	SampleAJ4	Sample26	SampleAZ1	25.6	9.7	0.1074	0.0049	0.0586	4th
 Sample10	SampleAJ4	Sample26	SampleAZ2	27.7	0.0	0.0642	0.0000	0.0321	UN
 Sample10	SampleAJ4	Sample26	SampleAZ3	15.8	2.9	0.0652	0.0011	0.0337	UN
-Sample10	SampleAJ4	Sample26	SampleAZ4	13.7	0.0	0.0697	0.0000	0.0348	UN
 Sample9	SampleAI8	Sample26	SampleAZ5	30.0	0.0	0.0791	0.0000	0.0396	UN
 Sample9	SampleAI8	Sample26	SampleAZ6	15.3	0.0	0.0693	0.0000	0.0347	UN
 Sample9	SampleAI8	Sample26	SampleAZ7	11.6	0.0	0.0653	0.0000	0.0326	UN
@@ -24840,7 +24465,6 @@ Sample10	SampleAJ5	Sample26	SampleAZ0	12.5	0.0	0.0686	0.0000	0.0343	UN
 Sample10	SampleAJ5	Sample26	SampleAZ1	25.9	9.7	0.0689	0.0050	0.0394	UN
 Sample10	SampleAJ5	Sample26	SampleAZ2	12.3	0.0	0.0652	0.0000	0.0326	UN
 Sample10	SampleAJ5	Sample26	SampleAZ3	15.8	2.9	0.0691	0.0011	0.0357	UN
-Sample10	SampleAJ5	Sample26	SampleAZ4	13.4	0.0	0.0577	0.0000	0.0289	UN
 Sample10	SampleAJ6	Sample25	SampleAY8	25.6	0.0	0.1021	0.0000	0.0511	4th
 Sample10	SampleAJ6	Sample25	SampleAY9	23.0	0.0	0.0873	0.0000	0.0437	UN
 Sample10	SampleAJ6	Sample25	SampleAY10	16.2	0.0	0.0677	0.0000	0.0339	UN
@@ -24848,7 +24472,6 @@ Sample10	SampleAJ6	Sample26	SampleAZ0	27.3	6.4	0.0853	0.0024	0.0450	4th
 Sample10	SampleAJ6	Sample26	SampleAZ1	30.9	0.0	0.0763	0.0000	0.0382	UN
 Sample10	SampleAJ6	Sample26	SampleAZ2	32.5	0.0	0.0823	0.0000	0.0411	UN
 Sample10	SampleAJ6	Sample26	SampleAZ3	56.4	6.3	0.1727	0.0024	0.0888	3rd
-Sample10	SampleAJ6	Sample26	SampleAZ4	26.8	0.0	0.0762	0.0000	0.0381	UN
 Sample10	SampleAJ7	Sample25	SampleAY8	22.4	0.0	0.0617	0.0000	0.0309	UN
 Sample10	SampleAJ7	Sample25	SampleAY9	16.0	0.0	0.0468	0.0000	0.0234	UN
 Sample10	SampleAJ7	Sample25	SampleAY10	12.0	0.0	0.0677	0.0000	0.0339	UN
@@ -24856,7 +24479,6 @@ Sample10	SampleAJ7	Sample26	SampleAZ0	15.8	0.0	0.0647	0.0000	0.0324	UN
 Sample10	SampleAJ7	Sample26	SampleAZ1	17.8	0.0	0.0671	0.0000	0.0336	UN
 Sample10	SampleAJ7	Sample26	SampleAZ2	33.5	0.0	0.0617	0.0000	0.0309	UN
 Sample10	SampleAJ7	Sample26	SampleAZ3	16.2	0.0	0.0812	0.0000	0.0406	UN
-Sample10	SampleAJ7	Sample26	SampleAZ4	12.0	0.0	0.0592	0.0000	0.0296	UN
 Sample10	SampleAJ8	Sample25	SampleAY8	24.8	5.0	0.0861	0.0019	0.0450	4th
 Sample10	SampleAJ8	Sample25	SampleAY9	15.8	0.0	0.0485	0.0000	0.0243	UN
 Sample10	SampleAJ8	Sample25	SampleAY10	20.6	0.0	0.0720	0.0000	0.0360	UN
@@ -24864,7 +24486,6 @@ Sample10	SampleAJ8	Sample26	SampleAZ0	17.2	0.0	0.0974	0.0000	0.0487	4th
 Sample10	SampleAJ8	Sample26	SampleAZ1	17.8	4.1	0.0789	0.0015	0.0410	UN
 Sample10	SampleAJ8	Sample26	SampleAZ2	29.6	0.0	0.0851	0.0000	0.0426	UN
 Sample10	SampleAJ8	Sample26	SampleAZ3	20.9	0.0	0.0708	0.0000	0.0354	UN
-Sample10	SampleAJ8	Sample26	SampleAZ4	17.2	0.0	0.0834	0.0000	0.0417	UN
 Sample10	SampleAJ9	Sample25	SampleAY8	20.4	0.0	0.0721	0.0000	0.0360	UN
 Sample10	SampleAJ9	Sample25	SampleAY9	21.0	0.0	0.0406	0.0000	0.0203	UN
 Sample10	SampleAJ9	Sample25	SampleAY10	32.7	0.0	0.0795	0.0000	0.0398	UN
@@ -24872,7 +24493,6 @@ Sample10	SampleAJ9	Sample26	SampleAZ0	44.0	0.0	0.0908	0.0000	0.0454	4th
 Sample10	SampleAJ9	Sample26	SampleAZ1	21.9	8.3	0.0809	0.0031	0.0435	UN
 Sample10	SampleAJ9	Sample26	SampleAZ2	21.2	0.0	0.0734	0.0000	0.0367	UN
 Sample10	SampleAJ9	Sample26	SampleAZ3	20.6	2.9	0.0768	0.0021	0.0405	UN
-Sample10	SampleAJ9	Sample26	SampleAZ4	16.6	0.0	0.0729	0.0000	0.0365	UN
 Sample10	SampleAJ10	Sample25	SampleAY8	23.4	0.0	0.0873	0.0000	0.0437	UN
 Sample10	SampleAJ10	Sample25	SampleAY9	12.5	0.0	0.0601	0.0000	0.0301	UN
 Sample10	SampleAJ10	Sample25	SampleAY10	12.9	3.1	0.0619	0.0011	0.0321	UN
@@ -24880,7 +24500,6 @@ Sample10	SampleAJ10	Sample26	SampleAZ0	19.8	0.0	0.0809	0.0000	0.0404	UN
 Sample10	SampleAJ10	Sample26	SampleAZ1	15.4	0.0	0.0675	0.0000	0.0338	UN
 Sample10	SampleAJ10	Sample26	SampleAZ2	15.3	0.0	0.0901	0.0000	0.0450	4th
 Sample10	SampleAJ10	Sample26	SampleAZ3	35.2	4.8	0.0869	0.0018	0.0453	4th
-Sample10	SampleAJ10	Sample26	SampleAZ4	12.5	0.0	0.0935	0.0000	0.0467	4th
 Sample11	SampleAK0	Sample25	SampleAY8	10.8	0.0	0.0744	0.0000	0.0372	UN
 Sample11	SampleAK0	Sample25	SampleAY9	30.4	0.0	0.0670	0.0000	0.0335	UN
 Sample11	SampleAK0	Sample25	SampleAY10	17.9	4.9	0.0747	0.0018	0.0392	UN
@@ -24888,7 +24507,6 @@ Sample11	SampleAK0	Sample26	SampleAZ0	32.2	3.0	0.0749	0.0011	0.0386	UN
 Sample11	SampleAK0	Sample26	SampleAZ1	30.4	12.0	0.0760	0.0057	0.0437	UN
 Sample11	SampleAK0	Sample26	SampleAZ2	12.4	0.0	0.0568	0.0000	0.0284	UN
 Sample11	SampleAK0	Sample26	SampleAZ3	20.6	5.2	0.0823	0.0019	0.0430	UN
-Sample11	SampleAK0	Sample26	SampleAZ4	10.8	0.0	0.0637	0.0000	0.0319	UN
 Sample11	SampleAK1	Sample25	SampleAY8	22.8	0.0	0.1095	0.0000	0.0548	4th
 Sample11	SampleAK1	Sample25	SampleAY9	17.8	0.0	0.0721	0.0000	0.0360	UN
 Sample11	SampleAK1	Sample25	SampleAY10	51.9	2.8	0.0893	0.0010	0.0457	4th
@@ -24896,7 +24514,6 @@ Sample11	SampleAK1	Sample26	SampleAZ0	11.5	0.0	0.0746	0.0000	0.0373	UN
 Sample11	SampleAK1	Sample26	SampleAZ1	32.9	0.0	0.0867	0.0000	0.0433	UN
 Sample11	SampleAK1	Sample26	SampleAZ2	28.2	0.0	0.0988	0.0000	0.0494	4th
 Sample11	SampleAK1	Sample26	SampleAZ3	20.9	0.0	0.0932	0.0000	0.0466	4th
-Sample11	SampleAK1	Sample26	SampleAZ4	19.3	0.0	0.1002	0.0000	0.0501	4th
 Sample10	SampleAJ5	Sample26	SampleAZ5	15.2	0.0	0.0590	0.0000	0.0295	UN
 Sample10	SampleAJ5	Sample26	SampleAZ6	41.9	2.9	0.0908	0.0011	0.0465	4th
 Sample10	SampleAJ5	Sample26	SampleAZ7	26.6	0.0	0.0826	0.0000	0.0413	UN
@@ -26169,7 +25786,6 @@ Sample11	SampleAK2	Sample26	SampleAZ0	33.2	0.0	0.0986	0.0000	0.0493	4th
 Sample11	SampleAK2	Sample26	SampleAZ1	15.1	0.0	0.0629	0.0000	0.0314	UN
 Sample11	SampleAK2	Sample26	SampleAZ2	33.2	0.0	0.0711	0.0000	0.0355	UN
 Sample11	SampleAK2	Sample26	SampleAZ3	17.5	0.0	0.0905	0.0000	0.0453	4th
-Sample11	SampleAK2	Sample26	SampleAZ4	33.2	0.0	0.0708	0.0000	0.0354	UN
 Sample11	SampleAK3	Sample25	SampleAY8	37.1	4.3	0.0983	0.0016	0.0507	4th
 Sample11	SampleAK3	Sample25	SampleAY9	15.4	0.0	0.0504	0.0000	0.0252	UN
 Sample11	SampleAK3	Sample25	SampleAY10	20.0	0.0	0.0677	0.0000	0.0339	UN
@@ -26177,7 +25793,6 @@ Sample11	SampleAK3	Sample26	SampleAZ0	25.3	0.0	0.0833	0.0000	0.0416	UN
 Sample11	SampleAK3	Sample26	SampleAZ1	20.2	0.0	0.0906	0.0000	0.0453	4th
 Sample11	SampleAK3	Sample26	SampleAZ2	15.5	10.7	0.0656	0.0040	0.0368	UN
 Sample11	SampleAK3	Sample26	SampleAZ3	13.2	0.0	0.0812	0.0000	0.0406	UN
-Sample11	SampleAK3	Sample26	SampleAZ4	12.1	0.0	0.0745	0.0000	0.0372	UN
 Sample11	SampleAK4	Sample25	SampleAY8	30.3	3.1	0.0897	0.0012	0.0461	4th
 Sample11	SampleAK4	Sample25	SampleAY9	30.2	0.0	0.0720	0.0000	0.0360	UN
 Sample11	SampleAK4	Sample25	SampleAY10	30.1	0.0	0.0851	0.0000	0.0426	UN
@@ -26185,7 +25800,6 @@ Sample11	SampleAK4	Sample26	SampleAZ0	32.3	0.0	0.0769	0.0000	0.0385	UN
 Sample11	SampleAK4	Sample26	SampleAZ1	27.2	3.0	0.0867	0.0011	0.0444	4th
 Sample11	SampleAK4	Sample26	SampleAZ2	12.4	0.0	0.0626	0.0000	0.0313	UN
 Sample11	SampleAK4	Sample26	SampleAZ3	16.6	0.0	0.0887	0.0000	0.0444	4th
-Sample11	SampleAK4	Sample26	SampleAZ4	12.6	0.0	0.0537	0.0000	0.0269	UN
 Sample11	SampleAK5	Sample25	SampleAY8	31.4	6.7	0.0945	0.0025	0.0498	4th
 Sample11	SampleAK5	Sample25	SampleAY9	15.0	0.0	0.0598	0.0000	0.0299	UN
 Sample11	SampleAK5	Sample25	SampleAY10	19.7	0.0	0.0749	0.0000	0.0375	UN
@@ -26193,14 +25807,12 @@ Sample11	SampleAK5	Sample26	SampleAZ0	31.8	2.7	0.0879	0.0010	0.0450	4th
 Sample11	SampleAK5	Sample26	SampleAZ1	14.8	0.0	0.0707	0.0000	0.0353	UN
 Sample11	SampleAK5	Sample26	SampleAZ2	31.8	0.0	0.0684	0.0000	0.0342	UN
 Sample11	SampleAK5	Sample26	SampleAZ3	14.2	0.0	0.0758	0.0000	0.0379	UN
-Sample11	SampleAK5	Sample26	SampleAZ4	31.8	0.0	0.0718	0.0000	0.0359	UN
 Sample11	SampleAK6	Sample25	SampleAY8	58.0	6.1	0.2763	0.0049	0.1430	3rd
 Sample11	SampleAK6	Sample25	SampleAY10	37.7	8.4	0.1449	0.0031	0.0756	4th
 Sample11	SampleAK6	Sample26	SampleAZ0	13.5	0.0	0.0870	0.0000	0.0435	UN
 Sample11	SampleAK6	Sample26	SampleAZ1	29.5	0.0	0.0779	0.0000	0.0389	UN
 Sample11	SampleAK6	Sample26	SampleAZ2	14.6	0.0	0.0667	0.0000	0.0334	UN
 Sample11	SampleAK6	Sample26	SampleAZ3	62.9	0.0	0.2032	0.0000	0.1016	3rd
-Sample11	SampleAK6	Sample26	SampleAZ4	13.0	4.5	0.0723	0.0017	0.0379	UN
 Sample11	SampleAK7	Sample25	SampleAY8	48.1	0.0	0.1253	0.0000	0.0626	4th
 Sample11	SampleAK7	Sample25	SampleAY9	18.9	0.0	0.0741	0.0000	0.0370	UN
 Sample11	SampleAK7	Sample25	SampleAY10	19.2	0.0	0.0738	0.0000	0.0369	UN
@@ -26208,7 +25820,6 @@ Sample11	SampleAK7	Sample26	SampleAZ0	13.7	0.0	0.0904	0.0000	0.0452	4th
 Sample11	SampleAK7	Sample26	SampleAZ1	17.2	0.0	0.0717	0.0000	0.0358	UN
 Sample11	SampleAK7	Sample26	SampleAZ2	28.8	0.0	0.0989	0.0000	0.0495	4th
 Sample11	SampleAK7	Sample26	SampleAZ3	20.7	0.0	0.1067	0.0000	0.0534	4th
-Sample11	SampleAK7	Sample26	SampleAZ4	19.3	0.0	0.0889	0.0000	0.0445	4th
 Sample11	SampleAK8	Sample25	SampleAY8	15.6	5.3	0.0999	0.0020	0.0520	4th
 Sample11	SampleAK8	Sample25	SampleAY9	15.8	0.0	0.0716	0.0000	0.0358	UN
 Sample11	SampleAK8	Sample25	SampleAY10	20.4	0.0	0.0874	0.0000	0.0437	UN
@@ -26216,7 +25827,6 @@ Sample11	SampleAK8	Sample26	SampleAZ0	11.7	0.0	0.0795	0.0000	0.0398	UN
 Sample11	SampleAK8	Sample26	SampleAZ1	17.2	0.0	0.0756	0.0000	0.0378	UN
 Sample11	SampleAK8	Sample26	SampleAZ2	28.6	0.0	0.0863	0.0000	0.0432	UN
 Sample11	SampleAK8	Sample26	SampleAZ3	20.4	0.0	0.0900	0.0000	0.0450	4th
-Sample11	SampleAK8	Sample26	SampleAZ4	14.0	0.0	0.0750	0.0000	0.0375	UN
 Sample11	SampleAK9	Sample25	SampleAY8	29.1	0.0	0.0769	0.0000	0.0385	UN
 Sample11	SampleAK9	Sample25	SampleAY9	26.9	0.0	0.0603	0.0000	0.0301	UN
 Sample11	SampleAK9	Sample25	SampleAY10	20.1	0.0	0.0658	0.0000	0.0329	UN
@@ -26224,7 +25834,6 @@ Sample11	SampleAK9	Sample26	SampleAZ0	15.3	0.0	0.0912	0.0000	0.0456	4th
 Sample11	SampleAK9	Sample26	SampleAZ1	26.8	0.0	0.0858	0.0000	0.0429	UN
 Sample11	SampleAK9	Sample26	SampleAZ2	18.1	0.0	0.0897	0.0000	0.0449	4th
 Sample11	SampleAK9	Sample26	SampleAZ3	18.3	6.3	0.0820	0.0024	0.0434	UN
-Sample11	SampleAK9	Sample26	SampleAZ4	10.0	2.8	0.0775	0.0011	0.0398	UN
 Sample11	SampleAK2	Sample26	SampleAZ5	18.3	3.1	0.0640	0.0011	0.0331	UN
 Sample11	SampleAK2	Sample26	SampleAZ6	16.2	0.0	0.0567	0.0000	0.0284	UN
 Sample11	SampleAK2	Sample26	SampleAZ7	11.1	0.0	0.0562	0.0000	0.0281	UN
@@ -27443,7 +27052,6 @@ Sample11	SampleAK10	Sample26	SampleAZ0	15.5	0.0	0.0865	0.0000	0.0433	UN
 Sample11	SampleAK10	Sample26	SampleAZ1	29.5	0.0	0.0825	0.0000	0.0413	UN
 Sample11	SampleAK10	Sample26	SampleAZ2	28.8	0.0	0.0791	0.0000	0.0396	UN
 Sample11	SampleAK10	Sample26	SampleAZ3	44.4	5.5	0.1801	0.0037	0.0938	3rd
-Sample11	SampleAK10	Sample26	SampleAZ4	17.5	8.6	0.0867	0.0032	0.0466	4th
 Sample12	SampleAL0	Sample25	SampleAY8	23.1	3.0	0.0912	0.0011	0.0467	4th
 Sample12	SampleAL0	Sample25	SampleAY9	46.2	0.0	0.1209	0.0000	0.0605	4th
 Sample12	SampleAL0	Sample25	SampleAY10	57.9	0.0	0.1219	0.0000	0.0610	4th
@@ -27451,7 +27059,6 @@ Sample12	SampleAL0	Sample26	SampleAZ0	18.1	0.0	0.0913	0.0000	0.0457	4th
 Sample12	SampleAL0	Sample26	SampleAZ1	19.1	3.1	0.1037	0.0012	0.0530	4th
 Sample12	SampleAL0	Sample26	SampleAZ2	14.3	0.0	0.0721	0.0000	0.0360	UN
 Sample12	SampleAL0	Sample26	SampleAZ3	14.3	3.0	0.0951	0.0011	0.0486	4th
-Sample12	SampleAL0	Sample26	SampleAZ4	18.1	0.0	0.0629	0.0000	0.0314	UN
 Sample12	SampleAL1	Sample25	SampleAY8	11.2	0.0	0.0739	0.0000	0.0370	UN
 Sample12	SampleAL1	Sample25	SampleAY9	14.6	0.0	0.0499	0.0000	0.0249	UN
 Sample12	SampleAL1	Sample25	SampleAY10	11.6	0.0	0.0706	0.0000	0.0353	UN
@@ -27459,7 +27066,6 @@ Sample12	SampleAL1	Sample26	SampleAZ0	13.7	0.0	0.0567	0.0000	0.0284	UN
 Sample12	SampleAL1	Sample26	SampleAZ1	13.7	0.0	0.0782	0.0000	0.0391	UN
 Sample12	SampleAL1	Sample26	SampleAZ2	10.8	0.0	0.0554	0.0000	0.0277	UN
 Sample12	SampleAL1	Sample26	SampleAZ3	18.5	0.0	0.0944	0.0000	0.0472	4th
-Sample12	SampleAL1	Sample26	SampleAZ4	11.6	4.5	0.0687	0.0017	0.0360	UN
 Sample12	SampleAL2	Sample25	SampleAY8	12.6	0.0	0.0656	0.0000	0.0328	UN
 Sample12	SampleAL2	Sample25	SampleAY9	15.6	3.5	0.0769	0.0013	0.0398	UN
 Sample12	SampleAL2	Sample25	SampleAY10	14.9	0.0	0.0657	0.0000	0.0329	UN
@@ -27467,7 +27073,6 @@ Sample12	SampleAL2	Sample26	SampleAZ0	38.7	4.0	0.1391	0.0029	0.0725	4th
 Sample12	SampleAL2	Sample26	SampleAZ1	12.7	0.0	0.0798	0.0000	0.0399	UN
 Sample12	SampleAL2	Sample26	SampleAZ2	30.1	0.0	0.1134	0.0000	0.0567	4th
 Sample12	SampleAL2	Sample26	SampleAZ3	14.4	8.3	0.0842	0.0031	0.0452	4th
-Sample12	SampleAL2	Sample26	SampleAZ4	38.7	4.0	0.0951	0.0015	0.0491	4th
 Sample12	SampleAL3	Sample25	SampleAY8	46.6	3.8	0.0998	0.0014	0.0513	4th
 Sample12	SampleAL3	Sample25	SampleAY9	26.7	3.0	0.0819	0.0011	0.0420	UN
 Sample12	SampleAL3	Sample25	SampleAY10	32.9	0.0	0.0841	0.0000	0.0421	UN
@@ -27475,7 +27080,6 @@ Sample12	SampleAL3	Sample26	SampleAZ0	21.1	6.6	0.0852	0.0040	0.0466	4th
 Sample12	SampleAL3	Sample26	SampleAZ1	12.7	0.0	0.0795	0.0000	0.0398	UN
 Sample12	SampleAL3	Sample26	SampleAZ2	15.2	0.0	0.0796	0.0000	0.0398	UN
 Sample12	SampleAL3	Sample26	SampleAZ3	14.4	0.0	0.0758	0.0000	0.0379	UN
-Sample12	SampleAL3	Sample26	SampleAZ4	15.1	0.0	0.0656	0.0000	0.0328	UN
 Sample12	SampleAL4	Sample25	SampleAY8	12.5	0.0	0.0713	0.0000	0.0357	UN
 Sample12	SampleAL4	Sample25	SampleAY9	28.3	0.0	0.0916	0.0000	0.0458	4th
 Sample12	SampleAL4	Sample25	SampleAY10	18.2	0.0	0.0738	0.0000	0.0369	UN
@@ -27483,7 +27087,6 @@ Sample12	SampleAL4	Sample26	SampleAZ0	35.4	10.5	0.1107	0.0050	0.0604	4th
 Sample12	SampleAL4	Sample26	SampleAZ1	19.6	0.0	0.1112	0.0000	0.0556	4th
 Sample12	SampleAL4	Sample26	SampleAZ2	30.4	3.1	0.0835	0.0011	0.0428	UN
 Sample12	SampleAL4	Sample26	SampleAZ3	14.3	3.6	0.0968	0.0025	0.0509	4th
-Sample12	SampleAL4	Sample26	SampleAZ4	35.4	10.5	0.0817	0.0081	0.0490	4th
 Sample12	SampleAL5	Sample25	SampleAY8	17.0	0.0	0.0821	0.0000	0.0411	UN
 Sample12	SampleAL5	Sample25	SampleAY9	46.8	0.0	0.1018	0.0000	0.0509	4th
 Sample12	SampleAL5	Sample25	SampleAY10	57.9	0.0	0.0884	0.0000	0.0442	4th
@@ -27491,7 +27094,6 @@ Sample12	SampleAL5	Sample26	SampleAZ0	36.1	3.4	0.1087	0.0013	0.0557	4th
 Sample12	SampleAL5	Sample26	SampleAZ1	14.4	0.0	0.0949	0.0000	0.0474	4th
 Sample12	SampleAL5	Sample26	SampleAZ2	18.7	0.0	0.1014	0.0000	0.0507	4th
 Sample12	SampleAL5	Sample26	SampleAZ3	17.4	3.0	0.0844	0.0011	0.0433	UN
-Sample12	SampleAL5	Sample26	SampleAZ4	18.2	0.0	0.0790	0.0000	0.0395	UN
 Sample12	SampleAL6	Sample25	SampleAY8	24.5	0.0	0.0814	0.0000	0.0407	UN
 Sample12	SampleAL6	Sample25	SampleAY9	13.6	0.0	0.0686	0.0000	0.0343	UN
 Sample12	SampleAL6	Sample25	SampleAY10	36.4	0.0	0.0849	0.0000	0.0425	UN
@@ -27499,7 +27101,6 @@ Sample12	SampleAL6	Sample26	SampleAZ0	23.0	9.9	0.0960	0.0055	0.0535	4th
 Sample12	SampleAL6	Sample26	SampleAZ1	12.9	0.0	0.0852	0.0000	0.0426	UN
 Sample12	SampleAL6	Sample26	SampleAZ2	22.6	3.1	0.0679	0.0012	0.0352	UN
 Sample12	SampleAL6	Sample26	SampleAZ3	17.6	0.0	0.1061	0.0000	0.0530	4th
-Sample12	SampleAL6	Sample26	SampleAZ4	23.1	0.0	0.0677	0.0000	0.0339	UN
 Sample11	SampleAK10	Sample26	SampleAZ5	21.3	8.6	0.0723	0.0032	0.0394	UN
 Sample11	SampleAK10	Sample26	SampleAZ6	14.6	0.0	0.0585	0.0000	0.0293	UN
 Sample11	SampleAK10	Sample26	SampleAZ7	20.9	0.0	0.0659	0.0000	0.0330	UN
@@ -28643,14 +28244,12 @@ Sample12	SampleAL7	Sample26	SampleAZ0	30.2	3.2	0.0981	0.0022	0.0513	4th
 Sample12	SampleAL7	Sample26	SampleAZ1	17.1	7.0	0.0821	0.0026	0.0437	UN
 Sample12	SampleAL7	Sample26	SampleAZ2	30.1	0.0	0.0826	0.0000	0.0413	UN
 Sample12	SampleAL7	Sample26	SampleAZ3	14.5	4.5	0.0943	0.0038	0.0510	4th
-Sample12	SampleAL7	Sample26	SampleAZ4	25.0	0.0	0.0861	0.0000	0.0431	UN
 Sample12	SampleAL8	Sample25	SampleAY9	21.9	0.0	0.0495	0.0000	0.0248	UN
 Sample12	SampleAL8	Sample25	SampleAY10	13.9	0.0	0.0763	0.0000	0.0382	UN
 Sample12	SampleAL8	Sample26	SampleAZ0	25.8	4.7	0.0943	0.0018	0.0490	4th
 Sample12	SampleAL8	Sample26	SampleAZ1	13.7	4.4	0.0898	0.0032	0.0481	4th
 Sample12	SampleAL8	Sample26	SampleAZ2	20.2	0.0	0.0977	0.0000	0.0489	4th
 Sample12	SampleAL8	Sample26	SampleAZ3	18.5	0.0	0.0938	0.0000	0.0469	4th
-Sample12	SampleAL8	Sample26	SampleAZ4	20.2	4.6	0.0707	0.0017	0.0370	UN
 Sample12	SampleAL9	Sample25	SampleAY8	15.5	3.2	0.0930	0.0012	0.0477	4th
 Sample12	SampleAL9	Sample25	SampleAY9	26.9	3.1	0.0796	0.0011	0.0409	UN
 Sample12	SampleAL9	Sample25	SampleAY10	31.2	0.0	0.0925	0.0000	0.0462	4th
@@ -28658,7 +28257,6 @@ Sample12	SampleAL9	Sample26	SampleAZ0	38.4	0.0	0.1133	0.0000	0.0567	4th
 Sample12	SampleAL9	Sample26	SampleAZ1	18.9	0.0	0.1086	0.0000	0.0543	4th
 Sample12	SampleAL9	Sample26	SampleAZ2	27.0	0.0	0.0880	0.0000	0.0440	UN
 Sample12	SampleAL9	Sample26	SampleAZ3	19.9	2.9	0.1006	0.0011	0.0514	4th
-Sample12	SampleAL9	Sample26	SampleAZ4	38.4	0.0	0.0981	0.0000	0.0491	4th
 Sample12	SampleAL10	Sample25	SampleAY8	16.2	0.0	0.0646	0.0000	0.0323	UN
 Sample12	SampleAL10	Sample25	SampleAY9	13.4	0.0	0.0619	0.0000	0.0310	UN
 Sample12	SampleAL10	Sample25	SampleAY10	12.8	0.0	0.0796	0.0000	0.0398	UN
@@ -28666,7 +28264,6 @@ Sample12	SampleAL10	Sample26	SampleAZ0	30.2	0.0	0.1117	0.0000	0.0559	4th
 Sample12	SampleAL10	Sample26	SampleAZ1	14.1	0.0	0.0887	0.0000	0.0444	4th
 Sample12	SampleAL10	Sample26	SampleAZ2	30.2	0.0	0.0744	0.0000	0.0372	UN
 Sample12	SampleAL10	Sample26	SampleAZ3	14.1	3.4	0.1206	0.0013	0.0616	4th
-Sample12	SampleAL10	Sample26	SampleAZ4	25.1	2.7	0.0867	0.0010	0.0444	4th
 Sample13	SampleAM0	Sample25	SampleAY8	36.5	5.6	0.1249	0.0021	0.0646	4th
 Sample13	SampleAM0	Sample25	SampleAY9	17.2	0.0	0.0567	0.0000	0.0284	UN
 Sample13	SampleAM0	Sample25	SampleAY10	19.4	0.0	0.0922	0.0000	0.0461	4th
@@ -28674,7 +28271,6 @@ Sample13	SampleAM0	Sample26	SampleAZ0	18.0	0.0	0.0777	0.0000	0.0389	UN
 Sample13	SampleAM0	Sample26	SampleAZ1	17.1	3.5	0.0697	0.0013	0.0362	UN
 Sample13	SampleAM0	Sample26	SampleAZ2	18.4	0.0	0.0570	0.0000	0.0285	UN
 Sample13	SampleAM0	Sample26	SampleAZ3	15.2	0.0	0.0734	0.0000	0.0367	UN
-Sample13	SampleAM0	Sample26	SampleAZ4	17.1	0.0	0.0628	0.0000	0.0314	UN
 Sample13	SampleAM1	Sample25	SampleAY8	16.6	4.1	0.0758	0.0015	0.0394	UN
 Sample13	SampleAM1	Sample25	SampleAY9	23.3	0.0	0.0794	0.0000	0.0397	UN
 Sample13	SampleAM1	Sample25	SampleAY10	12.5	6.7	0.0630	0.0025	0.0340	UN
@@ -28689,7 +28285,6 @@ Sample13	SampleAM2	Sample26	SampleAZ0	23.4	4.0	0.1068	0.0015	0.0549	4th
 Sample13	SampleAM2	Sample26	SampleAZ1	18.9	0.0	0.0737	0.0000	0.0369	UN
 Sample13	SampleAM2	Sample26	SampleAZ2	25.2	0.0	0.0851	0.0000	0.0426	UN
 Sample13	SampleAM2	Sample26	SampleAZ3	17.1	4.1	0.0926	0.0016	0.0479	4th
-Sample13	SampleAM2	Sample26	SampleAZ4	23.4	0.0	0.0934	0.0000	0.0467	4th
 Sample13	SampleAM3	Sample25	SampleAY8	11.3	0.0	0.0739	0.0000	0.0370	UN
 Sample13	SampleAM3	Sample25	SampleAY9	14.5	0.0	0.0714	0.0000	0.0357	UN
 Sample13	SampleAM3	Sample25	SampleAY10	16.1	3.6	0.0693	0.0014	0.0360	UN
@@ -29786,7 +29381,6 @@ Sample13	SampleAM4	Sample25	SampleAY10	14.7	0.0	0.0668	0.0000	0.0334	UN
 Sample13	SampleAM4	Sample26	SampleAZ0	13.7	0.0	0.0793	0.0000	0.0397	UN
 Sample13	SampleAM4	Sample26	SampleAZ1	18.9	0.0	0.0821	0.0000	0.0411	UN
 Sample13	SampleAM4	Sample26	SampleAZ2	14.8	0.0	0.0765	0.0000	0.0382	UN
-Sample13	SampleAM4	Sample26	SampleAZ4	14.8	0.0	0.0845	0.0000	0.0423	UN
 Sample13	SampleAM5	Sample25	SampleAY8	36.5	0.0	0.1125	0.0000	0.0563	4th
 Sample13	SampleAM5	Sample25	SampleAY9	17.5	0.0	0.0682	0.0000	0.0341	UN
 Sample13	SampleAM5	Sample25	SampleAY10	35.7	0.0	0.0951	0.0000	0.0476	4th
@@ -29794,7 +29388,6 @@ Sample13	SampleAM5	Sample26	SampleAZ0	25.2	3.8	0.0927	0.0014	0.0478	4th
 Sample13	SampleAM5	Sample26	SampleAZ1	18.9	0.0	0.0720	0.0000	0.0360	UN
 Sample13	SampleAM5	Sample26	SampleAZ2	25.8	2.8	0.0771	0.0010	0.0396	UN
 Sample13	SampleAM5	Sample26	SampleAZ3	19.0	0.0	0.0694	0.0000	0.0347	UN
-Sample13	SampleAM5	Sample26	SampleAZ4	23.2	3.3	0.0740	0.0012	0.0382	UN
 Sample13	SampleAM6	Sample25	SampleAY8	23.1	0.0	0.0971	0.0000	0.0486	4th
 Sample13	SampleAM6	Sample25	SampleAY9	19.4	0.0	0.0693	0.0000	0.0347	UN
 Sample13	SampleAM6	Sample25	SampleAY10	19.9	0.0	0.0955	0.0000	0.0478	4th
@@ -29802,7 +29395,6 @@ Sample13	SampleAM6	Sample26	SampleAZ0	12.2	0.0	0.0754	0.0000	0.0377	UN
 Sample13	SampleAM6	Sample26	SampleAZ1	14.3	0.0	0.0781	0.0000	0.0391	UN
 Sample13	SampleAM6	Sample26	SampleAZ2	20.1	0.0	0.0721	0.0000	0.0360	UN
 Sample13	SampleAM6	Sample26	SampleAZ3	17.4	4.1	0.0750	0.0015	0.0390	UN
-Sample13	SampleAM6	Sample26	SampleAZ4	15.1	0.0	0.0529	0.0000	0.0265	UN
 Sample13	SampleAM7	Sample25	SampleAY8	33.0	0.0	0.0819	0.0000	0.0410	UN
 Sample13	SampleAM7	Sample25	SampleAY9	16.4	6.3	0.0521	0.0024	0.0284	UN
 Sample13	SampleAM7	Sample25	SampleAY10	20.1	0.0	0.0704	0.0000	0.0352	UN
@@ -29810,7 +29402,6 @@ Sample13	SampleAM7	Sample26	SampleAZ0	23.2	0.0	0.0732	0.0000	0.0366	UN
 Sample13	SampleAM7	Sample26	SampleAZ1	50.2	0.0	0.1114	0.0000	0.0557	4th
 Sample13	SampleAM7	Sample26	SampleAZ2	34.4	2.6	0.0893	0.0010	0.0457	4th
 Sample13	SampleAM7	Sample26	SampleAZ3	20.9	0.0	0.0803	0.0000	0.0402	UN
-Sample13	SampleAM7	Sample26	SampleAZ4	23.2	2.6	0.0709	0.0010	0.0365	UN
 Sample13	SampleAM8	Sample25	SampleAY8	33.2	4.4	0.0850	0.0017	0.0442	4th
 Sample13	SampleAM8	Sample25	SampleAY9	16.4	0.0	0.0550	0.0000	0.0275	UN
 Sample13	SampleAM8	Sample25	SampleAY10	15.7	2.6	0.0781	0.0010	0.0401	UN
@@ -29818,7 +29409,6 @@ Sample13	SampleAM8	Sample26	SampleAZ0	25.2	0.0	0.0765	0.0000	0.0382	UN
 Sample13	SampleAM8	Sample26	SampleAZ1	47.1	0.0	0.0983	0.0000	0.0491	4th
 Sample13	SampleAM8	Sample26	SampleAZ2	25.3	2.6	0.0781	0.0010	0.0401	UN
 Sample13	SampleAM8	Sample26	SampleAZ3	20.7	0.0	0.0937	0.0000	0.0469	4th
-Sample13	SampleAM8	Sample26	SampleAZ4	13.7	2.6	0.0543	0.0010	0.0282	UN
 Sample13	SampleAM9	Sample25	SampleAY8	33.0	0.0	0.0937	0.0000	0.0469	4th
 Sample13	SampleAM9	Sample25	SampleAY9	15.3	0.0	0.0625	0.0000	0.0312	UN
 Sample13	SampleAM9	Sample25	SampleAY10	12.4	0.0	0.0561	0.0000	0.0281	UN
@@ -29826,7 +29416,6 @@ Sample13	SampleAM9	Sample26	SampleAZ0	13.5	0.0	0.0727	0.0000	0.0364	UN
 Sample13	SampleAM9	Sample26	SampleAZ1	59.7	9.7	0.1328	0.0052	0.0716	4th
 Sample13	SampleAM9	Sample26	SampleAZ2	13.4	0.0	0.0625	0.0000	0.0312	UN
 Sample13	SampleAM9	Sample26	SampleAZ3	12.7	0.0	0.0704	0.0000	0.0352	UN
-Sample13	SampleAM9	Sample26	SampleAZ4	13.5	0.0	0.0761	0.0000	0.0381	UN
 Sample13	SampleAM10	Sample25	SampleAY8	22.5	4.5	0.0944	0.0017	0.0489	4th
 Sample13	SampleAM10	Sample25	SampleAY9	18.9	0.0	0.0428	0.0000	0.0214	UN
 Sample13	SampleAM10	Sample25	SampleAY10	20.0	0.0	0.0786	0.0000	0.0393	UN
@@ -29834,7 +29423,6 @@ Sample13	SampleAM10	Sample26	SampleAZ0	13.5	0.0	0.0787	0.0000	0.0394	UN
 Sample13	SampleAM10	Sample26	SampleAZ1	17.7	0.0	0.0842	0.0000	0.0421	UN
 Sample13	SampleAM10	Sample26	SampleAZ2	13.5	3.4	0.0679	0.0013	0.0353	UN
 Sample13	SampleAM10	Sample26	SampleAZ3	21.6	0.0	0.0818	0.0000	0.0409	UN
-Sample13	SampleAM10	Sample26	SampleAZ4	13.4	2.6	0.0548	0.0010	0.0284	UN
 Sample14	SampleAN0	Sample25	SampleAY8	16.9	5.9	0.0742	0.0022	0.0393	UN
 Sample14	SampleAN0	Sample25	SampleAY9	26.8	0.0	0.0938	0.0000	0.0469	4th
 Sample14	SampleAN0	Sample25	SampleAY10	22.4	0.0	0.0798	0.0000	0.0399	UN
@@ -29842,7 +29430,6 @@ Sample14	SampleAN0	Sample26	SampleAZ0	15.1	4.1	0.0782	0.0015	0.0406	UN
 Sample14	SampleAN0	Sample26	SampleAZ1	37.7	9.1	0.1893	0.0071	0.1017	3rd
 Sample14	SampleAN0	Sample26	SampleAZ2	15.0	0.0	0.0692	0.0000	0.0346	UN
 Sample14	SampleAN0	Sample26	SampleAZ3	71.6	8.3	0.3760	0.0059	0.1939	2nd
-Sample14	SampleAN0	Sample26	SampleAZ4	14.8	0.0	0.0715	0.0000	0.0358	UN
 Sample13	SampleAM4	Sample26	SampleAZ5	12.3	0.0	0.0747	0.0000	0.0374	UN
 Sample13	SampleAM4	Sample26	SampleAZ6	23.0	3.1	0.0866	0.0023	0.0456	4th
 Sample13	SampleAM4	Sample26	SampleAZ7	15.8	0.0	0.0782	0.0000	0.0391	UN
@@ -30855,7 +30442,6 @@ Sample14	SampleAN1	Sample26	SampleAZ0	14.8	0.0	0.1034	0.0000	0.0517	4th
 Sample14	SampleAN1	Sample26	SampleAZ1	12.9	5.4	0.0658	0.0020	0.0349	UN
 Sample14	SampleAN1	Sample26	SampleAZ2	18.4	2.6	0.0729	0.0010	0.0375	UN
 Sample14	SampleAN1	Sample26	SampleAZ3	13.5	0.0	0.0677	0.0000	0.0339	UN
-Sample14	SampleAN1	Sample26	SampleAZ4	18.5	10.4	0.0783	0.0039	0.0431	UN
 Sample14	SampleAN2	Sample25	SampleAY8	17.1	0.0	0.0725	0.0000	0.0363	UN
 Sample14	SampleAN2	Sample25	SampleAY9	11.6	0.0	0.0574	0.0000	0.0287	UN
 Sample14	SampleAN2	Sample25	SampleAY10	13.0	0.0	0.0731	0.0000	0.0365	UN
@@ -30863,7 +30449,6 @@ Sample14	SampleAN2	Sample26	SampleAZ0	18.5	0.0	0.0808	0.0000	0.0404	UN
 Sample14	SampleAN2	Sample26	SampleAZ1	10.5	0.0	0.0533	0.0000	0.0267	UN
 Sample14	SampleAN2	Sample26	SampleAZ2	24.9	0.0	0.0963	0.0000	0.0482	4th
 Sample14	SampleAN2	Sample26	SampleAZ3	12.0	0.0	0.0706	0.0000	0.0353	UN
-Sample14	SampleAN2	Sample26	SampleAZ4	16.9	5.0	0.0784	0.0019	0.0411	UN
 Sample14	SampleAN3	Sample25	SampleAY8	13.0	0.0	0.0554	0.0000	0.0277	UN
 Sample14	SampleAN3	Sample25	SampleAY9	14.0	0.0	0.0605	0.0000	0.0303	UN
 Sample14	SampleAN3	Sample25	SampleAY10	58.3	0.0	0.0631	0.0000	0.0316	UN
@@ -30871,7 +30456,6 @@ Sample14	SampleAN3	Sample26	SampleAZ0	13.6	0.0	0.0643	0.0000	0.0322	UN
 Sample14	SampleAN3	Sample26	SampleAZ1	19.1	6.7	0.0697	0.0025	0.0374	UN
 Sample14	SampleAN3	Sample26	SampleAZ2	15.6	0.0	0.0458	0.0000	0.0229	UN
 Sample14	SampleAN3	Sample26	SampleAZ3	19.6	0.0	0.0684	0.0000	0.0342	UN
-Sample14	SampleAN3	Sample26	SampleAZ4	10.3	0.0	0.0412	0.0000	0.0206	UN
 Sample14	SampleAN4	Sample25	SampleAY8	17.1	0.0	0.0706	0.0000	0.0353	UN
 Sample14	SampleAN4	Sample25	SampleAY9	22.3	0.0	0.0666	0.0000	0.0333	UN
 Sample14	SampleAN4	Sample25	SampleAY10	22.3	0.0	0.0774	0.0000	0.0387	UN
@@ -30879,21 +30463,18 @@ Sample14	SampleAN4	Sample26	SampleAZ0	12.5	0.0	0.0665	0.0000	0.0333	UN
 Sample14	SampleAN4	Sample26	SampleAZ1	37.7	3.3	0.1540	0.0012	0.0782	4th
 Sample14	SampleAN4	Sample26	SampleAZ2	10.8	0.0	0.0658	0.0000	0.0329	UN
 Sample14	SampleAN4	Sample26	SampleAZ3	76.0	0.0	0.2355	0.0000	0.1178	3rd
-Sample14	SampleAN4	Sample26	SampleAZ4	12.0	4.7	0.0702	0.0018	0.0369	UN
 Sample14	SampleAN5	Sample25	SampleAY8	17.1	0.0	0.0860	0.0000	0.0430	UN
 Sample14	SampleAN5	Sample25	SampleAY9	21.6	0.0	0.0578	0.0000	0.0289	UN
 Sample14	SampleAN5	Sample25	SampleAY10	21.6	0.0	0.0790	0.0000	0.0395	UN
 Sample14	SampleAN5	Sample26	SampleAZ0	16.9	0.0	0.0886	0.0000	0.0443	4th
 Sample14	SampleAN5	Sample26	SampleAZ1	31.1	0.0	0.1231	0.0000	0.0616	4th
 Sample14	SampleAN5	Sample26	SampleAZ3	48.0	0.0	0.1888	0.0000	0.0944	3rd
-Sample14	SampleAN5	Sample26	SampleAZ4	16.9	0.0	0.0732	0.0000	0.0366	UN
 Sample14	SampleAN6	Sample25	SampleAY8	14.7	0.0	0.0795	0.0000	0.0398	UN
 Sample14	SampleAN6	Sample25	SampleAY9	23.1	0.0	0.0714	0.0000	0.0357	UN
 Sample14	SampleAN6	Sample26	SampleAZ0	23.4	2.9	0.0935	0.0011	0.0478	4th
 Sample14	SampleAN6	Sample26	SampleAZ1	16.0	0.0	0.0894	0.0000	0.0447	4th
 Sample14	SampleAN6	Sample26	SampleAZ2	14.2	0.0	0.0708	0.0000	0.0354	UN
 Sample14	SampleAN6	Sample26	SampleAZ3	22.8	0.0	0.1018	0.0000	0.0509	4th
-Sample14	SampleAN6	Sample26	SampleAZ4	23.2	0.0	0.0675	0.0000	0.0338	UN
 Sample14	SampleAN7	Sample25	SampleAY8	32.6	3.8	0.0929	0.0014	0.0479	4th
 Sample14	SampleAN7	Sample25	SampleAY9	15.5	3.7	0.0589	0.0014	0.0308	UN
 Sample14	SampleAN7	Sample25	SampleAY10	13.1	0.0	0.0678	0.0000	0.0339	UN
@@ -30901,14 +30482,12 @@ Sample14	SampleAN7	Sample26	SampleAZ0	18.9	0.0	0.0834	0.0000	0.0417	UN
 Sample14	SampleAN7	Sample26	SampleAZ1	11.1	0.0	0.0643	0.0000	0.0322	UN
 Sample14	SampleAN7	Sample26	SampleAZ2	15.1	0.0	0.0758	0.0000	0.0379	UN
 Sample14	SampleAN7	Sample26	SampleAZ3	11.9	3.1	0.0553	0.0011	0.0288	UN
-Sample14	SampleAN7	Sample26	SampleAZ4	15.4	0.0	0.0739	0.0000	0.0370	UN
 Sample14	SampleAN8	Sample25	SampleAY8	29.5	8.7	0.0753	0.0033	0.0410	UN
 Sample14	SampleAN8	Sample25	SampleAY9	19.7	3.7	0.0512	0.0014	0.0270	UN
 Sample14	SampleAN8	Sample25	SampleAY10	13.5	0.0	0.0682	0.0000	0.0341	UN
 Sample14	SampleAN8	Sample26	SampleAZ0	19.4	0.0	0.1133	0.0000	0.0567	4th
 Sample14	SampleAN8	Sample26	SampleAZ1	12.6	0.0	0.0572	0.0000	0.0286	UN
 Sample14	SampleAN8	Sample26	SampleAZ2	20.9	0.0	0.0910	0.0000	0.0455	4th
-Sample14	SampleAN8	Sample26	SampleAZ4	15.0	0.0	0.0799	0.0000	0.0399	UN
 Sample14	SampleAN1	Sample26	SampleAZ5	17.9	0.0	0.0798	0.0000	0.0399	UN
 Sample14	SampleAN1	Sample26	SampleAZ6	15.0	0.0	0.0643	0.0000	0.0322	UN
 Sample14	SampleAN1	Sample26	SampleAZ7	19.8	0.0	0.0705	0.0000	0.0353	UN
@@ -31853,7 +31432,6 @@ Sample14	SampleAN10	Sample26	SampleAZ0	22.8	0.0	0.0821	0.0000	0.0411	UN
 Sample14	SampleAN10	Sample26	SampleAZ1	11.5	0.0	0.0615	0.0000	0.0308	UN
 Sample14	SampleAN10	Sample26	SampleAZ2	12.4	0.0	0.0617	0.0000	0.0309	UN
 Sample14	SampleAN10	Sample26	SampleAZ3	11.9	0.0	0.0838	0.0000	0.0419	UN
-Sample14	SampleAN10	Sample26	SampleAZ4	11.9	11.3	0.0675	0.0042	0.0380	UN
 Sample15	SampleAO0	Sample25	SampleAY8	30.7	0.0	0.0973	0.0000	0.0487	4th
 Sample15	SampleAO0	Sample25	SampleAY9	16.7	0.0	0.0909	0.0000	0.0455	4th
 Sample15	SampleAO0	Sample25	SampleAY10	22.2	0.0	0.0615	0.0000	0.0308	UN
@@ -31861,7 +31439,6 @@ Sample15	SampleAO0	Sample26	SampleAZ0	18.7	0.0	0.1005	0.0000	0.0503	4th
 Sample15	SampleAO0	Sample26	SampleAZ1	13.3	0.0	0.0711	0.0000	0.0355	UN
 Sample15	SampleAO0	Sample26	SampleAZ2	19.7	2.8	0.0693	0.0010	0.0357	UN
 Sample15	SampleAO0	Sample26	SampleAZ3	14.1	0.0	0.0722	0.0000	0.0361	UN
-Sample15	SampleAO0	Sample26	SampleAZ4	18.7	0.0	0.0828	0.0000	0.0414	UN
 Sample15	SampleAO1	Sample25	SampleAY8	33.8	0.0	0.1402	0.0000	0.0701	4th
 Sample15	SampleAO1	Sample25	SampleAY9	19.7	0.0	0.0927	0.0000	0.0464	4th
 Sample15	SampleAO1	Sample25	SampleAY10	33.8	0.0	0.1065	0.0000	0.0533	4th
@@ -31869,7 +31446,6 @@ Sample15	SampleAO1	Sample26	SampleAZ0	16.2	0.0	0.0700	0.0000	0.0350	UN
 Sample15	SampleAO1	Sample26	SampleAZ1	48.0	7.4	0.1183	0.0028	0.0619	4th
 Sample15	SampleAO1	Sample26	SampleAZ2	24.8	0.0	0.0798	0.0000	0.0399	UN
 Sample15	SampleAO1	Sample26	SampleAZ3	18.5	0.0	0.1205	0.0000	0.0603	4th
-Sample15	SampleAO1	Sample26	SampleAZ4	13.1	0.0	0.0528	0.0000	0.0264	UN
 Sample15	SampleAO2	Sample25	SampleAY8	31.5	0.0	0.0666	0.0000	0.0333	UN
 Sample15	SampleAO2	Sample25	SampleAY9	12.8	8.6	0.0405	0.0032	0.0235	UN
 Sample15	SampleAO2	Sample25	SampleAY10	15.0	2.6	0.0482	0.0010	0.0251	UN
@@ -31877,7 +31453,6 @@ Sample15	SampleAO2	Sample26	SampleAZ0	16.3	0.0	0.0782	0.0000	0.0391	UN
 Sample15	SampleAO2	Sample26	SampleAZ1	16.5	0.0	0.0660	0.0000	0.0330	UN
 Sample15	SampleAO2	Sample26	SampleAZ2	20.6	0.0	0.0697	0.0000	0.0348	UN
 Sample15	SampleAO2	Sample26	SampleAZ3	19.8	3.1	0.0611	0.0012	0.0318	UN
-Sample15	SampleAO2	Sample26	SampleAZ4	20.9	0.0	0.0819	0.0000	0.0410	UN
 Sample15	SampleAO3	Sample25	SampleAY8	18.3	3.1	0.0756	0.0011	0.0389	UN
 Sample15	SampleAO3	Sample25	SampleAY9	13.5	0.0	0.0479	0.0000	0.0240	UN
 Sample15	SampleAO3	Sample25	SampleAY10	24.5	0.0	0.0783	0.0000	0.0392	UN
@@ -31885,7 +31460,6 @@ Sample15	SampleAO3	Sample26	SampleAZ0	19.3	0.0	0.0917	0.0000	0.0459	4th
 Sample15	SampleAO3	Sample26	SampleAZ1	15.8	0.0	0.0875	0.0000	0.0438	UN
 Sample15	SampleAO3	Sample26	SampleAZ2	14.4	5.0	0.0660	0.0029	0.0359	UN
 Sample15	SampleAO3	Sample26	SampleAZ3	16.6	0.0	0.0820	0.0000	0.0410	UN
-Sample15	SampleAO3	Sample26	SampleAZ4	19.3	0.0	0.0864	0.0000	0.0432	UN
 Sample15	SampleAO4	Sample25	SampleAY8	42.2	0.0	0.0836	0.0000	0.0418	UN
 Sample15	SampleAO4	Sample25	SampleAY9	16.8	4.4	0.0609	0.0031	0.0336	UN
 Sample15	SampleAO4	Sample25	SampleAY10	15.0	4.6	0.0578	0.0017	0.0306	UN
@@ -31893,7 +31467,6 @@ Sample15	SampleAO4	Sample26	SampleAZ0	14.3	0.0	0.0696	0.0000	0.0348	UN
 Sample15	SampleAO4	Sample26	SampleAZ1	20.6	3.1	0.0495	0.0011	0.0259	UN
 Sample15	SampleAO4	Sample26	SampleAZ2	20.7	0.0	0.0712	0.0000	0.0356	UN
 Sample15	SampleAO4	Sample26	SampleAZ3	19.6	3.1	0.0605	0.0023	0.0326	UN
-Sample15	SampleAO4	Sample26	SampleAZ4	20.8	0.0	0.0712	0.0000	0.0356	UN
 Sample15	SampleAO5	Sample25	SampleAY8	42.2	0.0	0.0945	0.0000	0.0473	4th
 Sample15	SampleAO5	Sample25	SampleAY9	16.7	0.0	0.0676	0.0000	0.0338	UN
 Sample15	SampleAO5	Sample25	SampleAY10	23.0	4.5	0.0513	0.0017	0.0274	UN
@@ -31901,7 +31474,6 @@ Sample15	SampleAO5	Sample26	SampleAZ0	19.8	0.0	0.0996	0.0000	0.0498	4th
 Sample15	SampleAO5	Sample26	SampleAZ1	13.5	0.0	0.0627	0.0000	0.0314	UN
 Sample15	SampleAO5	Sample26	SampleAZ2	18.7	0.0	0.0673	0.0000	0.0336	UN
 Sample15	SampleAO5	Sample26	SampleAZ3	15.5	0.0	0.0634	0.0000	0.0317	UN
-Sample15	SampleAO5	Sample26	SampleAZ4	18.5	6.4	0.0862	0.0024	0.0455	4th
 Sample14	SampleAN9	Sample26	SampleAZ5	12.6	4.1	0.0516	0.0015	0.0273	UN
 Sample14	SampleAN9	Sample26	SampleAZ6	15.7	0.0	0.0734	0.0000	0.0367	UN
 Sample14	SampleAN9	Sample26	SampleAZ7	29.8	0.0	0.0766	0.0000	0.0383	UN
@@ -32793,7 +32365,6 @@ Sample15	SampleAO7	Sample26	SampleAZ0	14.2	0.0	0.0639	0.0000	0.0319	UN
 Sample15	SampleAO7	Sample26	SampleAZ1	44.8	0.0	0.1158	0.0000	0.0579	4th
 Sample15	SampleAO7	Sample26	SampleAZ2	24.4	0.0	0.0806	0.0000	0.0403	UN
 Sample15	SampleAO7	Sample26	SampleAZ3	18.5	0.0	0.0729	0.0000	0.0365	UN
-Sample15	SampleAO7	Sample26	SampleAZ4	16.6	0.0	0.0653	0.0000	0.0326	UN
 Sample15	SampleAO8	Sample25	SampleAY8	28.2	0.0	0.0805	0.0000	0.0403	UN
 Sample15	SampleAO8	Sample25	SampleAY9	20.7	0.0	0.0684	0.0000	0.0342	UN
 Sample15	SampleAO8	Sample25	SampleAY10	13.1	0.0	0.0520	0.0000	0.0260	UN
@@ -32801,7 +32372,6 @@ Sample15	SampleAO8	Sample26	SampleAZ0	15.6	0.0	0.0633	0.0000	0.0317	UN
 Sample15	SampleAO8	Sample26	SampleAZ1	44.8	0.0	0.0925	0.0000	0.0462	4th
 Sample15	SampleAO8	Sample26	SampleAZ2	21.2	3.1	0.0729	0.0012	0.0377	UN
 Sample15	SampleAO8	Sample26	SampleAZ3	22.2	0.0	0.0518	0.0000	0.0259	UN
-Sample15	SampleAO8	Sample26	SampleAZ4	20.1	0.0	0.0668	0.0000	0.0334	UN
 Sample15	SampleAO9	Sample25	SampleAY8	21.9	0.0	0.0771	0.0000	0.0386	UN
 Sample15	SampleAO9	Sample25	SampleAY9	21.4	0.0	0.0618	0.0000	0.0309	UN
 Sample15	SampleAO9	Sample25	SampleAY10	18.2	0.0	0.0793	0.0000	0.0397	UN
@@ -32809,7 +32379,6 @@ Sample15	SampleAO9	Sample26	SampleAZ0	13.6	0.0	0.0729	0.0000	0.0365	UN
 Sample15	SampleAO9	Sample26	SampleAZ1	18.6	0.0	0.0674	0.0000	0.0337	UN
 Sample15	SampleAO9	Sample26	SampleAZ2	16.0	0.0	0.0811	0.0000	0.0406	UN
 Sample15	SampleAO9	Sample26	SampleAZ3	11.3	2.9	0.0536	0.0011	0.0279	UN
-Sample15	SampleAO9	Sample26	SampleAZ4	16.6	0.0	0.0701	0.0000	0.0351	UN
 Sample15	SampleAO10	Sample25	SampleAY8	34.4	5.2	0.0804	0.0019	0.0421	UN
 Sample15	SampleAO10	Sample25	SampleAY9	19.5	0.0	0.0676	0.0000	0.0338	UN
 Sample15	SampleAO10	Sample25	SampleAY10	33.8	0.0	0.0723	0.0000	0.0362	UN
@@ -32817,7 +32386,6 @@ Sample15	SampleAO10	Sample26	SampleAZ0	13.9	0.0	0.0596	0.0000	0.0298	UN
 Sample15	SampleAO10	Sample26	SampleAZ1	37.7	0.0	0.0989	0.0000	0.0495	4th
 Sample15	SampleAO10	Sample26	SampleAZ2	13.0	5.7	0.0748	0.0021	0.0395	UN
 Sample15	SampleAO10	Sample26	SampleAZ3	14.0	0.0	0.0547	0.0000	0.0274	UN
-Sample15	SampleAO10	Sample26	SampleAZ4	14.1	5.1	0.0490	0.0019	0.0264	UN
 Sample16	SampleAP0	Sample25	SampleAY8	13.9	3.3	0.0897	0.0012	0.0461	4th
 Sample16	SampleAP0	Sample25	SampleAY9	16.5	0.0	0.0674	0.0000	0.0337	UN
 Sample16	SampleAP0	Sample25	SampleAY10	20.0	0.0	0.0704	0.0000	0.0352	UN
@@ -32825,7 +32393,6 @@ Sample16	SampleAP0	Sample26	SampleAZ0	23.9	0.0	0.0881	0.0000	0.0440	UN
 Sample16	SampleAP0	Sample26	SampleAZ1	22.2	0.0	0.0785	0.0000	0.0393	UN
 Sample16	SampleAP0	Sample26	SampleAZ2	30.7	3.0	0.0844	0.0021	0.0443	4th
 Sample16	SampleAP0	Sample26	SampleAZ3	12.0	0.0	0.0852	0.0000	0.0426	UN
-Sample16	SampleAP0	Sample26	SampleAZ4	22.0	3.0	0.0841	0.0011	0.0432	UN
 Sample16	SampleAP1	Sample25	SampleAY8	18.2	0.0	0.0997	0.0000	0.0499	4th
 Sample16	SampleAP1	Sample25	SampleAY9	18.2	0.0	0.0868	0.0000	0.0434	UN
 Sample16	SampleAP1	Sample25	SampleAY10	19.8	5.0	0.0969	0.0019	0.0503	4th
@@ -32833,7 +32400,6 @@ Sample16	SampleAP1	Sample26	SampleAZ0	24.8	0.0	0.1027	0.0000	0.0513	4th
 Sample16	SampleAP1	Sample26	SampleAZ1	18.3	0.0	0.0914	0.0000	0.0457	4th
 Sample16	SampleAP1	Sample26	SampleAZ2	16.7	8.4	0.0788	0.0031	0.0425	UN
 Sample16	SampleAP1	Sample26	SampleAZ3	21.5	0.0	0.0999	0.0000	0.0500	4th
-Sample16	SampleAP1	Sample26	SampleAZ4	13.5	0.0	0.0721	0.0000	0.0360	UN
 Sample16	SampleAP2	Sample25	SampleAY8	16.4	0.0	0.0960	0.0000	0.0480	4th
 Sample16	SampleAP2	Sample25	SampleAY9	24.5	0.0	0.0880	0.0000	0.0440	UN
 Sample16	SampleAP2	Sample25	SampleAY10	25.6	0.0	0.1256	0.0000	0.0628	4th
@@ -32841,7 +32407,6 @@ Sample16	SampleAP2	Sample26	SampleAZ0	52.1	6.4	0.1069	0.0038	0.0573	4th
 Sample16	SampleAP2	Sample26	SampleAZ1	24.5	0.0	0.0882	0.0000	0.0441	UN
 Sample16	SampleAP2	Sample26	SampleAZ2	13.5	0.0	0.0853	0.0000	0.0427	UN
 Sample16	SampleAP2	Sample26	SampleAZ3	14.5	6.5	0.0824	0.0024	0.0436	UN
-Sample16	SampleAP2	Sample26	SampleAZ4	11.1	0.0	0.0874	0.0000	0.0437	UN
 Sample15	SampleAO6	Sample26	SampleAZ5	14.1	0.0	0.0487	0.0000	0.0244	UN
 Sample15	SampleAO6	Sample26	SampleAZ6	40.8	0.0	0.0615	0.0000	0.0308	UN
 Sample15	SampleAO6	Sample26	SampleAZ7	14.7	0.0	0.0648	0.0000	0.0324	UN
@@ -33683,7 +33248,6 @@ Sample16	SampleAP3	Sample26	SampleAZ0	14.6	3.3	0.0759	0.0012	0.0392	UN
 Sample16	SampleAP3	Sample26	SampleAZ1	15.5	0.0	0.0550	0.0000	0.0275	UN
 Sample16	SampleAP3	Sample26	SampleAZ2	12.0	4.5	0.0747	0.0017	0.0391	UN
 Sample16	SampleAP3	Sample26	SampleAZ3	25.0	0.0	0.0984	0.0000	0.0492	4th
-Sample16	SampleAP3	Sample26	SampleAZ4	11.8	0.0	0.0671	0.0000	0.0336	UN
 Sample16	SampleAP4	Sample25	SampleAY8	13.1	0.0	0.0753	0.0000	0.0377	UN
 Sample16	SampleAP4	Sample25	SampleAY9	13.3	0.0	0.0775	0.0000	0.0387	UN
 Sample16	SampleAP4	Sample25	SampleAY10	22.5	0.0	0.1000	0.0000	0.0500	4th
@@ -33691,7 +33255,6 @@ Sample16	SampleAP4	Sample26	SampleAZ0	22.4	6.1	0.0798	0.0023	0.0422	UN
 Sample16	SampleAP4	Sample26	SampleAZ1	12.5	0.0	0.0632	0.0000	0.0316	UN
 Sample16	SampleAP4	Sample26	SampleAZ2	26.8	0.0	0.0916	0.0000	0.0458	4th
 Sample16	SampleAP4	Sample26	SampleAZ3	19.9	0.0	0.1019	0.0000	0.0510	4th
-Sample16	SampleAP4	Sample26	SampleAZ4	10.4	0.0	0.0854	0.0000	0.0427	UN
 Sample16	SampleAP5	Sample25	SampleAY8	24.5	0.0	0.0946	0.0000	0.0473	4th
 Sample16	SampleAP5	Sample25	SampleAY9	16.7	0.0	0.0677	0.0000	0.0339	UN
 Sample16	SampleAP5	Sample25	SampleAY10	22.5	3.9	0.1183	0.0015	0.0607	4th
@@ -33699,7 +33262,6 @@ Sample16	SampleAP5	Sample26	SampleAZ0	33.0	6.1	0.1105	0.0034	0.0587	4th
 Sample16	SampleAP5	Sample26	SampleAZ1	13.1	0.0	0.0737	0.0000	0.0369	UN
 Sample16	SampleAP5	Sample26	SampleAZ2	24.0	0.0	0.0770	0.0000	0.0385	UN
 Sample16	SampleAP5	Sample26	SampleAZ3	19.8	0.0	0.0858	0.0000	0.0429	UN
-Sample16	SampleAP5	Sample26	SampleAZ4	21.3	0.0	0.0880	0.0000	0.0440	UN
 Sample16	SampleAP6	Sample25	SampleAY8	16.2	0.0	0.0870	0.0000	0.0435	UN
 Sample16	SampleAP6	Sample25	SampleAY9	13.1	0.0	0.0869	0.0000	0.0435	UN
 Sample16	SampleAP6	Sample25	SampleAY10	28.8	0.0	0.0665	0.0000	0.0333	UN
@@ -33707,7 +33269,6 @@ Sample16	SampleAP6	Sample26	SampleAZ0	41.5	2.9	0.1339	0.0011	0.0681	4th
 Sample16	SampleAP6	Sample26	SampleAZ1	44.4	0.0	0.1128	0.0000	0.0564	4th
 Sample16	SampleAP6	Sample26	SampleAZ2	28.7	2.8	0.0833	0.0010	0.0427	UN
 Sample16	SampleAP6	Sample26	SampleAZ3	16.4	5.1	0.0828	0.0019	0.0433	UN
-Sample16	SampleAP6	Sample26	SampleAZ4	30.2	0.0	0.1093	0.0000	0.0547	4th
 Sample16	SampleAP7	Sample25	SampleAY8	14.9	5.3	0.0810	0.0020	0.0425	UN
 Sample16	SampleAP7	Sample25	SampleAY9	14.4	0.0	0.0668	0.0000	0.0334	UN
 Sample16	SampleAP7	Sample25	SampleAY10	17.3	0.0	0.1028	0.0000	0.0514	4th
@@ -33715,7 +33276,6 @@ Sample16	SampleAP7	Sample26	SampleAZ0	18.7	0.0	0.0800	0.0000	0.0400	UN
 Sample16	SampleAP7	Sample26	SampleAZ1	17.3	0.0	0.0816	0.0000	0.0408	UN
 Sample16	SampleAP7	Sample26	SampleAZ2	14.7	5.1	0.0611	0.0019	0.0324	UN
 Sample16	SampleAP7	Sample26	SampleAZ3	22.7	0.0	0.0720	0.0000	0.0360	UN
-Sample16	SampleAP7	Sample26	SampleAZ4	11.8	0.0	0.0683	0.0000	0.0341	UN
 Sample16	SampleAP8	Sample25	SampleAY8	18.9	0.0	0.0732	0.0000	0.0366	UN
 Sample16	SampleAP8	Sample25	SampleAY9	28.3	0.0	0.0669	0.0000	0.0335	UN
 Sample16	SampleAP8	Sample25	SampleAY10	17.0	0.0	0.0787	0.0000	0.0394	UN
@@ -33723,7 +33283,6 @@ Sample16	SampleAP8	Sample26	SampleAZ0	44.6	0.0	0.1128	0.0000	0.0564	4th
 Sample16	SampleAP8	Sample26	SampleAZ1	24.6	0.0	0.0769	0.0000	0.0385	UN
 Sample16	SampleAP8	Sample26	SampleAZ2	25.4	5.1	0.0925	0.0019	0.0481	4th
 Sample16	SampleAP8	Sample26	SampleAZ3	25.6	0.0	0.0924	0.0000	0.0462	4th
-Sample16	SampleAP8	Sample26	SampleAZ4	13.5	0.0	0.0710	0.0000	0.0355	UN
 Sample16	SampleAP9	Sample25	SampleAY8	21.5	0.0	0.0885	0.0000	0.0443	4th
 Sample16	SampleAP9	Sample25	SampleAY9	23.6	0.0	0.0566	0.0000	0.0283	UN
 Sample16	SampleAP9	Sample25	SampleAY10	19.8	6.3	0.0863	0.0042	0.0474	4th
@@ -33731,7 +33290,6 @@ Sample16	SampleAP9	Sample26	SampleAZ0	18.2	7.3	0.0821	0.0027	0.0438	UN
 Sample16	SampleAP9	Sample26	SampleAZ1	15.4	0.0	0.0607	0.0000	0.0304	UN
 Sample16	SampleAP9	Sample26	SampleAZ2	12.0	0.0	0.0931	0.0000	0.0466	4th
 Sample16	SampleAP9	Sample26	SampleAZ3	27.0	0.0	0.1053	0.0000	0.0527	4th
-Sample16	SampleAP9	Sample26	SampleAZ4	17.6	5.5	0.0805	0.0020	0.0423	UN
 Sample16	SampleAP10	Sample25	SampleAY8	16.2	0.0	0.1002	0.0000	0.0501	4th
 Sample16	SampleAP10	Sample25	SampleAY9	13.6	0.0	0.0618	0.0000	0.0309	UN
 Sample16	SampleAP10	Sample25	SampleAY10	24.0	0.0	0.1013	0.0000	0.0507	4th
@@ -33739,7 +33297,6 @@ Sample16	SampleAP10	Sample26	SampleAZ0	14.2	0.0	0.0868	0.0000	0.0434	UN
 Sample16	SampleAP10	Sample26	SampleAZ1	46.3	0.0	0.1040	0.0000	0.0520	4th
 Sample16	SampleAP10	Sample26	SampleAZ2	19.5	4.4	0.0658	0.0016	0.0345	UN
 Sample16	SampleAP10	Sample26	SampleAZ3	16.3	7.0	0.0782	0.0066	0.0457	4th
-Sample16	SampleAP10	Sample26	SampleAZ4	15.2	0.0	0.0831	0.0000	0.0416	UN
 Sample16	SampleAP3	Sample26	SampleAZ5	12.4	0.0	0.0640	0.0000	0.0320	UN
 Sample16	SampleAP3	Sample26	SampleAZ6	14.8	3.1	0.0906	0.0012	0.0465	4th
 Sample16	SampleAP3	Sample26	SampleAZ7	11.2	0.0	0.0615	0.0000	0.0308	UN
@@ -34506,7 +34063,6 @@ Sample17	SampleAQ0	Sample26	SampleAZ0	21.6	0.0	0.0964	0.0000	0.0482	4th
 Sample17	SampleAQ0	Sample26	SampleAZ1	17.9	0.0	0.0881	0.0000	0.0440	UN
 Sample17	SampleAQ0	Sample26	SampleAZ2	21.8	0.0	0.1067	0.0000	0.0534	4th
 Sample17	SampleAQ0	Sample26	SampleAZ3	38.0	5.6	0.2188	0.0039	0.1133	3rd
-Sample17	SampleAQ0	Sample26	SampleAZ4	22.0	0.0	0.0963	0.0000	0.0482	4th
 Sample17	SampleAQ1	Sample25	SampleAY8	16.6	0.0	0.0728	0.0000	0.0364	UN
 Sample17	SampleAQ1	Sample25	SampleAY9	22.6	0.0	0.0606	0.0000	0.0303	UN
 Sample17	SampleAQ1	Sample25	SampleAY10	14.4	0.0	0.0491	0.0000	0.0246	UN
@@ -34514,7 +34070,6 @@ Sample17	SampleAQ1	Sample26	SampleAZ0	40.2	0.0	0.0870	0.0000	0.0435	UN
 Sample17	SampleAQ1	Sample26	SampleAZ1	11.3	0.0	0.0585	0.0000	0.0293	UN
 Sample17	SampleAQ1	Sample26	SampleAZ2	11.9	0.0	0.0795	0.0000	0.0398	UN
 Sample17	SampleAQ1	Sample26	SampleAZ3	14.6	3.9	0.0770	0.0015	0.0400	UN
-Sample17	SampleAQ1	Sample26	SampleAZ4	19.2	0.0	0.0797	0.0000	0.0399	UN
 Sample17	SampleAQ2	Sample25	SampleAY8	18.7	0.0	0.0677	0.0000	0.0339	UN
 Sample17	SampleAQ2	Sample25	SampleAY9	38.7	0.0	0.1243	0.0000	0.0622	4th
 Sample17	SampleAQ2	Sample25	SampleAY10	24.9	0.0	0.0538	0.0000	0.0269	UN
@@ -34522,7 +34077,6 @@ Sample17	SampleAQ2	Sample26	SampleAZ0	34.1	6.2	0.1160	0.0043	0.0623	4th
 Sample17	SampleAQ2	Sample26	SampleAZ1	21.3	0.0	0.0781	0.0000	0.0391	UN
 Sample17	SampleAQ2	Sample26	SampleAZ2	23.0	0.0	0.0729	0.0000	0.0365	UN
 Sample17	SampleAQ2	Sample26	SampleAZ3	14.6	0.0	0.0776	0.0000	0.0388	UN
-Sample17	SampleAQ2	Sample26	SampleAZ4	30.4	4.0	0.0742	0.0029	0.0400	UN
 Sample17	SampleAQ3	Sample25	SampleAY8	21.3	0.0	0.0507	0.0000	0.0254	UN
 Sample17	SampleAQ3	Sample25	SampleAY9	21.3	0.0	0.0420	0.0000	0.0210	UN
 Sample17	SampleAQ3	Sample25	SampleAY10	30.2	0.0	0.0559	0.0000	0.0280	UN
@@ -34530,7 +34084,6 @@ Sample17	SampleAQ3	Sample26	SampleAZ0	15.8	6.8	0.0570	0.0026	0.0311	UN
 Sample17	SampleAQ3	Sample26	SampleAZ1	11.9	0.0	0.0421	0.0000	0.0211	UN
 Sample17	SampleAQ3	Sample26	SampleAZ2	37.2	4.2	0.1274	0.0044	0.0681	4th
 Sample17	SampleAQ3	Sample26	SampleAZ3	20.2	3.0	0.0592	0.0011	0.0307	UN
-Sample17	SampleAQ3	Sample26	SampleAZ4	25.7	0.0	0.0885	0.0000	0.0443	4th
 Sample17	SampleAQ4	Sample25	SampleAY8	19.5	0.0	0.0821	0.0000	0.0411	UN
 Sample17	SampleAQ4	Sample25	SampleAY9	31.3	0.0	0.0969	0.0000	0.0485	4th
 Sample17	SampleAQ4	Sample25	SampleAY10	11.0	0.0	0.0541	0.0000	0.0271	UN
@@ -34538,7 +34091,6 @@ Sample17	SampleAQ4	Sample26	SampleAZ0	21.7	0.0	0.0950	0.0000	0.0475	4th
 Sample17	SampleAQ4	Sample26	SampleAZ1	13.7	8.5	0.0617	0.0032	0.0341	UN
 Sample17	SampleAQ4	Sample26	SampleAZ2	21.7	4.1	0.0983	0.0015	0.0507	4th
 Sample17	SampleAQ4	Sample26	SampleAZ3	28.1	0.0	0.1268	0.0000	0.0634	4th
-Sample17	SampleAQ4	Sample26	SampleAZ4	23.2	0.0	0.0806	0.0000	0.0403	UN
 Sample17	SampleAQ5	Sample25	SampleAY8	17.3	0.0	0.0759	0.0000	0.0380	UN
 Sample17	SampleAQ5	Sample25	SampleAY9	19.7	0.0	0.1118	0.0000	0.0559	4th
 Sample17	SampleAQ5	Sample25	SampleAY10	25.6	0.0	0.0690	0.0000	0.0345	UN
@@ -34546,7 +34098,6 @@ Sample17	SampleAQ5	Sample26	SampleAZ0	45.5	8.9	0.1000	0.0077	0.0577	4th
 Sample17	SampleAQ5	Sample26	SampleAZ1	16.1	0.0	0.0869	0.0000	0.0435	UN
 Sample17	SampleAQ5	Sample26	SampleAZ2	22.0	0.0	0.0902	0.0000	0.0451	4th
 Sample17	SampleAQ5	Sample26	SampleAZ3	24.1	0.0	0.1656	0.0000	0.0828	4th
-Sample17	SampleAQ5	Sample26	SampleAZ4	22.0	8.9	0.0794	0.0033	0.0430	UN
 Sample17	SampleAQ6	Sample25	SampleAY8	12.8	0.0	0.0613	0.0000	0.0307	UN
 Sample17	SampleAQ6	Sample25	SampleAY9	22.6	0.0	0.0657	0.0000	0.0329	UN
 Sample17	SampleAQ6	Sample25	SampleAY10	20.2	5.6	0.0761	0.0021	0.0401	UN
@@ -34554,7 +34105,6 @@ Sample17	SampleAQ6	Sample26	SampleAZ0	10.1	0.0	0.0370	0.0000	0.0185	UN
 Sample17	SampleAQ6	Sample26	SampleAZ1	21.0	0.0	0.0673	0.0000	0.0336	UN
 Sample17	SampleAQ6	Sample26	SampleAZ2	21.3	0.0	0.0567	0.0000	0.0284	UN
 Sample17	SampleAQ6	Sample26	SampleAZ3	22.9	0.0	0.0913	0.0000	0.0457	4th
-Sample17	SampleAQ6	Sample26	SampleAZ4	17.1	0.0	0.0474	0.0000	0.0237	UN
 Sample17	SampleAQ7	Sample25	SampleAY8	18.6	0.0	0.0547	0.0000	0.0274	UN
 Sample17	SampleAQ7	Sample25	SampleAY9	15.3	0.0	0.0775	0.0000	0.0387	UN
 Sample17	SampleAQ7	Sample25	SampleAY10	25.6	0.0	0.0617	0.0000	0.0309	UN
@@ -34562,7 +34112,6 @@ Sample17	SampleAQ7	Sample26	SampleAZ0	42.6	3.3	0.1188	0.0035	0.0629	4th
 Sample17	SampleAQ7	Sample26	SampleAZ1	16.0	0.0	0.0654	0.0000	0.0327	UN
 Sample17	SampleAQ7	Sample26	SampleAZ2	12.9	0.0	0.0758	0.0000	0.0379	UN
 Sample17	SampleAQ7	Sample26	SampleAZ3	14.5	6.7	0.0753	0.0025	0.0402	UN
-Sample17	SampleAQ7	Sample26	SampleAZ4	24.4	0.0	0.0844	0.0000	0.0422	UN
 Sample17	SampleAQ0	Sample26	SampleAZ5	19.5	0.0	0.0922	0.0000	0.0461	4th
 Sample17	SampleAQ0	Sample26	SampleAZ6	20.5	0.0	0.1315	0.0000	0.0658	4th
 Sample17	SampleAQ0	Sample26	SampleAZ7	19.2	5.9	0.0817	0.0022	0.0431	UN
@@ -35266,7 +34815,6 @@ Sample17	SampleAQ8	Sample26	SampleAZ0	40.2	0.0	0.1063	0.0000	0.0532	4th
 Sample17	SampleAQ8	Sample26	SampleAZ1	13.7	0.0	0.0446	0.0000	0.0223	UN
 Sample17	SampleAQ8	Sample26	SampleAZ2	22.7	0.0	0.0720	0.0000	0.0360	UN
 Sample17	SampleAQ8	Sample26	SampleAZ3	11.4	5.0	0.0643	0.0019	0.0341	UN
-Sample17	SampleAQ8	Sample26	SampleAZ4	24.2	0.0	0.0849	0.0000	0.0425	UN
 Sample17	SampleAQ9	Sample25	SampleAY8	21.1	3.1	0.0626	0.0012	0.0325	UN
 Sample17	SampleAQ9	Sample25	SampleAY9	21.1	0.0	0.0856	0.0000	0.0428	UN
 Sample17	SampleAQ9	Sample25	SampleAY10	13.4	0.0	0.0609	0.0000	0.0305	UN
@@ -35274,7 +34822,6 @@ Sample17	SampleAQ9	Sample26	SampleAZ0	22.1	0.0	0.0748	0.0000	0.0374	UN
 Sample17	SampleAQ9	Sample26	SampleAZ1	14.4	3.1	0.0569	0.0022	0.0307	UN
 Sample17	SampleAQ9	Sample26	SampleAZ2	27.2	0.0	0.1045	0.0000	0.0523	4th
 Sample17	SampleAQ9	Sample26	SampleAZ3	24.4	0.0	0.1094	0.0000	0.0547	4th
-Sample17	SampleAQ9	Sample26	SampleAZ4	21.8	0.0	0.0721	0.0000	0.0360	UN
 Sample17	SampleAQ10	Sample25	SampleAY8	16.6	0.0	0.0524	0.0000	0.0262	UN
 Sample17	SampleAQ10	Sample25	SampleAY9	13.1	0.0	0.0606	0.0000	0.0303	UN
 Sample17	SampleAQ10	Sample25	SampleAY10	20.1	0.0	0.0751	0.0000	0.0376	UN
@@ -35282,7 +34829,6 @@ Sample17	SampleAQ10	Sample26	SampleAZ0	40.2	0.0	0.0827	0.0000	0.0414	UN
 Sample17	SampleAQ10	Sample26	SampleAZ1	14.4	0.0	0.0639	0.0000	0.0319	UN
 Sample17	SampleAQ10	Sample26	SampleAZ2	14.8	0.0	0.0579	0.0000	0.0290	UN
 Sample17	SampleAQ10	Sample26	SampleAZ3	13.2	4.9	0.0824	0.0037	0.0449	4th
-Sample17	SampleAQ10	Sample26	SampleAZ4	22.2	3.2	0.0631	0.0012	0.0328	UN
 Sample18	SampleAR0	Sample25	SampleAY8	37.5	4.8	0.2132	0.0033	0.1099	3rd
 Sample18	SampleAR0	Sample25	SampleAY9	37.3	6.6	0.1266	0.0025	0.0658	4th
 Sample18	SampleAR0	Sample25	SampleAY10	35.2	4.5	0.1758	0.0017	0.0896	3rd
@@ -35290,14 +34836,12 @@ Sample18	SampleAR0	Sample26	SampleAZ0	15.6	3.3	0.0804	0.0024	0.0426	UN
 Sample18	SampleAR0	Sample26	SampleAZ1	10.3	0.0	0.0584	0.0000	0.0292	UN
 Sample18	SampleAR0	Sample26	SampleAZ2	20.6	4.5	0.0690	0.0017	0.0362	UN
 Sample18	SampleAR0	Sample26	SampleAZ3	13.0	0.0	0.0672	0.0000	0.0336	UN
-Sample18	SampleAR0	Sample26	SampleAZ4	14.5	3.9	0.0503	0.0015	0.0267	UN
 Sample18	SampleAR1	Sample25	SampleAY8	14.6	0.0	0.0823	0.0000	0.0411	UN
 Sample18	SampleAR1	Sample25	SampleAY9	12.5	0.0	0.0435	0.0000	0.0218	UN
 Sample18	SampleAR1	Sample25	SampleAY10	14.2	2.9	0.0641	0.0011	0.0331	UN
 Sample18	SampleAR1	Sample26	SampleAZ0	31.1	0.0	0.0919	0.0000	0.0460	4th
 Sample18	SampleAR1	Sample26	SampleAZ1	60.3	6.3	0.2071	0.0024	0.1060	3rd
 Sample18	SampleAR1	Sample26	SampleAZ2	15.4	3.0	0.0712	0.0011	0.0367	UN
-Sample18	SampleAR1	Sample26	SampleAZ4	11.8	0.0	0.0594	0.0000	0.0297	UN
 Sample18	SampleAR2	Sample25	SampleAY8	11.8	0.0	0.0870	0.0000	0.0435	UN
 Sample18	SampleAR2	Sample25	SampleAY9	30.8	0.0	0.0756	0.0000	0.0378	UN
 Sample18	SampleAR2	Sample25	SampleAY10	16.8	0.0	0.0742	0.0000	0.0371	UN
@@ -35305,7 +34849,6 @@ Sample18	SampleAR2	Sample26	SampleAZ0	24.7	0.0	0.0807	0.0000	0.0404	UN
 Sample18	SampleAR2	Sample26	SampleAZ1	30.1	0.0	0.0808	0.0000	0.0404	UN
 Sample18	SampleAR2	Sample26	SampleAZ2	25.0	0.0	0.0765	0.0000	0.0382	UN
 Sample18	SampleAR2	Sample26	SampleAZ3	22.0	0.0	0.0839	0.0000	0.0420	UN
-Sample18	SampleAR2	Sample26	SampleAZ4	24.5	0.0	0.0801	0.0000	0.0401	UN
 Sample18	SampleAR3	Sample25	SampleAY8	19.6	0.0	0.0965	0.0000	0.0483	4th
 Sample18	SampleAR3	Sample25	SampleAY9	39.4	3.1	0.1033	0.0012	0.0529	4th
 Sample18	SampleAR3	Sample25	SampleAY10	16.6	0.0	0.0679	0.0000	0.0340	UN
@@ -35313,7 +34856,6 @@ Sample18	SampleAR3	Sample26	SampleAZ0	19.8	9.4	0.1073	0.0062	0.0599	4th
 Sample18	SampleAR3	Sample26	SampleAZ1	15.3	11.8	0.0875	0.0044	0.0482	4th
 Sample18	SampleAR3	Sample26	SampleAZ2	18.8	6.3	0.0859	0.0024	0.0454	4th
 Sample18	SampleAR3	Sample26	SampleAZ3	19.1	4.2	0.0875	0.0016	0.0454	4th
-Sample18	SampleAR3	Sample26	SampleAZ4	19.5	5.2	0.0933	0.0020	0.0487	4th
 Sample18	SampleAR4	Sample25	SampleAY8	22.5	8.4	0.1413	0.0031	0.0738	4th
 Sample18	SampleAR4	Sample25	SampleAY9	32.7	0.0	0.1119	0.0000	0.0559	4th
 Sample18	SampleAR4	Sample25	SampleAY10	23.9	7.3	0.1142	0.0027	0.0598	4th
@@ -35321,7 +34863,6 @@ Sample18	SampleAR4	Sample26	SampleAZ0	24.7	5.2	0.0998	0.0020	0.0519	4th
 Sample18	SampleAR4	Sample26	SampleAZ1	15.0	4.4	0.0605	0.0016	0.0319	UN
 Sample18	SampleAR4	Sample26	SampleAZ2	24.6	3.1	0.0757	0.0023	0.0402	UN
 Sample18	SampleAR4	Sample26	SampleAZ3	21.4	0.0	0.0877	0.0000	0.0439	UN
-Sample18	SampleAR4	Sample26	SampleAZ4	24.4	3.0	0.0762	0.0023	0.0404	UN
 Sample17	SampleAQ8	Sample26	SampleAZ5	36.7	0.0	0.0864	0.0000	0.0432	UN
 Sample17	SampleAQ8	Sample26	SampleAZ6	24.8	0.0	0.0916	0.0000	0.0458	4th
 Sample17	SampleAQ8	Sample26	SampleAZ7	14.0	0.0	0.0597	0.0000	0.0299	UN
@@ -35970,7 +35511,6 @@ Sample18	SampleAR5	Sample26	SampleAZ0	15.6	0.0	0.0863	0.0000	0.0432	UN
 Sample18	SampleAR5	Sample26	SampleAZ1	30.3	0.0	0.0649	0.0000	0.0324	UN
 Sample18	SampleAR5	Sample26	SampleAZ2	20.6	4.2	0.0754	0.0027	0.0404	UN
 Sample18	SampleAR5	Sample26	SampleAZ3	12.3	0.0	0.0799	0.0000	0.0399	UN
-Sample18	SampleAR5	Sample26	SampleAZ4	13.8	3.0	0.0616	0.0011	0.0319	UN
 Sample18	SampleAR6	Sample25	SampleAY8	21.9	0.0	0.0831	0.0000	0.0416	UN
 Sample18	SampleAR6	Sample25	SampleAY9	87.4	5.0	0.2481	0.0034	0.1275	3rd
 Sample18	SampleAR6	Sample25	SampleAY10	16.8	0.0	0.0577	0.0000	0.0289	UN
@@ -35978,7 +35518,6 @@ Sample18	SampleAR6	Sample26	SampleAZ0	23.4	7.4	0.0781	0.0028	0.0418	UN
 Sample18	SampleAR6	Sample26	SampleAZ1	12.9	0.0	0.0832	0.0000	0.0416	UN
 Sample18	SampleAR6	Sample26	SampleAZ2	22.8	0.0	0.0810	0.0000	0.0405	UN
 Sample18	SampleAR6	Sample26	SampleAZ3	20.3	6.5	0.0969	0.0044	0.0529	4th
-Sample18	SampleAR6	Sample26	SampleAZ4	14.1	0.0	0.0729	0.0000	0.0365	UN
 Sample18	SampleAR7	Sample25	SampleAY8	11.7	0.0	0.0763	0.0000	0.0382	UN
 Sample18	SampleAR7	Sample25	SampleAY9	11.7	0.0	0.0549	0.0000	0.0275	UN
 Sample18	SampleAR7	Sample25	SampleAY10	15.0	0.0	0.0722	0.0000	0.0361	UN
@@ -35986,13 +35525,11 @@ Sample18	SampleAR7	Sample26	SampleAZ0	31.2	0.0	0.1004	0.0000	0.0502	4th
 Sample18	SampleAR7	Sample26	SampleAZ1	24.5	6.5	0.1369	0.0024	0.0708	4th
 Sample18	SampleAR7	Sample26	SampleAZ2	21.9	0.0	0.0920	0.0000	0.0460	4th
 Sample18	SampleAR7	Sample26	SampleAZ3	16.8	0.0	0.0717	0.0000	0.0358	UN
-Sample18	SampleAR7	Sample26	SampleAZ4	24.0	0.0	0.0732	0.0000	0.0366	UN
 Sample18	SampleAR8	Sample25	SampleAY10	11.9	4.9	0.0673	0.0018	0.0355	UN
 Sample18	SampleAR8	Sample26	SampleAZ0	24.7	0.0	0.0714	0.0000	0.0357	UN
 Sample18	SampleAR8	Sample26	SampleAZ1	58.4	12.0	0.1346	0.0069	0.0742	4th
 Sample18	SampleAR8	Sample26	SampleAZ2	15.9	3.0	0.0686	0.0011	0.0354	UN
 Sample18	SampleAR8	Sample26	SampleAZ3	10.2	0.0	0.0684	0.0000	0.0342	UN
-Sample18	SampleAR8	Sample26	SampleAZ4	24.4	0.0	0.0635	0.0000	0.0318	UN
 Sample18	SampleAR9	Sample25	SampleAY8	19.4	0.0	0.1195	0.0000	0.0598	4th
 Sample18	SampleAR9	Sample25	SampleAY9	39.8	0.0	0.1270	0.0000	0.0635	4th
 Sample18	SampleAR9	Sample25	SampleAY10	19.7	0.0	0.0987	0.0000	0.0494	4th
@@ -36000,7 +35537,6 @@ Sample18	SampleAR9	Sample26	SampleAZ0	24.9	7.6	0.1217	0.0029	0.0638	4th
 Sample18	SampleAR9	Sample26	SampleAZ1	29.2	0.0	0.0637	0.0000	0.0319	UN
 Sample18	SampleAR9	Sample26	SampleAZ2	26.0	0.0	0.0950	0.0000	0.0475	4th
 Sample18	SampleAR9	Sample26	SampleAZ3	14.1	4.1	0.0835	0.0027	0.0445	4th
-Sample18	SampleAR9	Sample26	SampleAZ4	24.4	5.1	0.0941	0.0019	0.0490	4th
 Sample18	SampleAR10	Sample25	SampleAY8	21.8	0.0	0.0746	0.0000	0.0373	UN
 Sample18	SampleAR10	Sample25	SampleAY9	30.8	3.5	0.1259	0.0013	0.0643	4th
 Sample18	SampleAR10	Sample25	SampleAY10	16.8	0.0	0.0542	0.0000	0.0271	UN
@@ -36008,7 +35544,6 @@ Sample18	SampleAR10	Sample26	SampleAZ0	25.3	0.0	0.0954	0.0000	0.0477	4th
 Sample18	SampleAR10	Sample26	SampleAZ1	22.0	0.0	0.0895	0.0000	0.0448	4th
 Sample18	SampleAR10	Sample26	SampleAZ2	29.8	0.0	0.0912	0.0000	0.0456	4th
 Sample18	SampleAR10	Sample26	SampleAZ3	16.8	3.9	0.0964	0.0015	0.0497	4th
-Sample18	SampleAR10	Sample26	SampleAZ4	23.8	4.7	0.0814	0.0018	0.0425	UN
 Sample19	SampleAS0	Sample25	SampleAY8	15.4	0.0	0.0640	0.0000	0.0320	UN
 Sample19	SampleAS0	Sample25	SampleAY9	20.4	0.0	0.0844	0.0000	0.0422	UN
 Sample19	SampleAS0	Sample25	SampleAY10	25.0	0.0	0.1067	0.0000	0.0534	4th
@@ -36016,7 +35551,6 @@ Sample19	SampleAS0	Sample26	SampleAZ0	21.4	3.5	0.0853	0.0013	0.0440	UN
 Sample19	SampleAS0	Sample26	SampleAZ1	16.9	0.0	0.0762	0.0000	0.0381	UN
 Sample19	SampleAS0	Sample26	SampleAZ2	18.0	0.0	0.0902	0.0000	0.0451	4th
 Sample19	SampleAS0	Sample26	SampleAZ3	20.8	4.1	0.0984	0.0015	0.0507	4th
-Sample19	SampleAS0	Sample26	SampleAZ4	19.4	2.7	0.0831	0.0010	0.0426	UN
 Sample19	SampleAS1	Sample25	SampleAY8	26.9	0.0	0.0952	0.0000	0.0476	4th
 Sample19	SampleAS1	Sample25	SampleAY9	17.4	0.0	0.0701	0.0000	0.0351	UN
 Sample19	SampleAS1	Sample25	SampleAY10	20.7	4.2	0.1006	0.0027	0.0530	4th
@@ -36024,7 +35558,6 @@ Sample19	SampleAS1	Sample26	SampleAZ0	25.0	12.6	0.1004	0.0061	0.0563	4th
 Sample19	SampleAS1	Sample26	SampleAZ1	14.3	0.0	0.0597	0.0000	0.0299	UN
 Sample19	SampleAS1	Sample26	SampleAZ2	25.4	4.8	0.0847	0.0018	0.0442	UN
 Sample19	SampleAS1	Sample26	SampleAZ3	15.4	3.1	0.0873	0.0012	0.0449	4th
-Sample19	SampleAS1	Sample26	SampleAZ4	27.8	0.0	0.0878	0.0000	0.0439	UN
 Sample18	SampleAR5	Sample26	SampleAZ5	21.3	0.0	0.0852	0.0000	0.0426	UN
 Sample18	SampleAR5	Sample26	SampleAZ6	99.3	10.4	0.5486	0.0089	0.2832	2nd
 Sample18	SampleAR5	Sample26	SampleAZ7	16.1	0.0	0.0699	0.0000	0.0350	UN
@@ -36609,7 +36142,6 @@ Sample19	SampleAS2	Sample26	SampleAZ0	39.4	0.0	0.1209	0.0000	0.0605	4th
 Sample19	SampleAS2	Sample26	SampleAZ1	15.0	0.0	0.0785	0.0000	0.0393	UN
 Sample19	SampleAS2	Sample26	SampleAZ2	21.6	7.9	0.0726	0.0029	0.0392	UN
 Sample19	SampleAS2	Sample26	SampleAZ3	11.8	3.1	0.0978	0.0023	0.0512	4th
-Sample19	SampleAS2	Sample26	SampleAZ4	39.4	0.0	0.0933	0.0000	0.0467	4th
 Sample19	SampleAS3	Sample25	SampleAY8	31.8	4.1	0.1158	0.0015	0.0594	4th
 Sample19	SampleAS3	Sample25	SampleAY9	13.2	0.0	0.0845	0.0000	0.0423	UN
 Sample19	SampleAS3	Sample25	SampleAY10	14.6	0.0	0.0560	0.0000	0.0280	UN
@@ -36617,7 +36149,6 @@ Sample19	SampleAS3	Sample26	SampleAZ0	21.7	4.8	0.1168	0.0049	0.0633	4th
 Sample19	SampleAS3	Sample26	SampleAZ1	21.4	6.1	0.1083	0.0023	0.0565	4th
 Sample19	SampleAS3	Sample26	SampleAZ2	10.4	0.0	0.0755	0.0000	0.0377	UN
 Sample19	SampleAS3	Sample26	SampleAZ3	17.0	0.0	0.0720	0.0000	0.0360	UN
-Sample19	SampleAS3	Sample26	SampleAZ4	23.3	3.7	0.1016	0.0014	0.0522	4th
 Sample19	SampleAS4	Sample25	SampleAY8	11.3	0.0	0.0675	0.0000	0.0338	UN
 Sample19	SampleAS4	Sample25	SampleAY9	22.9	0.0	0.0720	0.0000	0.0360	UN
 Sample19	SampleAS4	Sample25	SampleAY10	58.6	16.4	0.2275	0.0074	0.1212	3rd
@@ -36625,7 +36156,6 @@ Sample19	SampleAS4	Sample26	SampleAZ0	19.2	2.7	0.0952	0.0010	0.0486	4th
 Sample19	SampleAS4	Sample26	SampleAZ1	10.5	0.0	0.0734	0.0000	0.0367	UN
 Sample19	SampleAS4	Sample26	SampleAZ2	21.8	0.0	0.0730	0.0000	0.0365	UN
 Sample19	SampleAS4	Sample26	SampleAZ3	18.3	0.0	0.0936	0.0000	0.0468	4th
-Sample19	SampleAS4	Sample26	SampleAZ4	12.4	9.5	0.0576	0.0035	0.0323	UN
 Sample19	SampleAS5	Sample25	SampleAY8	23.6	0.0	0.0836	0.0000	0.0418	UN
 Sample19	SampleAS5	Sample25	SampleAY9	22.9	0.0	0.0912	0.0000	0.0456	4th
 Sample19	SampleAS5	Sample25	SampleAY10	64.0	16.4	0.2121	0.0098	0.1159	3rd
@@ -36633,7 +36163,6 @@ Sample19	SampleAS5	Sample26	SampleAZ0	21.0	0.0	0.0884	0.0000	0.0442	4th
 Sample19	SampleAS5	Sample26	SampleAZ1	17.3	0.0	0.0824	0.0000	0.0412	UN
 Sample19	SampleAS5	Sample26	SampleAZ2	14.5	7.9	0.0719	0.0029	0.0389	UN
 Sample19	SampleAS5	Sample26	SampleAZ3	20.5	0.0	0.0980	0.0000	0.0490	4th
-Sample19	SampleAS5	Sample26	SampleAZ4	14.3	0.0	0.0681	0.0000	0.0341	UN
 Sample19	SampleAS6	Sample25	SampleAY8	19.1	4.0	0.0924	0.0015	0.0477	4th
 Sample19	SampleAS6	Sample25	SampleAY9	16.2	0.0	0.0631	0.0000	0.0316	UN
 Sample19	SampleAS6	Sample25	SampleAY10	28.2	0.0	0.0769	0.0000	0.0385	UN
@@ -36641,7 +36170,6 @@ Sample19	SampleAS6	Sample26	SampleAZ0	13.9	0.0	0.0721	0.0000	0.0360	UN
 Sample19	SampleAS6	Sample26	SampleAZ1	17.1	0.0	0.0753	0.0000	0.0377	UN
 Sample19	SampleAS6	Sample26	SampleAZ2	24.7	0.0	0.0813	0.0000	0.0406	UN
 Sample19	SampleAS6	Sample26	SampleAZ3	18.2	3.4	0.0790	0.0013	0.0408	UN
-Sample19	SampleAS6	Sample26	SampleAZ4	24.7	0.0	0.0828	0.0000	0.0414	UN
 Sample19	SampleAS7	Sample25	SampleAY8	24.0	0.0	0.1087	0.0000	0.0544	4th
 Sample19	SampleAS7	Sample25	SampleAY9	12.9	0.0	0.0675	0.0000	0.0338	UN
 Sample19	SampleAS7	Sample25	SampleAY10	63.3	6.6	0.2098	0.0025	0.1074	3rd
@@ -36649,7 +36177,6 @@ Sample19	SampleAS7	Sample26	SampleAZ0	38.3	7.3	0.1095	0.0038	0.0585	4th
 Sample19	SampleAS7	Sample26	SampleAZ1	14.3	0.0	0.0789	0.0000	0.0394	UN
 Sample19	SampleAS7	Sample26	SampleAZ2	26.1	0.0	0.0861	0.0000	0.0431	UN
 Sample19	SampleAS7	Sample26	SampleAZ3	16.9	0.0	0.0871	0.0000	0.0436	UN
-Sample19	SampleAS7	Sample26	SampleAZ4	18.8	0.0	0.0747	0.0000	0.0374	UN
 Sample19	SampleAS8	Sample25	SampleAY8	18.5	0.0	0.1049	0.0000	0.0525	4th
 Sample19	SampleAS8	Sample25	SampleAY9	17.8	0.0	0.0824	0.0000	0.0412	UN
 Sample19	SampleAS8	Sample25	SampleAY10	63.3	14.9	0.1786	0.0072	0.0965	3rd
@@ -36657,14 +36184,12 @@ Sample19	SampleAS8	Sample26	SampleAZ0	27.3	10.3	0.1067	0.0038	0.0571	4th
 Sample19	SampleAS8	Sample26	SampleAZ1	14.3	0.0	0.0605	0.0000	0.0303	UN
 Sample19	SampleAS8	Sample26	SampleAZ2	21.9	0.0	0.1026	0.0000	0.0513	4th
 Sample19	SampleAS8	Sample26	SampleAZ3	16.9	0.0	0.0963	0.0000	0.0482	4th
-Sample19	SampleAS8	Sample26	SampleAZ4	19.4	0.0	0.0860	0.0000	0.0430	UN
 Sample19	SampleAS9	Sample25	SampleAY8	22.3	0.0	0.0786	0.0000	0.0393	UN
 Sample19	SampleAS9	Sample25	SampleAY9	11.3	0.0	0.0657	0.0000	0.0329	UN
 Sample19	SampleAS9	Sample25	SampleAY10	51.5	3.9	0.1469	0.0026	0.0761	4th
 Sample19	SampleAS9	Sample26	SampleAZ0	23.0	0.0	0.1125	0.0000	0.0563	4th
 Sample19	SampleAS9	Sample26	SampleAZ1	16.5	8.6	0.0962	0.0032	0.0513	4th
 Sample19	SampleAS9	Sample26	SampleAZ3	12.4	4.0	0.0691	0.0015	0.0361	UN
-Sample19	SampleAS9	Sample26	SampleAZ4	17.1	2.7	0.0836	0.0010	0.0428	UN
 Sample19	SampleAS2	Sample26	SampleAZ5	39.4	3.9	0.1100	0.0015	0.0565	4th
 Sample19	SampleAS2	Sample26	SampleAZ6	14.6	2.8	0.0953	0.0010	0.0487	4th
 Sample19	SampleAS2	Sample26	SampleAZ7	22.0	0.0	0.0838	0.0000	0.0419	UN
@@ -37177,7 +36702,6 @@ Sample19	SampleAS10	Sample26	SampleAZ0	54.1	0.0	0.1007	0.0000	0.0504	4th
 Sample19	SampleAS10	Sample26	SampleAZ1	15.8	0.0	0.0779	0.0000	0.0389	UN
 Sample19	SampleAS10	Sample26	SampleAZ2	26.6	5.8	0.0806	0.0022	0.0425	UN
 Sample19	SampleAS10	Sample26	SampleAZ3	22.6	0.0	0.0933	0.0000	0.0467	4th
-Sample19	SampleAS10	Sample26	SampleAZ4	19.9	0.0	0.0885	0.0000	0.0443	4th
 Sample20	SampleAT0	Sample25	SampleAY8	12.0	0.0	0.0466	0.0000	0.0233	UN
 Sample20	SampleAT0	Sample25	SampleAY9	14.3	0.0	0.0539	0.0000	0.0270	UN
 Sample20	SampleAT0	Sample25	SampleAY10	11.5	0.0	0.0441	0.0000	0.0221	UN
@@ -37185,7 +36709,6 @@ Sample20	SampleAT0	Sample26	SampleAZ0	10.8	0.0	0.0583	0.0000	0.0292	UN
 Sample20	SampleAT0	Sample26	SampleAZ1	14.5	0.0	0.0377	0.0000	0.0189	UN
 Sample20	SampleAT0	Sample26	SampleAZ2	28.0	0.0	0.0752	0.0000	0.0376	UN
 Sample20	SampleAT0	Sample26	SampleAZ3	14.8	0.0	0.0799	0.0000	0.0399	UN
-Sample20	SampleAT0	Sample26	SampleAZ4	27.1	0.0	0.0523	0.0000	0.0261	UN
 Sample20	SampleAT1	Sample25	SampleAY8	25.3	5.8	0.0905	0.0022	0.0475	4th
 Sample20	SampleAT1	Sample25	SampleAY9	25.1	0.0	0.0789	0.0000	0.0394	UN
 Sample20	SampleAT1	Sample25	SampleAY10	16.2	3.9	0.0689	0.0015	0.0360	UN
@@ -37193,7 +36716,6 @@ Sample20	SampleAT1	Sample26	SampleAZ0	12.1	0.0	0.0702	0.0000	0.0351	UN
 Sample20	SampleAT1	Sample26	SampleAZ1	59.3	32.3	0.5442	0.0964	0.3685	FS
 Sample20	SampleAT1	Sample26	SampleAZ2	38.5	0.0	0.0877	0.0000	0.0439	UN
 Sample20	SampleAT1	Sample26	SampleAZ3	20.0	0.0	0.0734	0.0000	0.0367	UN
-Sample20	SampleAT1	Sample26	SampleAZ4	37.8	0.0	0.0788	0.0000	0.0394	UN
 Sample20	SampleAT2	Sample25	SampleAY8	15.8	0.0	0.0666	0.0000	0.0333	UN
 Sample20	SampleAT2	Sample25	SampleAY9	18.6	0.0	0.0709	0.0000	0.0355	UN
 Sample20	SampleAT2	Sample25	SampleAY10	14.1	0.0	0.0664	0.0000	0.0332	UN
@@ -37201,7 +36723,6 @@ Sample20	SampleAT2	Sample26	SampleAZ0	36.2	0.0	0.0955	0.0000	0.0478	4th
 Sample20	SampleAT2	Sample26	SampleAZ1	15.4	0.0	0.0668	0.0000	0.0334	UN
 Sample20	SampleAT2	Sample26	SampleAZ2	15.8	0.0	0.0904	0.0000	0.0452	4th
 Sample20	SampleAT2	Sample26	SampleAZ3	17.5	0.0	0.0698	0.0000	0.0349	UN
-Sample20	SampleAT2	Sample26	SampleAZ4	11.6	0.0	0.0526	0.0000	0.0263	UN
 Sample20	SampleAT3	Sample25	SampleAY8	24.5	3.6	0.0749	0.0013	0.0388	UN
 Sample20	SampleAT3	Sample25	SampleAY9	35.3	0.0	0.0718	0.0000	0.0359	UN
 Sample20	SampleAT3	Sample25	SampleAY10	15.0	0.0	0.0601	0.0000	0.0301	UN
@@ -37209,14 +36730,12 @@ Sample20	SampleAT3	Sample26	SampleAZ0	16.5	9.8	0.0601	0.0085	0.0386	UN
 Sample20	SampleAT3	Sample26	SampleAZ1	30.1	0.0	0.0512	0.0000	0.0256	UN
 Sample20	SampleAT3	Sample26	SampleAZ2	22.8	0.0	0.0786	0.0000	0.0393	UN
 Sample20	SampleAT3	Sample26	SampleAZ3	12.9	0.0	0.0552	0.0000	0.0276	UN
-Sample20	SampleAT3	Sample26	SampleAZ4	22.8	0.0	0.0639	0.0000	0.0319	UN
 Sample20	SampleAT4	Sample25	SampleAY8	11.7	0.0	0.0422	0.0000	0.0211	UN
 Sample20	SampleAT4	Sample25	SampleAY9	11.0	3.6	0.0514	0.0014	0.0271	UN
 Sample20	SampleAT4	Sample26	SampleAZ0	36.2	0.0	0.0772	0.0000	0.0386	UN
 Sample20	SampleAT4	Sample26	SampleAZ1	12.4	4.0	0.0496	0.0015	0.0263	UN
 Sample20	SampleAT4	Sample26	SampleAZ2	28.0	0.0	0.0888	0.0000	0.0444	4th
 Sample20	SampleAT4	Sample26	SampleAZ3	17.0	0.0	0.0740	0.0000	0.0370	UN
-Sample20	SampleAT4	Sample26	SampleAZ4	27.8	0.0	0.0565	0.0000	0.0283	UN
 Sample20	SampleAT5	Sample25	SampleAY8	15.8	0.0	0.0448	0.0000	0.0224	UN
 Sample20	SampleAT5	Sample25	SampleAY9	18.6	0.0	0.0650	0.0000	0.0325	UN
 Sample20	SampleAT5	Sample25	SampleAY10	14.2	0.0	0.0446	0.0000	0.0223	UN
@@ -37224,7 +36743,6 @@ Sample20	SampleAT5	Sample26	SampleAZ0	10.5	2.9	0.0718	0.0011	0.0370	UN
 Sample20	SampleAT5	Sample26	SampleAZ1	11.3	0.0	0.0449	0.0000	0.0225	UN
 Sample20	SampleAT5	Sample26	SampleAZ2	28.5	0.0	0.0785	0.0000	0.0393	UN
 Sample20	SampleAT5	Sample26	SampleAZ3	17.8	0.0	0.0732	0.0000	0.0366	UN
-Sample20	SampleAT5	Sample26	SampleAZ4	27.8	0.0	0.0548	0.0000	0.0274	UN
 Sample20	SampleAT6	Sample25	SampleAY8	12.9	0.0	0.0733	0.0000	0.0367	UN
 Sample20	SampleAT6	Sample25	SampleAY9	13.2	0.0	0.0688	0.0000	0.0344	UN
 Sample20	SampleAT6	Sample25	SampleAY10	16.9	0.0	0.0805	0.0000	0.0403	UN
@@ -37232,7 +36750,6 @@ Sample20	SampleAT6	Sample26	SampleAZ0	13.4	0.0	0.0781	0.0000	0.0391	UN
 Sample20	SampleAT6	Sample26	SampleAZ1	52.5	3.7	0.2412	0.0014	0.1220	3rd
 Sample20	SampleAT6	Sample26	SampleAZ2	14.3	0.0	0.0612	0.0000	0.0306	UN
 Sample20	SampleAT6	Sample26	SampleAZ3	74.0	3.7	0.1868	0.0026	0.0960	3rd
-Sample20	SampleAT6	Sample26	SampleAZ4	17.2	0.0	0.0643	0.0000	0.0322	UN
 Sample19	SampleAS10	Sample26	SampleAZ5	38.4	4.6	0.0846	0.0034	0.0457	4th
 Sample19	SampleAS10	Sample26	SampleAZ6	19.7	0.0	0.1107	0.0000	0.0554	4th
 Sample19	SampleAS10	Sample26	SampleAZ7	18.7	8.3	0.0801	0.0064	0.0465	4th
@@ -37692,7 +37209,6 @@ Sample20	SampleAT7	Sample26	SampleAZ0	11.5	0.0	0.0627	0.0000	0.0314	UN
 Sample20	SampleAT7	Sample26	SampleAZ1	79.6	9.5	0.4379	0.0058	0.2248	2nd
 Sample20	SampleAT7	Sample26	SampleAZ2	39.0	0.0	0.0816	0.0000	0.0408	UN
 Sample20	SampleAT7	Sample26	SampleAZ3	17.7	0.0	0.0777	0.0000	0.0389	UN
-Sample20	SampleAT7	Sample26	SampleAZ4	23.0	0.0	0.0527	0.0000	0.0264	UN
 Sample20	SampleAT8	Sample25	SampleAY8	12.6	0.0	0.0682	0.0000	0.0341	UN
 Sample20	SampleAT8	Sample25	SampleAY9	12.5	7.8	0.0653	0.0029	0.0355	UN
 Sample20	SampleAT8	Sample25	SampleAY10	16.3	0.0	0.0652	0.0000	0.0326	UN
@@ -37700,7 +37216,6 @@ Sample20	SampleAT8	Sample26	SampleAZ0	39.8	0.0	0.0798	0.0000	0.0399	UN
 Sample20	SampleAT8	Sample26	SampleAZ1	65.6	4.7	0.3918	0.0029	0.1988	2nd
 Sample20	SampleAT8	Sample26	SampleAZ2	14.9	4.8	0.0651	0.0018	0.0344	UN
 Sample20	SampleAT8	Sample26	SampleAZ3	20.7	7.8	0.0756	0.0029	0.0407	UN
-Sample20	SampleAT8	Sample26	SampleAZ4	13.4	0.0	0.0543	0.0000	0.0272	UN
 Sample20	SampleAT9	Sample25	SampleAY8	25.1	0.0	0.0639	0.0000	0.0319	UN
 Sample20	SampleAT9	Sample25	SampleAY9	12.7	0.0	0.0534	0.0000	0.0267	UN
 Sample20	SampleAT9	Sample25	SampleAY10	12.5	0.0	0.0536	0.0000	0.0268	UN
@@ -37708,7 +37223,6 @@ Sample20	SampleAT9	Sample26	SampleAZ0	13.2	0.0	0.0506	0.0000	0.0253	UN
 Sample20	SampleAT9	Sample26	SampleAZ1	12.4	0.0	0.0406	0.0000	0.0203	UN
 Sample20	SampleAT9	Sample26	SampleAZ2	28.2	0.0	0.0796	0.0000	0.0398	UN
 Sample20	SampleAT9	Sample26	SampleAZ3	13.1	0.0	0.0539	0.0000	0.0270	UN
-Sample20	SampleAT9	Sample26	SampleAZ4	27.8	0.0	0.0648	0.0000	0.0324	UN
 Sample20	SampleAT10	Sample25	SampleAY8	14.4	5.8	0.0671	0.0022	0.0358	UN
 Sample20	SampleAT10	Sample25	SampleAY9	18.5	0.0	0.0813	0.0000	0.0406	UN
 Sample20	SampleAT10	Sample25	SampleAY10	13.3	0.0	0.0745	0.0000	0.0372	UN
@@ -37716,7 +37230,6 @@ Sample20	SampleAT10	Sample26	SampleAZ0	11.0	0.0	0.0596	0.0000	0.0298	UN
 Sample20	SampleAT10	Sample26	SampleAZ1	76.0	21.7	0.3468	0.0102	0.1836	2nd
 Sample20	SampleAT10	Sample26	SampleAZ2	38.6	0.0	0.0769	0.0000	0.0385	UN
 Sample20	SampleAT10	Sample26	SampleAZ3	24.8	3.4	0.0986	0.0025	0.0518	4th
-Sample20	SampleAT10	Sample26	SampleAZ4	11.6	0.0	0.0428	0.0000	0.0214	UN
 Sample21	SampleAU0	Sample25	SampleAY8	30.1	0.0	0.1013	0.0000	0.0507	4th
 Sample21	SampleAU0	Sample25	SampleAY9	12.5	9.1	0.0678	0.0034	0.0373	UN
 Sample21	SampleAU0	Sample25	SampleAY10	30.5	0.0	0.1013	0.0000	0.0507	4th
@@ -37724,7 +37237,6 @@ Sample21	SampleAU0	Sample26	SampleAZ0	18.8	0.0	0.0815	0.0000	0.0408	UN
 Sample21	SampleAU0	Sample26	SampleAZ1	23.2	0.0	0.0930	0.0000	0.0465	4th
 Sample21	SampleAU0	Sample26	SampleAZ2	21.8	0.0	0.0636	0.0000	0.0318	UN
 Sample21	SampleAU0	Sample26	SampleAZ3	17.4	0.0	0.0987	0.0000	0.0494	4th
-Sample21	SampleAU0	Sample26	SampleAZ4	15.1	0.0	0.0567	0.0000	0.0284	UN
 Sample21	SampleAU1	Sample25	SampleAY8	47.6	0.0	0.1234	0.0000	0.0617	4th
 Sample21	SampleAU1	Sample25	SampleAY9	14.5	0.0	0.0550	0.0000	0.0275	UN
 Sample21	SampleAU1	Sample25	SampleAY10	44.3	0.0	0.1068	0.0000	0.0534	4th
@@ -37732,14 +37244,12 @@ Sample21	SampleAU1	Sample26	SampleAZ0	16.5	3.2	0.0978	0.0012	0.0501	4th
 Sample21	SampleAU1	Sample26	SampleAZ1	14.6	0.0	0.0560	0.0000	0.0280	UN
 Sample21	SampleAU1	Sample26	SampleAZ2	16.7	0.0	0.0690	0.0000	0.0345	UN
 Sample21	SampleAU1	Sample26	SampleAZ3	32.7	3.9	0.1021	0.0015	0.0526	4th
-Sample21	SampleAU1	Sample26	SampleAZ4	17.5	0.0	0.0887	0.0000	0.0444	4th
 Sample21	SampleAU2	Sample25	SampleAY8	14.8	0.0	0.0675	0.0000	0.0338	UN
 Sample21	SampleAU2	Sample25	SampleAY9	13.0	0.0	0.0425	0.0000	0.0213	UN
 Sample21	SampleAU2	Sample26	SampleAZ0	14.6	0.0	0.1099	0.0000	0.0550	4th
 Sample21	SampleAU2	Sample26	SampleAZ1	19.5	0.0	0.0548	0.0000	0.0274	UN
 Sample21	SampleAU2	Sample26	SampleAZ2	19.3	0.0	0.0757	0.0000	0.0379	UN
 Sample21	SampleAU2	Sample26	SampleAZ3	18.2	0.0	0.0631	0.0000	0.0316	UN
-Sample21	SampleAU2	Sample26	SampleAZ4	19.8	0.0	0.0901	0.0000	0.0450	4th
 Sample21	SampleAU3	Sample25	SampleAY8	21.0	0.0	0.0821	0.0000	0.0411	UN
 Sample21	SampleAU3	Sample25	SampleAY9	14.5	0.0	0.0708	0.0000	0.0354	UN
 Sample21	SampleAU3	Sample25	SampleAY10	15.3	0.0	0.0689	0.0000	0.0345	UN
@@ -37747,7 +37257,6 @@ Sample21	SampleAU3	Sample26	SampleAZ0	14.9	0.0	0.0799	0.0000	0.0399	UN
 Sample21	SampleAU3	Sample26	SampleAZ1	24.2	0.0	0.0935	0.0000	0.0467	4th
 Sample21	SampleAU3	Sample26	SampleAZ2	13.4	4.3	0.0656	0.0016	0.0344	UN
 Sample21	SampleAU3	Sample26	SampleAZ3	25.1	0.0	0.0631	0.0000	0.0316	UN
-Sample21	SampleAU3	Sample26	SampleAZ4	24.4	0.0	0.0777	0.0000	0.0389	UN
 Sample20	SampleAT7	Sample26	SampleAZ5	25.5	0.0	0.0748	0.0000	0.0374	UN
 Sample20	SampleAT7	Sample26	SampleAZ6	20.9	0.0	0.0919	0.0000	0.0460	4th
 Sample20	SampleAT7	Sample26	SampleAZ7	57.0	0.0	0.2728	0.0000	0.1364	3rd
@@ -38136,7 +37645,6 @@ Sample21	SampleAU4	Sample26	SampleAZ0	18.8	0.0	0.1097	0.0000	0.0549	4th
 Sample21	SampleAU4	Sample26	SampleAZ1	14.9	0.0	0.0611	0.0000	0.0306	UN
 Sample21	SampleAU4	Sample26	SampleAZ2	20.2	0.0	0.0769	0.0000	0.0385	UN
 Sample21	SampleAU4	Sample26	SampleAZ3	17.9	4.2	0.0781	0.0016	0.0406	UN
-Sample21	SampleAU4	Sample26	SampleAZ4	19.5	4.5	0.0793	0.0029	0.0426	UN
 Sample21	SampleAU5	Sample25	SampleAY8	30.1	0.0	0.0836	0.0000	0.0418	UN
 Sample21	SampleAU5	Sample25	SampleAY9	14.6	0.0	0.0549	0.0000	0.0275	UN
 Sample21	SampleAU5	Sample25	SampleAY10	30.9	3.2	0.0736	0.0012	0.0380	UN
@@ -38144,7 +37652,6 @@ Sample21	SampleAU5	Sample26	SampleAZ0	18.8	0.0	0.0822	0.0000	0.0411	UN
 Sample21	SampleAU5	Sample26	SampleAZ1	19.5	0.0	0.0653	0.0000	0.0326	UN
 Sample21	SampleAU5	Sample26	SampleAZ2	16.2	0.0	0.0731	0.0000	0.0365	UN
 Sample21	SampleAU5	Sample26	SampleAZ3	11.1	4.2	0.0743	0.0016	0.0387	UN
-Sample21	SampleAU5	Sample26	SampleAZ4	13.6	0.0	0.0671	0.0000	0.0336	UN
 Sample21	SampleAU6	Sample25	SampleAY8	12.2	2.6	0.0935	0.0010	0.0478	4th
 Sample21	SampleAU6	Sample25	SampleAY9	13.5	0.0	0.0727	0.0000	0.0364	UN
 Sample21	SampleAU6	Sample25	SampleAY10	14.6	0.0	0.0659	0.0000	0.0330	UN
@@ -38152,7 +37659,6 @@ Sample21	SampleAU6	Sample26	SampleAZ0	14.7	2.9	0.0623	0.0011	0.0323	UN
 Sample21	SampleAU6	Sample26	SampleAZ1	11.7	2.8	0.0546	0.0010	0.0283	UN
 Sample21	SampleAU6	Sample26	SampleAZ2	18.0	0.0	0.0640	0.0000	0.0320	UN
 Sample21	SampleAU6	Sample26	SampleAZ3	15.0	3.6	0.0744	0.0014	0.0386	UN
-Sample21	SampleAU6	Sample26	SampleAZ4	17.8	4.8	0.0757	0.0018	0.0397	UN
 Sample21	SampleAU7	Sample25	SampleAY8	21.8	0.0	0.0789	0.0000	0.0394	UN
 Sample21	SampleAU7	Sample25	SampleAY9	13.5	0.0	0.0426	0.0000	0.0213	UN
 Sample21	SampleAU7	Sample25	SampleAY10	44.3	0.0	0.0918	0.0000	0.0459	4th
@@ -38160,7 +37666,6 @@ Sample21	SampleAU7	Sample26	SampleAZ0	12.5	0.0	0.0825	0.0000	0.0413	UN
 Sample21	SampleAU7	Sample26	SampleAZ1	14.5	0.0	0.0383	0.0000	0.0192	UN
 Sample21	SampleAU7	Sample26	SampleAZ2	19.3	0.0	0.0743	0.0000	0.0372	UN
 Sample21	SampleAU7	Sample26	SampleAZ3	33.2	4.1	0.0909	0.0015	0.0470	4th
-Sample21	SampleAU7	Sample26	SampleAZ4	19.5	4.5	0.0893	0.0017	0.0464	4th
 Sample21	SampleAU8	Sample25	SampleAY8	47.6	0.0	0.0834	0.0000	0.0417	UN
 Sample21	SampleAU8	Sample25	SampleAY9	19.3	0.0	0.0403	0.0000	0.0202	UN
 Sample21	SampleAU8	Sample25	SampleAY10	38.6	0.0	0.0722	0.0000	0.0361	UN
@@ -38168,7 +37673,6 @@ Sample21	SampleAU8	Sample26	SampleAZ0	13.8	4.6	0.1195	0.0017	0.0615	4th
 Sample21	SampleAU8	Sample26	SampleAZ1	11.0	0.0	0.0473	0.0000	0.0237	UN
 Sample21	SampleAU8	Sample26	SampleAZ2	16.6	0.0	0.0668	0.0000	0.0334	UN
 Sample21	SampleAU8	Sample26	SampleAZ3	13.9	9.5	0.0811	0.0036	0.0442	UN
-Sample21	SampleAU8	Sample26	SampleAZ4	13.6	4.5	0.1062	0.0017	0.0548	4th
 Sample21	SampleAU9	Sample25	SampleAY8	19.4	0.0	0.0749	0.0000	0.0375	UN
 Sample21	SampleAU9	Sample25	SampleAY9	14.5	0.0	0.0688	0.0000	0.0344	UN
 Sample21	SampleAU9	Sample25	SampleAY10	15.0	0.0	0.0667	0.0000	0.0334	UN
@@ -38176,14 +37680,12 @@ Sample21	SampleAU9	Sample26	SampleAZ0	15.3	0.0	0.0942	0.0000	0.0471	4th
 Sample21	SampleAU9	Sample26	SampleAZ1	11.5	0.0	0.0554	0.0000	0.0277	UN
 Sample21	SampleAU9	Sample26	SampleAZ2	20.3	0.0	0.0818	0.0000	0.0409	UN
 Sample21	SampleAU9	Sample26	SampleAZ3	18.6	0.0	0.0720	0.0000	0.0360	UN
-Sample21	SampleAU9	Sample26	SampleAZ4	19.8	0.0	0.0819	0.0000	0.0410	UN
 Sample21	SampleAU10	Sample25	SampleAY8	21.8	3.9	0.0928	0.0015	0.0479	4th
 Sample21	SampleAU10	Sample25	SampleAY9	11.4	0.0	0.0737	0.0000	0.0369	UN
 Sample21	SampleAU10	Sample25	SampleAY10	34.1	0.0	0.0926	0.0000	0.0463	4th
 Sample21	SampleAU10	Sample26	SampleAZ0	14.1	0.0	0.0791	0.0000	0.0396	UN
 Sample21	SampleAU10	Sample26	SampleAZ1	14.2	0.0	0.0522	0.0000	0.0261	UN
 Sample21	SampleAU10	Sample26	SampleAZ2	11.4	0.0	0.0568	0.0000	0.0284	UN
-Sample21	SampleAU10	Sample26	SampleAZ4	11.7	3.9	0.0620	0.0015	0.0325	UN
 Sample22	SampleAV0	Sample25	SampleAY8	22.8	0.0	0.1139	0.0000	0.0570	4th
 Sample22	SampleAV0	Sample25	SampleAY9	46.2	5.4	0.1282	0.0020	0.0661	4th
 Sample22	SampleAV0	Sample25	SampleAY10	24.1	3.0	0.1235	0.0011	0.0629	4th
@@ -38523,7 +38025,6 @@ Sample22	SampleAV1	Sample26	SampleAZ0	18.4	0.0	0.0962	0.0000	0.0481	4th
 Sample22	SampleAV1	Sample26	SampleAZ1	58.1	0.0	0.1021	0.0000	0.0511	4th
 Sample22	SampleAV1	Sample26	SampleAZ2	26.6	0.0	0.0817	0.0000	0.0409	UN
 Sample22	SampleAV1	Sample26	SampleAZ3	17.5	0.0	0.0977	0.0000	0.0489	4th
-Sample22	SampleAV1	Sample26	SampleAZ4	35.0	0.0	0.1005	0.0000	0.0503	4th
 Sample22	SampleAV2	Sample25	SampleAY8	11.6	0.0	0.0738	0.0000	0.0369	UN
 Sample22	SampleAV2	Sample25	SampleAY9	18.6	7.5	0.0733	0.0028	0.0394	UN
 Sample22	SampleAV2	Sample25	SampleAY10	11.3	0.0	0.0556	0.0000	0.0278	UN
@@ -38531,7 +38032,6 @@ Sample22	SampleAV2	Sample26	SampleAZ0	42.8	0.0	0.1090	0.0000	0.0545	4th
 Sample22	SampleAV2	Sample26	SampleAZ1	12.9	0.0	0.0755	0.0000	0.0377	UN
 Sample22	SampleAV2	Sample26	SampleAZ2	19.1	0.0	0.0776	0.0000	0.0388	UN
 Sample22	SampleAV2	Sample26	SampleAZ3	12.5	0.0	0.0913	0.0000	0.0457	4th
-Sample22	SampleAV2	Sample26	SampleAZ4	19.4	0.0	0.0912	0.0000	0.0456	4th
 Sample22	SampleAV3	Sample25	SampleAY8	88.0	6.1	0.5672	0.0060	0.2896	2nd
 Sample22	SampleAV3	Sample25	SampleAY9	19.1	0.0	0.0610	0.0000	0.0305	UN
 Sample22	SampleAV3	Sample25	SampleAY10	59.5	0.0	0.3076	0.0000	0.1538	3rd
@@ -38539,7 +38039,6 @@ Sample22	SampleAV3	Sample26	SampleAZ0	11.7	0.0	0.0858	0.0000	0.0429	UN
 Sample22	SampleAV3	Sample26	SampleAZ1	23.2	0.0	0.0788	0.0000	0.0394	UN
 Sample22	SampleAV3	Sample26	SampleAZ2	29.7	0.0	0.0794	0.0000	0.0397	UN
 Sample22	SampleAV3	Sample26	SampleAZ3	23.5	0.0	0.0750	0.0000	0.0375	UN
-Sample22	SampleAV3	Sample26	SampleAZ4	29.7	0.0	0.0756	0.0000	0.0378	UN
 Sample22	SampleAV4	Sample25	SampleAY8	14.5	7.1	0.0784	0.0026	0.0418	UN
 Sample22	SampleAV4	Sample25	SampleAY9	14.0	3.0	0.0816	0.0011	0.0419	UN
 Sample22	SampleAV4	Sample25	SampleAY10	23.9	0.0	0.1018	0.0000	0.0509	4th
@@ -38547,7 +38046,6 @@ Sample22	SampleAV4	Sample26	SampleAZ0	42.3	3.2	0.1003	0.0012	0.0513	4th
 Sample22	SampleAV4	Sample26	SampleAZ1	21.0	6.7	0.1056	0.0025	0.0553	4th
 Sample22	SampleAV4	Sample26	SampleAZ2	12.0	0.0	0.0701	0.0000	0.0351	UN
 Sample22	SampleAV4	Sample26	SampleAZ3	14.1	4.2	0.1020	0.0016	0.0526	4th
-Sample22	SampleAV4	Sample26	SampleAZ4	18.7	0.0	0.0876	0.0000	0.0438	UN
 Sample22	SampleAV5	Sample25	SampleAY8	14.2	7.1	0.0987	0.0026	0.0520	4th
 Sample22	SampleAV5	Sample25	SampleAY9	25.0	0.0	0.1109	0.0000	0.0554	4th
 Sample22	SampleAV5	Sample25	SampleAY10	18.7	0.0	0.0915	0.0000	0.0457	4th
@@ -38555,7 +38053,6 @@ Sample22	SampleAV5	Sample26	SampleAZ0	42.8	0.0	0.0900	0.0000	0.0450	4th
 Sample22	SampleAV5	Sample26	SampleAZ1	15.5	6.7	0.0791	0.0025	0.0421	UN
 Sample22	SampleAV5	Sample26	SampleAZ2	11.5	3.2	0.0735	0.0012	0.0380	UN
 Sample22	SampleAV5	Sample26	SampleAZ3	17.2	3.7	0.0887	0.0014	0.0457	4th
-Sample22	SampleAV5	Sample26	SampleAZ4	18.7	0.0	0.0690	0.0000	0.0345	UN
 Sample22	SampleAV6	Sample25	SampleAY8	17.1	0.0	0.0732	0.0000	0.0366	UN
 Sample22	SampleAV6	Sample25	SampleAY9	21.1	0.0	0.0760	0.0000	0.0380	UN
 Sample22	SampleAV6	Sample25	SampleAY10	12.2	3.4	0.0812	0.0024	0.0430	UN
@@ -38563,7 +38060,6 @@ Sample22	SampleAV6	Sample26	SampleAZ0	147.6	13.1	0.9787	0.0183	0.5077	PO
 Sample22	SampleAV6	Sample26	SampleAZ1	17.8	0.0	0.0747	0.0000	0.0374	UN
 Sample22	SampleAV6	Sample26	SampleAZ2	136.7	6.6	0.6283	0.0095	0.3237	2nd
 Sample22	SampleAV6	Sample26	SampleAZ3	20.7	0.0	0.0997	0.0000	0.0499	4th
-Sample22	SampleAV6	Sample26	SampleAZ4	86.2	39.6	0.5737	0.0920	0.3789	FS
 Sample22	SampleAV7	Sample25	SampleAY8	30.1	0.0	0.1275	0.0000	0.0638	4th
 Sample22	SampleAV7	Sample25	SampleAY9	17.8	0.0	0.0986	0.0000	0.0493	4th
 Sample22	SampleAV7	Sample25	SampleAY10	12.7	8.1	0.0673	0.0049	0.0386	UN
@@ -38571,7 +38067,6 @@ Sample22	SampleAV7	Sample26	SampleAZ0	39.7	0.0	0.1103	0.0000	0.0552	4th
 Sample22	SampleAV7	Sample26	SampleAZ1	28.4	0.0	0.0873	0.0000	0.0437	UN
 Sample22	SampleAV7	Sample26	SampleAZ2	27.3	0.0	0.0786	0.0000	0.0393	UN
 Sample22	SampleAV7	Sample26	SampleAZ3	20.0	0.0	0.0866	0.0000	0.0433	UN
-Sample22	SampleAV7	Sample26	SampleAZ4	35.0	3.2	0.1019	0.0012	0.0522	4th
 Sample22	SampleAV8	Sample25	SampleAY8	30.1	0.0	0.1125	0.0000	0.0563	4th
 Sample22	SampleAV8	Sample25	SampleAY9	17.8	5.2	0.0744	0.0019	0.0391	UN
 Sample22	SampleAV8	Sample25	SampleAY10	11.5	5.0	0.0417	0.0019	0.0227	UN
@@ -38579,7 +38074,6 @@ Sample22	SampleAV8	Sample26	SampleAZ0	39.7	0.0	0.0849	0.0000	0.0425	UN
 Sample22	SampleAV8	Sample26	SampleAZ1	58.9	0.0	0.1046	0.0000	0.0523	4th
 Sample22	SampleAV8	Sample26	SampleAZ2	27.3	0.0	0.0683	0.0000	0.0341	UN
 Sample22	SampleAV8	Sample26	SampleAZ3	20.0	0.0	0.0741	0.0000	0.0370	UN
-Sample22	SampleAV8	Sample26	SampleAZ4	35.0	0.0	0.0769	0.0000	0.0385	UN
 Sample22	SampleAV1	Sample26	SampleAZ5	18.7	0.0	0.0942	0.0000	0.0471	4th
 Sample22	SampleAV1	Sample26	SampleAZ6	14.2	4.3	0.0705	0.0016	0.0369	UN
 Sample22	SampleAV1	Sample26	SampleAZ7	27.6	0.0	0.0802	0.0000	0.0401	UN
@@ -38846,7 +38340,6 @@ Sample22	SampleAV9	Sample26	SampleAZ0	11.2	3.9	0.0651	0.0015	0.0341	UN
 Sample22	SampleAV9	Sample26	SampleAZ1	11.5	0.0	0.0750	0.0000	0.0375	UN
 Sample22	SampleAV9	Sample26	SampleAZ2	14.2	0.0	0.0653	0.0000	0.0326	UN
 Sample22	SampleAV9	Sample26	SampleAZ3	23.7	2.7	0.1146	0.0010	0.0583	4th
-Sample22	SampleAV9	Sample26	SampleAZ4	12.1	3.9	0.0592	0.0015	0.0311	UN
 Sample22	SampleAV10	Sample25	SampleAY8	30.1	0.0	0.1166	0.0000	0.0583	4th
 Sample22	SampleAV10	Sample25	SampleAY9	16.1	0.0	0.0768	0.0000	0.0384	UN
 Sample22	SampleAV10	Sample25	SampleAY10	24.2	0.0	0.0795	0.0000	0.0398	UN
@@ -38854,7 +38347,6 @@ Sample22	SampleAV10	Sample26	SampleAZ0	96.8	8.9	0.5540	0.0116	0.2886	2nd
 Sample22	SampleAV10	Sample26	SampleAZ1	28.4	3.0	0.0899	0.0011	0.0461	4th
 Sample22	SampleAV10	Sample26	SampleAZ2	67.4	5.6	0.3328	0.0021	0.1685	3rd
 Sample22	SampleAV10	Sample26	SampleAZ3	17.7	2.7	0.0838	0.0010	0.0429	UN
-Sample22	SampleAV10	Sample26	SampleAZ4	60.0	6.5	0.4188	0.0070	0.2164	2nd
 Sample23	SampleAW0	Sample25	SampleAY8	14.5	0.0	0.0758	0.0000	0.0379	UN
 Sample23	SampleAW0	Sample25	SampleAY9	22.3	0.0	0.0749	0.0000	0.0375	UN
 Sample23	SampleAW0	Sample25	SampleAY10	15.4	0.0	0.0659	0.0000	0.0330	UN
@@ -38862,7 +38354,6 @@ Sample23	SampleAW0	Sample26	SampleAZ0	19.2	0.0	0.0670	0.0000	0.0335	UN
 Sample23	SampleAW0	Sample26	SampleAZ1	30.2	0.0	0.0660	0.0000	0.0330	UN
 Sample23	SampleAW0	Sample26	SampleAZ2	14.4	3.2	0.0720	0.0012	0.0372	UN
 Sample23	SampleAW0	Sample26	SampleAZ3	36.3	5.0	0.0653	0.0019	0.0345	UN
-Sample23	SampleAW0	Sample26	SampleAZ4	19.3	0.0	0.0676	0.0000	0.0338	UN
 Sample23	SampleAW1	Sample25	SampleAY8	23.8	3.5	0.1335	0.0013	0.0680	4th
 Sample23	SampleAW1	Sample25	SampleAY9	17.4	0.0	0.0840	0.0000	0.0420	UN
 Sample23	SampleAW1	Sample25	SampleAY10	17.9	0.0	0.1013	0.0000	0.0507	4th
@@ -38870,7 +38361,6 @@ Sample23	SampleAW1	Sample26	SampleAZ0	39.7	6.5	0.1066	0.0024	0.0557	4th
 Sample23	SampleAW1	Sample26	SampleAZ1	50.6	0.0	0.1481	0.0000	0.0741	4th
 Sample23	SampleAW1	Sample26	SampleAZ2	17.1	3.2	0.0919	0.0012	0.0472	4th
 Sample23	SampleAW1	Sample26	SampleAZ3	17.0	3.2	0.0811	0.0012	0.0418	UN
-Sample23	SampleAW1	Sample26	SampleAZ4	26.8	3.5	0.0939	0.0025	0.0495	4th
 Sample23	SampleAW2	Sample25	SampleAY8	49.0	6.6	0.2876	0.0040	0.1478	3rd
 Sample23	SampleAW2	Sample25	SampleAY9	60.2	7.9	0.2014	0.0089	0.1096	3rd
 Sample23	SampleAW2	Sample25	SampleAY10	51.7	6.1	0.2220	0.0023	0.1133	3rd
@@ -38878,7 +38368,6 @@ Sample23	SampleAW2	Sample26	SampleAZ0	21.8	4.5	0.0793	0.0017	0.0414	UN
 Sample23	SampleAW2	Sample26	SampleAZ1	12.7	0.0	0.0875	0.0000	0.0438	UN
 Sample23	SampleAW2	Sample26	SampleAZ2	16.0	0.0	0.0643	0.0000	0.0322	UN
 Sample23	SampleAW2	Sample26	SampleAZ3	14.9	0.0	0.0620	0.0000	0.0310	UN
-Sample23	SampleAW2	Sample26	SampleAZ4	22.3	0.0	0.0709	0.0000	0.0355	UN
 Sample23	SampleAW3	Sample25	SampleAY8	16.6	0.0	0.0658	0.0000	0.0329	UN
 Sample23	SampleAW3	Sample25	SampleAY9	19.0	0.0	0.0654	0.0000	0.0327	UN
 Sample23	SampleAW3	Sample25	SampleAY10	15.5	0.0	0.0533	0.0000	0.0267	UN
@@ -38886,7 +38375,6 @@ Sample23	SampleAW3	Sample26	SampleAZ0	19.2	0.0	0.0877	0.0000	0.0439	UN
 Sample23	SampleAW3	Sample26	SampleAZ1	28.0	0.0	0.0610	0.0000	0.0305	UN
 Sample23	SampleAW3	Sample26	SampleAZ2	18.3	6.5	0.1029	0.0024	0.0539	4th
 Sample23	SampleAW3	Sample26	SampleAZ3	18.9	0.0	0.0633	0.0000	0.0317	UN
-Sample23	SampleAW3	Sample26	SampleAZ4	24.8	0.0	0.0817	0.0000	0.0409	UN
 Sample23	SampleAW4	Sample25	SampleAY8	41.9	12.3	0.1725	0.0075	0.0938	3rd
 Sample23	SampleAW4	Sample25	SampleAY9	41.9	19.5	0.1587	0.0091	0.0885	3rd
 Sample23	SampleAW4	Sample25	SampleAY10	36.3	9.0	0.1331	0.0034	0.0699	4th
@@ -38894,7 +38382,6 @@ Sample23	SampleAW4	Sample26	SampleAZ0	19.0	10.9	0.0837	0.0041	0.0460	4th
 Sample23	SampleAW4	Sample26	SampleAZ1	27.2	3.5	0.0868	0.0013	0.0447	4th
 Sample23	SampleAW4	Sample26	SampleAZ2	13.5	0.0	0.0706	0.0000	0.0353	UN
 Sample23	SampleAW4	Sample26	SampleAZ3	28.9	0.0	0.0727	0.0000	0.0364	UN
-Sample23	SampleAW4	Sample26	SampleAZ4	18.7	0.0	0.0775	0.0000	0.0387	UN
 Sample23	SampleAW5	Sample25	SampleAY8	40.8	0.0	0.2076	0.0000	0.1038	3rd
 Sample23	SampleAW5	Sample25	SampleAY9	34.2	19.5	0.1644	0.0086	0.0908	3rd
 Sample23	SampleAW5	Sample25	SampleAY10	53.5	9.0	0.1737	0.0034	0.0903	3rd
@@ -39109,7 +38596,6 @@ Sample23	SampleAW6	Sample26	SampleAZ0	33.8	0.0	0.0990	0.0000	0.0495	4th
 Sample23	SampleAW6	Sample26	SampleAZ1	15.3	0.0	0.0939	0.0000	0.0470	4th
 Sample23	SampleAW6	Sample26	SampleAZ2	22.7	0.0	0.0746	0.0000	0.0373	UN
 Sample23	SampleAW6	Sample26	SampleAZ3	11.7	10.3	0.0675	0.0053	0.0391	UN
-Sample23	SampleAW6	Sample26	SampleAZ4	21.2	0.0	0.0659	0.0000	0.0330	UN
 Sample23	SampleAW7	Sample25	SampleAY8	27.9	3.6	0.1592	0.0013	0.0809	4th
 Sample23	SampleAW7	Sample25	SampleAY9	32.0	7.3	0.1259	0.0027	0.0657	4th
 Sample23	SampleAW7	Sample25	SampleAY10	32.4	6.1	0.1140	0.0023	0.0593	4th
@@ -39117,7 +38603,6 @@ Sample23	SampleAW7	Sample26	SampleAZ0	40.1	4.9	0.1078	0.0019	0.0558	4th
 Sample23	SampleAW7	Sample26	SampleAZ1	39.6	0.0	0.0905	0.0000	0.0453	4th
 Sample23	SampleAW7	Sample26	SampleAZ2	20.1	0.0	0.0633	0.0000	0.0317	UN
 Sample23	SampleAW7	Sample26	SampleAZ3	14.0	0.0	0.0669	0.0000	0.0335	UN
-Sample23	SampleAW7	Sample26	SampleAZ4	16.1	0.0	0.0815	0.0000	0.0408	UN
 Sample23	SampleAW8	Sample25	SampleAY8	44.0	4.8	0.2284	0.0043	0.1185	3rd
 Sample23	SampleAW8	Sample25	SampleAY9	62.1	11.4	0.1776	0.0055	0.0943	3rd
 Sample23	SampleAW8	Sample25	SampleAY10	38.4	0.0	0.1470	0.0000	0.0735	4th
@@ -39125,7 +38610,6 @@ Sample23	SampleAW8	Sample26	SampleAZ0	40.1	5.5	0.1046	0.0021	0.0544	4th
 Sample23	SampleAW8	Sample26	SampleAZ1	44.5	0.0	0.1279	0.0000	0.0640	4th
 Sample23	SampleAW8	Sample26	SampleAZ2	15.0	0.0	0.0836	0.0000	0.0418	UN
 Sample23	SampleAW8	Sample26	SampleAZ3	14.1	0.0	0.0788	0.0000	0.0394	UN
-Sample23	SampleAW8	Sample26	SampleAZ4	16.1	0.0	0.0900	0.0000	0.0450	4th
 Sample23	SampleAW9	Sample25	SampleAY8	34.6	0.0	0.1135	0.0000	0.0568	4th
 Sample23	SampleAW9	Sample25	SampleAY9	32.1	4.3	0.0868	0.0016	0.0450	4th
 Sample23	SampleAW9	Sample25	SampleAY10	36.5	0.0	0.0952	0.0000	0.0476	4th
@@ -39133,7 +38617,6 @@ Sample23	SampleAW9	Sample26	SampleAZ0	19.0	0.0	0.0814	0.0000	0.0407	UN
 Sample23	SampleAW9	Sample26	SampleAZ1	24.4	0.0	0.0746	0.0000	0.0373	UN
 Sample23	SampleAW9	Sample26	SampleAZ2	16.5	0.0	0.0982	0.0000	0.0491	4th
 Sample23	SampleAW9	Sample26	SampleAZ3	10.2	3.2	0.0475	0.0012	0.0249	UN
-Sample23	SampleAW9	Sample26	SampleAZ4	24.8	0.0	0.0798	0.0000	0.0399	UN
 Sample23	SampleAW10	Sample25	SampleAY8	14.9	4.4	0.1220	0.0029	0.0639	4th
 Sample23	SampleAW10	Sample25	SampleAY9	20.3	10.5	0.1083	0.0061	0.0603	4th
 Sample23	SampleAW10	Sample25	SampleAY10	47.1	3.8	0.1280	0.0014	0.0654	4th
@@ -39141,7 +38624,6 @@ Sample23	SampleAW10	Sample26	SampleAZ0	35.0	0.0	0.1237	0.0000	0.0619	4th
 Sample23	SampleAW10	Sample26	SampleAZ1	15.6	0.0	0.0946	0.0000	0.0473	4th
 Sample23	SampleAW10	Sample26	SampleAZ2	17.7	3.1	0.0728	0.0011	0.0375	UN
 Sample23	SampleAW10	Sample26	SampleAZ3	17.4	0.0	0.0995	0.0000	0.0498	4th
-Sample23	SampleAW10	Sample26	SampleAZ4	20.3	0.0	0.0657	0.0000	0.0329	UN
 Sample24	SampleAX0	Sample25	SampleAY8	22.2	0.0	0.1100	0.0000	0.0550	4th
 Sample24	SampleAX0	Sample25	SampleAY9	16.5	0.0	0.0714	0.0000	0.0357	UN
 Sample24	SampleAX0	Sample25	SampleAY10	40.8	4.3	0.0959	0.0016	0.0495	4th
@@ -39149,13 +38631,11 @@ Sample24	SampleAX0	Sample26	SampleAZ0	26.6	0.0	0.0923	0.0000	0.0462	4th
 Sample24	SampleAX0	Sample26	SampleAZ1	15.2	0.0	0.0826	0.0000	0.0413	UN
 Sample24	SampleAX0	Sample26	SampleAZ2	22.7	0.0	0.0644	0.0000	0.0322	UN
 Sample24	SampleAX0	Sample26	SampleAZ3	20.9	0.0	0.0978	0.0000	0.0489	4th
-Sample24	SampleAX0	Sample26	SampleAZ4	18.7	4.5	0.0638	0.0028	0.0347	UN
 Sample24	SampleAX1	Sample25	SampleAY9	11.6	0.0	0.0360	0.0000	0.0180	UN
 Sample24	SampleAX1	Sample26	SampleAZ0	13.4	0.0	0.0727	0.0000	0.0364	UN
 Sample24	SampleAX1	Sample26	SampleAZ1	17.9	0.0	0.0666	0.0000	0.0333	UN
 Sample24	SampleAX1	Sample26	SampleAZ2	16.5	2.8	0.0555	0.0011	0.0289	UN
 Sample24	SampleAX1	Sample26	SampleAZ3	15.8	0.0	0.0993	0.0000	0.0496	4th
-Sample24	SampleAX1	Sample26	SampleAZ4	16.5	0.0	0.0674	0.0000	0.0337	UN
 Sample24	SampleAX2	Sample25	SampleAY8	39.4	11.7	0.1923	0.0044	0.1006	3rd
 Sample24	SampleAX2	Sample25	SampleAY9	14.6	3.0	0.0760	0.0011	0.0391	UN
 Sample24	SampleAX2	Sample25	SampleAY10	19.4	3.0	0.1216	0.0011	0.0619	4th
@@ -39163,7 +38643,6 @@ Sample24	SampleAX2	Sample26	SampleAZ0	25.1	0.0	0.0596	0.0000	0.0298	UN
 Sample24	SampleAX2	Sample26	SampleAZ1	22.5	0.0	0.0550	0.0000	0.0275	UN
 Sample24	SampleAX2	Sample26	SampleAZ2	14.5	0.0	0.0580	0.0000	0.0290	UN
 Sample24	SampleAX2	Sample26	SampleAZ3	23.0	0.0	0.0619	0.0000	0.0310	UN
-Sample24	SampleAX2	Sample26	SampleAZ4	15.1	0.0	0.0699	0.0000	0.0350	UN
 Sample23	SampleAW6	Sample26	SampleAZ5	24.3	0.0	0.0893	0.0000	0.0447	4th
 Sample23	SampleAW6	Sample26	SampleAZ6	44.9	3.2	0.1949	0.0012	0.0987	3rd
 Sample23	SampleAW6	Sample26	SampleAZ7	21.6	0.0	0.1083	0.0000	0.0542	4th
@@ -39308,7 +38787,6 @@ Sample24	SampleAX3	Sample26	SampleAZ0	147.6	9.6	0.9807	0.0163	0.5067	PO
 Sample24	SampleAX3	Sample26	SampleAZ1	22.0	0.0	0.0704	0.0000	0.0352	UN
 Sample24	SampleAX3	Sample26	SampleAZ2	132.8	17.2	0.3461	0.0128	0.1859	2nd
 Sample24	SampleAX3	Sample26	SampleAZ3	36.5	5.2	0.1158	0.0019	0.0598	4th
-Sample24	SampleAX3	Sample26	SampleAZ4	72.9	4.3	0.6421	0.0044	0.3255	2nd
 Sample24	SampleAX4	Sample25	SampleAY8	39.1	13.4	0.1763	0.0080	0.0962	3rd
 Sample24	SampleAX4	Sample25	SampleAY9	16.5	0.0	0.0837	0.0000	0.0419	UN
 Sample24	SampleAX4	Sample25	SampleAY10	26.0	0.0	0.1050	0.0000	0.0525	4th
@@ -39316,7 +38794,6 @@ Sample24	SampleAX4	Sample26	SampleAZ0	20.1	4.3	0.0655	0.0016	0.0343	UN
 Sample24	SampleAX4	Sample26	SampleAZ1	15.5	0.0	0.0505	0.0000	0.0253	UN
 Sample24	SampleAX4	Sample26	SampleAZ2	22.7	0.0	0.0458	0.0000	0.0229	UN
 Sample24	SampleAX4	Sample26	SampleAZ3	23.4	0.0	0.1003	0.0000	0.0502	4th
-Sample24	SampleAX4	Sample26	SampleAZ4	22.7	0.0	0.0536	0.0000	0.0268	UN
 Sample24	SampleAX5	Sample25	SampleAY8	39.1	7.9	0.1611	0.0029	0.0835	4th
 Sample24	SampleAX5	Sample25	SampleAY9	16.5	0.0	0.0848	0.0000	0.0424	UN
 Sample24	SampleAX5	Sample25	SampleAY10	45.3	0.0	0.1064	0.0000	0.0532	4th
@@ -39324,7 +38801,6 @@ Sample24	SampleAX5	Sample26	SampleAZ0	21.8	3.6	0.0638	0.0014	0.0333	UN
 Sample24	SampleAX5	Sample26	SampleAZ1	15.5	2.9	0.0691	0.0011	0.0357	UN
 Sample24	SampleAX5	Sample26	SampleAZ2	15.7	0.0	0.0645	0.0000	0.0323	UN
 Sample24	SampleAX5	Sample26	SampleAZ3	23.4	0.0	0.0825	0.0000	0.0413	UN
-Sample24	SampleAX5	Sample26	SampleAZ4	15.6	0.0	0.0624	0.0000	0.0312	UN
 Sample24	SampleAX6	Sample25	SampleAY8	26.1	6.1	0.0837	0.0049	0.0468	4th
 Sample24	SampleAX6	Sample25	SampleAY9	25.5	0.0	0.0808	0.0000	0.0404	UN
 Sample24	SampleAX6	Sample25	SampleAY10	21.2	0.0	0.0769	0.0000	0.0385	UN
@@ -39332,7 +38808,6 @@ Sample24	SampleAX6	Sample26	SampleAZ0	27.9	0.0	0.0865	0.0000	0.0433	UN
 Sample24	SampleAX6	Sample26	SampleAZ1	18.9	0.0	0.0612	0.0000	0.0306	UN
 Sample24	SampleAX6	Sample26	SampleAZ2	18.5	0.0	0.0771	0.0000	0.0386	UN
 Sample24	SampleAX6	Sample26	SampleAZ3	21.8	0.0	0.0804	0.0000	0.0402	UN
-Sample24	SampleAX6	Sample26	SampleAZ4	19.2	0.0	0.0711	0.0000	0.0355	UN
 Sample24	SampleAX7	Sample25	SampleAY8	38.2	3.5	0.1441	0.0013	0.0733	4th
 Sample24	SampleAX7	Sample25	SampleAY9	17.3	0.0	0.0503	0.0000	0.0252	UN
 Sample24	SampleAX7	Sample25	SampleAY10	19.5	0.0	0.1005	0.0000	0.0503	4th
@@ -39340,7 +38815,6 @@ Sample24	SampleAX7	Sample26	SampleAZ0	22.9	0.0	0.0699	0.0000	0.0350	UN
 Sample24	SampleAX7	Sample26	SampleAZ1	16.9	0.0	0.0631	0.0000	0.0316	UN
 Sample24	SampleAX7	Sample26	SampleAZ2	13.1	3.3	0.0503	0.0012	0.0264	UN
 Sample24	SampleAX7	Sample26	SampleAZ3	16.7	6.1	0.0723	0.0023	0.0384	UN
-Sample24	SampleAX7	Sample26	SampleAZ4	13.1	0.0	0.0692	0.0000	0.0346	UN
 Sample24	SampleAX8	Sample25	SampleAY8	41.6	3.6	0.0939	0.0014	0.0484	4th
 Sample24	SampleAX8	Sample25	SampleAY9	11.8	0.0	0.0485	0.0000	0.0243	UN
 Sample24	SampleAX8	Sample25	SampleAY10	15.6	0.0	0.0880	0.0000	0.0440	UN
@@ -39348,7 +38822,6 @@ Sample24	SampleAX8	Sample26	SampleAZ0	22.9	0.0	0.0676	0.0000	0.0338	UN
 Sample24	SampleAX8	Sample26	SampleAZ1	17.9	0.0	0.0601	0.0000	0.0301	UN
 Sample24	SampleAX8	Sample26	SampleAZ2	13.1	0.0	0.0507	0.0000	0.0254	UN
 Sample24	SampleAX8	Sample26	SampleAZ3	15.3	6.1	0.0774	0.0023	0.0410	UN
-Sample24	SampleAX8	Sample26	SampleAZ4	12.3	4.0	0.0647	0.0015	0.0339	UN
 Sample24	SampleAX9	Sample25	SampleAY8	39.1	12.0	0.1563	0.0094	0.0876	4th
 Sample24	SampleAX9	Sample25	SampleAY9	24.8	0.0	0.1083	0.0000	0.0542	4th
 Sample24	SampleAX9	Sample25	SampleAY10	25.7	0.0	0.1118	0.0000	0.0559	4th
@@ -39356,7 +38829,6 @@ Sample24	SampleAX9	Sample26	SampleAZ0	102.1	6.4	0.5174	0.0071	0.2658	2nd
 Sample24	SampleAX9	Sample26	SampleAZ1	23.8	0.0	0.0668	0.0000	0.0334	UN
 Sample24	SampleAX9	Sample26	SampleAZ2	56.7	5.2	0.1658	0.0020	0.0849	4th
 Sample24	SampleAX9	Sample26	SampleAZ3	23.0	4.0	0.1140	0.0052	0.0622	4th
-Sample24	SampleAX9	Sample26	SampleAZ4	70.6	5.2	0.3291	0.0034	0.1679	3rd
 Sample24	SampleAX10	Sample25	SampleAY8	25.7	3.1	0.1198	0.0012	0.0611	4th
 Sample24	SampleAX10	Sample25	SampleAY9	25.0	0.0	0.0721	0.0000	0.0360	UN
 Sample24	SampleAX10	Sample25	SampleAY10	21.2	3.9	0.0992	0.0015	0.0511	4th
@@ -39364,7 +38836,6 @@ Sample24	SampleAX10	Sample26	SampleAZ0	25.1	6.5	0.0831	0.0025	0.0441	UN
 Sample24	SampleAX10	Sample26	SampleAZ1	18.9	0.0	0.0533	0.0000	0.0267	UN
 Sample24	SampleAX10	Sample26	SampleAZ2	18.0	0.0	0.0712	0.0000	0.0356	UN
 Sample24	SampleAX10	Sample26	SampleAZ3	16.0	2.7	0.0674	0.0010	0.0347	UN
-Sample24	SampleAX10	Sample26	SampleAZ4	18.0	0.0	0.0766	0.0000	0.0383	UN
 Sample24	SampleAX3	Sample26	SampleAZ5	101.5	4.6	0.5489	0.0062	0.2807	2nd
 Sample24	SampleAX3	Sample26	SampleAZ6	16.3	0.0	0.0967	0.0000	0.0484	4th
 Sample24	SampleAX3	Sample26	SampleAZ7	132.8	3.9	0.2018	0.0015	0.1024	3rd
@@ -39446,7 +38917,6 @@ Sample25	SampleAY0	Sample26	SampleAZ0	21.0	2.7	0.0986	0.0010	0.0503	4th
 Sample25	SampleAY0	Sample26	SampleAZ1	29.5	0.0	0.0738	0.0000	0.0369	UN
 Sample25	SampleAY0	Sample26	SampleAZ2	22.8	0.0	0.0857	0.0000	0.0428	UN
 Sample25	SampleAY0	Sample26	SampleAZ3	17.9	3.8	0.0970	0.0024	0.0509	4th
-Sample25	SampleAY0	Sample26	SampleAZ4	13.7	0.0	0.0910	0.0000	0.0455	4th
 Sample25	SampleAY1	Sample25	SampleAY8	147.6	14.3	0.9777	0.0195	0.5083	PO
 Sample25	SampleAY1	Sample25	SampleAY9	21.3	0.0	0.0686	0.0000	0.0343	UN
 Sample25	SampleAY1	Sample25	SampleAY10	93.5	0.0	0.5503	0.0000	0.2752	2nd
@@ -39454,7 +38924,6 @@ Sample25	SampleAY1	Sample26	SampleAZ0	16.2	0.0	0.0759	0.0000	0.0380	UN
 Sample25	SampleAY1	Sample26	SampleAZ1	15.9	2.9	0.0754	0.0011	0.0388	UN
 Sample25	SampleAY1	Sample26	SampleAZ2	17.4	0.0	0.0819	0.0000	0.0410	UN
 Sample25	SampleAY1	Sample26	SampleAZ3	23.0	3.4	0.0917	0.0013	0.0472	4th
-Sample25	SampleAY1	Sample26	SampleAZ4	16.1	0.0	0.0690	0.0000	0.0345	UN
 Sample25	SampleAY2	Sample25	SampleAY8	147.6	7.0	0.9841	0.0133	0.5054	PO
 Sample25	SampleAY2	Sample25	SampleAY9	120.6	6.5	0.6120	0.0065	0.3125	2nd
 Sample25	SampleAY2	Sample25	SampleAY10	138.2	20.0	0.5064	0.0118	0.2650	2nd
@@ -39462,7 +38931,6 @@ Sample25	SampleAY2	Sample26	SampleAZ0	22.1	9.2	0.0868	0.0034	0.0468	4th
 Sample25	SampleAY2	Sample26	SampleAZ1	37.1	0.0	0.1244	0.0000	0.0622	4th
 Sample25	SampleAY2	Sample26	SampleAZ2	14.8	0.0	0.0692	0.0000	0.0346	UN
 Sample25	SampleAY2	Sample26	SampleAZ3	17.7	0.0	0.0653	0.0000	0.0326	UN
-Sample25	SampleAY2	Sample26	SampleAZ4	22.1	0.0	0.0739	0.0000	0.0370	UN
 Sample25	SampleAY3	Sample25	SampleAY8	16.4	0.0	0.0747	0.0000	0.0374	UN
 Sample25	SampleAY3	Sample25	SampleAY9	147.6	8.9	0.9806	0.0187	0.5090	PO
 Sample25	SampleAY3	Sample25	SampleAY10	20.6	4.2	0.0682	0.0016	0.0357	UN
@@ -39470,7 +38938,6 @@ Sample25	SampleAY3	Sample26	SampleAZ0	15.6	0.0	0.0758	0.0000	0.0379	UN
 Sample25	SampleAY3	Sample26	SampleAZ1	15.1	0.0	0.0711	0.0000	0.0355	UN
 Sample25	SampleAY3	Sample26	SampleAZ2	15.9	0.0	0.0845	0.0000	0.0423	UN
 Sample25	SampleAY3	Sample26	SampleAZ3	29.2	0.0	0.0941	0.0000	0.0471	4th
-Sample25	SampleAY3	Sample26	SampleAZ4	15.6	3.7	0.0731	0.0014	0.0379	UN
 Sample25	SampleAY4	Sample25	SampleAY8	135.8	9.8	0.5944	0.0105	0.3077	2nd
 Sample25	SampleAY4	Sample25	SampleAY9	120.6	5.9	0.9927	0.0054	0.5018	PO
 Sample25	SampleAY4	Sample25	SampleAY10	68.4	0.0	0.2506	0.0000	0.1253	3rd
@@ -39478,7 +38945,6 @@ Sample25	SampleAY4	Sample26	SampleAZ0	22.9	0.0	0.0881	0.0000	0.0440	UN
 Sample25	SampleAY4	Sample26	SampleAZ1	30.8	0.0	0.1005	0.0000	0.0503	4th
 Sample25	SampleAY4	Sample26	SampleAZ2	16.6	6.4	0.0643	0.0024	0.0346	UN
 Sample25	SampleAY4	Sample26	SampleAZ3	14.8	0.0	0.0769	0.0000	0.0385	UN
-Sample25	SampleAY4	Sample26	SampleAZ4	22.1	6.4	0.0739	0.0024	0.0394	UN
 Sample25	SampleAY5	Sample25	SampleAY8	93.1	5.0	0.4744	0.0089	0.2461	2nd
 Sample25	SampleAY5	Sample25	SampleAY9	87.4	4.3	0.5735	0.0056	0.2923	2nd
 Sample25	SampleAY5	Sample25	SampleAY10	80.1	0.0	0.2952	0.0000	0.1476	3rd
@@ -39486,7 +38952,6 @@ Sample25	SampleAY5	Sample26	SampleAZ0	17.2	13.2	0.0972	0.0050	0.0536	4th
 Sample25	SampleAY5	Sample26	SampleAZ1	19.9	4.0	0.0797	0.0015	0.0414	UN
 Sample25	SampleAY5	Sample26	SampleAZ2	13.9	0.0	0.0770	0.0000	0.0385	UN
 Sample25	SampleAY5	Sample26	SampleAZ3	12.8	0.0	0.0669	0.0000	0.0335	UN
-Sample25	SampleAY5	Sample26	SampleAZ4	17.2	0.0	0.0844	0.0000	0.0422	UN
 Sample25	SampleAY6	Sample25	SampleAY8	16.4	6.0	0.1149	0.0022	0.0597	4th
 Sample25	SampleAY6	Sample25	SampleAY9	20.8	0.0	0.0847	0.0000	0.0423	UN
 Sample25	SampleAY6	Sample25	SampleAY10	147.6	18.4	0.9631	0.0350	0.5166	PO
@@ -39494,7 +38959,6 @@ Sample25	SampleAY6	Sample26	SampleAZ0	21.6	9.3	0.0903	0.0035	0.0487	4th
 Sample25	SampleAY6	Sample26	SampleAZ1	19.5	0.0	0.0957	0.0000	0.0479	4th
 Sample25	SampleAY6	Sample26	SampleAZ2	16.4	3.2	0.0888	0.0012	0.0456	4th
 Sample25	SampleAY6	Sample26	SampleAZ3	22.7	3.2	0.1141	0.0012	0.0583	4th
-Sample25	SampleAY6	Sample26	SampleAZ4	17.0	4.5	0.0795	0.0029	0.0427	UN
 Sample25	SampleAY7	Sample25	SampleAY8	73.2	33.7	0.5762	0.1611	0.4492	FS
 Sample25	SampleAY7	Sample25	SampleAY9	68.4	0.0	0.3295	0.0000	0.1648	3rd
 Sample25	SampleAY7	Sample25	SampleAY10	147.6	23.5	0.9730	0.0263	0.5128	PO
@@ -39502,7 +38966,6 @@ Sample25	SampleAY7	Sample26	SampleAZ0	22.1	6.2	0.0903	0.0023	0.0475	4th
 Sample25	SampleAY7	Sample26	SampleAZ1	23.8	0.0	0.1270	0.0000	0.0635	4th
 Sample25	SampleAY7	Sample26	SampleAZ2	19.5	0.0	0.0836	0.0000	0.0418	UN
 Sample25	SampleAY7	Sample26	SampleAZ3	19.5	0.0	0.0973	0.0000	0.0487	4th
-Sample25	SampleAY7	Sample26	SampleAZ4	22.1	0.0	0.0784	0.0000	0.0392	UN
 Sample25	SampleAY0	Sample26	SampleAZ5	16.5	2.7	0.0622	0.0020	0.0331	UN
 Sample25	SampleAY0	Sample26	SampleAZ6	14.4	0.0	0.0747	0.0000	0.0374	UN
 Sample25	SampleAY0	Sample26	SampleAZ7	14.3	6.1	0.0756	0.0023	0.0401	UN
@@ -39557,28 +39020,21 @@ Sample25	SampleAY8	Sample26	SampleAZ0	21.4	0.0	0.0835	0.0000	0.0418	UN
 Sample25	SampleAY8	Sample26	SampleAZ1	17.5	5.5	0.0850	0.0021	0.0446	4th
 Sample25	SampleAY8	Sample26	SampleAZ2	22.2	0.0	0.0836	0.0000	0.0418	UN
 Sample25	SampleAY8	Sample26	SampleAZ3	23.0	0.0	0.0858	0.0000	0.0429	UN
-Sample25	SampleAY8	Sample26	SampleAZ4	17.0	0.0	0.0622	0.0000	0.0311	UN
 Sample25	SampleAY9	Sample25	SampleAY10	68.4	0.0	0.1916	0.0000	0.0958	3rd
 Sample25	SampleAY9	Sample26	SampleAZ0	22.1	0.0	0.0940	0.0000	0.0470	4th
 Sample25	SampleAY9	Sample26	SampleAZ1	33.5	0.0	0.0992	0.0000	0.0496	4th
 Sample25	SampleAY9	Sample26	SampleAZ2	11.0	0.0	0.0616	0.0000	0.0308	UN
 Sample25	SampleAY9	Sample26	SampleAZ3	26.8	0.0	0.0932	0.0000	0.0466	4th
-Sample25	SampleAY9	Sample26	SampleAZ4	21.1	0.0	0.0828	0.0000	0.0414	UN
 Sample25	SampleAY10	Sample26	SampleAZ0	13.3	0.0	0.0780	0.0000	0.0390	UN
 Sample25	SampleAY10	Sample26	SampleAZ1	22.1	0.0	0.0757	0.0000	0.0379	UN
 Sample25	SampleAY10	Sample26	SampleAZ2	18.6	0.0	0.0756	0.0000	0.0378	UN
 Sample25	SampleAY10	Sample26	SampleAZ3	20.0	4.9	0.0865	0.0018	0.0451	4th
-Sample25	SampleAY10	Sample26	SampleAZ4	12.0	0.0	0.0667	0.0000	0.0334	UN
 Sample26	SampleAZ0	Sample26	SampleAZ1	15.8	0.0	0.0674	0.0000	0.0337	UN
 Sample26	SampleAZ0	Sample26	SampleAZ2	138.2	6.8	0.5447	0.0088	0.2812	2nd
 Sample26	SampleAZ0	Sample26	SampleAZ3	25.3	0.0	0.1196	0.0000	0.0598	4th
-Sample26	SampleAZ0	Sample26	SampleAZ4	122.9	51.3	0.8363	0.1598	0.5779	PO
 Sample26	SampleAZ1	Sample26	SampleAZ2	38.8	0.0	0.0752	0.0000	0.0376	UN
 Sample26	SampleAZ1	Sample26	SampleAZ3	22.8	3.1	0.0812	0.0012	0.0418	UN
-Sample26	SampleAZ1	Sample26	SampleAZ4	22.2	0.0	0.0664	0.0000	0.0332	UN
 Sample26	SampleAZ2	Sample26	SampleAZ3	21.9	0.0	0.0661	0.0000	0.0331	UN
-Sample26	SampleAZ2	Sample26	SampleAZ4	101.2	43.9	0.8497	0.1470	0.5718	PO
-Sample26	SampleAZ3	Sample26	SampleAZ4	23.4	3.9	0.1012	0.0014	0.0520	4th
 Sample25	SampleAY8	Sample26	SampleAZ5	17.1	0.0	0.0813	0.0000	0.0406	UN
 Sample25	SampleAY8	Sample26	SampleAZ6	42.8	3.7	0.2200	0.0014	0.1114	3rd
 Sample25	SampleAY8	Sample26	SampleAZ7	22.1	0.0	0.0703	0.0000	0.0352	UN
@@ -39621,12 +39077,6 @@ Sample26	SampleAZ3	Sample26	SampleAZ7	21.9	3.9	0.0858	0.0015	0.0444	4th
 Sample26	SampleAZ3	Sample26	SampleAZ8	23.0	2.9	0.0738	0.0011	0.0380	UN
 Sample26	SampleAZ3	Sample26	SampleAZ9	138.2	15.4	0.9788	0.0196	0.5090	PO
 Sample26	SampleAZ3	Sample26	SampleAZ10	12.7	3.2	0.0769	0.0012	0.0397	UN
-Sample26	SampleAZ4	Sample26	SampleAZ5	108.3	36.9	0.5868	0.1874	0.4808	FS
-Sample26	SampleAZ4	Sample26	SampleAZ6	17.0	3.9	0.0577	0.0015	0.0304	UN
-Sample26	SampleAZ4	Sample26	SampleAZ7	110.3	3.4	0.5975	0.0024	0.3012	2nd
-Sample26	SampleAZ4	Sample26	SampleAZ8	110.3	4.1	0.5951	0.0039	0.3015	2nd
-Sample26	SampleAZ4	Sample26	SampleAZ9	147.6	13.2	0.9630	0.0308	0.5123	PO
-Sample26	SampleAZ4	Sample26	SampleAZ10	57.5	6.6	0.2345	0.0025	0.1198	3rd
 Sample26	SampleAZ5	Sample26	SampleAZ6	15.6	3.8	0.0801	0.0014	0.0415	UN
 Sample26	SampleAZ5	Sample26	SampleAZ7	104.4	5.9	0.4973	0.0022	0.2509	2nd
 Sample26	SampleAZ5	Sample26	SampleAZ8	105.1	14.7	0.5083	0.0073	0.2614	2nd
