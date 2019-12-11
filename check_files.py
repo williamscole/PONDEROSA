@@ -94,6 +94,8 @@ def start_up(parameter_dict):
     if not_found == []:
         if "_" in open(parameter_dict["match file"] % "1").readlines()[0].split()[1] and not parameter_dict["ilash"]:
             errors.append("iLASH file detected but --ilash flag not used.\n")
+        elif "." in open(parameter_dict["match file"] % "1").readlines()[0].split()[1] and parameter_dict["ilash"]:
+        	errors.append("--ilash flag used but GERMLINE file detected.\n")
         for i in range(1,23):
             mapf = open(parameter_dict["map file"] % str(i)).readlines()
             if float(mapf[-1].split()[2]) == 0:
