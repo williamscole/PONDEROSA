@@ -4,6 +4,7 @@ import sys
 import time
 import statistics as stat
 import os
+import check_files
 
 parser = OptionParser()
 #Required args
@@ -26,6 +27,21 @@ parser.add_option("--likelihood",dest="likelihood",default=0.80)
 
 (option,args) = parser.parse_args()
 
+check_files.start_up({"fam file":option.fam_file,
+                        "match file":option.match_file,
+                        "king file":option.king_file,
+                        "map file":option.map_file,
+                        "ped file":option.ped_file,
+                        "age file":option.age_file,
+                        "haps file":option.haps,
+                        "out":option.out,
+                        "mhs gap":option.mhs_gap,
+                        "gp gap":option.gp_gap,
+                        "po gap":option.po_gap,
+                        "ilash":option.ilash,
+                        "cm gap":option.cm_gap,
+                        "max discordant homoz.":option.disc_homoz,
+                        "likelihood":option.likelihood})
 
 degrees = ["PO","FS","2nd","3rd","4th"]
 ped_rels = {"PO":["PO"],
@@ -34,57 +50,7 @@ ped_rels = {"PO":["PO"],
             "3rd":["GGP","HV","CO"],
             "4th":["GGGP","HC"]}
 
-tree = ["\n       P  O  N  D  E  R  O  S  A",
-"                v.1.1          ",
-"                  &",                   
-"                 ##&",                   
-"                #####",                  
-"              &%#######",              
-"            &%&%#####%###",              
-"          &   &%######&   &",            
-"             &%########&",               
-"            %%%%#########",              
-"          %%%%%###########&",           
-"        %%&  &%#########  &&&",          
-"      *     %%###########.",             
-"          &%%##############",            
-"        &&&%%%############&",         
-"     #  &%%%%##/(###########&/",         
-"      %%%%%%##%((%%############%&",      
-"   &%%%%&&  &%%%&&&%#######&&&&&&&&&",   
-"&&.&%     &%%&   &((&&  ###&&&&&",        
-"                 %((&       ",      
-"                 %*(&",                  
-"                 #((&",                 
-"                .(((%",                  
-"                &%(((%",                 
-"               %%#(#((((",               
-"              &&&&(  &(&)",
-"                          ",
-"               (c) 2019",
-"C.M. Williams, C.R. Gignoux, B.M. Henn\n"]
-
-def print_color(color,text):
-    if color == "bold":
-        color = "\033[1m"
-    if color == "brown":
-        color = "\033[0;33m"
-    elif color == "green":
-        color = "\033[0;32m"
-    colored_text = f"\033[{color}{text}\033[00m"
-    return colored_text
-
-for index,i in enumerate(tree):
-        if index in [k for k in range(19,26)]:
-            print(print_color("brown",i))
-        elif index in [k for k in range(2,19)]:
-            print(print_color("green",i))
-        elif index == 0:
-            print(print_color("bold",i))
-        elif index in [1,27,28]:
-            print(i)
-
-def ilash2germline(match_file):
+'''def ilash2germline(match_file):
     if "/" in match_file:
         match_file_stripped = match_file.split("/")[-1]
     for i in range(1,23):
@@ -96,7 +62,7 @@ def ilash2germline(match_file):
             lines[3] = lines[3].split("_")[0] + "." + lines[3].split("_")[1]
             lines[7] = "\n"
             germline.write(" ".join([lines[i] for i in [0,1,2,3,4,5,6,7]]))
-    return "GERMLINE" + match_file_stripped
+    return "GERMLINE" + match_file_stripped'''
 
 def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
     class GenotypeData:
@@ -205,10 +171,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
 
     pairs = PairData(rel_list,out)
 
-    if ilash:
-        match_file = ilash2germline(match_file)
-
-    for chrm in range(1,23):
+    for chrm in range(1,2):
         ticker_char = {0: "|", 1: "/", 2: "-", 3: "\\"}
         ticker = 1
         sys.stdout.write("\rCalculating hap score...chr %s %s" % (chrm,ticker_char[ticker % 4]))
@@ -216,18 +179,22 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
         genotype_data = GenotypeData(map_file,ped_file,chrm)
         match = list()
         for segs in open(match_file % str(chrm)).readlines():
-            iid1,iid2 = segs.split()[1].split(".")[0],segs.split()[3].split(".")[0]
+            if ilash:
+                iid1,iid2 = segs.split()[1].split("_")[0],segs.split()[3].split("_")[0]
+            else:
+                iid1,iid2 = segs.split()[1].split(".")[0],segs.split()[3].split(".")[0]
             if pairs.move_on(iid1,iid2):
                 continue
-            hap1,hap2 = int(segs.split()[1].split(".")[1]),int(segs.split()[3].split(".")[1])
+            if ilash:
+                hap1,hap2 = int(segs.split()[1].split("_")[1]),int(segs.split()[3].split("_")[1])
+            else:
+                hap1,hap2 = int(segs.split()[1].split(".")[1]),int(segs.split()[3].split(".")[1])
             mb_start,mb_end = int(segs.split()[5]),int(segs.split()[6])
             cm_start,cm_end = genotype_data.mb_to_cm(mb_start),genotype_data.mb_to_cm(mb_end)
             match.append([iid1,iid2,cm_start,cm_end,hap1,hap2])
             ticker += 1
             sys.stdout.write("\rCalculating hap score...chr %s %s" % (chrm,ticker_char[ticker % 4]))
             sys.stdout.flush()
-        if ilash:
-            os.remove(match_file % str(chrm))
         match.sort()
 
         while match != []:
