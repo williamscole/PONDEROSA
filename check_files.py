@@ -74,7 +74,7 @@ def start_up(parameter_dict):
             continue
         if not os.path.isfile(files):
             not_found.append(files)
-    for i in range(1,23):
+    for i in range(1,parameter_dict["num chr"]+1):
         if not os.path.isfile(parameter_dict["map file"] % str(i)):
             not_found.append(parameter_dict["map file"] % str(i))
         if not os.path.isfile(parameter_dict["match file"] % str(i)):
@@ -96,7 +96,7 @@ def start_up(parameter_dict):
             errors.append("iLASH file detected but --ilash flag not used.\n")
         elif "." in open(parameter_dict["match file"] % "1").readlines()[0].split()[1] and parameter_dict["ilash"]:
         	errors.append("--ilash flag used but GERMLINE file detected.\n")
-        for i in range(1,23):
+        for i in range(1,parameter_dict["num chr"]+1):
             mapf = open(parameter_dict["map file"] % str(i)).readlines()
             if float(mapf[-1].split()[2]) == 0:
                 errors.append(".map file must have distance in cM in 3rd column.\n")

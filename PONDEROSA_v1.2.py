@@ -13,6 +13,7 @@ parser.add_option("--king",dest="king_file")
 parser.add_option("--match",dest="match_file")
 parser.add_option("--fam",dest="fam_file")
 #Optional args
+parser.add_option("--chr",dest="num_chrs",default=22)
 parser.add_option("--ped",dest="ped_file",default="")
 parser.add_option("--ages",dest="age_file",default="")
 parser.add_option("--out",dest="out",default="PONDEROSA")
@@ -32,6 +33,7 @@ check_files.start_up({"fam file":option.fam_file,
                         "king file":option.king_file,
                         "map file":option.map_file,
                         "ped file":option.ped_file,
+                        "num chr":option.num_chrs,
                         "age file":option.age_file,
                         "haps file":option.haps,
                         "out":option.out,
@@ -157,7 +159,7 @@ def find_hap_score1(rel_list,match_file,map_file,ped_file,out,ilash):
 
     pairs = PairData(rel_list,out)
 
-    for chrm in range(1,23):
+    for chrm in range(1,option.num_chrs+1):
         ticker_char = {0: "|", 1: "/", 2: "-", 3: "\\"}
         ticker = 1
         sys.stdout.write("\rCalculating hap score...chr %s %s" % (chrm,ticker_char[ticker % 4]))
