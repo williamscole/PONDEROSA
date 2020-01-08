@@ -93,8 +93,8 @@ for pairs in open("new" + option.king).readlines()[1:]:
 		if unique_id in pair_list[degrees]:
 			ibd_list[degrees].append(ibd1)
 
-keep_list = {"PO":pair_list["PO"],"FS":pair_list["FS"]}
-for degrees in ["2nd","3rd","4th"]:
+keep_list = {}
+for degrees in ["PO","FS","2nd","3rd","4th"]:
 	std = st.stdev(ibd_list[degrees])
 	avg = st.mean(ibd_list[degrees])
 	lower,upper = avg - 2.32635 * std, avg + 2.32635 * std
@@ -102,10 +102,10 @@ for degrees in ["2nd","3rd","4th"]:
 	for pairs in open("new" + option.king).readlines()[1:]:
 		pairs = pairs.split()
 		unique_id,ibd1,ibd2 = pairs[0],float(pairs[1]),float(pairs[2])
-		if unique_id in pair_list[degrees] and lower <= ibd1 <= upper:
+		if degrees == "PO" or degrees == "FS":
 			keep.append([unique_id,ibd1,ibd2])
-		#elif unique_id in pair_list[degrees] and not lower <= ibd1 <= upper:
-			#print(unique_id,ibd1,lower,upper)
+		elif unique_id in pair_list[degrees] and lower <= ibd1 <= upper:
+			keep.append([unique_id,ibd1,ibd2])
 	keep_list[degrees] = keep
 
 for degrees1 in ["PO","FS","2nd","3rd","4th"]:
