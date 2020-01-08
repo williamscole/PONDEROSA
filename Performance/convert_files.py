@@ -69,16 +69,19 @@ for pairs in open(option.king).readlines()[1:]:
 out.close()
 
 #Convert the PONDEROSA outputs
+out = open("new" + option.pedigree,"w")
+out.write("ID ActualDeg PONDdeg\n")
+
 rel_to_deg = {"PO":"PO","FS":"FS",
 			  "PHS":"2nd","MHS":"2nd","GP":"2nd","AV":"2nd",
 			  "GGP":"3rd","CO":"3rd","HV":"3rd",
 			  "GGGP":"4th","HC":"4th"}
-pair_list = {"2nd":[],"3rd":[],"4th":[]}
+pair_list = {"PO":[],"FS":[],"2nd":[],"3rd":[],"4th":[]}
 for pairs in open(option.pedigree).readlines()[1:]:
 	pairs = pairs.split()
 	iid1,iid2,rel,confidence = pairs[0],pairs[1],pairs[2],pairs[3]
 	unique_id = pair_id(iid1,iid2)
-	if confidence != "1.0" or rel == "FS" or rel == "PO":
+	if confidence != "1.0":
 		continue
 	pair_list[rel_to_deg[rel]].append(unique_id)
 
@@ -90,7 +93,7 @@ for pairs in open("new" + option.king).readlines()[1:]:
 		if unique_id in pair_list[degrees]:
 			ibd_list[degrees].append(ibd1)
 
-keep_list = {}
+keep_list = {"PO":pair_list["PO"],"FS":pair_list["FS"]}
 for degrees in ["2nd","3rd","4th"]:
 	std = st.stdev(ibd_list[degrees])
 	avg = st.mean(ibd_list[degrees])
@@ -105,14 +108,12 @@ for degrees in ["2nd","3rd","4th"]:
 			#print(unique_id,ibd1,lower,upper)
 	keep_list[degrees] = keep
 
-out = open("new" + option.pedigree,"w")
-out.write("ID ActualDeg PONDdeg\n")
-for degrees1 in ["2nd","3rd","4th"]:
+for degrees1 in ["PO","FS","2nd","3rd","4th"]:
 	for iid1 in keep_list[degrees1]:
 		test_val = [iid1[1],iid1[2]]
 		unique_id = iid1[0]
 		train_val,train_lab = [],[]
-		for degrees2 in ["2nd","3rd","4th"]:
+		for degrees2 in ["PO","FS","2nd","3rd","4th"]:
 			for iid2 in keep_list[degrees2]:
 				if iid2 != iid1:
 					train_val.append([iid2[1],iid2[2]])
@@ -149,4 +150,3 @@ for rels1 in ["PHS","MHS","GP","AV"]:
 			ersa_pred_rel = "HS"
 		out.write(" ".join([unique_id,rels1,ersa_rel,pred_rel,ersa_pred_rel,"\n"]))
 out.close()
-
