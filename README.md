@@ -22,6 +22,7 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 | Flag | Description |
 | ---- | ----------- |
 |**out** | Output file prefix. _Default: “PONDEROSA”_ |
+|**chr** | Number of autosomes. Change only for non-human samples. _Default: 22_ |
 |**ilash** | For use if .match file is in iLASH format. |
 |**haps** | If PONDEROSA has already been run, supplying the haplotype score file here will skip the haplotype score calculation step. |
 |**age** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
