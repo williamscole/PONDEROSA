@@ -85,11 +85,11 @@ for pairs in open(option.pedigree).readlines()[1:]:
 		continue
 	pair_list[rel_to_deg[rel]].append(unique_id)
 
-ibd_list = {"2nd":[],"3rd":[],"4th":[]}
+ibd_list = {"PO":[],"FS":[],"2nd":[],"3rd":[],"4th":[]}
 for pairs in open("new" + option.king).readlines()[1:]:
 	pairs = pairs.split()
 	unique_id,ibd1 = pairs[0],float(pairs[1])
-	for degrees in ["2nd","3rd","4th"]:
+	for degrees in ["PO","FS","2nd","3rd","4th"]:
 		if unique_id in pair_list[degrees]:
 			ibd_list[degrees].append(ibd1)
 
