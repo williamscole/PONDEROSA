@@ -24,6 +24,7 @@ def pair_id(iid1,iid2):
 		iid2 = "679"
 	return "%04d" % int(iid1) + "%04d" % int(iid2)
 
+print("Convert ERSA file")
 #Convert the ERSA file
 out = open("new" + option.ersa, "w")
 out.write("ID ERSAdeg ERSArel\n")
@@ -58,6 +59,7 @@ for pairs in open(option.ersa).readlines()[3:]:
 	out.write(" ".join([unique_id,degree,rel,"\n"]))
 out.close()
 
+print("Convert KING file")
 #Convert the KING file
 out = open("new" + option.king, "w")
 out.write("ID IBD1 IBD2 KINGdeg\n")
@@ -77,6 +79,7 @@ rel_to_deg = {"PO":"PO","FS":"FS",
 			  "GGP":"3rd","CO":"3rd","HV":"3rd",
 			  "GGGP":"4th","HC":"4th"}
 pair_list = {"PO":[],"FS":[],"2nd":[],"3rd":[],"4th":[]}
+print("Add relatives to degree categories")
 for pairs in open(option.pedigree).readlines()[1:]:
 	pairs = pairs.split()
 	iid1,iid2,rel,confidence = pairs[0],pairs[1],pairs[2],pairs[3]
@@ -85,6 +88,7 @@ for pairs in open(option.pedigree).readlines()[1:]:
 		continue
 	pair_list[rel_to_deg[rel]].append(unique_id)
 
+print("Add IBD values to degree categories")
 ibd_list = {"PO":[],"FS":[],"2nd":[],"3rd":[],"4th":[]}
 for pairs in open("new" + option.king).readlines()[1:]:
 	pairs = pairs.split()
@@ -93,6 +97,7 @@ for pairs in open("new" + option.king).readlines()[1:]:
 		if unique_id in pair_list[degrees]:
 			ibd_list[degrees].append(ibd1)
 
+print("Choosing pairs to keep")
 keep_list = {}
 for degrees in ["PO","FS","2nd","3rd","4th"]:
 	std = st.stdev(ibd_list[degrees])
@@ -108,6 +113,7 @@ for degrees in ["PO","FS","2nd","3rd","4th"]:
 			keep.append([unique_id,ibd1,ibd2])
 	keep_list[degrees] = keep
 
+print("Inferring degrees of relatedness")
 for degrees1 in ["PO","FS","2nd","3rd","4th"]:
 	for iid1 in keep_list[degrees1]:
 		test_val = [iid1[1],iid1[2]]
@@ -123,6 +129,7 @@ for degrees1 in ["PO","FS","2nd","3rd","4th"]:
 		out.write(" ".join([unique_id,degrees1,pred_deg,"\n"]))
 out.close()
 
+print("Add 2nd degree pairs to list")
 second_rels = {"PHS":[],"MHS":[],"AV":[],"GP":[]}
 for pairs in open(option.training).readlines()[1:]:
 	pairs = pairs.split()
@@ -130,6 +137,7 @@ for pairs in open(option.training).readlines()[1:]:
 	unique_id = pair_id(iid1,iid2)
 	second_rels[rel].append([unique_id,ratio,num])
 
+print("Inferring 2nd degree relatives")
 out = open("new" + option.training,"w")
 out.write("ID ActualRel SimpleRel PONDrel\n")
 for rels1 in ["PHS","MHS","GP","AV"]:
