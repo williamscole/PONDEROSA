@@ -25,6 +25,7 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 |**chr** | Number of autosomes. Change only for non-human samples. _Default: 22_ |
 |**ilash** | For use if .match file is in iLASH format. |
 |**haps** | If PONDEROSA has already been run, supplying the haplotype score file here will skip the haplotype score calculation step. |
+|**second_train** | If PONDEROSA has already been run, the user can supply the .training file from that run to train the 2nd degree classifier of another PONDEROSA run (with a different dataset that has few 2nd degree training pairs). |
 |**age** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
 |**gp_gap** | Minimum age-gap for a grandparent-grandchild pair. Note that if you do not want PONDEROSA to consider age, use 0 for this flag. _Default: 30_ |
 |**mhs_gap** | Maximum age-gap for maternal half-siblings. If you do not want PONDEROSA to consider age here, use an arbitrarily large age gap (e.g. 100). _Default: 30_ |
