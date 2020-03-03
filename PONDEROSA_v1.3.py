@@ -532,7 +532,6 @@ class Data:
                         lab_list.append(labs)
                         val_list.append(hap_data)
                         self.training.write("\t".join([iid1,str(h1),iid2,str(h2),str(hap_data[0]),str(hap_data[1]),rels,"\n"]))
-                lower_list,upper_list = [],[]
             else:
                 rel_to_lab = {"PHS":0,"MHS":1,"GP":2,"AV":3}
                 for pairs in open(option.train_2nd).readlines()[1:]:
@@ -541,7 +540,7 @@ class Data:
                     labs = rel_to_lab[pairs[6]]
                     lab_list.append(labs)
                     val_list.append(hap_data)
-
+            lower_list,upper_list = [],[]
         elif type == "IBD":
             ibd1_vals = {0:[],1:[],2:[],3:[],4:[]}
             for labs,degs in enumerate(degrees):
@@ -777,4 +776,4 @@ def main(fam_file,match_file,king_file,map_file,
 
 main(option.fam_file,option.match_file,option.king_file,option.map_file,
         option.ped_file,option.age_file,option.out,
-        option.mhs_gap,option.gp_gap,option.po_gap,option.haps,option.ilash,option.train_2nd)
+        option.mhs_gap,option.gp_gap,option.po_gap,option.haps,option.ilash)
