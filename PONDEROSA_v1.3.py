@@ -708,7 +708,7 @@ def main(fam_file,match_file,king_file,map_file,
             data.write_log("%s degree: (%s, %s)\n" % (degs,lower,upper))
     except:
         sys.stdout.write("\rResolving ambiguous sibships...ERROR\n")
-        sys.stdout.write("ERROR. Not enough training pairs. Please double check that PO pairs are in .fam file.\n")
+        sys.stdout.write("Not enough training pairs. Please double check that PO pairs are in .fam file.\n")
         exit()
 
     #Look for IBD discrepancies
