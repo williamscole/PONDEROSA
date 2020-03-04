@@ -708,6 +708,7 @@ def main(fam_file,match_file,king_file,map_file,
             data.write_log("%s degree: (%s, %s)\n" % (degs,lower,upper))
     except:
         print("ERROR. Not enough training pairs. Please double check that PO pairs are in .fam file.")
+        exit()
 
     #Look for IBD discrepancies
     problem_pairs = list()
