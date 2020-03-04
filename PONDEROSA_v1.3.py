@@ -669,23 +669,26 @@ def main(fam_file,match_file,king_file,map_file,
     #Create IBD1 vs IBD2 classifier for degrees of rel
     sys.stdout.write("\rResolving ambiguous sibships...")
     sys.stdout.flush()
-    training_data = data.generate_training_data("IBD")
-    ibd_lda = LinearDiscriminantAnalysis().fit(training_data[0],training_data[1])
-    for pairs in data.get_unresolved_sibs():
-        iid1,iid2,rel = pairs[0],pairs[1],pairs[2]
-        ibd1,ibd2 = data.get_ibd(iid1,iid2,1),data.get_ibd(iid1,iid2,2)
-        prob = ibd_lda.predict_proba([[ibd1,ibd2]])[0]
-        if prob[1] > prob[2]:
-            data.add_siblings(iid1,iid2,prob[1]/(prob[1]+prob[2]),"FS")
-        else:
-            data.add_siblings(iid1,iid2,prob[2]/(prob[1]+prob[2]),rel)
-    for pairs in data.get_king_unresolved_sibs():
-        iid1,iid2 = pairs[0],pairs[1]
-        ibd1,ibd2 = data.get_ibd(iid1,iid2,1),data.get_ibd(iid1,iid2,2)
-        prob = ibd_lda.predict_proba([[ibd1,ibd2]])[0]
-        if prob[1] > prob[2]:
-            data.add_siblings(iid1,iid2,prob[1]/(prob[1]+prob[2]),"FS")
-    data.resolve_siblings()
+    try:
+        training_data = data.generate_training_data("IBD")
+        ibd_lda = LinearDiscriminantAnalysis().fit(training_data[0],training_data[1])
+        for pairs in data.get_unresolved_sibs():
+            iid1,iid2,rel = pairs[0],pairs[1],pairs[2]
+            ibd1,ibd2 = data.get_ibd(iid1,iid2,1),data.get_ibd(iid1,iid2,2)
+            prob = ibd_lda.predict_proba([[ibd1,ibd2]])[0]
+            if prob[1] > prob[2]:
+                data.add_siblings(iid1,iid2,prob[1]/(prob[1]+prob[2]),"FS")
+            else:
+                data.add_siblings(iid1,iid2,prob[2]/(prob[1]+prob[2]),rel)
+        for pairs in data.get_king_unresolved_sibs():
+            iid1,iid2 = pairs[0],pairs[1]
+            ibd1,ibd2 = data.get_ibd(iid1,iid2,1),data.get_ibd(iid1,iid2,2)
+            prob = ibd_lda.predict_proba([[ibd1,ibd2]])[0]
+            if prob[1] > prob[2]:
+                data.add_siblings(iid1,iid2,prob[1]/(prob[1]+prob[2]),"FS")
+        data.resolve_siblings()
+    except:
+        print("ERROR. Not enough training pairs. Please double check that PO pairs are in .fam file.")
     sys.stdout.write("\rResolving ambiguous sibships...done\n")
 
     #Recreate the classifier for the added pairs
