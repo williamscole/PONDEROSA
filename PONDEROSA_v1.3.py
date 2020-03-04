@@ -666,10 +666,11 @@ def main(fam_file,match_file,king_file,map_file,
                 data.add_siblings(child1,child2,1.0)
     sys.stdout.write("\rFinding high-confidence relationships...done\n")
 
-    #Create IBD1 vs IBD2 classifier for degrees of rel
-    sys.stdout.write("\rResolving ambiguous sibships...")
-    sys.stdout.flush()
+    
     try:
+        #Create IBD1 vs IBD2 classifier for degrees of rel
+        sys.stdout.write("\rResolving ambiguous sibships...")
+        sys.stdout.flush()
         training_data = data.generate_training_data("IBD")
         ibd_lda = LinearDiscriminantAnalysis().fit(training_data[0],training_data[1])
         for pairs in data.get_unresolved_sibs():
@@ -687,27 +688,26 @@ def main(fam_file,match_file,king_file,map_file,
             if prob[1] > prob[2]:
                 data.add_siblings(iid1,iid2,prob[1]/(prob[1]+prob[2]),"FS")
         data.resolve_siblings()
+        sys.stdout.write("\rResolving ambiguous sibships...done\n")
+
+        #Recreate the classifier for the added pairs
+        sys.stdout.write("\rClassifying putative second degree relatives...")
+        sys.stdout.flush()
+        training_data = data.generate_training_data("IBD")
+        ibd_lda = LinearDiscriminantAnalysis().fit(training_data[0],training_data[1])
+        data.write_log("Number of training pairs for 1st LDA:\n")
+        for degs in degrees:
+            num = 0 
+            for rels in ped_rels[degs]:
+                num += len(data.get_relatives(rels))
+            data.write_log("%s degree: %s\n" % (degs,num))
+        data.write_log("\nIBD1 98% confidence intervals:\n")
+        lower_list,upper_list = training_data[2],training_data[3]
+        for index,degs in enumerate(degrees):
+            lower,upper = lower_list[index],upper_list[index]
+            data.write_log("%s degree: (%s, %s)\n" % (degs,lower,upper))
     except:
         print("ERROR. Not enough training pairs. Please double check that PO pairs are in .fam file.")
-    sys.stdout.write("\rResolving ambiguous sibships...done\n")
-
-    #Recreate the classifier for the added pairs
-    sys.stdout.write("\rClassifying putative second degree relatives...")
-    sys.stdout.flush()
-    training_data = data.generate_training_data("IBD")
-    ibd_lda = LinearDiscriminantAnalysis().fit(training_data[0],training_data[1])
-    data.write_log("Number of training pairs for 1st LDA:\n")
-    for degs in degrees:
-        num = 0 
-        for rels in ped_rels[degs]:
-            num += len(data.get_relatives(rels))
-        data.write_log("%s degree: %s\n" % (degs,num))
-    data.write_log("\nIBD1 98% confidence intervals:\n")
-    lower_list,upper_list = training_data[2],training_data[3]
-    for index,degs in enumerate(degrees):
-        lower,upper = lower_list[index],upper_list[index]
-        data.write_log("%s degree: (%s, %s)\n" % (degs,lower,upper))
-
 
     #Look for IBD discrepancies
     problem_pairs = list()
