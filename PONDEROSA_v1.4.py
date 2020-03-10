@@ -13,7 +13,7 @@ parser.add_option("--king",dest="king_file")
 parser.add_option("--match",dest="match_file")
 parser.add_option("--fam",dest="fam_file")
 #Optional args
-parser.add_option("-fs", action="store_true", dest="consider_fs")
+parser.add_option("--fs", action="store_true", dest="consider_fs")
 parser.add_option("--chr",dest="num_chrs",default=22)
 parser.add_option("--ped",dest="ped_file",default="")
 parser.add_option("--ages",dest="age_file",default="")
