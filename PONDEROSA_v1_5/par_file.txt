@@ -1,0 +1,23 @@
+Run_type
+po_only False
+ped_only False
+run_all True
+
+Required_args
+king_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample_KING.seg
+match_file /Users/cole/Downloads/PONDEROSA-master/Sample/Segments/Sample_ilash_chr1.match
+fam_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample.fam
+map_file /Users/cole/Downloads/PONDEROSA-master/Sample/Map_Files/Sample_chr1.map
+
+Optional_args
+ped_file None
+age_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample_Ages.txt
+hap_file /Users/cole/Desktop/work/colorado/pedigree_stuff/PONDEROSA_v15/TestRun.txt
+out TestRun
+num_chr 10
+cm_gap 1
+disc_homoz 1
+likelihood 0.80
+mhs_gap 30
+po_gap 15
+gp_gap 30
