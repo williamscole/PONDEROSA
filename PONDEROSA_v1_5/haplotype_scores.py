@@ -108,13 +108,7 @@ def get_hap_score(relative_list,par_file,hap_file):
         genotype_data = GenotypeData(map_file,ped_file,chrm)
 
         def create_match_df(relative_list):
-            def strip_hap_index(iid_hap):
-                return iid_hap[-1]
-
-            def strip_iid(iid_hap):
-                return iid_hap[:-2]
-
-            match = pd.read_table(match_file.replace("chr1","chr%s" % chrm),header=None)
+            match = pd.read_table(match_file.replace("chr1","chr%s" % chrm),delim_whitespace=True,header=None)
             match["IID1"] = match[1].apply(lambda x: x[:-2])
             match["IID2"] = match[3].apply(lambda x: x[:-2])
             match["PAIR_ID"] = match[["IID1","IID2"]].min(axis=1) + "_" + match[["IID1","IID2"]].max(axis=1)
@@ -128,10 +122,6 @@ def get_hap_score(relative_list,par_file,hap_file):
             return match
 
         match = create_match_df(hap_data.get_relatives())
-
-        disc_homoz = 1
-        cm_gap = 1
-
 
         while match != []:
             pair_segs = list()
@@ -158,5 +148,5 @@ def get_hap_score(relative_list,par_file,hap_file):
             num_segs += 1
             hap_data.finish_chrm(pair,iid1,iid2,[pair_segs[i] for i in index_list],num_segs)            
 
-    sys.stdout.write("\rCalculating hap score...done   ")
+    sys.stdout.write("\rCalculating hap score...done   \n")
     return hap_data.write_out(relative_list,out)

@@ -210,7 +210,7 @@ class Pedigree:
                         analyze_rels(self.get_relationships(self.get_coord(rel_type)[1:],parent[0],parent))
         return out_list
 
-    def resolve_siblings(self,trust_fs=False):
+    def resolve_siblings(self,trust_fs=True):
         '''In phase 1, we assume that there are FS with 1 (or more) missing parents. Thus,
         absence of a lineage does not necessarily mean sibs are HS. This function finds FS with BOTH lineages
         and sibs with one lineage and where the other lineage does NOT connect so are HS. It then
