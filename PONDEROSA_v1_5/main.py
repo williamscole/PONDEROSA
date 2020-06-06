@@ -147,8 +147,29 @@ def main():
 				self.set_conditional(self.putative)
 				self.write_out(pars["out"],self.putative)
 
+			def validation(self,out):
+				second = self.training[self.training["DEGREE"]=="2nd"].copy()
+				with open("%s_training_data.txt" % out,"w") as outfile:
+					outfile.write(self.training.to_string(index=False,na_rep="NA"))
+				train_val,train_lab = self.get_training(second,"REL",["HSR","N"])
+				classif = LinearDiscriminantAnalysis().fit(train_val,train_lab)
+				probs = classif.predict_proba(second[["HSR","N"]].values.tolist())
+				for index,rel in enumerate(self.second):
+					second[rel] = [p[index] for p in probs]
+				out_file = open("%s_performance.txt" % out,"w")
+				for rels in self.second:
+					rel_pairs = second[second["REL"] == rels]
+					tot = rel_pairs.shape[0]
+					incorrect = rel_pairs[rel_pairs[self.second].idxmax(axis=1) != rels][rel_pairs[self.second].idxmax(axis=1)].values.tolist()
+					num_incorrect = len(incorrect)
+					print(incorrect)
+					incorrect = {i:incorrect.count(i) for i in self.second}
+					out_file.write("%s:\nTotal pairs: %s\nIncorrect pairs: %s\n" % (rels,tot,num_incorrect))
+					out_file.write("AV: %s\nGP: %s\nMHS: %s\nPHS: %s\n\n" % (incorrect["AV"],incorrect["GP"],incorrect["MHS"],incorrect["PHS"]))
+				out_file.close()
 		data = Data(king_df,relative_df,hap_df,threshold,gp_gap,mhs_gap)
 		data.run()
+		data.validation(pars["out"])
 
 	#Step 1: check files
 	pars,run_type = init(sys.argv[-1])

@@ -100,7 +100,7 @@ class Pedigree:
         return out_list
 
     def add_king(self,king_file):
-        self.king = pd.read_table(king_file,sep="\t")
+        self.king = pd.read_csv(king_file,sep="\t")
         self.pair_ID(self.king,["ID1","ID2"])
         self.add_mz_twins(self.king[self.king["InfType"] == "Dup/MZ"]["PAIR_ID"].values.tolist())
         self.king["DUP1"] = self.king["ID1"].isin(self.mz_twins)
