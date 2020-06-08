@@ -181,7 +181,8 @@ def main():
 	#Step 4: create ped structure; resolve amb sibships, add missing parents, creates 2 df: king_df, rel_df
 	sys.stdout.write("Building pedigree graphs...")
 	pedigree = graphs.Pedigree()
-	pedigree.run_PONDEROSA(pars["king_file"],pars["fam_file"],pars["out"])
+	errors = pedigree.run_PONDEROSA(pars["king_file"],pars["fam_file"],pars["out"],pars["trust_fs"])
+	log.write_errors(errors)
 	relative_df = pedigree.get_rels()
 	king_df = pedigree.get_king()
 	log.mz_twins(pedigree.get_mz_twins())

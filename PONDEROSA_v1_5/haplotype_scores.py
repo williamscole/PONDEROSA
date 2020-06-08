@@ -108,7 +108,7 @@ def get_hap_score(relative_list,par_file,hap_file):
         genotype_data = GenotypeData(map_file,ped_file,chrm)
 
         def create_match_df(relative_list):
-            match = pd.read_table(match_file.replace("chr1","chr%s" % chrm),delim_whitespace=True,header=None)
+            match = pd.read_csv(match_file.replace("chr1","chr%s" % chrm),delim_whitespace=True,header=None)
             match["IID1"] = match[1].apply(lambda x: x[:-2])
             match["IID2"] = match[3].apply(lambda x: x[:-2])
             match["PAIR_ID"] = match[["IID1","IID2"]].min(axis=1) + "_" + match[["IID1","IID2"]].max(axis=1)

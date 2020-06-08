@@ -44,6 +44,9 @@ class Pedigree:
                        3:["The following PO pairs have been inferred by KING but are not reported in the .fam file.\n"],
                        4:["KING found the following MZ twins. The twin on the left has been replaced by the twin on the right.\n"]}
 
+        #Type 1 error is critical and exits PONDEROSA; type 2 is added to log file but does not stop running
+        self.errors = {1:[],2:[]}
+
 
     def pair_ID(self,df,iids=["IID1","IID2"]):
         df["MAXID"] = df[iids].max(axis=1)
@@ -78,12 +81,9 @@ class Pedigree:
             parent = []
         return parent
 
-    def add_error(self,error_msg,error_type):
-        if error_type == 1:
-            sys.stdout.write("WARNING: Not enough training pairs. Try rerunning with --king_fs flag\nExiting PONDEROSA...")
-            sys.exit()
-        else:
-            self.errors[error_type].append(error_msg)
+    def add_error(self,error_msg,pairs,error_type):
+        if error_type == 1 or pairs != []:
+            self.errors[error_type].append([error_msg,pairs])
 
     def add_mz_twins(self,twin_list):
         twin_list = [twins.split("_") for twins in twin_list]
@@ -211,7 +211,7 @@ class Pedigree:
                         analyze_rels(self.get_relationships(self.get_coord(rel_type)[1:],parent[0],parent))
         return out_list
 
-    def resolve_siblings(self,trust_fs=True):
+    def resolve_siblings(self,trust_fs):
         '''In phase 1, we assume that there are FS with 1 (or more) missing parents. Thus,
         absence of a lineage does not necessarily mean sibs are HS. This function finds FS with BOTH lineages
         and sibs with one lineage and where the other lineage does NOT connect so are HS. It then
@@ -249,21 +249,23 @@ class Pedigree:
             unresolved_pairs = all_siblings[all_siblings["NUMERIC_TYPE"] == 2][["IID1","IID2"]].values.tolist()
             unresolved_ibd = all_siblings[all_siblings["NUMERIC_TYPE"] == 2][["IBD1","IBD2"]].values.tolist()
 
-            #create training arrays and LDA
-            training = all_siblings[all_siblings["NUMERIC_TYPE"] != 2]
-            train_labs,train_vals = training["NUMERIC_TYPE"].values.tolist(),training[["IBD1","IBD2"]].values.tolist()
-            #need at least 1 per category to train the classifier
-            if train_labs.count(0) == 0 or train_labs.count(1) == 0 or len(unresolved_pairs) == 0:
-                print("ERROR")
-            classif = LinearDiscriminantAnalysis().fit(train_vals,train_labs)
-
-            #predict whether each sibship is FS or HS
-            predicted_rels = classif.predict(unresolved_ibd)
-            predicted_rels = [[unresolved_pairs[i][0],unresolved_pairs[i][1],predicted_rels[i]] for i in range(len(unresolved_pairs))]
-
-            #generate list of FS pairs
             fs_pairs = all_siblings[all_siblings["NUMERIC_TYPE"] == 0][["IID1","IID2"]].values.tolist()
-            fs_pairs += [[sibs[0],sibs[1]] for sibs in predicted_rels if sibs[2] == 0]
+
+            if len(unresolved_pairs) > 0:
+                #create training arrays and LDA
+                training = all_siblings[all_siblings["NUMERIC_TYPE"] != 2]
+                train_labs,train_vals = training["NUMERIC_TYPE"].values.tolist(),training[["IBD1","IBD2"]].values.tolist()
+
+                if train_labs.count(0) == 0 or train_labs.count(1) == 0:
+                    self.add_error("Sparse pedigree warning: not enough training pairs. Try rerunning with king_fs as True\n",[],1)
+                    return
+
+                classif = LinearDiscriminantAnalysis().fit(train_vals,train_labs)
+
+                #predict whether each sibship is FS or HS
+                predicted_rels = classif.predict(unresolved_ibd)
+                predicted_rels = [[unresolved_pairs[i][0],unresolved_pairs[i][1],predicted_rels[i]] for i in range(len(unresolved_pairs))]
+                fs_pairs += [[sibs[0],sibs[1]] for sibs in predicted_rels if sibs[2] == 0]
             
         '''Here creating a list of all full sib sets (i.e. where every set is FS) to make sure they have parents/
         have same parents'''
@@ -296,16 +298,18 @@ class Pedigree:
             #returns list with parent 0th index and duplicate parents in 1st index (if any)
             return parent
 
+        error_pairs = []
         for sets in fs_sets:
             dad = resolve_parents([self.get_parent(sibs,1) for sibs in sets])
             mom = resolve_parents([self.get_parent(sibs,2) for sibs in sets])
             if dad[1] != [] or mom[1] != []:
-                self.add_error(" ".join(sets)+"\n",2)
+                error_pairs.append(sets)
                 continue
             dad,mom = dad[0],mom[0]
             for sibs in sets:
                 self.add_po(dad,sibs,1)
                 self.add_po(mom,sibs,2)
+        self.add_error("The following FS sets have different parents. The problem has been ignored but please double check.\n",error_pairs,2)
 
     #Creates a pandas table of all pedigree relationships present in the structure at the time of running it
     def get_all_pairs(self):
@@ -333,8 +337,7 @@ class Pedigree:
         king_po = self.king[self.king["KINGINF"] == "PO"]["PAIR_ID"].values.tolist()
         fam_po = self.relatives[(self.relatives["REL"] == "PO") & (self.relatives["GTD"] == True)]["PAIR_ID"].values.tolist()
         missing = [[pairs.split("_")[0],pairs.split("_")[1]] for pairs in king_po if pairs not in fam_po]
-        for pairs in missing:
-            self.add_error(" ".join(pairs)+"\n",3)
+        self.add_error("The following PO pairs have been inferred by KING but are not reported in the .fam file.\n",missing,2)
 
     def get_king(self):
         return self.king
@@ -349,17 +352,13 @@ class Pedigree:
         with open("%s_pairs.txt" % out,"w") as outfile:
             outfile.write(self.relatives.to_string(index=False,na_rep="NA"))
 
-    def out_errors(self):
-        for i in range(2,5):
-            if len(self.errors[i]) > 1:
-                for errors in self.errors[i]:
-                    print(errors)
-
-    def run_PONDEROSA(self,king_file,fam_file,out):
+    def run_PONDEROSA(self,king_file,fam_file,out,trust_fs):
         self.add_king(king_file)
         self.make_from_fam(fam_file)
-        self.resolve_siblings()
+        self.resolve_siblings(trust_fs)
         self.get_all_pairs()
         self.print_out(out)
+        self.check_po()
+        return self.errors
 
 

@@ -115,8 +115,22 @@ class LogFile:
 
     def write_log(self):
         time_elapsed = round(time.time() - time.time(),1)
-        self.write("\nTime elapsed: %s\n" % time_elapsed)
+        self.write("\nTime elapsed: %s\n\n" % time_elapsed)
         self.logfile.close()
+
+    def write_errors(self,error_dict):
+        if error_dict[2] != []:
+            self.write("\nNon-critical errors detected. Please double check.\n")
+            for errors in error_dict[2]:
+                self.write(errors[0])
+                for pairs in errors[1]:
+                    self.write("\t"+" ".join(pairs) + "\n")
+        for errors in error_dict[1]:
+            self.write("Critical errors detected.\n")
+            self.write(errors[0])
+            self.write_log()
+            sys.stdout.write("\nCritical error detected. See log file.\nExiting PONDEROSA...\n")
+            sys.exit()
 
 
 
