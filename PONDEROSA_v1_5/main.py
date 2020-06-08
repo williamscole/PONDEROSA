@@ -99,12 +99,13 @@ def main():
 				self.putative["SECOND_PROB"] = self.putative.apply(lambda x: classif.predict_proba([[x.IBD1,x.IBD2]])[0][0],axis=1)
 				self.putative = self.putative[self.putative["SECOND_PROB"] > threshold]
 
-			def classify_second(self):
-				train_val,train_lab = self.get_training(self.training[self.training["DEGREE"]=="2nd"],"REL",["HSR","N"])
+			def classify_second(self,train_df,put_df):
+				train_val,train_lab = self.get_training(train_df[train_df["DEGREE"]=="2nd"],"REL",["HSR","N"])
 				classif = LinearDiscriminantAnalysis().fit(train_val,train_lab)
-				probs = classif.predict_proba(self.putative[["HSR","N"]].values.tolist())
+				probs = classif.predict_proba(put_df[["HSR","N"]].values.tolist())
 				for index,rel in enumerate(self.second):
-					self.putative[rel] = [p[index] for p in probs]
+					put_df[rel] = [p[index] for p in probs]
+				return put_df
 
 			def set_zero(self,col,df): #where condition is true, sets the probability to 0
 				df[col] = np.where(df["CONDITION"],0,df[col])
@@ -140,7 +141,7 @@ def main():
 
 			def run(self):
 				self.find_putative()
-				self.classify_second()
+				self.putative = self.classify_second(self.training,self.putative)
 				self.putative = resolve_generations(self.putative,pars["age_file"],"YOUNGER","OLDER",pars["out"])
 				self.parent(self.putative)
 				self.ages(self.putative)
@@ -148,31 +149,22 @@ def main():
 				self.write_out(pars["out"],self.putative)
 
 			def validation(self,out):
-				second = self.training[self.training["DEGREE"]=="2nd"].copy()
+				second_test = self.training[self.training["DEGREE"]=="2nd"].copy()
+				second_test = self.classify_second(self.training,second_test)
+				second_test["PREDICTED"] = second_test[self.second].idxmax(axis=1)
 				with open("%s_training_data.txt" % out,"w") as outfile:
 					outfile.write(self.training.to_string(index=False,na_rep="NA"))
-				train_val,train_lab = self.get_training(second,"REL",["HSR","N"])
-				classif = LinearDiscriminantAnalysis().fit(train_val,train_lab)
-				probs = classif.predict_proba(second[["HSR","N"]].values.tolist())
-				for index,rel in enumerate(self.second):
-					second[rel] = [p[index] for p in probs]
-				out_file = open("%s_performance.txt" % out,"w")
-				for rels in self.second:
-					rel_pairs = second[second["REL"] == rels]
-					tot = rel_pairs.shape[0]
-					incorrect = rel_pairs[rel_pairs[self.second].idxmax(axis=1) != rels][rel_pairs[self.second].idxmax(axis=1)].values.tolist()
-					num_incorrect = len(incorrect)
-					print(incorrect)
-					incorrect = {i:incorrect.count(i) for i in self.second}
-					out_file.write("%s:\nTotal pairs: %s\nIncorrect pairs: %s\n" % (rels,tot,num_incorrect))
-					out_file.write("AV: %s\nGP: %s\nMHS: %s\nPHS: %s\n\n" % (incorrect["AV"],incorrect["GP"],incorrect["MHS"],incorrect["PHS"]))
-				out_file.close()
+				log.validation(second_test)
+
 		data = Data(king_df,relative_df,hap_df,threshold,gp_gap,mhs_gap)
 		data.run()
 		data.validation(pars["out"])
 
 	#Step 1: check files
 	pars,run_type = init(sys.argv[-1])
+
+	#Init log file
+	log = check.LogFile(pars,run_type)
 
 	#Step 2: compute hap scores
 	hap_df = run_hapscores(pars["king_file"],pars["hap_file"])
@@ -192,6 +184,8 @@ def main():
 	pedigree.run_PONDEROSA(pars["king_file"],pars["fam_file"],pars["out"])
 	relative_df = pedigree.get_rels()
 	king_df = pedigree.get_king()
+	log.mz_twins(pedigree.get_mz_twins())
+	log.relative_pairs(relative_df)
 	sys.stdout.write("\rBuilding pedigree graphs...done\n")
 
 	#Quit program if ped only
@@ -202,7 +196,12 @@ def main():
 	sys.stdout.write("Finding and inferring 2nd degree pairs...")
 	infer_second(king_df,relative_df,hap_df,float(pars["likelihood"]),int(pars["gp_gap"]),int(pars["mhs_gap"]))
 	sys.stdout.write("\rFinding and inferring 2nd degree pairs...done\n")
-		
+
+	#Finish
+	sys.stdout.write("Writing log...")
+	log.write_log()
+	sys.stdout.write("\rWriting log...done\n")
+
 main()
 
 	

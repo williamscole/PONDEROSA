@@ -86,10 +86,11 @@ class Pedigree:
             self.errors[error_type].append(error_msg)
 
     def add_mz_twins(self,twin_list):
-        twin_list = [[twins.split("_")[0],twins.split("_")[1]] for twins in twin_list]
+        twin_list = [twins.split("_") for twins in twin_list]
         self.mz_twins = dict(twin_list)
-        for twins in self.mz_twins:
-            self.add_error("%s --> %s\n" % (twins,self.mz_twins[twins]),4)
+
+    def get_mz_twins(self):
+        return self.mz_twins
 
     def check_mz(self,iid_list):
         out_list = []

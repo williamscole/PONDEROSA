@@ -1,5 +1,9 @@
 import os.path
 import sys
+import pandas as pd
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+import time
+import datetime
 
 def start_up(parameter_dict,file_dict,run_type):
     def logo():
@@ -82,3 +86,40 @@ def start_up(parameter_dict,file_dict,run_type):
     sys.stdout.write("\nChecking files...done\n")
     locate_files()
     return {**parameter_dict,**file_dict}
+
+class LogFile:
+    def __init__(self,parameters,run_type):
+        self.start_time = time.time()
+        self.logfile = open("%s.log" % parameters["out"],"w")
+        self.logfile.write("PONDEROSA v1.5\n\n%s\n" % datetime.datetime.now())
+        self.logfile.write("\nRun type: %s\n\nParameters/files provided:\n" % run_type)        
+        for pars in list(dict.fromkeys(parameters)):
+            self.logfile.write("\t%s: %s\n" % (pars,parameters[pars]))
+
+    def write(self,line):
+        self.logfile.write(line)
+
+    def validation(self,second_df):
+        pass
+
+    def mz_twins(self,twins):
+        if twins != {}:
+            self.write("\nMZ twins present. PONDEROSA collapses MZ twins into one individual.\n")
+            self.write("The ID on the left has been replaced by the ID on the right.\n")
+            for iid in twins:
+                self.write("%s %s\n" % (iid,twins[iid]))
+
+    def relative_pairs(self,rel_df):
+        pass
+
+
+    def write_log(self):
+        time_elapsed = round(time.time() - time.time(),1)
+        self.write("\nTime elapsed: %s\n" % time_elapsed)
+        self.logfile.close()
+
+
+
+
+
+
