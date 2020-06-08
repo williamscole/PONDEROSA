@@ -224,7 +224,7 @@ class Pedigree:
         king_fs = self.king[self.king["KINGINF"] == "FS"]["PAIR_ID"].values.tolist()
         king_fs = [[sibs.split("_")[0],sibs.split("_")[1],"UNK"] for sibs in king_fs]
 
-        if trust_fs:
+        if trust_fs == "True":
             fs_pairs = king_fs
         else:
             #all siblings from the pedigree structure
@@ -250,7 +250,6 @@ class Pedigree:
             unresolved_ibd = all_siblings[all_siblings["NUMERIC_TYPE"] == 2][["IBD1","IBD2"]].values.tolist()
 
             fs_pairs = all_siblings[all_siblings["NUMERIC_TYPE"] == 0][["IID1","IID2"]].values.tolist()
-
             if len(unresolved_pairs) > 0:
                 #create training arrays and LDA
                 training = all_siblings[all_siblings["NUMERIC_TYPE"] != 2]
