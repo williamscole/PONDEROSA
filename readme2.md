@@ -23,28 +23,28 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 | **run_all** | Will run the entirety of PONDEROSA.|
 
 
-##### _File options_  
-| Flag | Description | Needed for run types | 
+##### _Required files_  
+| Flag | Description | Required for | 
 | ---- | ----------- | -------------------- |
 |**king_file** | KING .seg file (or any .seg-formatted IBD file). | **po_only**, **ped_only**, **run_all** |
 |**map_file** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. Note that PONDEROSA expects a .map file for each chromosome but only one **--map** flag (see example script). This .map file must be the same .map file used to generate IBD segments. | **po_only**, **run_all** |
 |**fam_file** | PLINK-formatted .fam file. All PO present in the KING file must be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA can be run and the haplotype scores of the individuals can be used to make the distinction. | **ped_only**, **run_all** |
 |**match_file** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. Again, PONDEROSA expects a .match file for each chromosome but only one **--match** flag (see example script). If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.| **po_only**, **run_all** |
-|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **--cm_gap** flag) of each other and have, at most, one discordant homozygote (can be changed with **--disc_homoz** flag).| **po_only**, **run_all** (both optional) |
-|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. | **po_only**, **run_all** (both optional) |
-|**hap_file** | If PONDEROSA has already been run (either with **po_only** or **run_all**), supplying the haplotype score file here will skip the haplotype score calculation step. Will drastically reduce computation time. | **run_all** (optional) |
 
-
-
-
+##### _Optional files_
+| Flag | Description | Optional for | 
+| ---- | ----------- | ------------ |
+|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **--cm_gap** flag) of each other and have, at most, one discordant homozygote (can be changed with **--disc_homoz** flag).| **po_only**, **run_all**|
+|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. | **po_only**, **run_all**|
+|**hap_file** | If PONDEROSA has already been run (either with **po_only** or **run_all**), supplying the haplotype score file here will skip the haplotype score calculation step. Will drastically reduce computation time. | **run_all**|
 
 ##### _Parameters_  
 | Flag | Description |
 | ---- | ----------- |
 |**out** | Output file prefix.|
 |**num_chr** | Number of autosomes.|
-|**cm_gap** | Maximum gap in cM between IBD segments for them to be considered a single segment (see **--ped** flag for more detail).|
-|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **--ped** flag for more detail). Only use if **--ped file** is used.|  
+|**cm_gap** | Maximum gap in cM between IBD segments for them to be considered a single segment (see **ped_file** for more detail).|
+|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **ped_file** for more detail). Only use if **ped file** is provided.|  
 |**likelihood** | Minimum likelihood (0.5 - 1) required for a pair to be inferred as a 2nd degree pair. We recommend being more conservative here.|  
 |**mhs_gap** | Maximum age-gap for maternal half-siblings. If you do not want PONDEROSA to consider age here, use an arbitrarily large age gap (e.g. 100).|
 |**po_gap** | Minimum age-gap for parent-offspring. If you do not want PONDEROSA to consider age here, use 0 for this flag.|
