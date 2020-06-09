@@ -24,19 +24,23 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 
 
 ##### _Required files_  
-| Flag | Description | Required for | 
-| ---- | ----------- | -------------------- |
-|**king_file** | KING .seg file (or any .seg-formatted IBD file). | **po_only**, **ped_only**, **run_all** |
-|**map_file** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. Note that PONDEROSA expects a .map file for each chromosome but only one **--map** flag (see example script). This .map file must be the same .map file used to generate IBD segments. | **po_only**, **run_all** |
-|**fam_file** | PLINK-formatted .fam file. All PO present in the KING file must be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA can be run and the haplotype scores of the individuals can be used to make the distinction. | **ped_only**, **run_all** |
-|**match_file** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. Again, PONDEROSA expects a .match file for each chromosome but only one **--match** flag (see example script). If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used, but PONDEROSA’s **\-\-ilash** flag must be used.| **po_only**, **run_all** |
+Depending on the run type, the following files may be required. See the 3rd column.
+| Run type | Required files | Optional files |
+| -------- | -------------- | -------------- |
+| **po_only** | king_file, map_file, match_file** | ped_file, age_file** |   
+| **ped_only** | king_file, fam_file | |  
+| **run_all** | king_file, map_file, match_file**, fam_file | ped_file, age_file, hap_file |
 
-##### _Optional files_
-| Flag | Description | Optional for | 
-| ---- | ----------- | ------------ |
-|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **--cm_gap** flag) of each other and have, at most, one discordant homozygote (can be changed with **--disc_homoz** flag).| **po_only**, **run_all**|
-|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. | **po_only**, **run_all**|
-|**hap_file** | If PONDEROSA has already been run (either with **po_only** or **run_all**), supplying the haplotype score file here will skip the haplotype score calculation step. Will drastically reduce computation time. | **run_all**|
+##### _File descriptors_
+| Flag | Description |
+| ---- | ----------- |
+|**king_file** | KING .seg file (or any .seg-formatted IBD file).
+|**map_file** | PLINK-formatted .map file. The chromosome number should be replaced with “%s”. Note that PONDEROSA expects a .map file for each chromosome but only one **--map** flag (see example script). This .map file must be the same .map file used to generate IBD segments.
+|**fam_file** | PLINK-formatted .fam file. All PO present in the KING file must be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA can be run and the haplotype scores of the individuals can be used to make the distinction. 
+|**match_file** | GERMLINE-formatted match file where the chromosome number is replaced with “%s”. Again, PONDEROSA expects a .match file for each chromosome but only one **--match** flag (see example script). If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used and will be detected by PONDEROSA.
+|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **--cm_gap** flag) of each other and have, at most, one discordant homozygote (can be changed with **--disc_homoz** flag).|
+|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
+|**hap_file** | If PONDEROSA has already been run (either with **po_only** or **run_all**), supplying the haplotype score file here will skip the haplotype score calculation step. Will drastically reduce computation time. |
 
 ##### _Parameters_  
 | Flag | Description |
