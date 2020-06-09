@@ -14,7 +14,7 @@ Running PONDEROSA from the command line is easy, requiring only a parameter file
 `python3.6 PONDEROSA.py [par_file]`
 ### **Parameter file**
 The template for the parameter file is provided (**par_file.txt**).  
-##### _Run type_. 
+##### _Run type_ 
 PONDEROSA has three different run types. Only one can be True; the other two must be False.  
 | Run type | Description |
 | -------- | ----------- |
@@ -26,11 +26,11 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
-| **po_only** | king_file, map_file, match_file** | ped_file, age_file |   
+| **po_only** | king_file, map_file, match_file | ped_file, age_file |   
 | **ped_only** | king_file, fam_file | |  
-| **run_all** | king_file, map_file, match_file**, fam_file | ped_file, age_file, hap_file |
+| **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
-##### _File descriptors_
+##### _File descriptions_
 The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/.
 | Flag | Description |
 | ---- | ----------- |
