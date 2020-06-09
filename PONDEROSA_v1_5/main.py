@@ -184,6 +184,7 @@ def main():
 
 	#Quit program if po only
 	if run_type == "po_only":
+		log.write_log()
 		sys.exit()
 
 	#Step 4: create ped structure; resolve amb sibships, add missing parents, creates 2 df: king_df, rel_df
@@ -199,6 +200,7 @@ def main():
 
 	#Quit program if ped only
 	if run_type == "ped_only":
+		log.write_log()
 		sys.exit()
 
 	#Step 5: infer second deg pairs
