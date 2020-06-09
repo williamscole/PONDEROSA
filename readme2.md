@@ -30,7 +30,7 @@ Each run type uses and requires different files. See below.
 | **ped_only** | king_file, fam_file | |  
 | **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
-##### _File descriptors_
+##### _File descriptions_
 The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/.
 | Flag | Description |
 | ---- | ----------- |
