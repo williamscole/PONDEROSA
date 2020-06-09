@@ -17,7 +17,7 @@ def main():
 		return pars,run_type
 
 	def run_hapscores(kingf,hap_file):
-		relative_list = [[lines.split()[1],lines.split()[3]] for lines in open(kingf).readlines()[1:]]
+		relative_list = [[lines.split()[1],lines.split()[3]] for lines in open(kingf).readlines()[1:] if float(lines.split()[6]) > 0.30]
 		relative_list = [min(pair) + "_" + max(pair) for pair in relative_list]
 		return hap.get_hap_score(relative_list,pars,hap_file)
 
@@ -172,13 +172,15 @@ def main():
 	#Init log file
 	log = check.LogFile(pars,run_type)
 
-	#Step 2: compute hap scores
-	hap_df = run_hapscores(pars["king_file"],pars["hap_file"])
+	#Skip hap score computation if ped only
+	if run_type in ["po_only","run_all"]:
+		#Step 2: compute hap scores
+		hap_df = run_hapscores(pars["king_file"],pars["hap_file"])
 
-	#Step 3: analyze PO pairs
-	sys.stdout.write("Analyzing PO pairs...")
-	po_analysis(hap_df,pars["age_file"],pars["out"])
-	sys.stdout.write("\rAnalyzing PO pairs...done\n")
+		#Step 3: analyze PO pairs
+		sys.stdout.write("Analyzing PO pairs...")
+		po_analysis(hap_df,pars["age_file"],pars["out"])
+		sys.stdout.write("\rAnalyzing PO pairs...done\n")
 
 	#Quit program if po only
 	if run_type == "po_only":
