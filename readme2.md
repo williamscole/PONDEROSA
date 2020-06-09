@@ -22,9 +22,8 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 | **ped_only** | PONDEROSA will output all pairwise relationships present in the .fam file provided.|  
 | **run_all** | Will run the entirety of PONDEROSA.|
 
-
 ##### _Required files_  
-Depending on the run type, the following files may be required. See the 3rd column.
+Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
 | **po_only** | king_file, map_file, match_file** | ped_file, age_file** |   
@@ -32,6 +31,7 @@ Depending on the run type, the following files may be required. See the 3rd colu
 | **run_all** | king_file, map_file, match_file**, fam_file | ped_file, age_file, hap_file |
 
 ##### _File descriptors_
+The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/.
 | Flag | Description |
 | ---- | ----------- |
 |**king_file** | KING .seg file (or any .seg-formatted IBD file).
