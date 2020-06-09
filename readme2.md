@@ -14,7 +14,7 @@ Running PONDEROSA from the command line is easy, requiring only a parameter file
 `python3.6 PONDEROSA.py [par_file]`
 ### **Parameter file**
 The template for the parameter file is provided (**par_file.txt**).  
-##### _Run type_. 
+##### _Run type_ 
 PONDEROSA has three different run types. Only one can be True; the other two must be False.  
 | Run type | Description |
 | -------- | ----------- |
