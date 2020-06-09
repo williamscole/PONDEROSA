@@ -114,12 +114,12 @@ class LogFile:
 
 
     def write_log(self):
-        time_elapsed = round(time.time() - time.time(),1)
+        time_elapsed = round(time.time() - self.start_time,1)
         self.write("\nTime elapsed: %s\n\n" % time_elapsed)
         self.logfile.close()
 
     def write_errors(self,error_dict):
-        if error_dict[2] != []:
+        if 2 in error_dict and error_dict[2] != []:
             self.write("\nNon-critical errors detected. Please double check.\n")
             for errors in error_dict[2]:
                 self.write(errors[0])

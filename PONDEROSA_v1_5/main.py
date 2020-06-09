@@ -31,6 +31,7 @@ def main():
 				age_data = {lines.split()[0]:int(lines.split()[1]) for lines in open(agef).readlines()}
 			df["AGE1"],df["AGE2"] = df["IID1"].map(age_data),df["IID2"].map(age_data)
 			df["USE_H"] = df["AGE1"].isna() | df["AGE2"].isna()
+			df["USE_H"] = np.where(df["AGE1"]==df["AGE2"],True,df["USE_H"])
 
 		def resolve_h(df):
 			hap_data = df[["IID1","H1","IID2","H2"]].values.tolist()
@@ -48,7 +49,7 @@ def main():
 			return df
 
 		add_age(df)
-		w_age = resolve_age(df.copy()[df["USE_H"]==False])
+		w_age = resolve_age(df.copy()[~df["USE_H"]])
 		wo_age = resolve_h(df.copy()[df["USE_H"]])
 		df = pd.concat([w_age,wo_age]).drop("USE_H",axis=1)
 		return df
@@ -89,18 +90,25 @@ def main():
 				self.gp_gap = gp_gap
 				self.mhs_gap = mhs_gap
 
+			def check_error(self,train_lab,lab_types,error_msg):
+				for labs in lab_types:
+					if train_lab.count(labs) == 0:
+						log.write_errors({1:[["Not enough %s pairs to train %s classifier" % (labs,error_msg),[]]]})
+
 			def get_training(self,df,lab_type,val_list):
 				vals,labs = df[val_list].values.tolist(),df[lab_type].values.tolist()
 				return vals,labs
 
 			def find_putative(self):
 				train_val,train_lab = self.get_training(self.training,"DEGREE",["IBD1","IBD2"])
+				self.check_error(train_lab,["2nd","3rd"],"degree")
 				classif = LinearDiscriminantAnalysis().fit(train_val,train_lab)
 				self.putative["SECOND_PROB"] = self.putative.apply(lambda x: classif.predict_proba([[x.IBD1,x.IBD2]])[0][0],axis=1)
 				self.putative = self.putative[self.putative["SECOND_PROB"] > threshold]
 
 			def classify_second(self,train_df,put_df):
 				train_val,train_lab = self.get_training(train_df[train_df["DEGREE"]=="2nd"],"REL",["HSR","N"])
+				self.check_error(train_lab,["AV","MHS","PHS","GP"],"2nd degree")
 				classif = LinearDiscriminantAnalysis().fit(train_val,train_lab)
 				probs = classif.predict_proba(put_df[["HSR","N"]].values.tolist())
 				for index,rel in enumerate(self.second):
@@ -123,10 +131,8 @@ def main():
 
 			def parent(self,df): #constrain HS rels with parent data
 				for i,rel in enumerate(["PHS","MHS"]):
-					for iid in ["IID1","IID2"]:
-						df["CONDITION"] = df[iid].apply(lambda x: pedigree.get_parent(x,i+1)).str[0]
-						df["CONDITION"] = ~(df["CONDITION"].isna() | df["CONDITION"].str.contains("Missing"))
-						self.set_zero(rel,df)
+					df["CONDITION"] = df.apply(lambda x: pedigree.ruleout_hs(x.IID1,x.IID2,i+1),axis=1)
+					self.set_zero(rel,df)
 
 			def av_error(self,h1,age1,h2,age2):
 				return {age1:h1,age2:h2}[max(age1,age2)] > {age1:h1,age2:h2}[min(age1,age2)]

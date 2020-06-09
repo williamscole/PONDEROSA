@@ -38,15 +38,10 @@ class Pedigree:
         self.rel_to_deg = { "PO":"PO","FS":"FS",
                             "PHS":"2nd","MHS":"2nd","GP":"2nd","AV":"2nd",
                             "CO":"3rd","GGP":"3rd","HAV":"3rd",
-                            "HCO":"4th"}
-
-        self.errors = {2:["The following FS sets have different parents. The problem has been ignored but please double check.\n"],
-                       3:["The following PO pairs have been inferred by KING but are not reported in the .fam file.\n"],
-                       4:["KING found the following MZ twins. The twin on the left has been replaced by the twin on the right.\n"]}
+                            "HCO":"4th","GGGP":"4th"}
 
         #Type 1 error is critical and exits PONDEROSA; type 2 is added to log file but does not stop running
         self.errors = {1:[],2:[]}
-
 
     def pair_ID(self,df,iids=["IID1","IID2"]):
         df["MAXID"] = df[iids].max(axis=1)
@@ -104,9 +99,9 @@ class Pedigree:
         self.king = pd.read_csv(king_file,sep="\t")
         self.pair_ID(self.king,["ID1","ID2"])
         self.add_mz_twins(self.king[self.king["InfType"] == "Dup/MZ"]["PAIR_ID"].values.tolist())
-        self.king["DUP1"] = self.king["ID1"].isin(self.mz_twins)
-        self.king["DUP2"] = self.king["ID2"].isin(self.mz_twins)
-        self.king = self.king[(self.king["DUP1"] == False) & (self.king["DUP2"] == False)]
+        self.king["DUP"] = self.king["ID1"].isin(self.mz_twins) | self.king["ID2"].isin(self.mz_twins)
+        self.king = self.king[~self.king["DUP"]]
+        self.gtd = list(dict.fromkeys(self.king["ID1"].values.tolist() + self.king["ID1"].values.tolist()))
         self.king = self.king.iloc[:,[12,6,7,8,9]]
         self.king.columns = ["PAIR_ID","IBD1","IBD2","PIHAT","KINGINF"]
 
@@ -141,11 +136,10 @@ class Pedigree:
                 return_rels += [rel for rel in rel_l if (direction == 1 or rel not in stop_list)]
         return return_rels
 
-
-    def get_lineal(self,stop=5):
+    def get_lineal(self,stop=4):
         out_list = []
         for iid in self.ind_list:
-            if stop == 5:
+            if stop == 4:
                 out_list += [[iid,self.get_parent(iid,sex)[0],"PO"] for sex in [1,2] if self.get_parent(iid,sex) != []]
             for gen in range(1,stop):
                 coord = [1 for i in range(1,gen+2)]
@@ -221,12 +215,15 @@ class Pedigree:
 
         '''king_fs TRUE if there are no FS in dataset with both parents; used when pedigree structure is sparse.
         king_fs list contains all pairs inferred by KING as FS'''
-        king_fs = self.king[self.king["KINGINF"] == "FS"]["PAIR_ID"].values.tolist()
-        king_fs = [[sibs.split("_")[0],sibs.split("_")[1],"UNK"] for sibs in king_fs]
-
         if trust_fs == "True":
-            fs_pairs = king_fs
+            king_fs = self.king[(self.king["KINGINF"] == "FS") & (self.king["IBD2"] > 0.15)]["PAIR_ID"].values.tolist()
+            fs_pairs = [[sibs.split("_")[0],sibs.split("_")[1],"FS"] for sibs in king_fs]
+            low_IBD2 = self.king[(self.king["KINGINF"] == "FS") & (self.king["IBD2"] <= 0.15)]["PAIR_ID"].values.tolist()
+            self.add_error("KING has inferred the following as FS, but have low IBD2 values (< 0.15):\n",[pairs.split("_") for pairs in low_IBD2],2)
         else:
+            king_fs = self.king[self.king["KINGINF"] == "FS"]["PAIR_ID"].values.tolist()
+            king_fs = [sibs.split("_")+["UNK"] for sibs in king_fs]
+
             #all siblings from the pedigree structure
             av_pairs = [rels for rels in self.get_sibling_rels("AV") if rels[2] == "AV"]
             all_siblings = self.get_sibling_rels("FS",1) + av_pairs + self.get_lineal(2)
@@ -254,7 +251,6 @@ class Pedigree:
                 #create training arrays and LDA
                 training = all_siblings[all_siblings["NUMERIC_TYPE"] != 2]
                 train_labs,train_vals = training["NUMERIC_TYPE"].values.tolist(),training[["IBD1","IBD2"]].values.tolist()
-
                 if train_labs.count(0) == 0 or train_labs.count(1) == 0:
                     self.add_error("Sparse pedigree warning: not enough training pairs. Try rerunning with king_fs as True\n",[],1)
                     return
@@ -346,6 +342,14 @@ class Pedigree:
 
     def get_pedigree_structure(self):
         return self.pedigree_structure
+
+    def ruleout_hs(self,iid1,iid2,sex):
+        parent1,parent2 = self.get_parent(iid1,sex),self.get_parent(iid2,sex)
+        for parents in [parent1,parent2]:
+            if parents != [] and parents[0] in self.gtd:
+                return True
+        return False
+
 
     def print_out(self,out):
         with open("%s_pairs.txt" % out,"w") as outfile:
