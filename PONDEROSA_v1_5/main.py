@@ -12,7 +12,7 @@ def main():
 		par_file = [lines.strip() for lines in open(par_file).readlines()]
 		run_type = [lines.split()[0] for lines in par_file[1:4] if "True" in lines][0]
 		parameters = {lines.split()[0]:lines.split()[1] for lines in par_file[15:]}
-		files = {lines.split()[0]:lines.split()[1] for lines in (par_file[6:10] + par_file[12:15])}
+		files = {lines.split()[0]:lines.split()[1] for lines in par_file[6:13]}
 		pars = check.start_up(parameters,files,run_type)
 		return pars,run_type
 
