@@ -7,7 +7,7 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 
 ### **Requirements**
 **python3 or higher**  
-**scikit-learn** and its dependencies (install here: https://scikit-learn.org/stable/install.html). Alternatively, we recommend running python directly from anaconda3, which has all the packages needed to run PONDEROSA (sklearn, numpy, pandas).    
+**scikit-learn** and its dependencies, including numpy and pandas. We recommend running python directly from anaconda3, which has all the packages needed to run PONDEROSA.   
 
 ### **Running PONDEROSA**. 
 Running PONDEROSA from the command line is easy, requiring only a parameter file.    
@@ -26,7 +26,7 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
-| **po_only** | king_file, map_file, match_file** | ped_file, age_file** |   
+| **po_only** | king_file, map_file, match_file** | ped_file, age_file |   
 | **ped_only** | king_file, fam_file | |  
 | **run_all** | king_file, map_file, match_file**, fam_file | ped_file, age_file, hap_file |
 
