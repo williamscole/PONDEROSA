@@ -26,9 +26,9 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
-| **po_only** | king_file, map_file, match_file** | ped_file, age_file |   
+| **po_only** | king_file, map_file, match_file | ped_file, age_file |   
 | **ped_only** | king_file, fam_file | |  
-| **run_all** | king_file, map_file, match_file**, fam_file | ped_file, age_file, hap_file |
+| **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
 ##### _File descriptors_
 The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/.
