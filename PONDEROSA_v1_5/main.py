@@ -66,16 +66,17 @@ def main():
 		class Data:
 			def __init__(self,king,rel,hap_scores,threshold,mhs_gap,gp_gap):
 				#remove outliers; main goal is to remove duplicate ind (who have >1 rel)
-				degrees = ["PO","FS","2nd","3rd"]
+				degrees = ["FS","2nd","3rd"]
+				self.second = ["AV","GP","MHS","PHS"]
 				def remove_outliers(df):
 					df = df[df["GTD"] & df["DEGREE"].isin(degrees)]
-					avg_sd = {}
-					for degree in degrees:
-						mean = stat.mean(df[df["DEGREE"]==degree]["IBD1"])
-						sd = stat.stdev(df[df["DEGREE"]==degree]["IBD1"])
-						avg_sd[degree] = [mean,sd]
-					df = df[df.apply(lambda x: abs(x.IBD1-avg_sd[x.DEGREE][0])/avg_sd[x.DEGREE][1] < 2,axis=1)]
-					df = df.drop_duplicates(subset=["PAIR_ID"])
+					third_df = df[df["DEGREE"]=="3rd"].copy()
+					df = df[df["DEGREE"] != "3rd"]
+					third_mean = stat.mean(third_df["IBD1"])
+					third_sd = stat.stdev(third_df["IBD1"])
+					third_df = third_df[third_df.apply(lambda x: abs((x.IBD1-third_mean)/third_sd) < 2,axis=1)]
+					third_df = third_df[~third_df["PAIR_ID"].isin(df["PAIR_ID"])]
+					df = pd.concat([df,third_df])
 					df = df.drop(["IID1","IID2","IBD1","IBD2","PIHAT","KINGINF","GTD"],axis=1)
 					return df
 
@@ -86,7 +87,6 @@ def main():
 
 				self.training = self.putative[self.putative["DEGREE"].isin(degrees)].copy()
 				self.putative = self.putative[self.putative["DEGREE"].isna()]
-				self.second = ["AV","GP","MHS","PHS"]
 				self.gp_gap = gp_gap
 				self.mhs_gap = mhs_gap
 
