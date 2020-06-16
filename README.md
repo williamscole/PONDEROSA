@@ -31,7 +31,7 @@ Each run type uses and requires different files. See below.
 | **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
 ##### _File descriptions_
-The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/.
+The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/. The file name for optional files that are not supplied should be "None".
 | Flag | Description |
 | ---- | ----------- |
 |**king_file** | KING .seg file (or any .seg-formatted IBD file).
