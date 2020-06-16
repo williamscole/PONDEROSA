@@ -1,4 +1,3 @@
-import check_files as check
 import pandas as pd
 import numpy as np
 import statistics as stat
