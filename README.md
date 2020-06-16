@@ -71,7 +71,7 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | 05 | KING has a low IBD2 threshold for pairs to be considered FS. Pairs listed here have abnormally low IBD2 values for a FS pair, but have been inferred as such by KING. These are unlikely to be real FS pairs, and PONDEROSA will ignore them. |
 
 #### _[out]\_PO.txt_
-
+Pairwise data for parent-offspring present in KING file.  
 | Column | Description |
 | ------ | ----------- |
 | PAIR_ID | Unique pair ID for the PO pair |
@@ -87,6 +87,7 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | STRENGTH | If METHOD is AGE, the difference in age of the PO pair. If METHOD is H, the difference in haplotype scores of the PO pair; PO pairs with a small difference in haplotype scores (i.e. close to 0) cannot be as confidentally oriented. | 
 
 #### _[out]\_pairs.txt_
+Relative pairs present in the .fam file.  
 | Column | Description |
 | ------ | ----------- |
 | PAIR_ID | Unique pair ID for the relative pair |
@@ -101,6 +102,7 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | DEGREE | Degree of relatedness of the pedigree relationship. |
 
 #### _[out]\_second.txt_
+Pairwise data of putative second degree relatives.  
 | Column | Description |
 | ------ | ----------- |
 | PAIR_ID | Unique pair ID for the relative pair |
@@ -116,4 +118,4 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | GP | Probability of pair being AV. |
 | MHS | Probability of pair being AV. |
 | PHS | Probability of pair being AV. |
-| AV_ERROR | True if 1) Pair is inferred as AV 2) Age data disagrees with haplotype data (i.e. the older individual appears to be the niece/nephew). Note that it is possible that a niece/nephew is older than their uncle/aunt. |
+| AV_ERROR | True if 1) Pair is inferred as AV _and_ 2) Age data disagrees with haplotype data (i.e. the older individual appears to be the niece/nephew). Note that it is possible that a niece/nephew is older than their uncle/aunt. |
