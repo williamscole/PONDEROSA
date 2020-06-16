@@ -1,1 +1,0 @@
-python3.6 PONDEROSA_v1.1.py --map Sample/Map_Files/Sample_chr%s.map --ped Sample/Phased_Data/Sample_shapeit.chr%s.ped --king Sample/Misc_Files/Sample_KING.seg --fam Sample/Misc_Files/Sample.fam --match Sample/Segments/Sample_ilash_chr%s.match --ilash --age Sample/Misc_Files/Sample_Ages.txt --out Sample
