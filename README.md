@@ -57,7 +57,7 @@ The following files can be used by PONDEROSA. They must be formatted correctly; 
 
 ### **Output files.** 
 
-#### _[out].log file_ 
+#### _[out].log_ 
 
 Provides information about the PONDEROSA run, including supplied parameters and files, run time, and any errors.  
 
@@ -85,3 +85,16 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | CHILD | IID of the inferred child |
 | METHOD | AGE if age data was used to orient; H if haplotype scores used to orient. |
 | STRENGTH | If METHOD is AGE, the difference in age of the PO pair. If METHOD is H, the difference in haplotype scores of the PO pair; PO pairs with a small difference in haplotype scores (i.e. close to 0) cannot be as confidentally oriented. | 
+
+#### _[out]\_pairs.txt_
+| Column | Description |
+| ------ | ----------- |
+| PAIR_ID | Unique pair ID for the relative pair |
+| IID1 | The IID of the genetically younger individual in a pair (if applicable). For example, a child in a PO pair or niece of an avuncular pair. |
+| IID2 | the IID of the genetically older individual. |
+| REL | Pedigree relationship of the pair. |
+| IBD1 | KING IBD1 value. |
+| IBD2 | KING IBD2 value. |
+| PI_HAT | Total proportion IBD shared. | 
+| KINGINF | KING-inferred degree of relatedness | 
+| DEGREE | Degree of relatedness of the pedigree relationship. |
