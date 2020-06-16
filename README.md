@@ -115,7 +115,7 @@ Pairwise data of putative second degree relatives.
 | HSR | Haplotype score ratio of the pair. |
 | N | Number of IBD segments shared. |
 | AV | Probability of pair being AV. |
-| GP | Probability of pair being AV. |
-| MHS | Probability of pair being AV. |
-| PHS | Probability of pair being AV. |
+| GP | Probability of pair being GP. |
+| MHS | Probability of pair being MHS. |
+| PHS | Probability of pair being PHS. |
 | AV_ERROR | True if 1) Pair is inferred as AV _and_ 2) Age data disagrees with haplotype data (i.e. the older individual appears to be the niece/nephew). Note that it is possible that a niece/nephew is older than their uncle/aunt. |
