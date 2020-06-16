@@ -48,7 +48,7 @@ The following files can be used by PONDEROSA. They must be formatted correctly; 
 |**out** | Output file prefix.|
 |**num_chr** | Number of autosomes.|
 |**cm_gap** | Maximum gap in cM between IBD segments for them to be considered a single segment (see **ped_file** for more detail).|
-|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **ped_file** for more detail). Only use if **ped file** is provided.|  
+|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **ped_file** for more detail). Will ignore if ped file is not provided. |  
 |**likelihood** | Minimum likelihood (0.5 - 1) required for a pair to be inferred as a 2nd degree pair. We recommend being more conservative here.|  
 |**mhs_gap** | Maximum age-gap for maternal half-siblings. If you do not want PONDEROSA to consider age here, use an arbitrarily large age gap (e.g. 100).|
 |**po_gap** | Minimum age-gap for parent-offspring. If you do not want PONDEROSA to consider age here, use 0 for this flag.|
