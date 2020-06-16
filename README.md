@@ -55,13 +55,13 @@ The following files can be used by PONDEROSA. They must be formatted correctly; 
 |**gp_gap** | Minimum age-gap for a grandparent-grandchild pair. Note that if you do not want PONDEROSA to consider age, use 0 for this flag.|
 |**trust_fs** | If True, PONDEROSA will assume that all KING-inferred FS with IBD2 > 0.15 are true FS. Recommended when pedigree data is sparse. |
 
-###Output files. 
+### **Output files.** 
 
-####.log file. 
+#### _.log file._ 
 
 Provides information about the PONDEROSA run, including supplied parameters and files, run time, and any errors.  
 
-#####Error messages. 
+##### _Error messages._
 | Error code | Description |
 | ---------- | ----------- |
 | 01 | PONDEROSA is attempting to assign putative 2nd degree relatives to a pedigree relationship, but there are not enough training pairs of either AV, GP, MHS, PHS. The dataset is too sparse to train the classifier. | 
