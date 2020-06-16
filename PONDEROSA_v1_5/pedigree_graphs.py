@@ -59,8 +59,8 @@ class Pedigree:
             #each maps to [[dad],[mom],children,sex]
             self.pedigree_structure[iid] = [[],[],[],sex]
 
-    def add_po(self,parent,child,sex):
-        if self.pedigree_structure[child][sex-1] == []: #parent not reported yet
+    def add_po(self,parent,child,sex,override=False):
+        if self.pedigree_structure[child][sex-1] == [] or override: #parent not reported yet
             self.pedigree_structure[child][sex-1] += [(parent,1)]
             self.add_person(parent,sex)
             self.pedigree_structure[parent][2] += [(child,-1)]
@@ -205,6 +205,19 @@ class Pedigree:
                         analyze_rels(self.get_relationships(self.get_coord(rel_type)[1:],parent[0],parent))
         return out_list
 
+    #Takes in a list of parents (e.g. all the mothers of a set of FS) and looks for 1) multiple mothers and 2) no mother
+    def resolve_parents(self,parent_list):
+        parent_list = [i[0] for i in parent_list if i != []]
+        parent_list = list(dict.fromkeys(parent_list))
+        if len(parent_list) == 0: #No mom/dad --> create dummy parent
+            parent = [self.get_dummy_id(),[]]
+        elif len(parent_list) == 1: #Exactly one mom/dad --> a-OK
+            parent = [parent_list[0],[]]
+        elif len(parent_list) > 1: #More than one mom/dad --> will raise error
+            parent = [parent_list[0],parent_list]
+        #returns list with parent 0th index and duplicate parents in 1st index (if any)
+        return parent
+
     def resolve_siblings(self,trust_fs):
         '''In phase 1, we assume that there are FS with 1 (or more) missing parents. Thus,
         absence of a lineage does not necessarily mean sibs are HS. This function finds FS with BOTH lineages
@@ -280,23 +293,10 @@ class Pedigree:
             if new_set:
                 fs_sets.append([iid1,iid2])
 
-        #Takes in a list of parents (e.g. all the mothers of a set of FS) and looks for 1) multiple mothers and 2) no mother
-        def resolve_parents(parent_list):
-            parent_list = [i[0] for i in parent_list if i != []]
-            parent_list = list(dict.fromkeys(parent_list))
-            if len(parent_list) == 0: #No mom/dad --> create dummy parent
-                parent = [self.get_dummy_id(),[]]
-            elif len(parent_list) == 1: #Exactly one mom/dad --> a-OK
-                parent = [parent_list[0],[]]
-            elif len(parent_list) > 1: #More than one mom/dad --> will raise error
-                parent = [parent_list[0],parent_list]
-            #returns list with parent 0th index and duplicate parents in 1st index (if any)
-            return parent
-
         error_pairs = []
         for sets in fs_sets:
-            dad = resolve_parents([self.get_parent(sibs,1) for sibs in sets])
-            mom = resolve_parents([self.get_parent(sibs,2) for sibs in sets])
+            dad = self.resolve_parents([self.get_parent(sibs,1) for sibs in sets])
+            mom = self.resolve_parents([self.get_parent(sibs,2) for sibs in sets])
             if dad[1] != [] or mom[1] != []:
                 error_pairs.append(sets)
                 continue
@@ -349,7 +349,6 @@ class Pedigree:
             if parents != [] and parents[0] in self.gtd:
                 return True
         return False
-
 
     def print_out(self,out):
         with open("%s_pairs.txt" % out,"w") as outfile:

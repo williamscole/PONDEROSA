@@ -3,21 +3,7 @@ po_only False
 ped_only False
 run_all True
 
-<<<<<<< HEAD
-Required_args
-king_file /share/hennlab/projects/himba_pedigree/BAGS_PONDEROSA/king.seg
-match_file /share/hennlab/projects/himba_pedigree/BAGS_PONDEROSA/BAGS_germline_chr1.output.match
-fam_file /share/hennlab/projects/himba_pedigree/BAGS_PONDEROSA/BAGS_convertedID.fam
-map_file /share/hennlab/projects/himba_pedigree/plink_data/newHimba_shapeit.chr1.map
-
-Optional_args
-ped_file None
-age_file None
-hap_file BAGS.txt
-out BAGS
-num_chr 22
-=======
-Files
+File options
 king_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample_KING.seg
 match_file /Users/cole/Downloads/PONDEROSA-master/Sample/Segments/Sample_ilash_chr1.match
 fam_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample.fam
@@ -27,9 +13,8 @@ age_file /Users/cole/Downloads/PONDEROSA-master/Sample/Misc_Files/Sample_Ages.tx
 hap_file /Users/cole/Desktop/work/colorado/pedigree_stuff/PONDEROSA_v15/TestRun.txt
 
 Parameters
-out TestRun
-num_chr 10
->>>>>>> 42b6d1d72ad70a15193a7e18f400261eecfc52b7
+out BAGS
+num_chr 22
 cm_gap 1
 disc_homoz 1
 likelihood 0.80
