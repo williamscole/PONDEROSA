@@ -833,5 +833,3 @@ def main():
 	sys.stdout.write("\rWriting log...done\n")
 
 main()
-
-	
