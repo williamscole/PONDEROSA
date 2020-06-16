@@ -260,7 +260,7 @@ class LogFile:
 
     def write_log(self):
         time_elapsed = round(time.time() - self.start_time,1)
-        self.write("\nTime elapsed: %s\n\n" % time_elapsed)
+        self.write("\nTime elapsed: %s seconds\n\n" % time_elapsed)
         self.logfile.close()
 
     def write_errors(self,error_dict):
@@ -763,7 +763,7 @@ def main():
 				df["PROB"] = df[self.second].max(axis=1)
 				df["AV_ERROR"] = np.where(df["REL"] == "AV",df.apply(lambda x: self.av_error(x.H1,x.AGE1,x.H2,x.AGE2),axis=1),False)
 				with open("%s_second.txt" % out,"w") as outfile:
-					outfile.write(df.to_string(index=False,na_rep="NA",columns=["PAIR_ID","YOUNGER","OLDER","REL","PROB","HSR","N","AV","GP","MHS","PHS","AV_ERROR"]))
+					outfile.write(df.to_string(index=False,na_rep="NA",columns=["PAIR_ID","YOUNGER","OLDER","METHOD","REL","SECOND_PROB","PROB","HSR","N","AV","GP","MHS","PHS","AV_ERROR"]))
 
 			def run(self):
 				self.find_putative()
