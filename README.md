@@ -14,7 +14,7 @@ Running PONDEROSA from the command line is easy, requiring only a parameter file
 `python3.6 PONDEROSA.py [par_file]`
 ### **Parameter file**
 The template for the parameter file is provided (_par_file.txt_).  
-##### _Run type_ 
+#### _Run type_ 
 PONDEROSA has three different run types. Only one can be True; the other two must be False.  
 | Run type | Description |
 | -------- | ----------- |
@@ -22,7 +22,7 @@ PONDEROSA has three different run types. Only one can be True; the other two mus
 | **ped_only** | PONDEROSA will output all pairwise relationships present in the .fam file provided.|  
 | **run_all** | Will do the above but will also infer unresolved second degree relationships.|
 
-##### _File requirements_  
+#### _File requirements_  
 Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
@@ -30,7 +30,7 @@ Each run type uses and requires different files. See below.
 | **ped_only** | king_file, fam_file | |  
 | **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
-##### _File descriptions_
+#### _File descriptions_
 The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/. The file name for optional files that are not supplied should be "None".
 | Flag | Description |
 | ---- | ----------- |
@@ -42,7 +42,7 @@ The following files can be used by PONDEROSA. They must be formatted correctly; 
 |**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age, and vice versa. |
 |**hap_file** | PONDEROSA will create a hap file if it has already been run with **po_only** or **run_all**. It can be supplied here, and PONDEROSA will skip the haplotype score calculation step. Will drastically reduce computation time. |
 
-##### _Parameters_  
+#### _Parameters_  
 | Flag | Description |
 | ---- | ----------- |
 |**out** | Output file prefix.|
