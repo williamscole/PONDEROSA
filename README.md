@@ -99,3 +99,21 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | KINGINF | KING-inferred degree of relatedness | 
 | GTD | True if both individuals in pair are genotyped. |
 | DEGREE | Degree of relatedness of the pedigree relationship. |
+
+#### _[out]\_second.txt_
+| Column | Description |
+| ------ | ----------- |
+| PAIR_ID | Unique pair ID for the relative pair |
+| YOUNGER | The genetically younger individual in the pair, if applicable. | 
+| OLDER | The genetically older individual in the pair. |
+| METHOD | AGE if age data used to orient younger-older; H is haplotype scores used to orient younger-older. |
+| REL | Inferred second degree relative type. |
+| SECOND_PROB | Probability of pair being second degree related. |
+| PROB | Probability of the inferred second degree relative type. |
+| HSR | Haplotype score ratio of the pair. |
+| N | Number of IBD segments shared. |
+| AV | Probability of pair being AV. |
+| GP | Probability of pair being AV. |
+| MHS | Probability of pair being AV. |
+| PHS | Probability of pair being AV. |
+| AV_ERROR | True if 1) Pair is inferred as AV 2) Age data disagrees with haplotype data (i.e. the older individual appears to be the niece/nephew). Note that it is possible that a niece/nephew is older than their uncle/aunt. |
