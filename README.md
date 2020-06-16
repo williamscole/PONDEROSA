@@ -72,4 +72,16 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 
 #### _[out]\_PO.txt_
 
-
+| Column | Description |
+| ------ | ----------- |
+| PAIR_ID | Unique pair ID for the PO pair |
+| IID1 | IID for individual 1 |
+| H1 | Haplotype score for individual 1 |
+| IID2 | IID for individual 2 |
+| H2 | Haplotype score for individual 2 |
+| AGE1 | Age of individual 1 |
+| AGE2 | Age of individual 2 |
+| PARENT | IID of the inferred parent |
+| CHILD | IID of the inferred child |
+| METHOD | AGE if age data was used to orient; H if haplotype scores used to orient. |
+| STRENGTH | If METHOD is AGE, the difference in age of the PO pair. If METHOD is H, the difference in haplotype scores of the PO pair; PO pairs with a small difference in haplotype scores (i.e. close to 0) cannot be as confidentally oriented. | 
