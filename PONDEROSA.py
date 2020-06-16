@@ -497,7 +497,7 @@ class Pedigree:
             king_fs = self.king[(self.king["KINGINF"] == "FS") & (self.king["IBD2"] > 0.15)]["PAIR_ID"].values.tolist()
             fs_pairs = [[sibs.split("_")[0],sibs.split("_")[1],"FS"] for sibs in king_fs]
             low_IBD2 = self.king[(self.king["KINGINF"] == "FS") & (self.king["IBD2"] <= 0.15)]["PAIR_ID"].values.tolist()
-            self.add_error("KING has inferred the following as FS, but have low IBD2 values (< 0.15):\n",[pairs.split("_") for pairs in low_IBD2],2)
+            self.add_error("ERROR05: KING has inferred the following as FS, but have low IBD2 values (< 0.15):\n",[pairs.split("_") for pairs in low_IBD2],2)
         else:
             king_fs = self.king[self.king["KINGINF"] == "FS"]["PAIR_ID"].values.tolist()
             king_fs = [sibs.split("_")+["UNK"] for sibs in king_fs]
@@ -530,7 +530,7 @@ class Pedigree:
                 training = all_siblings[all_siblings["NUMERIC_TYPE"] != 2]
                 train_labs,train_vals = training["NUMERIC_TYPE"].values.tolist(),training[["IBD1","IBD2"]].values.tolist()
                 if train_labs.count(0) == 0 or train_labs.count(1) == 0:
-                    self.add_error("Sparse pedigree warning: not enough training pairs. Try rerunning with king_fs as True\n",[],1)
+                    self.add_error("ERROR04: Sparse pedigree warning: not enough training pairs. Try rerunning with king_fs as True\n",[],1)
                     return
 
                 classif = LinearDiscriminantAnalysis().fit(train_vals,train_labs)
@@ -569,7 +569,7 @@ class Pedigree:
             for sibs in sets:
                 self.add_po(dad,sibs,1)
                 self.add_po(mom,sibs,2)
-        self.add_error("The following FS sets have different parents. The problem has been ignored but please double check.\n",error_pairs,2)
+        self.add_error("ERROR03: The following FS sets have different parents. The problem has been ignored but please double check.\n",error_pairs,2)
 
     #Creates a pandas table of all pedigree relationships present in the structure at the time of running it
     def get_all_pairs(self):
@@ -596,7 +596,7 @@ class Pedigree:
         king_po = self.king[self.king["KINGINF"] == "PO"]["PAIR_ID"].values.tolist()
         fam_po = self.relatives[(self.relatives["REL"] == "PO") & (self.relatives["GTD"] == True)]["PAIR_ID"].values.tolist()
         missing = [[pairs.split("_")[0],pairs.split("_")[1]] for pairs in king_po if pairs not in fam_po]
-        self.add_error("The following PO pairs have been inferred by KING but are not reported in the .fam file.\n",missing,2)
+        self.add_error("ERROR02: The following PO pairs have been inferred by KING but are not reported in the .fam file.\n",missing,2)
 
     def get_king(self):
         return self.king
@@ -713,7 +713,7 @@ def main():
 			def check_error(self,train_lab,lab_types,error_msg):
 				for labs in lab_types:
 					if train_lab.count(labs) == 0:
-						log.write_errors({1:[["Not enough %s pairs to train %s classifier" % (labs,error_msg),[]]]})
+						log.write_errors({1:[["ERROR01: Not enough %s pairs to train %s classifier" % (labs,error_msg),[]]]})
 
 			def get_training(self,df,lab_type,val_list):
 				vals,labs = df[val_list].values.tolist(),df[lab_type].values.tolist()
