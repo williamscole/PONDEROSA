@@ -13,16 +13,16 @@ Please note that PONDEROSA is designed to _assist_ pedigree construction and fur
 Running PONDEROSA from the command line is easy, requiring only a parameter file.    
 `python3.6 PONDEROSA.py [par_file]`
 ### **Parameter file**
-The template for the parameter file is provided (**par_file.txt**).  
-##### _Run type_ 
+The template for the parameter file is provided (_par_file.txt_).  
+#### _Run type_ 
 PONDEROSA has three different run types. Only one can be True; the other two must be False.  
 | Run type | Description |
 | -------- | ----------- |
 | **po_only** | If selected, PONDEROSA will compute haplotype scores for PO pairs. Using age first, and then haplotype scores (if age is unavailable), this run type will output all PO pairs oriented as parent-child. We suggest running this step to create the .fam file necessary for other run types. |  
 | **ped_only** | PONDEROSA will output all pairwise relationships present in the .fam file provided.|  
-| **run_all** | Will run the entirety of PONDEROSA.|
+| **run_all** | Will do the above but will also infer unresolved second degree relationships.|
 
-##### _Required files_  
+#### _File requirements_  
 Each run type uses and requires different files. See below.  
 | Run type | Required files | Optional files |
 | -------- | -------------- | -------------- |
@@ -30,25 +30,25 @@ Each run type uses and requires different files. See below.
 | **ped_only** | king_file, fam_file | |  
 | **run_all** | king_file, map_file, match_file, fam_file | ped_file, age_file, hap_file |
 
-##### _File descriptions_
+#### _File descriptions_
 The following files can be used by PONDEROSA. They must be formatted correctly; see sample files provided in Sample/. The file name for optional files that are not supplied should be "None".
 | Flag | Description |
 | ---- | ----------- |
 |**king_file** | KING .seg file (or any .seg-formatted IBD file).
-|**map_file** | PLINK-formatted .map file. This should be the full path/file name for chromosome 1. The map files for the other 21 autosomes must be in the same directory. Note that PONDEROSA expects a .map file for each chromosome but only one **--map** flag (see example par file). This .map file **must** be the same .map file used to generate IBD segments.
-|**fam_file** | PLINK-formatted .fam file. All PO present in the KING file must be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA can be run and the haplotype scores of the individuals can be used to make the distinction. 
+|**map_file** | PLINK-formatted .map file. This should be the full path/file name for chromosome 1. The map files for the other 21 autosomes must be in the same directory. Note that PONDEROSA expects a .map file for each chromosome, but the user need only supply the name of the first chromosome (see example par file). This .map file **must** be the same .map file used to generate IBD segments.
+|**fam_file** | PLINK-formatted .fam file. All PO present in the KING file should be present in the .fam file. If age data is unavailable/unreliable and the parent/offspring cannot be distinguished in the pair, PONDEROSA should be run with **po_only**, which will orient pairs into parent-offspring.
 |**match_file** | GERMLINE-formatted match file for chromosome 1. Again, PONDEROSA expects a .match file for each chromosome but only one **--match** flag (see example par file). If GERMLINE file, must be generated with GERMLINE’s --haploid flag (we suggest GERMLINE v1.5.3). iLASH .match files can also be used and will be detected by PONDEROSA.
-|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **--cm_gap** flag) of each other and have, at most, one discordant homozygote (can be changed with **--disc_homoz** flag). This flag can add considerable computational time. |
-|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age. |
-|**hap_file** | If PONDEROSA has already been run (either with **po_only** or **run_all**), supplying the haplotype score file here will skip the haplotype score calculation step. Will drastically reduce computation time. |
+|**ped_file** | PLINK-formatted .ped file used by PONDEROSA to stitch IBD segments together. If no .ped file is supplied, PONDEROSA stitches together two segments that are within 1 cM of each other. If .ped file is supplied, PONDEROSA only stitches two segments that are within 1 cM (can be changed with **cm_gap**) of each other and have, at most, one discordant homozygote (can be changed with **disc_homoz**). This flag can add considerable computational time and is generally not recommdended. |
+|**age_file** | Age file where the first column corresponds to the individual ID and the second column corresponds to the age. Note that not all individuals need an age, and vice versa. |
+|**hap_file** | PONDEROSA will create a hap file if it has already been run with **po_only** or **run_all**. It can be supplied here, and PONDEROSA will skip the haplotype score calculation step. Will drastically reduce computation time. |
 
-##### _Parameters_  
+#### _Parameters_  
 | Flag | Description |
 | ---- | ----------- |
 |**out** | Output file prefix.|
 |**num_chr** | Number of autosomes.|
 |**cm_gap** | Maximum gap in cM between IBD segments for them to be considered a single segment (see **ped_file** for more detail).|
-|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **ped_file** for more detail). Only use if **ped file** is provided.|  
+|**disc_homoz** | Maximum number of discordant homozygotes between two IBD segments in order for them to be considered the same IBD segment (see **ped_file** for more detail). Will ignore if ped file is not provided. |  
 |**likelihood** | Minimum likelihood (0.5 - 1) required for a pair to be inferred as a 2nd degree pair. We recommend being more conservative here.|  
 |**mhs_gap** | Maximum age-gap for maternal half-siblings. If you do not want PONDEROSA to consider age here, use an arbitrarily large age gap (e.g. 100).|
 |**po_gap** | Minimum age-gap for parent-offspring. If you do not want PONDEROSA to consider age here, use 0 for this flag.|
