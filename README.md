@@ -55,3 +55,17 @@ The following files can be used by PONDEROSA. They must be formatted correctly; 
 |**gp_gap** | Minimum age-gap for a grandparent-grandchild pair. Note that if you do not want PONDEROSA to consider age, use 0 for this flag.|
 |**trust_fs** | If True, PONDEROSA will assume that all KING-inferred FS with IBD2 > 0.15 are true FS. Recommended when pedigree data is sparse. |
 
+### **Output files.** 
+
+#### _.log file._ 
+
+Provides information about the PONDEROSA run, including supplied parameters and files, run time, and any errors.  
+
+##### _Error messages._
+| Error code | Description |
+| ---------- | ----------- |
+| 01 | PONDEROSA is attempting to assign putative 2nd degree relatives to a pedigree relationship, but there are not enough training pairs of either AV, GP, MHS, PHS. The dataset is too sparse to train the classifier. | 
+| 02 | To maximize the number of relative pairs, all PO pairs present in KING should be present in the .fam file provided. Pairs here are present in KING but not in the .fam file. They should be added to the .fam, but PONDEROSA will continue running. |
+| 03 | The following sets of individuals are full siblings but have different parents listed in the .fam file. PONDEROSA has ignored this, but the user should double check. |
+| 04 | PONDEROSA is attempting to classify ambiguous sibships with a classifier, but there are not enough FS or 2nd degree relationships to train the classifier. Try running again with **trust_fs** set True, which will skip this step. |
+| 05 | KING has a low IBD2 threshold for pairs to be considered FS. Pairs listed here have abnormally low IBD2 values for a FS pair, but have been inferred as such by KING. These are unlikely to be real FS pairs, and PONDEROSA will ignore them. |
