@@ -97,4 +97,5 @@ Provides information about the PONDEROSA run, including supplied parameters and 
 | IBD2 | KING IBD2 value. |
 | PI_HAT | Total proportion IBD shared. | 
 | KINGINF | KING-inferred degree of relatedness | 
+| GTD | True if both individuals in pair are genotyped. |
 | DEGREE | Degree of relatedness of the pedigree relationship. |
