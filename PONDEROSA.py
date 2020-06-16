@@ -51,7 +51,6 @@ def get_hap_score(relative_list,par_file,hap_file):
                         break
             return status
 
-
     class PairData:
         def __init__(self,relative_list,out):
             self.relative_list,self.out = relative_list,out
@@ -105,7 +104,6 @@ def get_hap_score(relative_list,par_file,hap_file):
         for col in ["H1","H2","HSR","N"]:
             hap_df[col] = hap_df[col].astype(float)
         return hap_df
-
 
     hap_data = PairData(relative_list,out)
 
@@ -232,7 +230,6 @@ def start_up(parameter_dict,file_dict,run_type):
                 sys.stdout.write("\t%s\n" % msg)
             sys.stdout.write("\nExiting PONDEROSA...\n\n")
             sys.exit()
-
 
     logo()
     write_args()
@@ -589,7 +586,6 @@ class Pedigree:
         self.relatives["DEGREE"] = self.relatives["REL"].replace(self.rel_to_deg)
         self.king["FOUND"] = self.king["PAIR_ID"].isin(self.relatives["PAIR_ID"])
 
-
     def get_relatives(self,rel,gt_only=True):
         if gt_only:
             out_list = len(self.relatives[(self.relatives["REL"]==rel) & (self.relatives["GTD"] == True)][["IID1","IID2"]].values.tolist())
@@ -789,7 +785,6 @@ def main():
 
 		data = Data(king_df,relative_df,hap_df,threshold,gp_gap,mhs_gap)
 		data.run()
-		data.validation(pars["out"])
 
 	#Step 1: check files
 	pars,run_type = init(sys.argv[-1])
