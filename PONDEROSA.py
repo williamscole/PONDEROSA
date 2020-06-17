@@ -158,7 +158,7 @@ def get_hap_score(relative_list,par_file,hap_file):
 def start_up(parameter_dict,file_dict,run_type):
     def logo():
         tree = ["\n           P O N D E R O S A",
-        "                v.1.2          ",
+        "                v.1.5          ",
         "                  &",                   
         "                 ##&",                   
         "                #####",                  
@@ -184,7 +184,7 @@ def start_up(parameter_dict,file_dict,run_type):
         "               %%#(#((((",               
         "              &&&&(  &(&)",
         "                          ",
-        "               (c) 2019",
+        "               (c) 2020",
         "C.M. Williams, C.R. Gignoux, B.M. Henn\n"]
 
         def print_color(color,text):
