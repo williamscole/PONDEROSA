@@ -76,13 +76,13 @@ Pairwise data for parent-offspring present in KING file.
 | ------ | ----------- |
 | PAIR_ID | Unique pair ID for the PO pair |
 | IID1 | IID for individual 1 |
-| H1 | Haplotype score for individual 1 |
 | IID2 | IID for individual 2 |
+| H1 | Haplotype score for individual 1 |
 | H2 | Haplotype score for individual 2 |
 | AGE1 | Age of individual 1 |
 | AGE2 | Age of individual 2 |
-| PARENT | IID of the inferred parent |
 | CHILD | IID of the inferred child |
+| PARENT | IID of the inferred parent |
 | METHOD | AGE if age data was used to orient; H if haplotype scores used to orient. |
 | STRENGTH | If METHOD is AGE, the difference in age of the PO pair. If METHOD is H, the difference in haplotype scores of the PO pair; PO pairs with a small difference in haplotype scores (i.e. close to 0) cannot be as confidentally oriented. | 
 
@@ -93,12 +93,12 @@ Relative pairs present in the .fam file.
 | PAIR_ID | Unique pair ID for the relative pair |
 | IID1 | The IID of the genetically younger individual in a pair (if applicable). For example, a child in a PO pair or niece of an avuncular pair. |
 | IID2 | the IID of the genetically older individual. |
-| REL | Pedigree relationship of the pair. |
+| GTD | True if both individuals in pair are genotyped. |
 | IBD1 | KING IBD1 value. |
 | IBD2 | KING IBD2 value. |
-| PI_HAT | Total proportion IBD shared. | 
+| PI_HAT | Total proportion IBD shared (equal to 0.5*\IBD1 + IBD2). | 
 | KINGINF | KING-inferred degree of relatedness | 
-| GTD | True if both individuals in pair are genotyped. |
+| REL | Pedigree relationship of the pair as inferred by PONDEROSA. |
 | DEGREE | Degree of relatedness of the pedigree relationship. |
 
 #### _[out]\_second.txt_
