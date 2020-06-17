@@ -616,7 +616,7 @@ class Pedigree:
 
     def print_out(self,out):
         with open("%s_pairs.txt" % out,"w") as outfile:
-            outfile.write(self.relatives.to_string(index=False,na_rep="NA"))
+            outfile.write(self.relatives.to_string(index=False,na_rep="NA",columns=["PAIR_ID","IID1","IID2","GTD","IBD1","IBD2","PIHAT","KINGINF","REL","DEGREE"]))
 
     def run_PONDEROSA(self,king_file,fam_file,out,trust_fs):
         self.add_king(king_file)
@@ -680,7 +680,7 @@ def main():
 		po_data = pd.merge(po_data,hap_df,on="PAIR_ID",how="left")
 		po_data = resolve_generations(po_data,agef,"CHILD","PARENT",out)
 		with open("%s_PO.txt" % out,"w") as outfile:
-			  outfile.write(po_data.to_string(index=False))
+			  outfile.write(po_data.to_string(index=False,columns=["PAIR_ID","IID1","IID2","H1","H2","AGE1","AGE2","CHILD","PARENT","METHOD","STRENGTH"]))
 
 	def infer_second(king_df,relative_df,hap_df,threshold,mhs_gap,gp_gap):
 		class Data:
