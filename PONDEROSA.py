@@ -90,7 +90,7 @@ def get_hap_score(relative_list,par_file,hap_file):
             for pairs in self.relative_list:
                 out_df.append(self.get_scores(pairs))
             out_df = pd.DataFrame(out_df,columns=["PAIR_ID","IID1","H1","IID2","H2","HSR","N"])
-            with open("%s.txt" % self.out,"w") as outfile:
+            with open("%s.haps" % self.out,"w") as outfile:
                 outfile.write(out_df.to_string(index=False))
             outfile.close()
             return out_df
