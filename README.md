@@ -6,7 +6,7 @@ PONDEROSA (_**P**arent **O**ffspri**N**g pe**D**igree Inf**E**rence **RO**bu**S*
 Please note that PONDEROSA is designed to _assist_ pedigree construction and further steps by the user are required to construct the pedigree. We hope to change this in future versions of PONDEROSA. For now, PONDEROSA largely infers relationships in a vacuum (i.e. without considering the context of the pedigree). Relationship inference should be double-checked against the existing pedigree structure.  
 
 ### **Requirements**
-**python3 or higher**  
+**python3.6 or higher**  
 **scikit-learn** and its dependencies, including numpy and pandas. We recommend running python directly from anaconda3, which has all the packages needed to run PONDEROSA.   
 
 ### **Running PONDEROSA**. 
