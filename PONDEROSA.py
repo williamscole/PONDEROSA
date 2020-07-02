@@ -648,7 +648,7 @@ def main():
 		def add_age(df):
 			age_data = {}
 			if agef != "None":
-				age_data = {lines.split()[0]:int(lines.split()[1]) for lines in open(agef).readlines()}
+				age_data = {lines.split()[0]:float(lines.split()[1]) for lines in open(agef).readlines()}
 			df["AGE1"],df["AGE2"] = df["IID1"].map(age_data),df["IID2"].map(age_data)
 			df["USE_H"] = df["AGE1"].isna() | df["AGE2"].isna()
 			df["USE_H"] = np.where(df["AGE1"]==df["AGE2"],True,df["USE_H"])
