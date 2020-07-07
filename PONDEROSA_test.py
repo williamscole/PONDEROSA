@@ -366,7 +366,7 @@ class Pedigree:
         self.add_mz_twins(self.king[self.king["InfType"] == "Dup/MZ"]["PAIR_ID"].values.tolist())
         self.king["DUP"] = self.king["ID1"].isin(self.mz_twins) | self.king["ID2"].isin(self.mz_twins)
         self.king = self.king[~self.king["DUP"]]
-        self.gtd = set(dict.fromkeys(self.king["ID1"].values.tolist() + self.king["ID1"].values.tolist()))
+        self.gtd = list(set(self.king["ID1"].values.tolist()+self.king["ID2"].values.tolist()))
         self.king = self.king[["PAIR_ID","IBD1Seg","IBD2Seg","PropIBD","InfType"]]
         self.king.columns = ["PAIR_ID","IBD1","IBD2","PIHAT","KINGINF"]
 
