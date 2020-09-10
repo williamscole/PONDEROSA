@@ -637,6 +637,8 @@ def main():
 		return pars,run_type
 
 	def run_hapscores(kingf,hap_file):
+        if [lines for line in open(kingf).readlines() if float(lines.split()[6]) > 0.90] == []:
+            log.write_errors({1:["No KING-defined PO pairs."]})
 		relative_list = [[lines.split()[1],lines.split()[3]] for lines in open(kingf).readlines()[1:] if float(lines.split()[6]) > 0.30]
 		relative_list = [min(pair) + "_" + max(pair) for pair in relative_list]
 		return get_hap_score(relative_list,pars,hap_file)
