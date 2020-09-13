@@ -241,7 +241,7 @@ def make_fam(fam,po_output,king,out):
 		for line in df[(df["PID"] != "0")&(df["MID"] != "0")][["IID","PID","MID"]].values.tolist():
 			iid,pid,mid = line
 			deg = KINGdegree(pid,mid)
-			if deg in ["3rd","2nd","FS","PO"]:
+			if deg in ["2nd","FS","PO"]:
 				writeLog("relatedParents","%s: %s %s (%s)\n" % (iid,pid,mid,deg))
 
 	def run():
