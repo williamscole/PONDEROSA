@@ -684,6 +684,16 @@ def main():
 		with open("%s_PO.txt" % out,"w") as outfile:
 			  outfile.write(po_data.to_string(index=False,columns=["PAIR_ID","IID1","IID2","H1","H2","AGE1","AGE2","CHILD","PARENT","METHOD","STRENGTH"]))
 
+	def phase3_checkpoint(out):
+		pairs_df = pd.read_csv("%s_pairs.txt" % out, delim_whitespace=True)
+		pairs_df = pairs_df[pairs_df["GTD"]]
+		num_rels = [pairs_df[pairs_df["REL"]==rel].shape[0]>0 for rel in ["MHS","PHS","AV","GP"]] + [pairs_df[pairs_df["DEGREE"]=="3rd"].shape[0] > 0]
+		if sum(num_rels) == 5:
+			return
+		problem_rels = [rel for rel,status in zip(["MHS","PHS","AV","GP","3rd"],num_rels) if not status]
+		error_msg = "ERROR01: Not enough of the following pairs found " + " ".join(problem_rels) + "\n"
+		log.write_errors({1:[error_msg]})
+
 	def infer_second(king_df,relative_df,hap_df,threshold,mhs_gap,gp_gap):
 		class Data:
 			def __init__(self,king,rel,hap_scores,threshold,mhs_gap,gp_gap):
@@ -822,6 +832,8 @@ def main():
 	if run_type == "ped_only":
 		log.write_log()
 		sys.exit()
+	else:
+		phase3_checkpoint(pars["out"])
 
 	#Step 5: infer second deg pairs
 	sys.stdout.write("Finding and inferring 2nd degree pairs...")
