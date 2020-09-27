@@ -7,7 +7,14 @@ def make_fam(fam,po_output,king,out):
 	king["PAIR_ID"] = king.apply(lambda x: min([x.ID1,x.ID2]) + "_" + max([x.ID1,x.ID2]),axis=1)
 	king.set_index("PAIR_ID",inplace=True)
 
-	po = pd.read_csv(po_output,delim_whitespace=True)
+	try:
+		po = pd.read_csv(po_output,delim_whitespace=True)
+	except:
+		print("PO output from PONDEROSA not found")
+		sys.exit()
+	if po.shape[0] == 0:
+		print("PO output provided but no pairs present")
+		sys.exit()
 	po["INDEX"] = po["PAIR_ID"]
 	po.set_index("INDEX",inplace=True)
 	po["MIN_H"] = po.apply(lambda x: min([x.H1,x.H2]),axis=1)
