@@ -691,8 +691,8 @@ def main():
 		if sum(num_rels) == 5:
 			return
 		problem_rels = [rel for rel,status in zip(["MHS","PHS","AV","GP","3rd"],num_rels) if not status]
-		error_msg = "ERROR01: Not enough of the following pairs found " + " ".join(problem_rels) + "\n"
-		log.write_errors({1:[error_msg]})
+		error_msg = "ERROR01: Not enough of the following pairs found: " + " ".join(problem_rels) + "\n"
+		log.write_errors({1:[[error_msg]]})
 
 	def infer_second(king_df,relative_df,hap_df,threshold,mhs_gap,gp_gap):
 		class Data:
