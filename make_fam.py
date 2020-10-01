@@ -208,7 +208,7 @@ def make_fam(fam,po_output,king,out):
 
 	def noSex(problemParents):
 		sets = [problemParents[i] for i in problemParents]
-		singleSets = [i[0] for i in sets if len(i) == 0]
+		singleSets = [i[0] for i in sets if len(i) == 1]
 		doubleSets = [i for i in sets if len(i) == 2]
 		sex_dict = orientSex(doubleSets)
 		male,female = sex_dict[1],sex_dict[2]
