@@ -2,7 +2,7 @@ import sys
 import pandas as pd
 import numpy as np
 
-def make_fam(fam,po_output,king,out):
+def make_fam(fam,po_output,king,out,po_gap):
 	king = pd.read_csv(king,delim_whitespace=True)
 	king["PAIR_ID"] = king.apply(lambda x: min([x.ID1,x.ID2]) + "_" + max([x.ID1,x.ID2]),axis=1)
 	king.set_index("PAIR_ID",inplace=True)
@@ -19,6 +19,7 @@ def make_fam(fam,po_output,king,out):
 	po.set_index("INDEX",inplace=True)
 	po["MIN_H"] = po.apply(lambda x: min([x.H1,x.H2]),axis=1)
 	po["LOCKED"] = po["STRENGTH"] > 15.0
+	po["PARENT_AGE"] = po.apply(lambda x: {x.IID1:x.AGE1,x.IID2:x.AGE2}[x.PARENT],axis=1)
 
 	fam = pd.read_csv(fam,delim_whitespace=True,names=["FID","IID","PID","MID","SEX","PHE"])
 	fam["INDEX"] = fam["IID"]
@@ -134,6 +135,11 @@ def make_fam(fam,po_output,king,out):
 			return king.at[pair_id,"InfType"]
 		except:
 			return "UN"
+
+	def youngParent():
+		for pair in po[po["PARENT_AGE"]<po_gap].values.tolist():
+			parent,child = pair[7:9]
+			switchPO(child,parent,True)
 
 	def addUnrelated():
 		def findUnrelated(iid):
@@ -252,6 +258,7 @@ def make_fam(fam,po_output,king,out):
 				writeLog("relatedParents","%s: %s %s (%s)\n" % (iid,pid,mid,deg))
 
 	def run():
+		youngParent()
 		addUnrelated()
 		addFS()
 		problemParents = writeFam(fam)
@@ -280,7 +287,7 @@ def make_fam(fam,po_output,king,out):
 
 par_file = sys.argv[-1]
 par_file = pd.read_csv(par_file,delim_whitespace=True)
-params = {"fam_file":None,"out":None,"king_file":None}
+params = {"fam_file":None,"out":None,"king_file":None,"po_gap":None}
 print("Running with the following input:")
 for i in params:
 	params[i] = par_file.at[i,"Run_type"]
@@ -288,4 +295,4 @@ for i in params:
 params["po_output"] = "%s_PO.txt" % params["out"]
 print(params["po_output"])
 
-make_fam(params["fam_file"],params["po_output"],params["king_file"],params["out"])
+make_fam(params["fam_file"],params["po_output"],params["king_file"],params["out"],float(params["po_gap"]))
