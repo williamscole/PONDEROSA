@@ -1,4 +1,4 @@
-# Ponderosa-beta
+# PONDEROSA
 
 ### Setting up the virtual environment and installing phasedibd
 
