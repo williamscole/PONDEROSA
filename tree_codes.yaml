@@ -1,0 +1,147 @@
+FS:
+  1:
+    - [1, -1]
+  2:
+    - [1, -1]
+  sex: false
+  degree: relatives
+
+PO:
+  1:
+    - [1,]
+  sex: false
+  degree: relatives
+
+PHS:
+  1:
+    - [1, -1]
+  sex: true
+  degree: 2nd
+  parent: HS
+
+MHS:
+  2: 
+    - [1, -1]
+  sex: true
+  degree: 2nd
+  parent: HS
+
+HS:
+  1:
+    - [1, -1]
+  sex: false
+  degree: 2nd
+
+GPAV:
+  degree: 2nd
+
+AV:
+  1:
+    - [1, 1, -1]
+    - [1, 1, -1]
+  sex: false
+  degree: 2nd
+  parent: GPAV
+
+HAV:
+  1:
+    - [1, 1, -1]
+  sex: false
+  degree: 3rd
+
+GP:
+  1:
+    - [1, 1]
+  sex: false
+  degree: 2nd
+  parent: GPAV
+
+PGP:
+  1:
+    - [1, 1]
+  sex: true
+  degree: 2nd
+  parent: GP
+
+MGP:
+  2:
+    - [1, 1]
+  sex: true
+  degree: 2nd
+  parent: GP
+
+GGP:
+  1:
+    - [1, 1, 1]
+  sex: false
+  degree: 3rd
+
+DCO:
+  1:
+    - [1, 1, -1, -1]
+    - [1, 1, -1, -1]
+  2:
+    - [1, 1, -1, -1]
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 3rd+
+
+HSCO:
+  1:
+    - [1, -1]
+  2:
+    - [1, 1, -1, -1]
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 2nd+
+
+HSHCO:
+  1:
+    - [1, -1]
+  2:
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 2nd+
+
+CO:
+  1:
+    - [1, 1, -1, -1]
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 3rd
+
+HCO:
+  1:
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 4th
+
+DHCO:
+  1:
+    - [1, 1, -1, -1]
+  2:
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 4th+
+
+DHAV:
+  1:
+    - [1, 1, -1]
+  2:
+    - [1, 1, -1]
+  sex: false
+  degree: 3rd+
+
+COHCO:
+  1:
+    - [1, 1, -1, -1]
+    - [1, 1, -1, -1]
+  2:
+    - [1, 1, -1, -1]
+  sex: false
+  degree: 3rd+
+
+
+
+
+
