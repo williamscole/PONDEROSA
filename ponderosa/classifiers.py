@@ -314,6 +314,7 @@ def run_inference(pairs: Pairs, trained_classifiers: Dict[str, RelationshipClass
 
         X = classif.data_from_pairs(pairs=pairs, training=False)
 
+        
         proba = classif.predict_proba(X)
 
         classes = classif.get_classes()

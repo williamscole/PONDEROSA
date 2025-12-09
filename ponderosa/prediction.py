@@ -115,6 +115,7 @@ class MatrixHierarchy:
 
             node_idx = self.node_to_idx[node]
 
+
             children_idx = self.numeric_array(children_str, nodes=True, asfloat=False)
 
             needs_filling = np.isnan(self.matrix[:, node_idx, 1])
@@ -145,7 +146,7 @@ class MatrixHierarchy:
             children = self.numeric_array(children_str, nodes=True, asfloat=False)
             
             # Normalize conditional probabilities
-            p_arr = self.matrix[:,children,1].sum(axis=1)[:, np.newaxis]
+            p_arr = np.nansum(self.matrix[:, children, 1], axis=1)[:, np.newaxis] 
             self.matrix[:,children,1] = self.matrix[:,children,1] / p_arr
             
             # Get parent posterior probability
@@ -158,6 +159,7 @@ class MatrixHierarchy:
 
             # Update posterior probabilities
             self.matrix[:,children,0] = self.matrix[:,children,1] * parent_p
+
             
     def _operate_on(self, nodes, pidx, subset_name=None):
         node_idx = self.numeric_array(nodes, nodes=True, asfloat=False)
@@ -186,7 +188,7 @@ class MatrixHierarchy:
 
         mat = self._operate_on(nodes, 0, subset_name)
 
-        most_likely = np.argmax(mat, axis=1)
+        most_likely = np.nanargmax(mat, axis=1)
 
         arr = np.array([nodes[i] for i in most_likely])
 
@@ -221,7 +223,7 @@ class MatrixHierarchy:
             if children.shape[0] == 0:
                 break
 
-            new_node = children[np.argmax(arr[children])]
+            new_node = children[np.nanargmax(arr[children])]
 
             p = arr[new_node]
 
@@ -246,7 +248,7 @@ class MatrixHierarchy:
 
         degree_idx = self.levels[self.relatives_idx]
 
-        most_likely_idx = np.argmax(self.matrix[:,degree_idx,0], axis=1)
+        most_likely_idx = np.nanargmax(self.matrix[:,degree_idx,0], axis=1)
 
         if asint:
             return most_likely_idx

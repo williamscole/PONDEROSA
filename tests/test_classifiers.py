@@ -290,5 +290,7 @@ class TestTesting:
 
         mhier = run_inference(test_pairs, classifiers, hierarchy)
 
-        pytest.set_trace()
+        # TODO: actually test that this works!
+
+        import pytest; pytest.set_trace()
 

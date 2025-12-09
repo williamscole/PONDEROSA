@@ -496,9 +496,6 @@ class Pairs:
 
         return self._format_return(pair_list, *arrs, output_style=output_style)
 
-    def _index(self, attr):
-        return FEATURE_DICT[attr]
-
     def _compute_pair(self, pair_df: pl.DataFrame, max_gap: float = 1.0) -> pl.DataFrame:
 
         arr = ProcessSegments.ibd_sharing_stats(pair_df, max_gap)

@@ -1,4 +1,5 @@
 import pickle as pkl
+import pandas as pd
 
 from .prediction import MatrixHierarchy
 from .data_loading import Pairs
@@ -48,7 +49,7 @@ def write_out_matrix_hierarchy(mhier: MatrixHierarchy, output_prefix: str):
 
 def write_out_classifier(classifiers: dict, output_prefix: str):
 
-    return write_pickle(classifers, f"{output_prefix}.classif.pkl")
+    return write_pickle(classifiers, f"{output_prefix}.classif.pkl")
 
 
 def write_files(pairs: Pairs, registry: PedigreeRegistry, mhier: MatrixHierarchy, classifiers: dict, output_prefix: str):

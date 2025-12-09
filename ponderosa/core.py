@@ -1,4 +1,4 @@
-from .config import PonderosaConfig, OutputConfig
+from .config import PonderosaConfig
 from .data_loading import load_individuals, load_pairs
 from .pedigree import build_pedigree, PedigreeHierarchy
 from .classifiers import train_load_classifiers, run_inference
@@ -26,7 +26,7 @@ def run_ponderosa(config: PonderosaConfig):
     matrix_hierarchy = run_inference(pairs, classifiers, hierarchy)
 
     # Write out results
-    files_written = write_files(pairs, registry, mhier, classifiers, config.output.output)
+    files_written = write_files(pairs, registry, matrix_hierarchy, classifiers, config.output.output)
 
 
 
