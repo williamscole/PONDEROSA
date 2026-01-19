@@ -103,6 +103,10 @@ class MatrixHierarchy:
             self.matrix[:,label_arr,1] = prob_arr
             self.matrix[:,label_arr,2] = method_idx
 
+    def add_priors(self):
+        pass
+        
+
     def _fill_nan(self):
 
         # Iterate through from leaf node to root

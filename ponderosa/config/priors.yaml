@@ -1,0 +1,54 @@
+# Age prior configuration for PONDEROSA
+# These are hard cutoffs - relationships outside these bounds are set to P=0
+
+age_priors:
+  
+  # --- Parent-Offspring ---
+  # Parent is almost always older than child
+  # signed: true means (age_ancestor - age_descendant), where ancestor determined by H scores
+  PO:
+    signed: true
+    min_gap: 12    # Parent at least 12 years older (rare but possible)
+    max_gap: 70    # Parent at most 70 years older (very old father)
+  
+  # --- Grandparent-Grandchild ---
+  GP:
+    signed: true
+    min_gap: 25    # Grandparent at least 25 years older
+    max_gap: 120   # Theoretical max (two generations)
+  
+  PGP:
+    signed: true
+    min_gap: 25
+    max_gap: 130   # Paternal line can have older fathers
+  
+  MGP:
+    signed: true
+    min_gap: 25
+    max_gap: 100   # Maternal line more constrained
+  
+  # --- Half-Siblings ---
+  # Use absolute gap (signed: false) since no genetic directionality
+  HS:
+    signed: false
+    max_gap: 50    # Half-sibs more than 50 years apart is very rare
+  
+  PHS:
+    signed: false
+    max_gap: 60    # Paternal half-sibs can be far apart (old fathers)
+  
+  MHS:
+    signed: false
+    max_gap: 25    # Maternal half-sibs constrained by reproductive window
+  
+  # --- Avuncular (Aunt/Uncle - Niece/Nephew) ---
+  # Some directionality expected but aunt can be younger than niece
+  AV:
+    signed: true
+    min_gap: -25   # Aunt/uncle can be up to 25 years younger than niece/nephew
+    max_gap: 60    # Aunt/uncle can be up to 60 years older
+
+  # --- Full Siblings ---
+  FS:
+    signed: false
+    max_gap: 20    # Full sibs more than 20 years apart is very rare
