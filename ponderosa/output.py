@@ -4,6 +4,7 @@ import pandas as pd
 from .prediction import MatrixHierarchy
 from .data_loading import Pairs
 from .pedigree import PedigreeRegistry
+from .evaluation import EvaluationResults
 
 
 def write_out_readable(mhier: MatrixHierarchy, pairs: Pairs, registry: PedigreeRegistry, output_prefix: str):
@@ -51,6 +52,14 @@ def write_out_classifier(classifiers: dict, output_prefix: str):
 
     return write_pickle(classifiers, f"{output_prefix}.classif.pkl")
 
+def write_evaluation_report(eval_results: EvaluationResults, output_prefix: str) -> str:
+    """Write evaluation report to text file."""
+    output_file = f"{output_prefix}_evaluation.txt"
+    
+    with open(output_file, 'w') as f:
+        f.write(str(eval_results))
+    
+    return output_file
 
 def write_files(pairs: Pairs, registry: PedigreeRegistry, mhier: MatrixHierarchy, classifiers: dict, output_prefix: str):
 

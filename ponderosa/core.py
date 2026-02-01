@@ -22,7 +22,8 @@ from .data_loading import load_individuals, load_pairs, Individuals, Pairs
 from .pedigree import build_pedigree, PedigreeHierarchy, PedigreeRegistry
 from .classifiers import train_load_classifiers, run_inference, RelationshipClassifier
 from .prediction import MatrixHierarchy
-from .output import write_files
+from .output import write_files, write_evaluation_report
+from .evaluation import EvaluationResults
 
 logger = logging.getLogger(__name__)
 
@@ -131,7 +132,25 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
     logger.info("Running relationship inference...")
     matrix_hierarchy = run_inference(pairs, classifiers, hierarchy)
     logger.info("Inference complete")
-    
+
+    if config.files.truth:
+        logger.info(f"Evaluating predictions against ground truth: {config.files.truth}")
+        try:
+            evaluation = EvaluationResults(
+                matrix_hierarchy=matrix_hierarchy,
+                truth_file=config.files.truth,
+                pairs=pairs
+            )
+            logger.info(f"Evaluation complete - Accuracy: {evaluation.accuracy:.2%}")
+            
+            # Write evaluation report
+            eval_file = write_evaluation_report(evaluation, config.output.output)
+            logger.info(f"Evaluation report written: {eval_file}")
+            
+        except Exception as e:
+            logger.warning(f"Failed to evaluate predictions: {e}")
+            logger.debug("Continuing without evaluation...")
+
     # Step 7: Write output files
     logger.info(f"Writing output files with prefix: {config.output.output}")
     files_written = write_files(
