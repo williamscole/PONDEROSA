@@ -65,11 +65,9 @@ class MatrixHierarchy:
         self.g = diG
 
     @classmethod
-    def from_hierarchy(cls, hierarchy: PedigreeHierarchy, n_pairs: int, methods: list):
-
+    def from_hierarchy(cls, hierarchy: PedigreeHierarchy, index_to_pair: dict, methods: list):
         edge_list = list(hierarchy.edges())
-
-        return cls(edge_list, n_pairs, methods)
+        return cls(edge_list, index_to_pair, methods)
 
     def numeric_array(self, input_arr, nodes: bool, asfloat: bool):
         if type(input_arr) == str:
