@@ -42,6 +42,7 @@ class FilesConfig:
     training: Optional[Path] = None
     rel_tree: Optional[Path] = None
     priors: Optional[Path] = None
+    truth: Optional[Path] = None 
 
     mapf: Optional[Path] = None
     map_files: Optional[List[Path]] = None
@@ -94,7 +95,7 @@ class FilesConfig:
         self._map_file_list = self._validate_file_lists(self.mapf, self.map_files, "map")
         
         # Check optional files if provided
-        optional_files = [self.ages, self.mapf, self.populations, self.training, self.priors]
+        optional_files = [self.ages, self.mapf, self.populations, self.training, self.priors, self.truth]
         for file_path in optional_files:
             if file_path and not file_path.exists():
                 logger.warning(f"Optional file not found: {file_path}")
@@ -189,7 +190,7 @@ class PonderosaConfig:
         files_dict = config_dict.get("files", {})
         
         # Single path fields (convert to Path objects)
-        single_path_fields = {'ibd', 'fam', 'ages', 'mapf', 'populations', 'training', 'rel_tree'}
+        single_path_fields = {'ibd', 'fam', 'ages', 'mapf', 'populations', 'training', 'rel_tree', 'truth'}
         for key, value in files_dict.items():
             if value is not None and key in single_path_fields:
                 files_dict[key] = Path(value)
@@ -222,7 +223,7 @@ class PonderosaConfig:
         
         # Override with CLI arguments
         # Map flat CLI args to nested structure
-        file_args = ["ibd", "fam", "ages", "mapf", "populations", "training", "ibd_caller"]
+        file_args = ["ibd", "fam", "ages", "mapf", "populations", "training", "ibd_caller", "truth"]
         algorithm_args = ["min_segment_length", "min_total_ibd", "population", "genome_length"]
         output_args = ["output", "min_probability", "verbose"]
         
