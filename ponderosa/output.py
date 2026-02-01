@@ -14,7 +14,7 @@ def write_out_readable(mhier: MatrixHierarchy, pairs: Pairs, registry: PedigreeR
     prob_columns = output_df.attrs["prob_columns"]
 
     prob_df = output_df[prob_columns]
-    output_df.drop(prob_columns, inplace=True)
+    output_df = output_df.drop(columns=prob_columns)
 
     # Add the known relationship
     output_df["known_rel"] = registry.get_relationships(output_df[["id1", "id2"]].values)
@@ -23,7 +23,7 @@ def write_out_readable(mhier: MatrixHierarchy, pairs: Pairs, registry: PedigreeR
     ibd_columns = ["IBD1", "IBD2", "N", "H1", "H2"]
 
     pair_data = pairs.get_pair_data_from(output_df[["id1", "id2"]].apply(tuple, axis=1).values,
-                                         *ibd_columns, output_style="zip")
+                                         *ibd_columns, output_style="flatten")
 
     pair_data_df = pd.DataFrame(pair_data, columns=[i.lower() for i in ibd_columns])
 
