@@ -54,6 +54,8 @@ class EvaluationResults:
                        len(inferred) == n_levels
                 
                 for idx in range(n_levels):
+                    if inferred[idx] is None:
+                        continue                        
                     results[pair_idx, idx] = int(truth[idx] == inferred[idx])
 
         self.results = results
@@ -130,34 +132,7 @@ class EvaluationResults:
                     hierarchy: PedigreeHierarchy,
                     level_nodes: List[List[str]] = None,
                     level_names: List[str] = None):
-        """
-        Create EvaluationResults from PONDEROSA outputs.
-        
-        Compares ground truth relationships to predictions at multiple hierarchical levels.
-        For each level, uses most_likely_among to get the predicted node at that level.
-        
-        Args:
-            truth_file: Path to truth file with columns [ID1, ID2, truth]
-            pred_mhier: MatrixHierarchy with predicted relationships
-            hierarchy: PedigreeHierarchy defining relationship structure
-            level_nodes: Nodes to evaluate at each level.
-                        e.g., [["1st", "2nd", "3rd", "4th"], ["PHS", "MHS", "PGP", "MGP", ...]]
-                        If None, uses default levels (degree, then specific)
-            level_names: Names for each level (e.g., ["Degree", "Specific Relationship"])
-                        If None, generates names like "Level_0", "Level_1"
-        
-        Returns:
-            EvaluationResults object with accuracy metrics at each hierarchy level
-        
-        Example:
-            >>> eval_results = EvaluationResults.from_ponderosa(
-            ...     truth_file=Path("truth.txt"),
-            ...     pred_mhier=matrix_hierarchy,
-            ...     hierarchy=hierarchy,
-            ...     level_names=["Degree", "Specific"]
-            ... )
-            >>> print(eval_results)
-        """
+        """..."""
         from .data_loading import load_truth
         
         # Load truth data
@@ -173,23 +148,19 @@ class EvaluationResults:
         if level_names is None:
             level_names = [f"Level_{i}" for i in range(n_levels)]
         else:
-            assert len(level_names) == n_levels, \
-                f"level_names length ({len(level_names)}) must match level_nodes length ({n_levels})"
+            assert len(level_names) == n_levels
         
-        # Build truth_dict: (id1, id2) -> tuple of relationships at each level
+        # Build truth_dict
         truth_dict = {}
         for _, row in truth_df.iterrows():
             pair = (row['ID1'], row['ID2'])
             relationship = row['truth']
             
-            # Get the hierarchical path for this relationship
             try:
                 rel_path = cls._get_relationship_hierarchy(relationship, hierarchy)
-            except ValueError as e:
-                # Skip relationships not in hierarchy
+            except ValueError:
                 continue
             
-            # For each level, find which node matches
             rel_at_levels = []
             for level in level_nodes:
                 matching_node = None
@@ -201,20 +172,31 @@ class EvaluationResults:
             
             truth_dict[pair] = tuple(rel_at_levels)
         
-        # Build infer_dict: (id1, id2) -> tuple of predictions at each level
+        # Build infer_dict
         infer_dict = {}
         for idx, pair in pred_mhier.index_to_pair.items():
             pred_at_levels = []
             
-            for level in level_nodes:
-                # Use most_likely_among to get prediction at this specific level
+            for level_idx, level in enumerate(level_nodes):
+                # Use most_likely_among to get prediction at this level
                 pred_array = pred_mhier.most_likely_among(level, asint=False)
-                pred_at_levels.append(pred_array[idx])
+                predicted = pred_array[idx]
+                
+                # SPECIAL HANDLING: For 3rd+ and 4th+ degrees at specific level
+                # If this is the specific level (last level) and degree is 3rd/4th
+                # Then set to None since PONDEROSA doesn't predict specific rels for these
+                if level_idx == n_levels - 1 and level_idx > 0:  # Last level and not degree level
+                    # Get the degree prediction (first level)
+                    degree_pred = pred_at_levels[0] if len(pred_at_levels) > 0 else None
+                    if degree_pred in ["2nd+", "3rd", "3rd+", "4th", "4th+"]:
+                        predicted = None
+                
+                pred_at_levels.append(predicted)
             
             infer_dict[pair] = tuple(pred_at_levels)
         
         return cls(truth_dict, infer_dict, level_names)
-
+    
     @staticmethod
     def _get_relationship_hierarchy(relationship: str, hierarchy: PedigreeHierarchy) -> List[str]:
         """
