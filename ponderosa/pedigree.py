@@ -676,7 +676,7 @@ def build_pedigree(individuals: Individuals, pairs: Pairs, hierarchy: PedigreeHi
     registry = PedigreeRegistry(hierarchy)
     
     # Add relative pairs to the registry
-    codes = PedigreeCodes(hierarchy)
+    codes = PedigreeCodes.from_hierarchy(hierarchy)
 
     # Find all the relationships
     path_finder = RelationshipPathFinder(pedigree)
