@@ -1,8 +1,31 @@
+from pathlib import Path
 from typing import Dict, Tuple, List
 import numpy as np
 import pandas as pd
 
+from .prediction import MatrixHierarchy
+from .pedigree import PedigreeHierarchy
 from .data_loading import load_truth
+        
+def create_truth_matrix_hierarchy(truth_df: pd.DataFrame, 
+                                   hierarchy: PedigreeHierarchy,
+                                   pair_dict: Dict[int, Tuple[str, str]]) -> MatrixHierarchy:
+    """
+    Create a MatrixHierarchy from ground truth where each relationship has P=1.0
+    """
+    # Create reverse mapping: (id1, id2) -> index
+    pair_to_index = {pair: idx for idx, pair in pair_dict.items()}
+    
+    # Create MatrixHierarchy
+    truth_mhier = MatrixHierarchy.from_hierarchy(
+        hierarchy=hierarchy,
+        index_to_pair=pair_dict,
+        methods=["truth"]
+    )
+
+    truth_mhier._add_one_probs(truth_df.truth.values)
+    
+    return truth_mhier
 
 class EvaluationResults:
 
@@ -101,6 +124,7 @@ class EvaluationResults:
         return "\n".join(lines)
     
     @classmethod
-    def from_ponderosa(cls):
+    def from_ponderosa(cls,
+                       truth_file: Path):
         """Logic here - to be implemented"""
         raise NotImplementedError("from_ponderosa not yet implemented")
