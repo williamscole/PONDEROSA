@@ -39,6 +39,7 @@ class PonderosaResults:
     classifiers: Dict[str, RelationshipClassifier]
     matrix_hierarchy: MatrixHierarchy
     files_written: List[str]
+    evaluation: EvaluationResults
     
     def summary(self) -> str:
         """Return a summary of the analysis results."""
@@ -142,7 +143,8 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
             hierarchy=hierarchy,
             level_names=["Degree", "Specific Relationship"]  # Optional
         )
-            logger.info(f"Evaluation complete - Accuracy: {evaluation.accuracy:.2%}")
+            # TODO: fix this
+            # logger.info(f"Evaluation complete - Accuracy: {evaluation.accuracy:.2%}")
             
             # Write evaluation report
             eval_file = write_evaluation_report(evaluation, config.output.output)
@@ -175,7 +177,8 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
         hierarchy=hierarchy,
         classifiers=classifiers,
         matrix_hierarchy=matrix_hierarchy,
-        files_written=files_written
+        files_written=files_written,
+        evaluation=evaluation
     )
     
     return results

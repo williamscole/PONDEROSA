@@ -292,8 +292,13 @@ class MatrixHierarchy:
             if children.shape[0] == 0:
                 break
 
-            new_node = children[np.nanargmax(arr[children])]
-
+            child_probs = arr[children]
+        
+            # If all children are NaN, stop here (can't go deeper)
+            if np.all(np.isnan(child_probs)):
+                break
+            
+            new_node = children[np.nanargmax(child_probs)]
             p = arr[new_node]
 
         return node
