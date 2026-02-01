@@ -421,7 +421,7 @@ class Pairs:
 
         ibd_feature_df = ibd_segments.group_by("id1", "id2").map_groups(lambda group: cls._compute_pair(cls, group, max_gap))
 
-        return cls(ibd_feature_df, max_gap)
+        return cls(ibd_feature_df)
 
     def n_pairs(self):
         return self.max_index
@@ -586,7 +586,7 @@ def load_individuals(config: FilesConfig) -> Individuals:
 def load_pairs(files: FilesConfig, alg_args: AlgorithmConfig) -> Pairs:
 
     # Load the IBD segments
-    ibd_segments = load_ibd_from_file(files.ibd, files.ibd_caller, alg_args.min_segment_length, alg_args.min_total_ibd)
+    ibd_segments = load_ibd_from_file(files.ibd_file_list, files.ibd_caller, alg_args.min_segment_length, alg_args.min_total_ibd)
 
     # Add the IBD segments to the pairs
     pairs = Pairs.from_segment_df(ibd_segments)
