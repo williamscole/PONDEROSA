@@ -15,8 +15,16 @@ def process_phase_error(X: np.ndarray, prob_threshold: float = 0.5) -> np.ndarra
 
     return output / output.sum(axis=1)[:, np.newaxis]
 
+
 class MatrixHierarchy:
-    # def __init__(self, diG: nx.DiGraph, n_pairs: int, methods: list):
+    """
+    Docstring for MatrixHierarchy
+    
+    :var Args: Description
+    :var sample_idx: Description
+    :vartype sample_idx: Index
+    :var Returns: Description
+    """
     def __init__(self, directed_edge_list: list, index_to_pair: dict, methods: list):
 
         self.index_to_pair = index_to_pair
