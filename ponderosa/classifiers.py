@@ -301,7 +301,11 @@ def train_load_classifiers(registry: PedigreeRegistry, pairs: Pairs, training_fi
 
             trained_classifiers = pkl.load(pklf)
     else:
-        trained_classifiers = train_classifiers(registry, pairs, prefix)
+        trained_classifiers = train_classifiers(registry, pairs)
+
+        if prefix:
+            from .output import write_out_classifier
+            write_out_classifier(trained_classifiers, prefix)
 
     return trained_classifiers
 
