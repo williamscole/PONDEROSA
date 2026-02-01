@@ -6,7 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import yaml
-
+import pickle
 
 @pytest.fixture(scope="module")
 def test_data_dir(tmp_path_factory, request):
@@ -60,28 +60,61 @@ class TestEndToEnd:
     def test_1_direct_api_call(self, test_data_dir):
         """Test 1: Call run_ponderosa directly with config object."""
         from ponderosa import run_ponderosa, PonderosaConfig
+        from ponderosa.evaluation import EvaluationResults
+        from ponderosa.pedigree import PedigreeHierarchy
         
         config_file = test_data_dir / "test_config.yaml"
         assert config_file.exists(), f"Config file not found: {config_file}"
         
-        # Load config and run PONDEROSA
+        # Load config and validate
         config = PonderosaConfig.from_yaml(config_file)
         config.validate()
+        
+        # Run PONDEROSA
         results = run_ponderosa(config)
         
         # Verify outputs exist
-        output_prefix = config.output.output
         expected_files = [
-            f"{output_prefix}_pairs.txt",
-            f"{output_prefix}.mhier.pkl",
+            f"{config.output.output}_pairs.txt",
+            f"{config.output.output}.mhier.pkl",
         ]
         
         for expected_file in expected_files:
             output_file = Path(expected_file)
             assert output_file.exists(), f"Expected output file not found: {output_file}"
         
-        print(f"✓ Test 1 passed: Direct API call successful")
-        print(results.summary())
+        # EVALUATE ACCURACY
+        truth_file = test_data_dir / "test_truth.txt"
+        assert truth_file.exists(), f"Truth file not found: {truth_file}"
+        
+        # Load the saved matrix hierarchy
+        with open(f"{config.output.output}.mhier.pkl", "rb") as f:
+            matrix_hierarchy = pickle.load(f)
+        
+        # Load hierarchy
+        hierarchy = PedigreeHierarchy.from_yaml()
+        
+        # Evaluate
+        evaluation = EvaluationResults.from_ponderosa(
+            truth_file=truth_file,
+            pred_mhier=matrix_hierarchy,
+            hierarchy=hierarchy,
+            level_names=["Degree", "Specific"]
+        )
+        
+        # Print evaluation
+        print("\n" + str(evaluation))
+        
+        # Assert 100% accuracy at both levels
+        metrics = evaluation.get_overall_metrics()
+        
+        degree_acc = metrics["Degree"]["accuracy"]
+        specific_acc = metrics["Specific"]["accuracy"]
+        
+        assert degree_acc == 1.0, f"Expected 100% degree accuracy, got {degree_acc:.2%}"
+        assert specific_acc == 1.0, f"Expected 100% specific accuracy, got {specific_acc:.2%}"
+        
+        print(f"✓ Test 1 passed: Direct API call successful with 100% accuracy!")
     
     def test_2_cli_with_config(self, test_data_dir):
         """Test 2: Run PONDEROSA from CLI using config file."""
