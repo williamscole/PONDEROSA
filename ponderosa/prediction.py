@@ -271,7 +271,8 @@ class MatrixHierarchy:
 
         id_df = pd.DataFrame(index=range(self.n_pairs))
 
-        pairs = np.row_stack(id_df.index.map(self.index_to_pair))
+        pairs = np.vstack(id_df.index.map(self.index_to_pair))
+
         id_df["id1"] = pairs[:,0]
         id_df["id2"] = pairs[:,1]
         id_df["degree"] = self.most_likely_degree()
