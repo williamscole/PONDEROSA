@@ -125,6 +125,159 @@ class EvaluationResults:
     
     @classmethod
     def from_ponderosa(cls,
-                       truth_file: Path):
-        """Logic here - to be implemented"""
-        raise NotImplementedError("from_ponderosa not yet implemented")
+                    truth_file: Path,
+                    pred_mhier: MatrixHierarchy,
+                    hierarchy: PedigreeHierarchy,
+                    level_nodes: List[List[str]] = None,
+                    level_names: List[str] = None):
+        """
+        Create EvaluationResults from PONDEROSA outputs.
+        
+        Compares ground truth relationships to predictions at multiple hierarchical levels.
+        For each level, uses most_likely_among to get the predicted node at that level.
+        
+        Args:
+            truth_file: Path to truth file with columns [ID1, ID2, truth]
+            pred_mhier: MatrixHierarchy with predicted relationships
+            hierarchy: PedigreeHierarchy defining relationship structure
+            level_nodes: Nodes to evaluate at each level.
+                        e.g., [["1st", "2nd", "3rd", "4th"], ["PHS", "MHS", "PGP", "MGP", ...]]
+                        If None, uses default levels (degree, then specific)
+            level_names: Names for each level (e.g., ["Degree", "Specific Relationship"])
+                        If None, generates names like "Level_0", "Level_1"
+        
+        Returns:
+            EvaluationResults object with accuracy metrics at each hierarchy level
+        
+        Example:
+            >>> eval_results = EvaluationResults.from_ponderosa(
+            ...     truth_file=Path("truth.txt"),
+            ...     pred_mhier=matrix_hierarchy,
+            ...     hierarchy=hierarchy,
+            ...     level_names=["Degree", "Specific"]
+            ... )
+            >>> print(eval_results)
+        """
+        from .data_loading import load_truth
+        
+        # Load truth data
+        truth_df = load_truth(truth_file)
+        
+        # Determine levels to evaluate if not provided
+        if level_nodes is None:
+            level_nodes = cls._get_default_levels(hierarchy)
+        
+        n_levels = len(level_nodes)
+        
+        # Generate level names if not provided
+        if level_names is None:
+            level_names = [f"Level_{i}" for i in range(n_levels)]
+        else:
+            assert len(level_names) == n_levels, \
+                f"level_names length ({len(level_names)}) must match level_nodes length ({n_levels})"
+        
+        # Build truth_dict: (id1, id2) -> tuple of relationships at each level
+        truth_dict = {}
+        for _, row in truth_df.iterrows():
+            pair = (row['ID1'], row['ID2'])
+            relationship = row['truth']
+            
+            # Get the hierarchical path for this relationship
+            try:
+                rel_path = cls._get_relationship_hierarchy(relationship, hierarchy)
+            except ValueError as e:
+                # Skip relationships not in hierarchy
+                continue
+            
+            # For each level, find which node matches
+            rel_at_levels = []
+            for level in level_nodes:
+                matching_node = None
+                for node in level:
+                    if node in rel_path:
+                        matching_node = node
+                        break
+                rel_at_levels.append(matching_node)
+            
+            truth_dict[pair] = tuple(rel_at_levels)
+        
+        # Build infer_dict: (id1, id2) -> tuple of predictions at each level
+        infer_dict = {}
+        for idx, pair in pred_mhier.index_to_pair.items():
+            pred_at_levels = []
+            
+            for level in level_nodes:
+                # Use most_likely_among to get prediction at this specific level
+                pred_array = pred_mhier.most_likely_among(level, asint=False)
+                pred_at_levels.append(pred_array[idx])
+            
+            infer_dict[pair] = tuple(pred_at_levels)
+        
+        return cls(truth_dict, infer_dict, level_names)
+
+    @staticmethod
+    def _get_relationship_hierarchy(relationship: str, hierarchy: PedigreeHierarchy) -> List[str]:
+        """
+        Get the hierarchical path from root to relationship.
+        
+        Args:
+            relationship: Specific relationship (e.g., "PHS")
+            hierarchy: PedigreeHierarchy
+        
+        Returns:
+            List of nodes from most general to most specific
+            e.g., ["2nd", "HS", "PHS"] for PHS
+            e.g., ["1st", "PO"] for PO
+        
+        Raises:
+            ValueError: If relationship not found in hierarchy or no path exists
+        """
+        import networkx as nx
+        
+        if relationship not in hierarchy.nodes:
+            raise ValueError(f"Relationship '{relationship}' not found in hierarchy")
+        
+        # Get path from 'relatives' to this relationship
+        try:
+            path = nx.shortest_path(hierarchy, 'relatives', relationship)
+        except nx.NetworkXNoPath:
+            raise ValueError(f"No path from 'relatives' to '{relationship}'")
+        
+        # Remove 'relatives' from path (it's the root, not a meaningful level)
+        path = path[1:]
+        
+        return path
+
+    @staticmethod
+    def _get_default_levels(hierarchy: PedigreeHierarchy) -> List[List[str]]:
+        """
+        Get default evaluation levels from hierarchy.
+        
+        Returns two levels:
+        1. Degree level: Direct children of 'relatives' (e.g., ["1st", "2nd", "3rd", "4th"])
+        2. Specific level: All leaf nodes (relationships with no children)
+        
+        Args:
+            hierarchy: PedigreeHierarchy
+        
+        Returns:
+            List of lists, where each inner list contains nodes at that level
+            e.g., [["1st", "2nd", "3rd", "4th"], ["PO", "FS", "PHS", "MHS", ...]]
+        
+        Example:
+            >>> levels = EvaluationResults._get_default_levels(hierarchy)
+            >>> degree_level, specific_level = levels
+            >>> print(degree_level)  # ["1st", "2nd", "3rd", "4th"]
+        """
+        import networkx as nx
+        
+        # Level 1: Degree nodes (direct children of 'relatives')
+        degree_nodes = sorted(list(hierarchy.successors('relatives')))
+        
+        # Level 2: Leaf nodes (specific relationships with no children)
+        leaf_nodes = sorted([
+            node for node in hierarchy.nodes 
+            if hierarchy.out_degree(node) == 0 and node != 'relatives'
+        ])
+        
+        return [degree_nodes, leaf_nodes]
