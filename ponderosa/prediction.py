@@ -64,6 +64,54 @@ class MatrixHierarchy:
 
         self.g = diG
 
+    def __str__(self) -> str:
+        """
+        Generate ASCII representation of the hierarchy structure.
+        
+        Returns a tree view showing all nodes in the hierarchy.
+        """
+        def build_tree_lines(node_name, prefix="", is_last=True):
+            """Recursively build tree lines for a node and its children"""
+            lines = []
+            
+            # Format node line
+            connector = "└── " if is_last else "├── "
+            node_line = f"{prefix}{connector}{node_name}"
+            lines.append(node_line)
+            
+            # Get children
+            children = list(nx.descendants_at_distance(self.g, node_name, 1))
+            
+            if children:
+                # Sort children for consistent display
+                children.sort()
+                
+                for i, child in enumerate(children):
+                    is_last_child = (i == len(children) - 1)
+                    
+                    # Determine prefix for children
+                    if is_last:
+                        child_prefix = prefix + "    "
+                    else:
+                        child_prefix = prefix + "│   "
+                    
+                    child_lines = build_tree_lines(child, child_prefix, is_last_child)
+                    lines.extend(child_lines)
+            
+            return lines
+        
+        # Build header
+        header = f"MatrixHierarchy ({self.n_pairs} pairs, {len(self.nodes)} nodes)"
+        separator = "=" * len(header)
+        
+        # Build tree starting from root
+        tree_lines = build_tree_lines("relatives")
+        
+        # Combine all parts
+        result = [separator, header, separator] + tree_lines + [separator]
+        
+        return "\n".join(result)
+
     @classmethod
     def from_hierarchy(cls, hierarchy: PedigreeHierarchy, index_to_pair: dict, methods: list):
         edge_list = list(hierarchy.edges())
