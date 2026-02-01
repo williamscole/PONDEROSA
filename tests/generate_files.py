@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
+import yaml
 
-from generate_end_to_end import generate_test_segments
+from tests.generate_end_to_end import generate_test_segments
 
 CHROM_LEN = 160
 
@@ -395,7 +396,6 @@ class GeneratePairs:
             }
         }
         
-        import yaml
         config_path = f"{path_and_prefix}_config.yaml"
         with open(config_path, 'w') as f:
             yaml.dump(config_dict, f, default_flow_style=False, indent=2)
@@ -406,6 +406,7 @@ if __name__ == "__main__":
 
     gen = GeneratePairs(15)
     gen.generate_all()
-    gen.write_out("data/test1/test")
+    # gen.write_out("data/test1/test")
+    gen.write_out("del")
 
     
