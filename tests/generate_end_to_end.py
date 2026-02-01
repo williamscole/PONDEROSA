@@ -270,7 +270,7 @@ def test_segment_generator():
 
         segments_df["l"] = segments_df.end_cm - segments_df.start_cm
 
-        print(degree, rel, genome_len, total_ibd, n_segs, segments_df.l.sum(), segments_df.shape[0])
+        # print(degree, rel, genome_len, total_ibd, n_segs, segments_df.l.sum(), segments_df.shape[0])
 
         assert segments_df[segments_df.l<5].shape[0] == 0
         assert (total_ibd - 1) <= segments_df.l.sum() <= (total_ibd + 1)
@@ -306,7 +306,7 @@ def generate_test_segments(degree: str, rel: str = None, genome_len: int = 3200,
 
     n_segs = get_segment_count(degree) if rel is None else get_segment_count(rel)
 
-    print(degree, rel, kinship, total_ibd, n_segs)
+    # print(degree, rel, kinship, total_ibd, n_segs)
 
     if degree == "FS":
         total_ibd = total_ibd / 2

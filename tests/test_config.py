@@ -25,5 +25,5 @@ class TestYaml:
         config2 = PonderosaConfig.from_yaml(yaml_file_path / "args_split_chrom.yaml")
         config2.validate()
 
-        pytest.set_trace()
+        # pytest.set_trace()
 

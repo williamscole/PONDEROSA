@@ -292,5 +292,5 @@ class TestTesting:
 
         # TODO: actually test that this works!
 
-        import pytest; pytest.set_trace()
+        # import pytest; pytest.set_trace()
 

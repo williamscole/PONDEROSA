@@ -37,6 +37,11 @@ def test_data_dir(tmp_path_factory, request):
         pairs = GeneratePairs(n_pairs=100, simple_segments=False)
         pairs.generate_some(["po", "fs", "hs", "gp", "av", "co"])
         pairs.write_out(str(data_dir / "test"), n_chrom=22)
+
+        # DEBUG: Print what files were actually created
+        print(f"\n📋 Files created in {data_dir}:")
+        for f in sorted(data_dir.glob("*")):
+            print(f"  - {f.name}")
     
     yield data_dir
     
@@ -61,6 +66,7 @@ class TestEndToEnd:
         
         # Load config and run PONDEROSA
         config = PonderosaConfig.from_yaml(config_file)
+        config.validate()
         results = run_ponderosa(config)
         
         # Verify outputs exist
