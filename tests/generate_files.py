@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 
+from generate_end_to_end import generate_test_segments
+
 CHROM_LEN = 160
 
 def simple_ibd_segments(kinship: float, id1: str, id2: str, id1_haplotype: list, id2_haplotype: list, n_chrom: int = 2):
@@ -45,7 +47,6 @@ def simple_ibd_segments(kinship: float, id1: str, id2: str, id1_haplotype: list,
     return np.array(segments, dtype=object)
 
             
-
 def generate_simple_segments_for(rel_type, id1, id2):
     if rel_type == "PO":
         segments = simple_ibd_segments(1, id1, id2, np.random.choice([0, 1], 1), [0, 1])
@@ -77,16 +78,50 @@ def generate_simple_segments_for(rel_type, id1, id2):
 
     return segments
 
+def generate_complex_segments_for(rel_type, id1, id2):
+    if rel_type == "PO":
+        segments = generate_test_segments("PO")
+
+    elif rel_type == "FS":
+        segments = generate_test_segments("FS")
+
+    elif rel_type in ["AV", "GP", "MGP", "PGP", "MHS", "PHS"]:
+        segments = generate_test_segments("2nd", rel_type)
+
+    elif rel_type in ["CO"]:
+        segments = generate_test_segments("3rd")
+
+    elif rel_type in ["HCO"]:
+        segments = generate_test_segments("4th")
+
+    elif rel_type in ["HSCO"]:
+        pass
+
+    elif rel_type == "self":
+        # Paremeterized with an expected kinship of 0.045
+        # segments = simple_ibd_segments(np.random.beta(4.05, 85.9), id1, id2, [0], [1])
+        # mask = np.random.random(segments.shape[0]) < 0.4
+        # segments = segments[mask]
+         segments = generate_test_segments("5th")
+
+    segments["id1"] = id1
+    segments["id2"] = id2
+    
+    segment_matrix = segments[["id1", "id1_haplotype", "id2", "id2_haplotype", "chromosome", "start_cm", "end_cm"]].values
+
+    return segment_matrix
+
 
 class GeneratePairs:
 
-    def __init__(self, n_pairs: int = 10):
+    def __init__(self, n_pairs: int = 10, simple_segments: bool = True):
 
         self.n_pairs = n_pairs
         self.id_index = 1
         self.segments = []
         self.ages = []
         self.fam = []
+        self.truth = {}
 
         self.generation_ages = {
             1: [0, 10],
@@ -95,6 +130,11 @@ class GeneratePairs:
         }
 
         self.cur_fam = 1
+
+        if simple_segments:
+            self.segment_generator = generate_simple_segments_for
+        else:
+            self.segment_generator = generate_complex_segments_for
 
     def _new_pair(self):
         self.id_index += 2
@@ -117,11 +157,12 @@ class GeneratePairs:
             self.ages.append([iid, self._age(gen)])
 
     def add_segments(self, rel_type, id1, id2):
-        segment_arr = generate_simple_segments_for(rel_type, id1, id2)
+        segment_arr = self.segment_generator(rel_type, id1, id2)
         self.segments.append(segment_arr)
         for iid in [id1, id2]:
-            segment_arr = generate_simple_segments_for("self", iid, iid)
+            segment_arr = self.segment_generator("self", iid, iid)
             self.segments.append(segment_arr)
+        self.truth[(id1, id2)] = rel_type
         self.cur_fam += 1
 
     def po(self):
@@ -267,6 +308,18 @@ class GeneratePairs:
         self.co(half=False)
         self.hsco()
 
+    def generate_some(self, rel_list):
+        for r in rel_list:
+            if r == "hs" or r == "gp":
+                getattr(self, r)(1)
+                getattr(self, r)(2)
+            elif r == "co":
+                self.co(half=True)
+                self.co(half=False)
+            else:
+                getattr(self, r)()
+            
+
     def write_out(self, path_and_prefix: str, delim="\t", n_chrom=2):
 
         segments = np.vstack(self.segments)
@@ -292,10 +345,12 @@ class GeneratePairs:
         if len(self.ages) > 0:
             age_df = pd.DataFrame(self.ages)
             age_df.to_csv(f"{path_and_prefix}_ages.txt", sep=delim, index=False, header=False)
+            print("Wrote:", f"{path_and_prefix}_ages.txt")
 
         # Save fam file
         fam_df = pd.DataFrame(self.fam)
         fam_df.to_csv(f"{path_and_prefix}.fam", header=False, index=False, sep=" ")
+        print("Wrote:", f"{path_and_prefix}.fam")
 
         dfs = []
         for i in range(1, n_chrom + 1):
@@ -309,6 +364,12 @@ class GeneratePairs:
             dfs.append(map_df)
 
         pd.concat(dfs)[["chr", "rsid", "cm", "bp"]].to_csv(f"{path_and_prefix}.map", header=False, index=False, sep=" ")
+        print("Wrote:", f"{path_and_prefix}.map")
+
+        rows = [[*i,j] for i,j in self.truth.items()]
+        truth_df = pd.DataFrame(rows, columns=["iid1","iid2","truth"])
+        truth_df.to_csv(f"{path_and_prefix}_truth.txt", index=False, sep="\t")
+        print("Wrote:", f"{path_and_prefix}_truth.txt")
 
 
 if __name__ == "__main__":
