@@ -249,52 +249,55 @@ class GeneratePairs:
             self.add_fam_line(mother, 2, "0", "0", gen=3)
 
     def co(self, half: bool = False):
+        for _ in range(self.n_pairs):
 
-        co1, co2 = self._new_pair()
+            co1, co2 = self._new_pair()
 
-        self.add_segments("HCO" if half else "CO", co1, co2)
+            self.add_segments("HCO" if half else "CO", co1, co2)
 
-        sibs = []
-        for co in [co1, co2]:
-            father, mother = self._new_pair()
-            sibs.append(mother)
-            self.add_fam_line(co, self._sex(), father, mother, gen=1)
-            self.add_fam_line(father, 1, "0", "0", gen=2)
+            sibs = []
+            for co in [co1, co2]:
+                father, mother = self._new_pair()
+                sibs.append(mother)
+                self.add_fam_line(co, self._sex(), father, mother, gen=1)
+                self.add_fam_line(father, 1, "0", "0", gen=2)
 
-        if half:
-            shared_mother = self._new_ind()
-            self.add_fam_line(shared_mother, 2, "0", "0", gen=3)
-            for sib in sibs:
-                father = self._new_ind()
-                self.add_fam_line(sib, self._sex(), father, shared_mother, gen=2)
+            if half:
+                shared_mother = self._new_ind()
+                self.add_fam_line(shared_mother, 2, "0", "0", gen=3)
+                for sib in sibs:
+                    father = self._new_ind()
+                    self.add_fam_line(sib, self._sex(), father, shared_mother, gen=2)
+                    self.add_fam_line(father, 1, "0", "0", gen=3)
+            else:
+                father, mother = self._new_pair()
                 self.add_fam_line(father, 1, "0", "0", gen=3)
-        else:
-            father, mother = self._new_pair()
-            self.add_fam_line(father, 1, "0", "0", gen=3)
-            self.add_fam_line(mother, 2, "0", "0", gen=3)
-            for sib in sibs:
-                self.add_fam_line(sib, self._sex(), father, mother, gen=2)
+                self.add_fam_line(mother, 2, "0", "0", gen=3)
+                for sib in sibs:
+                    self.add_fam_line(sib, self._sex(), father, mother, gen=2)
 
     def hsco(self):
 
-        co1, co2 = self._new_pair()
+        for _ in range(self.n_pairs):
 
-        self.add_segments("HSCO", co1, co2)
+            co1, co2 = self._new_pair()
 
-        mother = self._new_ind()
-        father1 = self._new_ind()
-        father2 = self._new_ind()
+            self.add_segments("HSCO", co1, co2)
 
-        gma, gpa = self._new_pair()
+            mother = self._new_ind()
+            father1 = self._new_ind()
+            father2 = self._new_ind()
 
-        self.add_fam_line(co1, self._sex(), father1, mother, gen=1)
-        self.add_fam_line(co2, self._sex(), father2, mother, gen=1)
-        self.add_fam_line(mother, 2, "0", "0", gen=2)
-        for father in [father1, father2]:
-            self.add_fam_line(father, 1, gpa, gma, gen=2)
+            gma, gpa = self._new_pair()
 
-        self.add_fam_line(gpa, 1, "0", "0", gen=3)
-        self.add_fam_line(gma, 2, "0", "0", gen=3)
+            self.add_fam_line(co1, self._sex(), father1, mother, gen=1)
+            self.add_fam_line(co2, self._sex(), father2, mother, gen=1)
+            self.add_fam_line(mother, 2, "0", "0", gen=2)
+            for father in [father1, father2]:
+                self.add_fam_line(father, 1, gpa, gma, gen=2)
+
+            self.add_fam_line(gpa, 1, "0", "0", gen=3)
+            self.add_fam_line(gma, 2, "0", "0", gen=3)
 
 
     def generate_all(self):
