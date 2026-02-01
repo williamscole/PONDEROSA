@@ -13,8 +13,6 @@ def create_truth_matrix_hierarchy(truth_df: pd.DataFrame,
     """
     Create a MatrixHierarchy from ground truth where each relationship has P=1.0
     """
-    # Create reverse mapping: (id1, id2) -> index
-    pair_to_index = {pair: idx for idx, pair in pair_dict.items()}
     
     # Create MatrixHierarchy
     truth_mhier = MatrixHierarchy.from_hierarchy(
@@ -22,6 +20,8 @@ def create_truth_matrix_hierarchy(truth_df: pd.DataFrame,
         index_to_pair=pair_dict,
         methods=["truth"]
     )
+
+    truth_df = truth_df[truth_df[["ID1", "ID2"]].apply(tuple, axis=1).isin(pair_dict.values())]
 
     truth_mhier._add_one_probs(truth_df.truth.values)
     

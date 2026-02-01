@@ -572,14 +572,20 @@ def load_truth(truth_file: Path) -> pd.DataFrame:
     Load ground truth relationships from file.
     
     Expected format (whitespace-separated):
-    iid1    iid2    truth
+    ID1    ID2    truth
     ID1     ID2     PHS
     ID3     ID4     PO
     
     Returns:
-        DataFrame with columns ['iid1', 'iid2', 'truth']
+        DataFrame with columns ['ID1', 'ID2', 'truth']
     """
-    return pd.read_csv(truth_file, sep="\s+")
+    truth_df = pd.read_csv(truth_file, sep=r"\s+")
+
+    cols = list(truth_df.columns)
+
+    assert len(cols) >= 3
+
+    return truth_df.rename({col: new_col for col, new_col in zip(cols[:3], ["ID1", "ID2", "truth"])}, axis=1)
 
 
 def load_individuals(config: FilesConfig) -> Individuals:

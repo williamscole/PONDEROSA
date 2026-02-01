@@ -280,7 +280,8 @@ class MatrixHierarchy:
 
     def _most_probable_helper(self, arr):
 
-        p = 1; new_node = 0
+        p = 1
+        new_node = self.relatives_idx 
 
         while p >= self.min_p:
 

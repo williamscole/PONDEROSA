@@ -27,8 +27,8 @@ class TestCreateTruthMatrixHierarchy:
         
         # Create simple truth data
         truth_data = {
-            'iid1': ['ID1', 'ID3', 'ID5'],
-            'iid2': ['ID2', 'ID4', 'ID6'],
+            'ID1': ['ID1', 'ID3', 'ID5'],
+            'ID2': ['ID2', 'ID4', 'ID6'],
             'truth': ['PHS', 'PO', 'FS']
         }
         truth_df = pd.DataFrame(truth_data)
@@ -73,8 +73,8 @@ class TestCreateTruthMatrixHierarchy:
         """Test that probabilities propagate up the hierarchy."""
         
         truth_data = {
-            'iid1': ['ID1'],
-            'iid2': ['ID2'],
+            'ID1': ['ID1'],
+            'ID2': ['ID2'],
             'truth': ['PHS']  # Paternal half-sibling
         }
         truth_df = pd.DataFrame(truth_data)
@@ -105,8 +105,8 @@ class TestCreateTruthMatrixHierarchy:
         """Test handling pairs in truth but not in pair_dict."""
         
         truth_data = {
-            'iid1': ['ID1', 'ID99'],  # ID99 pair doesn't exist in pair_dict
-            'iid2': ['ID2', 'ID100'],
+            'ID1': ['ID1', 'ID99'],  # ID99 pair doesn't exist in pair_dict
+            'ID2': ['ID2', 'ID100'],
             'truth': ['PHS', 'FS']
         }
         truth_df = pd.DataFrame(truth_data)
@@ -134,8 +134,8 @@ class TestCreateTruthMatrixHierarchy:
         """Test with multiple different relationships at the same hierarchical level."""
         
         truth_data = {
-            'iid1': ['ID1', 'ID3', 'ID5', 'ID7'],
-            'iid2': ['ID2', 'ID4', 'ID6', 'ID8'],
+            'ID1': ['ID1', 'ID3', 'ID5', 'ID7'],
+            'ID2': ['ID2', 'ID4', 'ID6', 'ID8'],
             'truth': ['PHS', 'MHS', 'PGP', 'MGP']  # All 2nd degree
         }
         truth_df = pd.DataFrame(truth_data)
