@@ -157,6 +157,16 @@ class MatrixHierarchy:
             self.matrix[:,label_arr,1] = prob_arr
             self.matrix[:,label_arr,2] = method_idx
 
+    # Just added: allows for "truth" labels to be input
+    # This should still work with compute_probs, but it doesn't currently....
+    def _add_one_probs(self, str_rel: list):
+
+        for idx, rel in enumerate(str_rel):
+            self.matrix[idx,:,:2] = 0
+            for node in [rel] + list(nx.ancestors(self.g, rel)):
+                self.matrix[idx,self.node_to_idx[node],0] = 1
+                self.matrix[idx,self.node_to_idx[node],1] = 1
+
     def add_priors(self):
         pass
         
