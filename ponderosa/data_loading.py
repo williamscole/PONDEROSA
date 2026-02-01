@@ -567,6 +567,19 @@ def load_priors(config: FilesConfig) -> Priors:
     return priors
 
 
+def load_truth(truth_file: Path) -> pd.DataFrame:
+    """
+    Load ground truth relationships from file.
+    
+    Expected format (whitespace-separated):
+    iid1    iid2    truth
+    ID1     ID2     PHS
+    ID3     ID4     PO
+    
+    Returns:
+        DataFrame with columns ['iid1', 'iid2', 'truth']
+    """
+    return pd.read_csv(truth_file, sep="\s+")
 
 
 def load_individuals(config: FilesConfig) -> Individuals:
