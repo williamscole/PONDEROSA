@@ -371,6 +371,36 @@ class GeneratePairs:
         truth_df.to_csv(f"{path_and_prefix}_truth.txt", index=False, sep="\t")
         print("Wrote:", f"{path_and_prefix}_truth.txt")
 
+        config_dict = {
+            "files": {
+                "ibd": f"{path_and_prefix}_phasedibd.txt",
+                "fam": f"{path_and_prefix}.fam",
+                "ibd_caller": "phasedibd",
+                "ages": f"{path_and_prefix}_ages.txt" if len(self.ages) > 0 else None,
+                "mapf": f"{path_and_prefix}.map",
+                "truth": f"{path_and_prefix}_truth.txt",  # <-- ADD THIS LINE
+            },
+            "algorithm": {
+                "min_segment_length": 3.0,
+                "min_total_ibd": 50.0,
+                "max_gap": 1.0,
+                "population": "pop1",
+                "genome_length": float(CHROM_LEN * n_chrom),
+            },
+            "output": {
+                "output": f"{path_and_prefix}_ponderosa_output",
+                "min_probability": 0.5,
+                "write_training": True,
+                "verbose": True,
+            }
+        }
+        
+        import yaml
+        config_path = f"{path_and_prefix}_config.yaml"
+        with open(config_path, 'w') as f:
+            yaml.dump(config_dict, f, default_flow_style=False, indent=2)
+        
+        print("Wrote:", config_path)
 
 if __name__ == "__main__":
 
