@@ -136,11 +136,12 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
     if config.files.truth:
         logger.info(f"Evaluating predictions against ground truth: {config.files.truth}")
         try:
-            evaluation = EvaluationResults(
-                matrix_hierarchy=matrix_hierarchy,
-                truth_file=config.files.truth,
-                pairs=pairs
-            )
+            evaluation = EvaluationResults.from_ponderosa(
+            truth_file=config.files.truth,
+            pred_mhier=matrix_hierarchy,
+            hierarchy=hierarchy,
+            level_names=["Degree", "Specific Relationship"]  # Optional
+        )
             logger.info(f"Evaluation complete - Accuracy: {evaluation.accuracy:.2%}")
             
             # Write evaluation report
