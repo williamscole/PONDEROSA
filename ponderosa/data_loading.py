@@ -44,7 +44,7 @@ class IBDLoader(ABC):
             .group_by(['id1', 'id2'])
             .agg([
                 pl.col('length_cm').sum().alias('total_ibd'),
-                pl.count().alias('n_segments')
+                pl.len().alias('n_segments')
             ])
             .filter(pl.col('total_ibd') >= min_total_ibd)
             .collect()  # Only collect the small pairs summary
@@ -91,7 +91,7 @@ class PhasedIBDLoader(IBDLoader):
         df = pl.scan_csv(
             file_path,
             separator='\t',
-            dtypes={
+            schema_overrides={
                 'id1': pl.Utf8,
                 'id2': pl.Utf8,
                 'chromosome': pl.Int8,
