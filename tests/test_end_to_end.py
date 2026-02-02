@@ -7,6 +7,9 @@ import shutil
 import subprocess
 import yaml
 import pickle
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 @pytest.fixture(scope="module")
 def test_data_dir(tmp_path_factory, request):
@@ -72,6 +75,11 @@ class TestEndToEnd:
         
         # Run PONDEROSA
         results = run_ponderosa(config)
+
+        print(f"\n=== PEDIGREE REGISTRY ===")
+        for node, pairs_list in results.registry.nodes.items():
+            if pairs_list:
+                print(f"{node}: {len(pairs_list)} pairs")
         
         # Verify outputs exist
         expected_files = [
@@ -93,7 +101,7 @@ class TestEndToEnd:
         
         # Load hierarchy
         hierarchy = PedigreeHierarchy.from_yaml()
-        
+
         # Evaluate
         evaluation = EvaluationResults.from_ponderosa(
             truth_file=truth_file,
@@ -101,6 +109,74 @@ class TestEndToEnd:
             hierarchy=hierarchy,
             level_names=["Degree", "Specific"]
         )
+
+        with open(f"{config.output.output}.mhier.pkl", "rb") as f:
+            matrix_hierarchy = pickle.load(f)
+
+        # Get predictions
+        pred_df = matrix_hierarchy.to_dataframe(min_p=0.0)
+
+        # Load pairs to get IBD features
+        from ponderosa.data_loading import load_pairs
+        pairs = load_pairs(config.files, config.algorithm)
+
+        # Get IBD1 and IBD2 for all pairs
+        ibd_data = []
+        for idx, (id1, id2) in matrix_hierarchy.index_to_pair.items():
+            ibd1, ibd2 = pairs.get_pair_data_from(
+                np.array([(id1, id2)]),  # <-- Convert to numpy array
+                "IBD1", "IBD2", 
+                output_style="flatten"
+            )[0]
+            
+            # Get truth relationship
+            truth_rel = None
+            for (tid1, tid2), trel in evaluation.truth_dict.items():
+                if (tid1, tid2) == (id1, id2) or (tid2, tid1) == (id1, id2):
+                    truth_rel = trel[0] if len(trel) > 0 else None  # Degree level
+                    break
+            
+            ibd_data.append({
+                'ibd1': ibd1,
+                'ibd2': ibd2,
+                'truth': truth_rel,
+                'pred': pred_df.iloc[idx]['degree']
+            })
+
+        # Convert to dataframe
+        plot_df = pd.DataFrame(ibd_data)
+
+        # Create scatter plot
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+        # Plot 1: Colored by truth
+        for rel in plot_df['truth'].unique():
+            if pd.notna(rel):
+                subset = plot_df[plot_df['truth'] == rel]
+                ax1.scatter(subset['ibd1'], subset['ibd2'], label=rel, alpha=0.6, s=50)
+        ax1.set_xlabel('IBD1 (cM)')
+        ax1.set_ylabel('IBD2 (cM)')
+        ax1.set_title('Ground Truth Relationships')
+        ax1.legend()
+        ax1.grid(True, alpha=0.3)
+
+        # Plot 2: Colored by prediction
+        for rel in plot_df['pred'].unique():
+            if pd.notna(rel):
+                subset = plot_df[plot_df['pred'] == rel]
+                ax2.scatter(subset['ibd1'], subset['ibd2'], label=rel, alpha=0.6, s=50)
+        ax2.set_xlabel('IBD1 (cM)')
+        ax2.set_ylabel('IBD2 (cM)')
+        ax2.set_title('Predicted Relationships')
+        ax2.legend()
+        ax2.grid(True, alpha=0.3)
+
+        plt.tight_layout()
+        plt.savefig('ibd_scatter.png', dpi=150)
+        print("\n✓ Saved scatter plot to ibd_scatter.png")
+        plt.show()
+
+        import pytest; pytest.set_trace()
         
         # Print evaluation
         print("\n" + str(evaluation))

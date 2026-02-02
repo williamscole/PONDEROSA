@@ -392,6 +392,9 @@ class Pairs:
 
     def __init__(self, ibd_feature_df: pl.DataFrame):
 
+        # Remove self-IBD features!
+        ibd_feature_df = ibd_feature_df.filter(pl.col("id1")!=pl.col("id2"))
+
         data = ibd_feature_df.drop(["id1", "id2"]).to_numpy().copy()
 
         self.pair_to_index = {}

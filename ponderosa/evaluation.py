@@ -62,6 +62,8 @@ class EvaluationResults:
         self.n_levels = n_levels
         self.level_names = level_names
         self.n_pairs = len(truth_dict)
+        self.truth_dict = truth_dict
+        self.infer_dict = infer_dict
 
     def _calculate_level_accuracy(self, level_idx: int) -> Dict[str, float]:
         """Calculate accuracy metrics for a specific level, ignoring NaN values."""
