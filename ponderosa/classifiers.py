@@ -73,7 +73,8 @@ class RelationshipClassifier(ABC):
 
         else:
             y = np.array([])
-            pair_list = np.array([])
+
+            pair_list = np.array([pairs.index_to_pair[i] for i in range(pairs.n_pairs())])
 
             features = self.test_features
 
