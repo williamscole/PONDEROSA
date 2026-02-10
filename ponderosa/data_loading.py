@@ -506,8 +506,6 @@ class Pairs:
         id1_val = pair_df["id1"][0]
         id2_val = pair_df["id2"][0]
 
-        columns = ["IBD1", "IBD2", "H1", "H2", "HTOT", "N", "N2", "H1_ERR", "H2_ERR", "HTOT_ERR"]
-
         data = {col: [arr[Features.get_index(col)]] for col in Features.get_feature_names()}
         data["id1"] = [id1_val]
         data["id2"] = [id2_val]
