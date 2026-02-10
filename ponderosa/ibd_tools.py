@@ -263,4 +263,7 @@ class ProcessSegments:
 
             ibd_stats += instance._get_ibd_stats(chrom_index)
 
+        ibd_stats[[Features.H1, Features.H2]] /= ibd_stats[Features.HTOT]
+        ibd_stats[[Features.H1_ERR, Features.H2_ERR]] /= ibd_stats[Features.HTOT_ERR]
+
         return ibd_stats
