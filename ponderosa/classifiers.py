@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Dict, List, Tuple, Optional
+from collections import Counter
 import numpy as np
 from sklearn.model_selection import LeaveOneOut
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis
 import networkx as nx
 import pickle as pkl
 
@@ -25,6 +26,34 @@ def prepare_classifier_data(X: np.ndarray, *args):
         out_arrs.append(arg[valid_mask])
 
     return tuple(out_arrs)
+
+def choose_discriminant_classifier(X, y, min_samples_for_qda=20):
+    # 1. Check sample size per class
+    unique_classes, counts = np.unique(y, return_counts=True)
+    small_classes = counts < min_samples_for_qda
+    
+    # 2. Check for invariance (Zero Variance)
+    # We check if any class has a feature with near-zero spread
+    has_invariance = False
+    for label in unique_classes:
+        class_subset = X[y == label]
+        if np.any(np.var(class_subset, axis=0) < 1e-9):
+            has_invariance = True
+            break
+
+    # 3. Decision Logic
+    if np.any(small_classes):
+        # Fallback to LDA if any class is too small to estimate its own shape
+        model = LinearDiscriminantAnalysis()
+    else:
+        # If classes are large enough, use QDA
+        # If data is invariant, add noise or use reg_param
+        if has_invariance:
+            # Adding jitter to X to stabilize the matrix inversion
+            X = X + np.random.normal(0, 1e-8, X.shape)
+        model = QuadraticDiscriminantAnalysis()
+
+    return model.fit(X, y)
 
 
 class RelationshipClassifier(ABC):
@@ -191,11 +220,12 @@ class SegmentCountClassifier(RelationshipClassifier):
         """
         Columns in X correspond to no. of segments, IBD1 prop., IBD2 prop.
         """
-        
-        self.model = LinearDiscriminantAnalysis()
-        
-        self.model.fit(X, y)
 
+        self.model = choose_discriminant_classifier(X, y)
+
+        for cls in ["AV", "MGP", "MHS", "PGP", "PHS"]:
+            mask = y == cls
+            print(f"{cls}: N = {X[mask, 0].min():.0f} - {X[mask, 0].max():.0f}")
 
 class HaplotypeScoreClassifier(RelationshipClassifier):
 
@@ -252,9 +282,7 @@ class HaplotypeScoreClassifier(RelationshipClassifier):
 
     def _train_model(self, X: np.ndarray, y: np.ndarray):
 
-        self.model = LinearDiscriminantAnalysis()
-        
-        self.model.fit(X, y)
+        self.model = choose_discriminant_classifier(X, y)
 
 
 class DegreeClassifier(RelationshipClassifier):
