@@ -228,17 +228,27 @@ class HaplotypeScoreClassifier(RelationshipClassifier):
 
         n_samples = X.shape[0]
 
-        X_train = np.vstack([X[:,[H1,H2]], X[:,[H1_ERR,H2_ERR]]])
+        # Sort so max is always first (order-invariant)
+        h_max = np.maximum(X[:, H1], X[:, H2])
+        h_min = np.minimum(X[:, H1], X[:, H2])
+        
+        h_err_max = np.maximum(X[:, H1_ERR], X[:, H2_ERR])
+        h_err_min = np.minimum(X[:, H1_ERR], X[:, H2_ERR])
 
-        phase_error_y = np.array(["Phase error"]*n_samples)
+        X_train = np.vstack([
+            np.column_stack([h_max, h_min]),
+            np.column_stack([h_err_max, h_err_min])
+        ])
 
+        phase_error_y = np.array(["Phase error"] * n_samples)
         y_train = np.concatenate([y, phase_error_y])
 
         return X_train, y_train
 
     def _manipulate_testing_data(self, X):
-
-        return X[:,:2]
+        h_max = np.maximum(X[:, 0], X[:, 1])
+        h_min = np.minimum(X[:, 0], X[:, 1])
+        return np.column_stack([h_max, h_min])
 
     def _train_model(self, X: np.ndarray, y: np.ndarray):
 
