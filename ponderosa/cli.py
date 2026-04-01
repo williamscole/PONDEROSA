@@ -80,6 +80,12 @@ For more information, visit: https://github.com/williamscole/PONDEROSA or email 
         help='IBD calling software used (default: phasedibd)'
     )
     files_group.add_argument(
+        '--truth',
+        type=Path,
+        default=None,
+        help='Ground truth relationships file for evaluation'
+    )
+    files_group.add_argument(
         '--map',
         type=Path,
         dest='mapf',

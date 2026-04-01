@@ -242,11 +242,12 @@ class PonderosaConfig:
         """Convert configuration to dictionary."""
         return {
             "files": {
-                "ibd": str(self.files.ibd),
+                "ibd": str(self.files.ibd) if self.files.ibd else None,
                 "fam": str(self.files.fam),
-                "king": str(self.files.king),
+                "ibd_caller": self.files.ibd_caller,
                 "ages": str(self.files.ages) if self.files.ages else None,
-                "map": str(self.files.map) if self.files.map else None,
+                "mapf": str(self.files.mapf) if self.files.mapf else None,
+                "truth": str(self.files.truth) if self.files.truth else None,
                 "populations": str(self.files.populations) if self.files.populations else None,
                 "training": str(self.files.training) if self.files.training else None,
             },

@@ -420,7 +420,7 @@ class TestEndToEnd:
         if files.get("ages"):
             cmd.extend(["--ages", files["ages"]])
         if files.get("mapf"):
-            cmd.extend(["--mapf", files["mapf"]])
+            cmd.extend(["--map", files["mapf"]])
         if algorithm.get("min_segment_length"):
             cmd.extend(["--min-segment-length", str(algorithm["min_segment_length"])])
         if algorithm.get("min_total_ibd"):
@@ -429,6 +429,8 @@ class TestEndToEnd:
             cmd.extend(["--max-gap", str(algorithm["max_gap"])])
         if output.get("verbose"):
             cmd.append("--verbose")
+        if files.get("truth"):
+            cmd.extend(["--truth", files["truth"]])
         
         # Run PONDEROSA via subprocess
         result = subprocess.run(
