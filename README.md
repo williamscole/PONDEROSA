@@ -1,6 +1,6 @@
 # PONDEROSA
 
-PONDEROSA is a Python tool for inferring genetic relationships between individuals using Identity By Descent (IBD) segments. The tool uses machine learning classifiers trained on IBD sharing patterns to distinguish between different degrees of biological relationships.
+PONDEROSA (Parent OffspriNg peDigree infErence RObuSt to endogAmy) is a Python tool for inferring genetic relationships between individuals using Identity By Descent (IBD) segments. The tool uses machine learning classifiers trained on IBD sharing patterns to distinguish between different degrees of biological relationships.
 
 ## Overview
 
@@ -10,13 +10,15 @@ PONDEROSA analyzes IBD segments to infer relationships between pairs of individu
 
 ### Prerequisites
 
-PONDEROSA requires Python 3.13+ and the following dependencies:
+PONDEROSA requires Python 3.8+ and the following dependencies:
 - pandas
 - polars  
 - numpy
 - scikit-learn
 - pyyaml
 - networkx
+- matplotlib
+- seaborn
 
 ### Environment Setup
 
@@ -32,7 +34,7 @@ conda activate ponderosa_v2
 ### Basic Command Line Usage
 
 ```bash
-python -m ponderosa.cli [options]
+python -m ponderosa [options]
 ```
 
 ### Using Configuration Files
@@ -40,7 +42,7 @@ python -m ponderosa.cli [options]
 PONDEROSA supports YAML configuration files for complex analyses:
 
 ```bash
-python -m ponderosa.cli --config config.yaml
+python -m ponderosa --config config.yaml
 ```
 
 ## Command Line Arguments
@@ -54,11 +56,11 @@ These arguments specify input and output files:
 | `--config` | Path | No | YAML configuration file |
 | `--ibd` | Path | Yes | IBD segments file |
 | `--fam` | Path | Yes | PLINK FAM file with individual information |
-| `--ibd-caller` | Choice | Yes | IBD calling software: `phasedibd`, `hapibd` |
+| `--ibd-caller` | Choice | Yes | IBD calling software: `phasedibd`, `hap-ibd` |
 | `--map` | Path | Yes* | Genetic map file for coordinate conversion |
 | `--ages` | Path | No | File containing age information for individuals |
 | `--priors` | Path | No | File specifying relationship priors (e.g., age-based priors) |
-| `--populations` | Path | No | Population assignment file |
+| `--populations` | Path | No | Population assignment file *(in testing — not yet available)* |
 | `--training` | Path | No | Directory containing pre-trained models |
 
 *Unless your IBD caller outputs the segment length in cM
@@ -84,9 +86,9 @@ These control output format and verbosity:
 |----------|------|---------|-------------|
 | `--output` | String | "ponderosa_results" | Output file prefix |
 | `--min-probability` | Float | 0.5 | Minimum probability threshold for reporting relationships |
-| `--create-plots` | Flag | False | Generate visualization plots |
+| `--create-plots` | Flag | False | Generate visualization plots *(in testing — not yet available)* |
 | `--verbose`, `-v` | Count | 0 | Increase verbosity (can be used multiple times: `-v`, `-vv`, `-vvv`) |
-| `--write_training` | Flag | False | Write trained classifiers to pickle file |
+| `--write-training` | Flag | False | Write trained classifiers to pickle file |
 | `--debug` | Flag | False | Show full error tracebacks |
 
 ## Configuration File Format
@@ -98,11 +100,11 @@ PONDEROSA supports YAML configuration files with the following structure:
 files:
   ibd: "path/to/ibd_segments.txt"
   fam: "path/to/individuals.fam"
-  ibd_caller: "phasedibd"
+  ibd_caller: "hap-ibd"
   ages: "path/to/ages.txt"                    # Optional
-  map: "path/to/genetic.map"                  # Optional
-  priors: "path/to/priors.yaml"               # Optional
-  populations: "path/to/populations.txt"      # Optional
+  mapf: "path/to/genetic.map"                 # Optional
+  priors: "path/to/priors.yaml"              # Optional
+  populations: "path/to/populations.txt"      # Optional (in testing — not yet available)
   training: "path/to/trained_models/"         # Optional
 
 # Algorithm parameters  
@@ -122,20 +124,45 @@ output:
   write_training: false
 ```
 
+## Simulation Pipeline
+
+*(In testing — not yet available)*
+
+PONDEROSA includes a simulation pipeline for generating training data using [Ped-sim](https://github.com/williamslab/ped-sim). The simulation workflow simulates relative pairs from real genotype data and trains classifiers on the resulting IBD sharing patterns.
+
+### Simulation Configuration
+
+```yaml
+pedsim:
+  pedsim_path: "/path/to/ped-sim"
+  vcf_file: "/path/to/founders.vcf.gz"
+
+king_file: "/path/to/king.seg"
+
+training:
+  n_pairs_per_relationship: 100
+  max_kinship: 0.05
+
+# Optional: processing settings
+ibd_caller: "hap-ibd.sh"
+output_path: "simulation_output"
+cleanup_temp: true
+```
+
 ## Input File Formats
 
 ### IBD Segments File
 
 The format depends on the IBD caller specified:
 
-#### PhasedIBD Format
+#### phasedibd Format
 ```
 id1    id2    chromosome    start_cm    end_cm    id1_haplotype    id2_haplotype
 IND1   IND2   1             10.5        25.3      0                0
 IND1   IND3   1             30.1        45.7      1                0
 ```
 
-#### HapIBD Format  
+#### hap-ibd Format  
 ```
 id1    id1_haplotype    id2    id2_haplotype    chromosome    start_bp    end_bp    length_cm
 IND1   1                IND2   2                1             1000000     2500000   15.2
@@ -143,7 +170,7 @@ IND1   2                IND3   1                1             3000000     420000
 IND2   1                IND4   2                2             5000000     7800000   18.5
 ```
 
-*Actual hapibd file should have no header
+*Actual hap-ibd file should have no header
 
 ### FAM File (PLINK Format)
 ```
@@ -164,7 +191,7 @@ IND3            32
 ```
 *The actual age file should have no header
 
-### Genetic Map File (Optional, for HapIBD)
+### Genetic Map File (Optional, for hap-ibd)
 ```
 chromosome    position_bp    position_cm
 1             1000000        0.5
@@ -190,132 +217,15 @@ GP     <=          30
 **Example Usage:**
 In this example, if two 2nd degree individuals have a >25 year age gap, P(MHS) would be set to 0 and the other probabilities rescaled.
 
-## Examples
-
-### Basic Analysis
-
-Analyze relationships using PhasedIBD output with default parameters:
-
-```bash
-python -m ponderosa.cli \
-  --ibd segments.txt \
-  --ibd-caller phasedibd \
-  --map input.map \
-  --fam individuals.fam \
-  --output my_results
-```
-
-### Advanced Analysis with Custom Parameters
-
-```bash
-python -m ponderosa.cli \
-  --ibd segments.txt \
-  --map input.map \
-  --fam individuals.fam \
-  --ibd-caller hapibd \
-  --map genetic.map \
-  --min-segment-length 5.0 \
-  --min-total-ibd 75.0 \
-  --min-probability 0.7 \
-  --create-plots \
-  --verbose \
-  --output detailed_analysis
-```
-
-### Analysis with Multiple Chromosome Files
-
-When working with per-chromosome IBD files, use a YAML configuration:
-
-```yaml
-files:
-  ibd_files:
-    - "ibd_chr1.txt"
-    - "ibd_chr2.txt" 
-    - "ibd_chr3.txt"
-    # ... continue for all chromosomes
-  fam: "individuals.fam"
-  ibd_caller: "hapibd"
-  map_files:
-    - "genetic_chr1.map"
-    - "genetic_chr2.map"
-    - "genetic_chr3.map"
-    # ... continue for all chromosomes
-
-algorithm:
-  min_segment_length: 3.0
-  min_total_ibd: 50.0  # Applied after combining all chromosomes
-
-output:
-  output: "multi_chr_analysis"
-```
-
-```bash
-python -m ponderosa.cli --config multi_chromosome_config.yaml
-```
-
-### Using Configuration File
-
-```bash
-python -m ponderosa.cli --config analysis_config.yaml
-```
-
-### Using Configuration File
-
-```bash
-python -m ponderosa.cli --config analysis_config.yaml
-```
-
-### Analysis with Age Priors
-
-```bash
-python -m ponderosa.cli \
-  --config base_config.yaml \
-  --ages individual_ages.txt \
-  --priors age_priors.yaml
-```
-
-## Simulation Module
-
-PONDEROSA includes a simulation module for generating training data and testing:
-
-```bash
-python -m ponderosa.simulation.cli simulate --config simulation.yaml
-```
-
-### Simulation Configuration
-
-The simulation requires a separate YAML configuration:
-
-```yaml
-# Required: ped-sim configuration
-pedsim:
-  pedsim_path: "/path/to/ped-sim"
-  vcf_file: "/path/to/founders.vcf"
-  random_seed: 12345
-
-# Required: KING output for founder selection  
-king_file: "/path/to/kinship.seg"
-
-# Optional: training parameters
-training:
-  n_pairs_per_relationship: 100
-  max_kinship: 0.05
-
-# Optional: processing settings
-ibd_caller: "hap-ibd.sh"
-output_path: "simulation_output"
-cleanup_temp: true
-```
-
 ## Output Files
 
 PONDEROSA generates several output files with the specified prefix:
 
-- `{prefix}_relationships.txt`: Main results with relationship predictions
-- `{prefix}_probabilities.txt`: Detailed probability matrices  
-- `{prefix}_pairs.txt`: Processed pair-wise IBD statistics
-- `{prefix}_training.pkl`: Trained classifiers (if `--write_training` specified)
-- `{prefix}_plots/`: Visualization directory (if `--create-plots` specified)
+- `{prefix}_pairs.txt`: Processed pair-wise IBD statistics and relationship predictions
+- `{prefix}.mhier.pkl`: Relationship-likelihood tree data structure (binary pickle file)
+- `{prefix}.classif.pkl`: Trained classifiers (binary pickle file)
+- `{prefix}_evaluation.txt`: Evaluation report (if truth file is provided)
+- `{prefix}_plots/`: Visualization directory (if `--create-plots` specified) *(in testing — not yet available)*
 
 ## Relationship Categories
 
@@ -347,7 +257,7 @@ PONDEROSA classifies relationships into hierarchical categories:
 Use `--debug` to see full error tracebacks:
 
 ```bash
-python -m ponderosa.cli --debug --config config.yaml
+python -m ponderosa --debug --config config.yaml
 ```
 
 ### Verbose Output
@@ -355,19 +265,23 @@ python -m ponderosa.cli --debug --config config.yaml
 Use multiple `-v` flags for detailed progress information:
 
 ```bash
-python -m ponderosa.cli -vvv --config config.yaml
+python -m ponderosa -vvv --config config.yaml
 ```
 
 ## Citation
 
 If you use PONDEROSA in your research, please cite:
 
-[add citation]
+Williams CM, Scelza BA, Slack SD, Font-Porterias N, Al-Hindi DR, Mathias RA, Watson H, Barnes KC, Lange E, Johnson RK, Gignoux CR, Ramachandran S, Henn BM. A rapid accurate approach to inferring pedigrees in endogamous populations. *Genetics*. 2025;230(4):iyaf094. doi: [10.1093/genetics/iyaf094](https://doi.org/10.1093/genetics/iyaf094)
 
 ## License
 
-[add license]
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+PONDEROSA is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
 
 ## Support
 
-For questions, bug reports, or feature requests, please [contact information or GitHub issues link].
+For questions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com).
