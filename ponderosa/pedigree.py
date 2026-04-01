@@ -152,10 +152,7 @@ class Relationship:
         self.sex_specific = rel_dict["sex"]
         self.type3 = len(p1) > 0 and len(p2) > 0
 
-        try:
-            matrix = format_pedigree_paths(p1 + p2)
-        except:
-            import ipdb; ipdb.set_trace()
+        matrix = format_pedigree_paths(p1 + p2)
 
         self.mat = matrix if self.sex_specific else matrix[:,1:]
 
