@@ -59,7 +59,7 @@ These arguments specify input and output files:
 | `--ibd-caller` | Choice | Yes | IBD calling software: `phasedibd`, `hap-ibd` |
 | `--map` | Path | Yes* | Genetic map file for coordinate conversion |
 | `--ages` | Path | No | File containing age information for individuals |
-| `--priors` | Path | No | File specifying relationship priors (e.g., age-based priors) |
+| `--priors` | Path | No | File specifying relationship priors (e.g., age-based priors) *(in testing — not yet available)* |
 | `--populations` | Path | No | Population assignment file *(in testing — not yet available)* |
 | `--training` | Path | No | Directory containing pre-trained models |
 
@@ -75,7 +75,7 @@ These control the relationship inference algorithm:
 | `--min-segment-length` | Float | 3.0 | Minimum IBD segment length in centiMorgans (cM) |
 | `--min-total-ibd` | Float | 50.0 | Minimum total IBD sharing in cM for a pair to be analyzed |
 | `--max-gap` | Float | 1.0 | Maximum gap in cM for stitching adjacent segments |
-| `--population` | String | "pop1" | Population identifier for analysis |
+| `--population` | String | "pop1" | Population identifier for analysis *(currently deprecated; may be re-implemented in future versions)* |
 | `--genome-length` | Float | 3545.0 | Total genome length in cM |
 
 ### Output Arguments
@@ -103,7 +103,7 @@ files:
   ibd_caller: "hap-ibd"
   ages: "path/to/ages.txt"                    # Optional
   mapf: "path/to/genetic.map"                 # Optional
-  priors: "path/to/priors.yaml"              # Optional
+  priors: "path/to/priors.yaml"              # Optional (in testing — not yet available)
   populations: "path/to/populations.txt"      # Optional (in testing — not yet available)
   training: "path/to/trained_models/"         # Optional
 
@@ -201,6 +201,9 @@ chromosome    position_bp    position_cm
 *The actual map file should have no header
 
 ### Priors File (Optional)
+
+*(In testing — not yet available)*
+
 The priors file allows you to specify age-based relationship constraints. The format is a tab-separated or space-separated file with three columns:
 
 ```
