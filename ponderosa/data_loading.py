@@ -32,12 +32,18 @@ class IBDLoader(ABC):
     def custom_process(self, df: pl.DataFrame, **kwargs) -> pl.DataFrame:
         pass
 
-    def filter_pairs(self, df: Union[pl.DataFrame, pl.LazyFrame], min_total_ibd):
+    def filter_pairs(self, df: Union[pl.DataFrame, pl.LazyFrame], min_total_ibd, individuals: Optional[List[str]] = None):
 
         if isinstance(df, pl.DataFrame):
             lazy_df = df.lazy()
         else:
             lazy_df = df
+
+        if individuals is not None:
+            ind_set = set(individuals)
+            lazy_df = lazy_df.filter(
+                pl.col('id1').is_in(ind_set) & pl.col('id2').is_in(ind_set)
+            )
 
         pairs = (
             lazy_df
@@ -63,7 +69,7 @@ class IBDLoader(ABC):
 
         return filtered_segments
  
-    def load_filtered_segments(self, file_path: str, **process_kwargs) -> pl.DataFrame:
+    def load_filtered_segments(self, file_path: str, individuals: Optional[List[str]] = None, **process_kwargs) -> pl.DataFrame:
         """Loads IBD data from a source and returns a polars DataFrame."""
 
         # Keep lazy as long as possible
@@ -73,7 +79,7 @@ class IBDLoader(ABC):
         )
 
         # Filters based on pair-wise total IBD
-        filtered_segments = self.filter_pairs(segments_lazy, self.min_total_ibd)
+        filtered_segments = self.filter_pairs(segments_lazy, self.min_total_ibd, individuals=individuals)
 
         return self.custom_process(filtered_segments, **process_kwargs)
         
@@ -170,32 +176,32 @@ class HapIBDLoader(IBDLoader):
             
 
         
-def load_ibd_from_file(file_paths: List[Path], ibd_caller: str, min_segment_length: float, min_total_ibd: float, to_pandas: bool = False, **kwargs) -> IBD:
-
+def load_ibd_from_file(file_paths: List[Path], ibd_caller: str, min_segment_length: float, min_total_ibd: float, to_pandas: bool = False, individuals: Optional[List[str]] = None, **kwargs) -> IBD:
+ 
     ibd_caller_dict = {
         "phasedibd": PhasedIBDLoader,
         "hap-ibd": HapIBDLoader
     }
-
+ 
     loader_class = ibd_caller_dict[ibd_caller]
-
+ 
     single_file = len(file_paths) == 1
-
+ 
     # If multiple files, cannot filter based on min_total_ibd (since loading only for each chromosome)
     loader = loader_class(min_segment_length, min_total_ibd if single_file else min_segment_length)
-
+ 
     ibd_segments_list = []
-
+ 
     for file_path in file_paths:
-        ibd_segments_list.append(loader.load_filtered_segments(file_path, **kwargs))
-
+        ibd_segments_list.append(loader.load_filtered_segments(file_path, individuals=individuals, **kwargs))
+ 
     if single_file:
         ibd_segments = ibd_segments_list[0]
-    # Multiple files added; must concagt and then filter on total ibd
+    # Multiple files added; must concat and then filter on total ibd
     else:
         ibd_segments = pl.concat(ibd_segments_list)
-
-        ibd_segments = loader.filter_pairs(ibd_segments, min_total_ibd)
+ 
+        ibd_segments = loader.filter_pairs(ibd_segments, min_total_ibd, individuals=individuals)
     
     return ibd_segments.to_pandas() if to_pandas else ibd_segments
 
@@ -603,18 +609,15 @@ def load_individuals(config: FilesConfig) -> Individuals:
     return individuals
 
 
-def load_pairs(files: FilesConfig, alg_args: AlgorithmConfig) -> Pairs:
-
+def load_pairs(files: FilesConfig, alg_args: AlgorithmConfig, individuals: Optional[List[str]] = None) -> Pairs:
+ 
     # Load the IBD segments
-    ibd_segments = load_ibd_from_file(files.ibd_file_list, files.ibd_caller, alg_args.min_segment_length, alg_args.min_total_ibd)
-
+    ibd_segments = load_ibd_from_file(files.ibd_file_list, files.ibd_caller, alg_args.min_segment_length, alg_args.min_total_ibd, individuals=individuals)
+ 
     # Add the IBD segments to the pairs
     pairs = Pairs.from_segment_df(ibd_segments)
     
     return pairs
-
-
-
 
 
 
