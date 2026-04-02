@@ -1,5 +1,7 @@
 # PONDEROSA
 
+> **Note:** This is a major rewrite of PONDEROSA (v2). The codebase has been redesigned from the ground up for modularity, testability, and ease of collaboration. Some features from v1 are still being ported over — these are marked as *(in testing — not yet available)* below. Bug reports and contributions are welcome.
+
 PONDEROSA (Parent OffspriNg peDigree infErence RObuSt to endogAmy) is a Python tool for inferring genetic relationships between individuals using Identity By Descent (IBD) segments. The tool uses machine learning classifiers trained on IBD sharing patterns to distinguish between different degrees of biological relationships.
 
 ## Overview
@@ -60,7 +62,7 @@ These arguments specify input and output files:
 | `--map` | Path | Yes* | Genetic map file for coordinate conversion |
 | `--ages` | Path | No | File containing age information for individuals |
 | `--priors` | Path | No | File specifying relationship priors (e.g., age-based priors) *(in testing — not yet available)* |
-| `--populations` | Path | No | Population assignment file *(currently deprecated; may be re-implemented in future versions)*  |
+| `--populations` | Path | No | Population assignment file *(in testing — not yet available)* |
 | `--training` | Path | No | Directory containing pre-trained models |
 
 *Unless your IBD caller outputs the segment length in cM
