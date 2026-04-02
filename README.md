@@ -287,4 +287,4 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 ## Support
 
-For questions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com).
+For questions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com/williamscole/PONDEROSA/).
