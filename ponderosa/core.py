@@ -89,7 +89,7 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
     _setup_logging(config.output.verbose)
     
     logger.info("Starting PONDEROSA analysis")
-    logger.debug(f"Configuration: {config}")
+    logger.info(f"\n{config}")
     
     # Step 1: Load the relationship hierarchy
     logger.info("Loading relationship hierarchy...")

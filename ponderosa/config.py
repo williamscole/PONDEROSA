@@ -292,3 +292,67 @@ class PonderosaConfig:
             yaml.dump(self.to_dict(), f, default_flow_style=False, indent=2)
         
         logger.info(f"Configuration saved to {output_path}")
+
+    def __str__(self) -> str:
+        """Print a readable summary of the current configuration."""
+        from . import __version__
+
+        lines = []
+        lines.append(f"PONDEROSA v{__version__}")
+        lines.append("=" * (len(lines[0])))
+
+        # --- Input Files ---
+        lines.append("")
+        lines.append("Input Files:")
+
+        # IBD files
+        if self.files.ibd_files:
+            n = len(self.files.ibd_files)
+            first = self.files.ibd_files[0].name
+            last = self.files.ibd_files[-1].name
+            lines.append(f"  IBD:             {n} files ({first} ... {last}) [{self.files.ibd_caller}]")
+        elif self.files.ibd:
+            lines.append(f"  IBD:             {self.files.ibd} [{self.files.ibd_caller}]")
+
+        # FAM
+        lines.append(f"  FAM:             {self.files.fam}")
+
+        # Map files
+        if self.files.map_files:
+            n = len(self.files.map_files)
+            first = self.files.map_files[0].name
+            last = self.files.map_files[-1].name
+            lines.append(f"  Map:             {n} files ({first} ... {last})")
+        elif self.files.mapf:
+            lines.append(f"  Map:             {self.files.mapf}")
+
+        # Optional files — only show if provided
+        if self.files.ages:
+            lines.append(f"  Ages:            {self.files.ages}")
+        if self.files.truth:
+            lines.append(f"  Truth:           {self.files.truth}")
+        if self.files.rel_tree:
+            lines.append(f"  Hierarchy:       {self.files.rel_tree}")
+
+        # Training
+        if self.files.training:
+            lines.append(f"  Training:        {self.files.training}")
+        else:
+            lines.append(f"  Training:        (none — will train from data)")
+
+        # --- Algorithm ---
+        lines.append("")
+        lines.append("Algorithm:")
+        lines.append(f"  Min segment length:  {self.algorithm.min_segment_length} cM")
+        lines.append(f"  Min total IBD:       {self.algorithm.min_total_ibd} cM")
+        lines.append(f"  Max gap:             {self.algorithm.max_gap} cM")
+        lines.append(f"  Genome length:       {self.algorithm.genome_length} cM")
+
+        # --- Output ---
+        lines.append("")
+        lines.append("Output:")
+        lines.append(f"  Prefix:              {self.output.output}")
+        lines.append(f"  Min probability:     {self.output.min_probability}")
+        lines.append(f"  Write training:      {'yes' if self.output.write_training else 'no'}")
+
+        return "\n".join(lines)
