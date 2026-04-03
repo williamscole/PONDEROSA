@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # =========== Do not change this code ===========
+# Script name must match the IBD caller format (e.g. hap-ibd.sh, phasedibd.sh)
+# PONDEROSA uses the filename (minus .sh) to determine the IBD output format.
+
 dirpath=${1}
 prefix=${dirpath}/simulation
 
@@ -43,13 +46,14 @@ fi
 # ================================================
 
 # Create the concatenated map file for hap-ibd
-cat "${chr_map_dir}/plink.chr1.GRCh37.map" > "${dirpath}/hapibd.map"
+# PONDEROSA expects this file as "genetic.map" in plink format (chr, rsid, cM, bp)
+cat "${chr_map_dir}/plink.chr1.GRCh37.map" > "${dirpath}/genetic.map"
 for i in {2..22}; do
-    cat "${chr_map_dir}/plink.chr${i}.GRCh37.map" >> "${dirpath}/hapibd.map"
+    cat "${chr_map_dir}/plink.chr${i}.GRCh37.map" >> "${dirpath}/genetic.map"
 done
 
 java -Xmx${mem}g -jar $hapibd_jar \
     gt=$vcffile \
-    map=${dirpath}/hapibd.map \
+    map=${dirpath}/genetic.map \
     nthreads=$nthreads \
     out=$prefix
