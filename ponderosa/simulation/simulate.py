@@ -72,6 +72,9 @@ def simulate(config: SimulationConfig) -> PonderosaConfig:
         ponderosa_config.algorithm.train_only = True
         ponderosa_config.validate()
 
+        # Ensure that output dir exists
+        Path(config.output_path).parent.mkdir(parents=True, exist_ok=True)
+        
         # 10. Run PONDEROSA
         run_ponderosa(ponderosa_config, train_only=True)
         
