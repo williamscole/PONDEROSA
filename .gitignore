@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 del_*
 del
+ponderosa/simulation/hap-ibd/
