@@ -69,9 +69,11 @@ def simulate(config: SimulationConfig) -> PonderosaConfig:
         
         # 9. Create PonderosaConfig from simulation results
         ponderosa_config = _create_ponderosa_config(temp_dir, config)
+        ponderosa_config.algorithm.train_only = True
+        ponderosa_config.validate()
 
         # 10. Run PONDEROSA
-        results = run_ponderosa(ponderosa_config, train_only=True)
+        run_ponderosa(ponderosa_config, train_only=True)
         
         return Path(f"{config.output_path}.classif.pkl")
 
