@@ -120,6 +120,10 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
         logger.info(f"Loading pre-trained classifiers from {config.files.training}")
     else:
         logger.info("Training classifiers on known relationships...")
+
+    # Force to write training pickle if train_only enabled
+    if config.algorithm.train_only:
+        config.output.write_training = True
     
     classifiers = train_load_classifiers(
         registry=registry,
