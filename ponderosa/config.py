@@ -139,6 +139,9 @@ class AlgorithmConfig:
     validate_pair_order: bool = True
     parallel_processing: bool = True
 
+    # Run parameters
+    train_only: bool = False
+
 @dataclass
 class OutputConfig:
     """Output configuration for PONDEROSA."""
@@ -224,7 +227,7 @@ class PonderosaConfig:
         # Override with CLI arguments
         # Map flat CLI args to nested structure
         file_args = ["ibd", "fam", "ages", "mapf", "populations", "training", "ibd_caller", "truth"]
-        algorithm_args = ["min_segment_length", "min_total_ibd", "population", "genome_length"]
+        algorithm_args = ["min_segment_length", "min_total_ibd", "population", "genome_length", "train_only"]
         output_args = ["output", "min_probability", "verbose"]
         
         for arg, value in cli_args.items():

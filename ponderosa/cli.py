@@ -155,6 +155,12 @@ For more information, visit: https://github.com/williamscole/PONDEROSA or email 
         dest='genome_length',
         help='Total genome length in cM (default: 3545.0)'
     )
+    algo_group.add_argument(
+        '--train-only',
+        action='store_true',
+        dest='train_only',
+        help='Stop after training classifiers (skip inference)'
+    )
     
     # === Output arguments ===
     output_group = parser.add_argument_group('Output Settings')

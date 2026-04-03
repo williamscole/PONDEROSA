@@ -128,7 +128,11 @@ def run_ponderosa(config: PonderosaConfig) -> PonderosaResults:
         prefix=config.output.output if config.output.write_training else None
     )
     logger.info(f"Classifiers ready: {list(classifiers.keys())}")
-    
+
+    if config.algorithm.train_only:
+        logger.info("train_only=True — stopping after training.")
+        return None
+
     # Step 6: Run inference
     logger.info("Running relationship inference...")
     matrix_hierarchy = run_inference(pairs, classifiers, hierarchy)
