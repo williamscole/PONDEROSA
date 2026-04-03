@@ -29,6 +29,7 @@ The recommended installation method is using conda with the provided environment
 ```bash
 conda env create -f environment.yml
 conda activate ponderosa_v2
+pip install -e .
 ```
 
 ## Usage
